@@ -170,10 +170,18 @@ Front‑matter fields supported:
 ### Adding a new background pattern
 
 1. Drop the SVG/PNG into `assets/img/patterns/` (e.g. `my‑pattern.svg`).  
-2. Add a line to `assets/css/_hero-patterns.css`:  
+2. Add a class to `assets/css/_hero-patterns.css`:  
 
 ```css
-.hero-bg-my-pattern { background-image: url('/assets/img/patterns/my-pattern.svg'); }
+.hero-bg-my-pattern .hero-surface::before {
+  background-image: 
+    url('/assets/img/patterns/my-pattern.svg'),
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(26, 200, 122, 0.35),
+      transparent 55%
+    );
+}
 ```
 
 3. Reference the slug in front‑matter: `hero_bg_pattern: "my-pattern"`.
