@@ -273,16 +273,17 @@ article figcaption {
   background: var(--header-bg); /* centralized token */
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--header-border);
+  box-shadow: var(--shadow-soft);
 }
 
 .site-header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--ts-space-4);
-  min-height: 4rem;
-  padding-block: clamp(0.7rem, 2vw, 0.95rem);
-  padding-inline: clamp(1rem, 3vw, 1.5rem);
+  gap: var(--ts-space-3);
+  min-height: 3.25rem;
+  padding-block: clamp(0.5rem, 1.6vw, 0.8rem);
+  padding-inline: clamp(0.85rem, 2.5vw, 1.35rem);
 }
 
 .site-nav-shell {
@@ -294,30 +295,30 @@ article figcaption {
 .site-logo {
   display: inline-flex;
   align-items: center;
-  gap: var(--ts-space-3);
+  gap: var(--ts-space-2);
   text-decoration: none;
   flex-shrink: 0;
-  padding: 0.35rem 0.65rem;
-  border-radius: var(--ts-radius-lg);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(240, 236, 225, 0.9));
-  border: 1px solid rgba(255, 255, 255, 0.65);
-  box-shadow: var(--shadow-soft);
+  padding: 0.15rem 0.35rem;
+  border-radius: var(--ts-radius-md);
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .site-logo-img,
 .site-logo-svg {
-  width: clamp(118px, 22vw, 164px);
-  max-height: 52px;
+  width: clamp(118px, 22vw, 156px);
+  max-height: 44px;
   height: auto;
   display: block;
-  filter: drop-shadow(0 8px 18px rgba(12, 42, 32, 0.16));
+  filter: drop-shadow(0 6px 12px rgba(12, 42, 32, 0.12));
   border-radius: var(--ts-radius-md);
 }
 
 .site-header-actions {
   display: flex;
   align-items: center;
-  gap: var(--ts-space-3);
+  gap: var(--ts-space-2);
   margin-left: auto;
 }
 
@@ -835,3 +836,26 @@ body.nav-open {
    Breadcrumbs
    ============================================ */
 /* Breadcrumb styles moved to assets/css/breadcrumbs.css to avoid duplication */
+/* Header refinements */
+.site-header-inner {
+  min-height: 3.25rem;
+  padding-block: clamp(0.45rem, 1.4vw, 0.75rem);
+  padding-inline: clamp(0.85rem, 2.2vw, 1.35rem);
+  gap: var(--space-3);
+}
+
+.site-logo {
+  padding: 0.1rem 0.3rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.site-logo-img {
+  max-height: 44px;
+  filter: drop-shadow(0 6px 12px rgba(12, 42, 32, 0.12));
+}
+
+.site-header-actions {
+  gap: var(--space-2);
+}
