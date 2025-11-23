@@ -26,7 +26,7 @@
       BreadcrumbList JSON-LD (lightweight; avoids duplication with inline microdata)
       Generated only for non-home pages.
       {%- endcomment -%}
-      {%- if page.url != '/' and page.breadcrumb != false -%}
+      {%- if page.url != '/' and page.url != '/index.html' and page.is_home != true and page.layout != 'home' and page.breadcrumb != false -%}
         {%- assign crumb_position = 1 -%}
         {%- assign path = page.url | replace: 'index.html', '' -%}
         {%- assign segments = path | split: '/' -%}
@@ -53,9 +53,9 @@
       {%- endif -%}
 
       <!-- Page hero section (unless hidden) -->
-      {%- unless page.hide_hero -%}
+      {%- if page.hide_hero != true -%}
         {%- include page-hero.html -%}
-      {%- endunless -%}
+      {%- endif -%}
 
       <!-- Page content: full-width or contained -->
       {% if page.is_home or page.full_width %}
