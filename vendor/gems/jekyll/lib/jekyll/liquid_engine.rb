@@ -73,10 +73,10 @@ module Jekyll
     end
 
     def convert_tags(text)
-      # Patch: preserve closing tags for <a> and other inline HTML with Liquid logic
+      # Improved patch: preserve inline HTML tags with Liquid logic, especially <a> tags
       text.gsub(TAG_REGEX) do
         body = Regexp.last_match(1).strip
-        # If the tag is inside an HTML element, preserve the closing tag
+        # If the tag is a control structure, convert to ERB
         if body =~ /^if|unless|elsif|else|endif|endunless|for|endfor|assign/
           case body
           when /^include\s+(.+)$/
@@ -108,8 +108,12 @@ module Jekyll
             ''
           end
         else
-          # For inline HTML, preserve the tag
-          "{% #{body} %}"
+          # For inline HTML, especially <a> tags, do not break tag pairing
+          if body =~ /^\/?a(\s|$)/
+            ""
+          else
+            "{% #{body} %}"
+          end
         end
       end
     end
