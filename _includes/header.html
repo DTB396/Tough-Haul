@@ -1,128 +1,88 @@
-<header class="site-header ts-header ts-theme" role="banner" itemscope itemtype="https://schema.org/Organization">
+<header class="site-header ts-header ts-theme" role="banner" itemscope itemtype="https://schema.org/Organization" style="background: var(--color-surface, #fff); box-shadow: var(--shadow-soft, 0 2px 8px rgba(0,0,0,0.04));">
   <!-- Accessibility: Skip to main content link -->
   <a class="skip-link" href="#main" tabindex="1">Skip to main content</a>
   <meta itemprop="name" content="{{ site.title }}">
   <meta itemprop="url" content="{{ site.url }}">
   <meta itemprop="logo" content="{{ site.logo | absolute_url }}">
 
-  <div class="site-header-inner container">
-    <!-- Brand / Logo -->
-    <div class="ts-brand">
-      <a class="site-logo" href="{{ '/' | relative_url }}" aria-label="Tillerstead LLC - Return to homepage" rel="home">
-        <img src="{{ 'assets/img/logo-tillerstead-inverse.svg' | relative_url }}"
-             alt="Tillerstead LLC logo"
-             width="200"
-             height="60"
-             loading="eager"
-             decoding="async"
-             class="site-logo-img" />
-      </a>
-    </div>
+  <!-- Brand / Logo (single instance, no double) -->
+  <div class="ts-brand" style="display: flex; align-items: center; padding: var(--space-3, 1rem) 0;">
+    <a class="site-logo" href="{{ '/' | relative_url }}" aria-label="Tillerstead LLC - Return to homepage" rel="home" style="display: inline-block;">
+      <img src="{{ 'assets/img/logo-tillerstead-inverse.svg' | relative_url }}"
+           alt="Tillerstead LLC logo"
+           width="200"
+           height="60"
+           loading="eager"
+           decoding="async"
+           class="site-logo-img"
+           style="display: block; background: none;" />
+    </a>
+  </div>
 
-    <!-- Navigation Container -->
-    <div class="site-nav-shell" data-nav-container>
-      <!-- Mobile nav overlay -->
-      <div class="site-nav-backdrop"
-           data-nav-overlay
-           aria-hidden="true"
-           role="presentation"></div>
+  <!-- Navigation (no bubbles, no container) -->
+  <nav id="site-nav"
+       class="site-nav"
+       aria-label="Primary navigation"
+       aria-expanded="false"
+       role="navigation"
+       style="background: none; box-shadow: none;">
+    <ul class="site-menu" role="menubar" style="display: flex; gap: var(--space-5, 2rem); list-style: none; margin: 0; padding: 0;">
+      {% assign nav_items = site.data.navigation.primary %}
+      {% for item in nav_items %}
+        {% assign is_current = false %}
+        {% if item.exact and page.url == item.exact %}
+          {% assign is_current = true %}
+        {% elsif item.match and page.url contains item.match %}
+          {% assign is_current = true %}
+        {% endif %}
+        <li role="presentation">
+          <a href="{{ item.url | relative_url }}"
+             class="nav-link"
+             role="menuitem"
+             {% if is_current %}aria-current="page"{% endif %}
+             style="color: var(--color-primary, #222); text-decoration: none; font-weight: 500; padding: var(--space-2, 0.5rem) var(--space-3, 1rem); border-radius: var(--radius-pill, 999px); transition: background 0.2s;">
+            {{ item.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
 
-      <!-- Primary Navigation -->
-          <nav id="site-nav"
-            class="site-nav"
-            aria-label="Primary navigation"
+  <!-- Header Actions (call button, mobile menu toggle) -->
+  <div class="site-header-actions" role="group" aria-label="Site actions" style="display: flex; align-items: center; gap: var(--space-4, 1.5rem); margin-top: var(--space-2, 0.5rem);">
+    <a class="call-btn btn btn--secondary"
+       href="tel:{{ site.company.phone_link | default: '+16098628808' }}"
+       aria-label="Call Tillerstead at {{ site.company.phone_display | default: '(609) 862-8808' }}"
+       rel="nofollow"
+       style="background: var(--color-accent, #007bff); color: #fff; border-radius: var(--radius-pill, 999px); padding: var(--space-2, 0.5rem) var(--space-4, 1.5rem); font-weight: 600; text-decoration: none;">
+      <span class="call-btn-display" aria-hidden="false">
+        {{ site.company.phone_display | default: '(609) 862-8808' }}
+      </span>
+    </a>
+    <button type="button"
+            class="nav-toggle"
+            id="nav-toggle"
+            aria-controls="site-nav"
             aria-expanded="false"
-            role="navigation">
-        
-        <!-- Mobile drawer header -->
-        <div class="site-nav-drawer-header">
-          <h2 class="nav-drawer-label">Navigation Menu</h2>
-          <button type="button"
-                  class="nav-close"
-                  data-nav-close
-                  aria-label="Close navigation menu"
-                  aria-controls="site-nav">
-            <span class="nav-close-label" aria-hidden="true">Close</span>
-            <span class="nav-close-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg"
-                   viewBox="0 0 24 24"
-                   fill="none"
-                   stroke="currentColor"
-                   stroke-width="2"
-                   stroke-linecap="round"
-                   stroke-linejoin="round"
-                   width="24"
-                   height="24">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            </span>
-          </button>
-        </div>
-
-        <!-- Menu Items -->
-        <ul class="site-menu" role="menubar">
-          {% assign nav_items = site.data.navigation.primary %}
-          {% for item in nav_items %}
-            {% assign is_current = false %}
-            {% if item.exact and page.url == item.exact %}
-              {% assign is_current = true %}
-            {% elsif item.match and page.url contains item.match %}
-              {% assign is_current = true %}
-            {% endif %}
-
-            <li role="presentation">
-              <a href="{{ item.url | relative_url }}"
-                 class="nav-link"
-                 role="menuitem"
-                 {% if is_current %}aria-current="page"{% endif %}>
-                {{ item.title }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </nav>
-    </div>
-
-    <!-- Header Actions -->
-    <div class="site-header-actions" role="group" aria-label="Site actions">
-      <!-- Call Button -->
-      <a class="call-btn btn btn--secondary"
-         href="tel:{{ site.company.phone_link | default: '+16098628808' }}"
-         aria-label="Call Tillerstead at {{ site.company.phone_display | default: '(609) 862-8808' }}"
-         rel="nofollow">
-        <span class="call-btn-display" aria-hidden="false">
-          {{ site.company.phone_display | default: '(609) 862-8808' }}
-        </span>
-      </a>
-
-      <!-- High Contrast Mode Toggle removed -->
-
-      <!-- Mobile Menu Toggle -->
-      <button type="button"
-              class="nav-toggle"
-              id="nav-toggle"
-              aria-controls="site-nav"
-              aria-expanded="false"
-              aria-label="Open navigation menu"
-              data-nav-toggle>
-        <span class="nav-toggle-label" aria-hidden="true">Menu</span>
-        <span class="nav-toggle-icon" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg"
-               viewBox="0 0 24 24"
-               fill="none"
-               stroke="currentColor"
-               stroke-width="2"
-               stroke-linecap="round"
-               stroke-linejoin="round"
-               width="24"
-               height="24">
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </span>
-      </button>
-    </div>
+            aria-label="Open navigation menu"
+            data-nav-toggle
+            style="background: var(--color-primary, #222); color: #fff; border: none; border-radius: var(--radius-pill, 999px); padding: var(--space-2, 0.5rem) var(--space-3, 1rem); cursor: pointer; display: flex; align-items: center;">
+      <span class="nav-toggle-label" aria-hidden="true" style="margin-right: 0.5em;">Menu</span>
+      <span class="nav-toggle-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             width="24"
+             height="24">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </span>
+    </button>
   </div>
 </header>

@@ -1,5 +1,4 @@
 <footer class="site-footer ts-footer" style="background:#0d3b2c;color:#fff;" role="contentinfo" itemscope itemtype="https://schema.org/HomeAndConstructionBusiness">
-
   <meta itemprop="name" content="Tillerstead LLC">
   <meta itemprop="@id" content="{{ site.url }}/#contractor">
   <meta itemprop="url" content="{{ site.url }}/">
@@ -9,14 +8,9 @@
   <meta itemprop="description" content="Property maintenance and remodeling with tile specialty for South Jersey homeowners, landlords, and small commercial properties.">
   <meta itemprop="areaServed" content="Atlantic County NJ, Ocean County NJ, Cape May County NJ">
 
-  <div class="footer-grid">
-    <section class="footer-section footer-brand" aria-labelledby="footer-brand-heading" role="region">
-      <h2 id="footer-brand-heading" class="sr-only">Tillerstead LLC</h2>
-      <a href="{{ '/' | relative_url }}"
-         class="footer-brand"
-         aria-label="Tillerstead LLC Home"
-         itemprop="url"
-         rel="home">
+  <div class="footer-flex">
+    <div class="footer-brand-area">
+      <a href="{{ '/' | relative_url }}" aria-label="Tillerstead LLC Home" itemprop="url" rel="home" class="footer-logo-link">
         <img
           src="{{ '/assets/img/logo/tillerstead-logo-header.svg' | relative_url }}"
           class="footer-logo-img"
@@ -24,83 +18,154 @@
           width="220"
           height="80"
           loading="lazy"
-          decoding="async">
+          decoding="async"
+          style="background:#0d3b2c;border-radius:12px;padding:8px;">
       </a>
-      <p class="footer-text footer-tagline">
+      <p class="footer-tagline">
         <strong>Property Maintenance &middot; Remodeling &middot; Tile</strong><br>
         <small>NJ Licensed HIC #{{ site.company.hic }}</small>
       </p>
-      <p class="footer-text">
-        Monthly maintenance plans, reliable remodeling, and waterproof tile assemblies
-        across Atlantic, Ocean, and Cape May counties.
+      <p class="footer-desc">
+        Monthly maintenance plans, reliable remodeling, and waterproof tile assemblies across Atlantic, Ocean, and Cape May counties.
       </p>
-    </section>
+    </div>
 
-    <section class="footer-section" aria-labelledby="footer-services-heading">
-      <h3 id="footer-services-heading" class="footer-section-title">Property Services</h3>
-      <ul class="footer-list" role="list">
-        <li><a class="footer-link" href="{{ '/services/' | relative_url }}#tile">Tile &amp; Stone</a></li>
-        <li><a class="footer-link" href="{{ '/services/' | relative_url }}#remodeling">Remodeling</a></li>
-        <li><a class="footer-link" href="{{ '/services/' | relative_url }}#maintenance">Maintenance Plans</a></li>
-        <li><a class="footer-link" href="{{ '/portfolio/' | relative_url }}">Recent Projects</a></li>
+    <nav class="footer-nav" aria-label="Footer">
+      <ul class="footer-list">
+        <li><a href="{{ '/services/' | relative_url }}#tile" class="footer-link">Tile &amp; Stone</a></li>
+        <li><a href="{{ '/services/' | relative_url }}#remodeling" class="footer-link">Remodeling</a></li>
+        <li><a href="{{ '/services/' | relative_url }}#maintenance" class="footer-link">Maintenance Plans</a></li>
+        <li><a href="{{ '/portfolio/' | relative_url }}" class="footer-link">Recent Projects</a></li>
+        <li><a href="{{ '/about/' | relative_url }}" class="footer-link">About</a></li>
+        <li><a href="{{ '/reviews/' | relative_url }}" class="footer-link">Reviews</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}" class="footer-link">Contact</a></li>
+        <li><a href="{{ '/privacy/' | relative_url }}" class="footer-link">Privacy Policy</a></li>
       </ul>
-    </section>
+    </nav>
 
-    <section class="footer-section" aria-labelledby="footer-company-heading">
-      <h3 id="footer-company-heading" class="footer-section-title">Company</h3>
-      <ul class="footer-list" role="list">
-        <li><a class="footer-link" href="{{ '/about/' | relative_url }}">About</a></li>
-        <li><a class="footer-link" href="{{ '/reviews/' | relative_url }}">Reviews</a></li>
-        <li><a class="footer-link" href="{{ '/contact/' | relative_url }}">Contact</a></li>
-        <li><a class="footer-link" href="{{ '/privacy/' | relative_url }}">Privacy Policy</a></li>
-      </ul>
-    </section>
-
-    <section class="footer-section" aria-labelledby="footer-contact-heading">
-      <h3 id="footer-contact-heading" class="footer-section-title">Licensed NJ Contractor</h3>
-      <p class="footer-text">
+    <div class="footer-contact-area">
+      <h2 class="footer-title">Licensed NJ Contractor</h2>
+      <p>
         <strong>NJ Home Improvement Contractor</strong><br>
         <small>License #{{ site.company.hic }}</small>
       </p>
-
-      <address class="footer-text"
-               itemprop="address"
-               itemscope
-               itemtype="https://schema.org/PostalAddress">
+      <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
         <span itemprop="streetAddress">{{ site.company.address_line }}</span><br>
         <span itemprop="addressLocality">{{ site.company.address_locality }}</span>,
         <span itemprop="addressRegion">{{ site.company.address_region }}</span>
         <span itemprop="postalCode">{{ site.company.address_postal_code }}</span>
       </address>
-
-      <div role="group" aria-label="Contact methods">
-        <p class="footer-text">
-          <a href="tel:{{ site.company.phone_link }}"
-             itemprop="telephone"
-             class="footer-link">
-            {{ site.company.phone_display }}
-          </a>
-        </p>
-        <p class="footer-text">
-          <a href="mailto:{{ site.company.email }}"
-             itemprop="email"
-             class="footer-link">
-            {{ site.company.email }}
-          </a>
-        </p>
-      </div>
-
-      <p class="footer-text">
+      <p>
+        <a href="tel:{{ site.company.phone_link }}" itemprop="telephone" class="footer-link">{{ site.company.phone_display }}</a>
+        <br>
+        <a href="mailto:{{ site.company.email }}" itemprop="email" class="footer-link">{{ site.company.email }}</a>
+      </p>
+      <p>
         <small><strong>Quick response times.</strong> Written scopes. Licensed &amp; insured.</small>
       </p>
-    </section>
+    </div>
   </div>
 
-  <div class="footer-bottom container">
-    <p class="footer-copyright ts-foot-small">
+  <div class="footer-bottom">
+    <p>
       &copy; {{ 'now' | date: '%Y' }} Tillerstead LLC. All rights reserved.
       <a href="{{ '/privacy/' | relative_url }}" class="footer-link">Privacy</a> |
       <a href="{{ '/sitemap.xml' | relative_url }}" class="footer-link">Sitemap</a>
     </p>
   </div>
+
+  <style>
+    .site-footer.ts-footer {
+      background: #0d3b2c;
+      color: #fff;
+      font-family: var(--font-sans, 'Segoe UI', Arial, sans-serif);
+      padding: 3rem 1rem 1.5rem 1rem;
+      border-top: 0;
+    }
+    .footer-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+    .footer-brand-area {
+      flex: 1 1 240px;
+      min-width: 220px;
+      max-width: 340px;
+    }
+    .footer-logo-img {
+      display: block;
+      margin-bottom: 1rem;
+      background: #0d3b2c;
+      border-radius: 12px;
+      padding: 8px;
+    }
+    .footer-tagline {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .footer-desc {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      margin-bottom: 1rem;
+    }
+    .footer-nav {
+      flex: 1 1 180px;
+      min-width: 160px;
+      max-width: 220px;
+    }
+    .footer-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.5rem;
+    }
+    .footer-link {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .footer-link:hover,
+    .footer-link:focus {
+      color: var(--color-accent, #ffd700);
+      text-decoration: underline;
+    }
+    .footer-contact-area {
+      flex: 1 1 220px;
+      min-width: 200px;
+      max-width: 320px;
+      font-size: 0.98rem;
+    }
+    .footer-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    address {
+      font-style: normal;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.95rem;
+      opacity: 0.8;
+      margin-top: 2rem;
+    }
+    @media (max-width: 900px) {
+      .footer-flex {
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .footer-brand-area,
+      .footer-nav,
+      .footer-contact-area {
+        max-width: 100%;
+      }
+    }
+  </style>
 </footer>

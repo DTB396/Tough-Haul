@@ -1,19 +1,138 @@
 <!-- Unified Hero Section for Tillerstead LLC -->
-<section class="ts-hero parchment-bg celtic-border sicilian-accent" aria-label="Tillerstead LLC Hero">
-  <div class="container ts-hero__content">
-    <div class="ts-hero__main">
+<section class="ts-hero" aria-label="Tillerstead LLC Hero">
+  <div class="ts-hero__container">
+    <header class="ts-hero__header">
       <span class="ts-hero__eyebrow">{{ eyebrow }}</span>
-      <h1 class="ts-hero__title heading-1">{{ title }}</h1>
+      <h1 class="ts-hero__title">{{ title }}</h1>
       <p class="ts-hero__lead">{{ summary }}</p>
-      <ul class="ts-hero__badges">
+    </header>
+    <nav aria-label="Hero badges" class="ts-hero__badges">
+      <ul>
         <li class="ts-hero__badge">NJ HIC #13VH10808800</li>
         <li class="ts-hero__badge">Fully Insured</li>
         <li class="ts-hero__badge">5-Star Reviews</li>
       </ul>
-      <div class="ts-hero__actions">
-        <a class="btn btn--primary" href="/contact/">Request a Consultation</a>
-        <a class="btn btn--ghost" href="/portfolio/">See Recent Work</a>
-      </div>
+    </nav>
+    <div class="ts-hero__actions">
+      <a class="btn btn--primary" href="/contact/">Request a Consultation</a>
+      <a class="btn btn--ghost" href="/portfolio/">See Recent Work</a>
     </div>
   </div>
 </section>
+<style>
+.ts-hero {
+  background: var(--gradient-primary, linear-gradient(135deg, #f5f3e7 0%, #e6e1d3 100%));
+  border-radius: var(--radius-lg, 1.25rem);
+  box-shadow: var(--shadow-lift, 0 4px 24px rgba(0,0,0,0.08));
+  padding: var(--space-8, 3rem) var(--space-4, 1.5rem);
+  margin: var(--space-6, 2rem) auto;
+  max-width: 900px;
+  color: var(--color-surface, #222);
+}
+.ts-hero__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5, 1.75rem);
+}
+.ts-hero__header {
+  text-align: center;
+}
+.ts-hero__eyebrow {
+  display: block;
+  font-size: 1rem;
+  color: var(--color-accent, #7a5c2e);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2, 0.5rem);
+  font-weight: 600;
+}
+.ts-hero__title {
+  font-family: var(--font-sans, 'Montserrat', Arial, sans-serif);
+  font-size: var(--heading-1, 2.5rem);
+  color: var(--color-primary, #2c2c2c);
+  margin-bottom: var(--space-2, 0.5rem);
+  line-height: 1.1;
+}
+.ts-hero__lead {
+  font-size: 1.25rem;
+  color: var(--color-surface, #222);
+  margin-bottom: var(--space-3, 1rem);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ts-hero__badges ul {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3, 1rem);
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-3, 1rem) 0;
+}
+.ts-hero__badge {
+  background: var(--color-accent, #7a5c2e);
+  color: #fff;
+  font-size: 0.95rem;
+  padding: 0.5em 1.25em;
+  border-radius: var(--radius-pill, 999px);
+  font-weight: 500;
+  box-shadow: var(--shadow-soft, 0 2px 8px rgba(0,0,0,0.04));
+  letter-spacing: 0.03em;
+}
+.ts-hero__actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4, 1.5rem);
+  margin-top: var(--space-2, 0.5rem);
+}
+.btn {
+  font-family: inherit;
+  font-size: 1.1rem;
+  padding: 0.75em 2em;
+  border-radius: var(--radius-pill, 999px);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow-soft, 0 2px 8px rgba(0,0,0,0.04));
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.btn--primary {
+  background: var(--color-primary, #2c2c2c);
+  color: #fff;
+}
+.btn--primary:hover,
+.btn--primary:focus {
+  background: var(--color-accent, #7a5c2e);
+  color: #fff;
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--color-primary, #2c2c2c);
+  border: 2px solid var(--color-accent, #7a5c2e);
+}
+.btn--ghost:hover,
+.btn--ghost:focus {
+  background: var(--color-accent, #7a5c2e);
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .ts-hero {
+    padding: var(--space-5, 1.75rem) var(--space-2, 0.5rem);
+  }
+  .ts-hero__title {
+    font-size: 2rem;
+  }
+  .ts-hero__lead {
+    font-size: 1rem;
+  }
+  .ts-hero__badges ul {
+    flex-direction: column;
+    gap: var(--space-2, 0.5rem);
+  }
+  .ts-hero__actions {
+    flex-direction: column;
+    gap: var(--space-2, 0.5rem);
+  }
+}
+</style>
