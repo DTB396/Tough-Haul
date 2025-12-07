@@ -1,5 +1,0 @@
-check_html: true
-disable_external: true
-enforce_https: true
-internal_domains:
-  - tillersteaddemo.local

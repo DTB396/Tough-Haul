@@ -42,7 +42,7 @@ A fast, client-safe static site for Tillerstead LLC, built with Jekyll and a han
 - **Local machines:** Install Ruby 3.2 and Node 20, then run `bundle install && npm install` in the project root.
 - **Run the dev server:** `npm run dev` serves Jekyll on `http://127.0.0.1:4000` with LiveReload (`4000`/`35729` forwarded in Codespaces).
 - **Build once:** `npm run build` compiles CSS and runs `bundle exec jekyll build`.
-- **Test locally:** `npm run test` rebuilds the site and runs HTML checks via HTMLProofer. External link checks are disabled to keep runs offline-friendly.
+- **Test locally:** `npm run test` rebuilds the site and runs an internal link/asset check to verify the generated `_site` output. External link checks are skipped to keep runs offline-friendly.
 - **Note:** Playwright/browser-based screenshot tooling is not installed in Codespaces for this repo—skip any screenshot capture steps.
 
 ## Getting Started
