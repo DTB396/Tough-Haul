@@ -9,7 +9,7 @@
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
 
-  /* =========================
+    /* =========================
      NAV: mobile drawer
   ========================= */
   const navToggle = $(".nav-toggle");
@@ -18,46 +18,49 @@
   const nav = header ? header.querySelector("#site-nav") : null;
   const navClose = header ? header.querySelector("[data-nav-close]") : null;
   const navOverlay = header ? header.querySelector("[data-nav-overlay]") : null;
-  let lastFocus = null;
-  let touchStartX = 0;
-  let touchStartY = 0;
-  const BP_DESKTOP = 920; // matches SCSS breakpoint for drawer
-  const SWIPE_THRESHOLD = 50; // minimum swipe distance in pixels
 
-  const isNavOpen = () => !!navShell && navShell.classList.contains("is-open");
+  const BP_DESKTOP = 920; // matches SCSS breakpoint
+  let lastFocus = null;
+
   const isMobileView = () => window.innerWidth < BP_DESKTOP;
+  const isNavOpen = () =>
+    !!navShell && navShell.classList.contains("is-open");
 
   const syncAria = (open) => {
+    const state = open ? "true" : "false";
+
     if (navToggle) {
-      navToggle.setAttribute("aria-expanded", String(open));
+      navToggle.setAttribute("aria-expanded", state);
       navToggle.setAttribute(
         "aria-label",
         open ? "Close navigation menu" : "Open navigation menu",
       );
     }
-    if (navShell) navShell.dataset.open = open ? "true" : "false";
-    if (nav) nav.dataset.open = open ? "true" : "false";
-    if (navOverlay) navOverlay.dataset.open = open ? "true" : "false";
+    if (nav) {
+      nav.setAttribute("aria-expanded", state);
+      nav.dataset.open = state;
+    }
+    if (navShell) navShell.dataset.open = state;
+    if (navOverlay) navOverlay.dataset.open = state;
   };
 
-  const onKeydownEsc = (e) => {
-    if (e.key === "Escape" && isNavOpen()) {
+  const handleEsc = (e) => {
+    if (!isNavOpen()) return;
+    if (e.key === "Escape" || e.key === "Esc") {
       e.preventDefault();
       closeNav();
     }
   };
 
   const trapFocus = (e) => {
-    if (!isNavOpen() || e.key !== "Tab") return;
+    if (!isNavOpen() || e.key !== "Tab" || !nav) return;
 
-    const focusables =
-      nav &&
-      $$(
-        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
-        nav,
-      ).filter((el) => el.offsetParent !== null);
+    const focusables = $$(
+      'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      nav,
+    ).filter((el) => el.offsetParent !== null);
 
-    if (!focusables || !focusables.length) return;
+    if (!focusables.length) return;
 
     const first = focusables[0];
     const last = focusables[focusables.length - 1];
@@ -71,58 +74,46 @@
     }
   };
 
-  const outsideClick = (e) => {
-    if (!isNavOpen() || !isMobileView()) return;
-    if (header && header.contains(e.target)) return;
-    closeNav();
-  };
-
   const openNav = () => {
-    if (!nav || !navShell || !isMobileView()) return;
+    if (!navShell || !nav || !isMobileView()) return;
+
     lastFocus = document.activeElement;
+
     navShell.classList.add("is-open");
     nav.classList.add("is-open");
-    syncAria(true);
     document.body.classList.add("nav-open");
+    syncAria(true);
 
-    // Focus first interactive element
-    const firstLink = $("a, button", nav);
-    if (firstLink) {
-      // Use requestAnimationFrame to ensure drawer is visible before focusing
-      requestAnimationFrame(() => {
-        if (firstLink && typeof firstLink.focus === "function") {
-          firstLink.focus();
-        }
-      });
-    }
+    // Focus first actionable element in drawer
+    const first = $("button, a", nav) || nav;
+    requestAnimationFrame(() => {
+      if (first && typeof first.focus === "function") first.focus();
+    });
 
     document.addEventListener("keydown", trapFocus);
-    document.addEventListener("keydown", onKeydownEsc);
-    // Use capture phase for outside click to catch before other handlers
-    document.addEventListener("click", outsideClick, true);
+    document.addEventListener("keydown", handleEsc);
   };
 
   const closeNav = () => {
-    if (!nav || !navShell) return;
+    if (!navShell || !nav) return;
+
     navShell.classList.remove("is-open");
     nav.classList.remove("is-open");
-    syncAria(false);
     document.body.classList.remove("nav-open");
+    syncAria(false);
 
     document.removeEventListener("keydown", trapFocus);
-    document.removeEventListener("keydown", onKeydownEsc);
-    document.removeEventListener("click", outsideClick, true);
+    document.removeEventListener("keydown", handleEsc);
 
     const focusTarget = lastFocus || navToggle || document.body;
-    if (focusTarget && typeof focusTarget.focus === "function") {
-      // Use requestAnimationFrame for smooth focus transition
-      requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      if (focusTarget && typeof focusTarget.focus === "function") {
         focusTarget.focus();
-      });
-    }
+      }
+    });
   };
 
-  // Toggle button click handler
+  // Toggle button
   if (navToggle) {
     navToggle.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -130,7 +121,7 @@
     });
   }
 
-  // Close button click handler
+  // Close button
   if (navClose) {
     navClose.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -138,7 +129,7 @@
     });
   }
 
-  // Overlay click handler
+  // Backdrop
   if (navOverlay) {
     navOverlay.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -146,40 +137,16 @@
     });
   }
 
-  // Close nav on link click (mobile only)
+  // Close nav when a link is clicked (mobile)
   if (nav) {
     nav.addEventListener("click", (e) => {
       const link = e.target.closest("a");
       if (!link) return;
-      if (isMobileView() && isNavOpen()) {
-        closeNav();
-      }
+      if (isMobileView() && isNavOpen()) closeNav();
     });
   }
 
-  // Touch events for swipe-to-close gesture
-  if (nav && "ontouchstart" in window) {
-    nav.addEventListener("touchstart", (e) => {
-      if (!isNavOpen()) return;
-      touchStartX = e.touches[0].clientX;
-      touchStartY = e.touches[0].clientY;
-    }, { passive: true });
-
-    nav.addEventListener("touchend", (e) => {
-      if (!isNavOpen()) return;
-      const touchEndX = e.changedTouches[0].clientX;
-      const touchEndY = e.changedTouches[0].clientY;
-      const deltaX = touchEndX - touchStartX;
-      const deltaY = touchEndY - touchStartY;
-
-      // Swipe right to close (only if horizontal swipe is dominant)
-      if (deltaX > SWIPE_THRESHOLD && Math.abs(deltaX) > Math.abs(deltaY)) {
-        closeNav();
-      }
-    }, { passive: true });
-  }
-
-  // Close nav if resized to desktop
+  // On resize to desktop, force-close
   let resizeTimer;
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
@@ -190,20 +157,14 @@
     }, 120);
   });
 
-  // Handle orientation change on mobile devices
+  // Orientation change safety
   if ("onorientationchange" in window) {
     window.addEventListener("orientationchange", () => {
-      if (isNavOpen()) {
-        // Give browser time to recalculate layout
-        setTimeout(() => {
-          if (!isMobileView()) {
-            closeNav();
-          }
-        }, 200);
+      if (!isMobileView() && isNavOpen()) {
+        setTimeout(closeNav, 200);
       }
     });
   }
-
   /* =========================
      HIGH CONTRAST MODE TOGGLE
      - Adds html.high-contrast class
