@@ -3,13 +3,15 @@
   id="{{ include.form_id | default: 'contact-form-short' }}"
   class="contact-form contact-form--short"
   method="post"
-  action="{{ include.action | default: page.url | relative_url }}"
+  action="/success/"          <!-- FIX: real Netlify redirect -->
   data-netlify="true"
   netlify-honeypot="_trap_short"
   aria-live="polite"
 >
+  <!-- Netlify-required -->
   <input type="hidden" name="form-name" value="{{ include.form_name | default: 'contact-short' }}">
 
+  <!-- Honeypot -->
   <p class="sr-only">
     <label for="_trap_short">Do not fill this field</label>
     <input id="_trap_short" name="_trap_short" type="text" tabindex="-1" autocomplete="off">
@@ -18,14 +20,13 @@
   <div class="form-grid">
     <div class="form-field">
       <label for="{{ include.prefix }}name-short">
-        Name<span class="sr-only"> (required)</span><span aria-hidden="true">*</span>
+        Name <span aria-hidden="true">*</span>
       </label>
       <input
         id="{{ include.prefix }}name-short"
         name="name"
         type="text"
         required
-        aria-required="true"
         autocomplete="name"
         placeholder="Your name"
       >
@@ -33,14 +34,13 @@
 
     <div class="form-field">
       <label for="{{ include.prefix }}email-short">
-        Email<span class="sr-only"> (required)</span><span aria-hidden="true">*</span>
+        Email <span aria-hidden="true">*</span>
       </label>
       <input
         id="{{ include.prefix }}email-short"
         name="email"
         type="email"
         required
-        aria-required="true"
         autocomplete="email"
         inputmode="email"
         placeholder="you@example.com"
@@ -62,9 +62,7 @@
     </div>
 
     <div class="form-field">
-      <label for="{{ include.prefix }}project-type-short">
-        Project type
-      </label>
+      <label for="{{ include.prefix }}project-type-short">Project type</label>
       <select id="{{ include.prefix }}project-type-short" name="project_type">
         <option value="">Select an option</option>
         <option>Monthly Maintenance Plan</option>
@@ -79,15 +77,14 @@
 
   <div class="form-field">
     <label for="{{ include.prefix }}details-short">
-      Project details<span class="sr-only"> (required)</span><span aria-hidden="true">*</span>
+      Project details <span aria-hidden="true">*</span>
     </label>
     <textarea
       id="{{ include.prefix }}details-short"
       name="details"
       rows="4"
       required
-      aria-required="true"
-      placeholder="Share a quick overview of your property, project, or maintenance needs."
+      placeholder="Share a quick overview of your project or maintenance request."
     ></textarea>
   </div>
 
