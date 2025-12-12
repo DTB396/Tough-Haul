@@ -182,11 +182,12 @@
   display: flex;
   justify-content: center;
   position: relative;
-  z-index: 1300;
+  z-index: 1500;
 }
 
 .site-nav-backdrop {
   display: none;
+  z-index: 1490;
 }
 
 /* Desktop nav: inline */
@@ -195,6 +196,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1505;
 }
 
 /* Drawer header only for mobile */
@@ -358,6 +360,7 @@
     flex: 0 0 auto;
     width: 0;
     height: 0;
+    z-index: 1500;
   }
 
   .site-nav-shell.is-open {
@@ -378,7 +381,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity var(--transition-med);
-    z-index: 1325;
+    z-index: 1502;
 
     @supports (backdrop-filter: blur(4px)) {
       backdrop-filter: blur(4px) saturate(140%);
@@ -409,7 +412,7 @@
     transition:
       transform 380ms cubic-bezier(0.4, 0, 0.2, 1),
       opacity 280ms ease;
-    z-index: 1450;
+    z-index: 1508;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -569,6 +572,12 @@
 body.nav-open {
   overflow: hidden;
   touch-action: none;
+  .site-header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
