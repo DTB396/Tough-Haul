@@ -7,9 +7,8 @@ hero_eyebrow: "Reviews"
 hero_title: "What clients say about working with Tillerstead"
 hero_summary: "A quick snapshot of homeowner feedback plus links to leave your own review."
 ---
-Verified feedback
 
-# Property owners trust the process
+Verified feedback
 
 Tillerstead projects are scheduled, documented, and finished with care. Here are a few recent notes from homeowners and property managers. Want to add your own? Use the review links below.
 
