@@ -3,6 +3,7 @@ name: Delete All Branches Except Master
 on:
   push:
     branches: [ master ]
+  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -10,7 +11,7 @@ jobs:
     name: No-op (required check)
     runs-on: ubuntu-latest
     steps:
-      - run: echo "No-op on push; deletion is manual only."
+      - run: echo "No-op on push/PR; deletion is manual only."
 
   delete-branches:
     if: github.event_name == 'workflow_dispatch'
