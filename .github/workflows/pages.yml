@@ -5,7 +5,7 @@ env:
 
 on:
   push:
-    branches: ["master"]
+    branches: [ master ]
   pull_request:
   workflow_dispatch:
 
@@ -16,7 +16,7 @@ permissions:
 
 # Allow only one concurrent deployment per ref/PR
 concurrency:
-  group: "pages-${{ github.event.pull_request.number || github.ref }}"
+  group: pages-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          cache: npm
 
       - name: Install npm dependencies
         run: npm ci
