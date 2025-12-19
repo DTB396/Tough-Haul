@@ -71,10 +71,24 @@
 }
 
 
+.page-home .ts-hero__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ts-spacing-md);
+}
+
+.page-home .ts-hero__brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ts-spacing-sm);
+  margin-bottom: var(--ts-spacing-sm);
+}
+
 .page-home .ts-hero__tagline {
   margin: 0;
   color: var(--ts-color-muted);
   letter-spacing: 0.04em;
+  font-size: var(--font-size-sm);
 }
 
 .page-home .ts-hero__badge {
