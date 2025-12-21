@@ -1,10 +1,11 @@
 /* ============================================
    Tillerstead Main Stylesheet
    TCNA-Compliant, Modular CSS Architecture
+   Professional + Nostalgic + Memorable
    ============================================ */
 
 /* 00 - Settings: Design Tokens & Variables */
-@import "00-settings/tokens";
+@import "00-settings/tokens-hybrid";
 
 /* 10 - Base: Accessibility, Typography, Performance */
 @import "10-base/reset";
