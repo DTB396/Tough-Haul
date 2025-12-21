@@ -36,9 +36,7 @@ jobs:
         run: npm ci
 
       - name: Lint HTML & JavaScript
-        run: |
-          npx htmlhint '**/*.html'
-          npx eslint .
+        run: npm run lint
 
       - name: Setup Ruby (Jekyll Vendor)
         uses: ruby/setup-ruby@v1
