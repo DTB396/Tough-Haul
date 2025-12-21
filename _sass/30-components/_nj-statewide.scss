@@ -36,7 +36,7 @@
    /* TCNA/NJ HIC-compliant headline styling for clarity and authority */
    font-family: var(--font-sans, 'Inter', Arial, sans-serif);
    font-weight: 700;
-   color: var(--color-primary, #ffffff);
+   color: var(--color-primary, var(--ts-white));
   }
 }
 
@@ -73,7 +73,7 @@
    font-size: 16px;
    font-family: var(--font-sans, 'Inter', Arial, sans-serif);
    font-weight: 650;
-   color: var(--color-accent, #d6b45b);
+   color: var(--color-accent, var(--color-golden-500));
 
    /* Emphasize technical authority and service area */
   }
@@ -99,7 +99,7 @@
   padding: 10px 12px;
   background: rgb(214, 180, 91, 0.06);
   border-radius: 12px;
-  color: var(--color-accent, #d6b45b);
+  color: var(--color-accent, var(--color-golden-500));
   font-weight: 500;
 
   /* Used for compliance notes, licensing, or TCNA references */
@@ -123,20 +123,20 @@
   background: rgb(255, 255, 255, 0.03);
   font-weight: 650;
   font-size: 14px;
-  color: var(--color-primary, #ffffff);
+  color: var(--color-primary, var(--ts-white));
   transition: background 0.18s, border-color 0.18s, color 0.18s;
 
   &:hover,
   &:focus {
-   background: var(--tiller-gradient-primary, linear-gradient(90deg, #1fbf7a 0%, #d6b45b 100%));
-   color: #ffffff;
-   border-color: var(--color-accent, #d6b45b);
+   background: var(--tiller-gradient-primary, linear-gradient(90deg, #1fbf7a 0%, var(--color-golden-500) 100%));
+   color: var(--ts-white);
+   border-color: var(--color-accent, var(--color-golden-500));
    outline: none;
   }
 
   &.nj-primary {
    border-color: rgb(31, 191, 122, 0.55);
    background: linear-gradient(180deg, rgb(31, 191, 122, 0.20), rgb(31, 191, 122, 0.08));
-   color: #ffffff;
+   color: var(--ts-white);
   }
 }

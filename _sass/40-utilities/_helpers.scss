@@ -64,7 +64,7 @@
 
 .bg-gradient {
   /* TCNA/NJ HIC-compliant: High-contrast, accessible gradient for hero/CTA */
-  background: linear-gradient(135deg, #0b6b5c 0%, #053a2e 55%, #022318 100%) !important;
+  background: linear-gradient(135deg, var(--color-brand-teal-700) 0%, var(--color-brand-teal-900) 55%, var(--color-brand-teal-950) 100%) !important;
   color: var(--tiller-hero-text);
   border: 1px solid rgb(255, 255, 255, 0.08);
 }

@@ -31,7 +31,7 @@ body_class: page-guide guide-professional
 /* Cover Page */
 .cover-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0d9aaa 0%, #086470 100%);
+  background: linear-gradient(135deg, var(--color-brand-teal-500) 0%, var(--color-brand-teal-700) 100%);
   color: white;
   display: flex;
   flex-direction: column;
@@ -76,7 +76,7 @@ body_class: page-guide guide-professional
 
 .cover-badge {
   background: white;
-  color: #0d9aaa;
+  color: var(--color-brand-teal-500);
   padding: 1rem 2rem;
   border-radius: 50px;
   font-weight: 700;
@@ -100,15 +100,15 @@ body_class: page-guide guide-professional
 /* Table of Contents */
 .toc-page {
   padding: 4rem 3rem;
-  background: #f8fafc;
+  background: var(--color-slate-50);
 }
 
 .toc-title {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
-  color: #1e293b;
+  color: var(--color-slate-800);
   margin-bottom: 2rem;
-  border-bottom: 4px solid #0d9aaa;
+  border-bottom: 4px solid var(--color-brand-teal-500);
   padding-bottom: 1rem;
 }
 
@@ -121,7 +121,7 @@ body_class: page-guide guide-professional
   padding: 1.5rem;
   margin: 1rem 0;
   background: white;
-  border-left: 6px solid #0d9aaa;
+  border-left: 6px solid var(--color-brand-teal-500);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -138,7 +138,7 @@ body_class: page-guide guide-professional
 .toc-number {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #0d9aaa, #086470);
+  background: linear-gradient(135deg, var(--color-brand-teal-500), var(--color-brand-teal-700));
   color: white;
   border-radius: 50%;
   display: flex;
@@ -151,13 +151,13 @@ body_class: page-guide guide-professional
 
 .toc-content h3 {
   margin: 0 0 0.5rem 0;
-  color: #1e293b;
+  color: var(--color-slate-800);
   font-size: 1.3rem;
 }
 
 .toc-content p {
   margin: 0;
-  color: #64748b;
+  color: var(--color-slate-500);
   font-size: 0.95rem;
 }
 
@@ -169,13 +169,13 @@ body_class: page-guide guide-professional
 
 .chapter-header {
   margin-bottom: 3rem;
-  border-bottom: 3px solid #e2e8f0;
+  border-bottom: 3px solid var(--color-slate-200);
   padding-bottom: 2rem;
 }
 
 .chapter-number {
   display: inline-block;
-  background: linear-gradient(135deg, #0d9aaa, #086470);
+  background: linear-gradient(135deg, var(--color-brand-teal-500), var(--color-brand-teal-700));
   color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 50px;
@@ -187,14 +187,14 @@ body_class: page-guide guide-professional
 .chapter-title {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
-  color: #1e293b;
+  color: var(--color-slate-800);
   margin: 1rem 0;
   line-height: 1.2;
 }
 
 .chapter-intro {
   font-size: 1.3rem;
-  color: #475569;
+  color: var(--color-slate-600);
   font-style: italic;
   margin: 1.5rem 0;
   padding-left: 2rem;
@@ -208,7 +208,7 @@ body_class: page-guide guide-professional
 
 .section-title {
   font-size: 1.75rem;
-  color: #334155;
+  color: var(--color-slate-700);
   margin: 2rem 0 1.5rem;
   font-weight: 700;
   display: flex;
@@ -220,7 +220,7 @@ body_class: page-guide guide-professional
   content: '';
   width: 6px;
   height: 40px;
-  background: linear-gradient(to bottom, #0d9aaa, #ff8461);
+  background: linear-gradient(to bottom, var(--color-brand-teal-500), #ff8461);
   border-radius: 3px;
 }
 
@@ -244,11 +244,11 @@ body_class: page-guide guide-professional
 
 .callout-warning {
   background: linear-gradient(to right, #fef3c7, #fffbeb);
-  border: 1px solid #fbbf24;
+  border: 1px solid var(--color-golden-400);
 }
 
 .callout-warning::before {
-  background: linear-gradient(to bottom, #f59e0b, #d97706);
+  background: linear-gradient(to bottom, var(--color-golden-500), var(--color-golden-600));
 }
 
 .callout-info {
@@ -266,7 +266,7 @@ body_class: page-guide guide-professional
 }
 
 .callout-success::before {
-  background: linear-gradient(to bottom, #10b981, #059669);
+  background: linear-gradient(to bottom, var(--color-success-500), var(--color-success-600));
 }
 
 .callout-title {
@@ -294,7 +294,7 @@ body_class: page-guide guide-professional
 }
 
 .pro-table thead {
-  background: linear-gradient(135deg, #0d9aaa, #086470);
+  background: linear-gradient(135deg, var(--color-brand-teal-500), var(--color-brand-teal-700));
   color: white;
 }
 
@@ -308,7 +308,7 @@ body_class: page-guide guide-professional
 
 .pro-table td {
   padding: 1.25rem 1.5rem;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--color-slate-200);
   background: white;
 }
 
@@ -317,11 +317,11 @@ body_class: page-guide guide-professional
 }
 
 .pro-table tbody tr:nth-child(even) td {
-  background: #f8fafc;
+  background: var(--color-slate-50);
 }
 
 .pro-table tbody tr:hover td {
-  background: #f1f5f9;
+  background: var(--color-slate-100);
 }
 
 /* Checklist */
@@ -336,13 +336,13 @@ body_class: page-guide guide-professional
   margin: 1rem 0;
   background: white;
   border-radius: 8px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--color-slate-200);
   position: relative;
   transition: all 0.2s;
 }
 
 .pro-checklist li:hover {
-  border-color: #0d9aaa;
+  border-color: var(--color-brand-teal-500);
   box-shadow: 0 2px 8px rgba(13, 154, 170, 0.15);
 }
 
@@ -354,7 +354,7 @@ body_class: page-guide guide-professional
   transform: translateY(-50%);
   width: 32px;
   height: 32px;
-  background: linear-gradient(135deg, #10b981, #059669);
+  background: linear-gradient(135deg, var(--color-success-500), var(--color-success-600));
   color: white;
   border-radius: 8px;
   display: flex;
@@ -379,10 +379,10 @@ body_class: page-guide guide-professional
 
 .image-caption {
   padding: 1.5rem;
-  background: #f8fafc;
-  border-top: 3px solid #0d9aaa;
+  background: var(--color-slate-50);
+  border-top: 3px solid var(--color-brand-teal-500);
   font-size: 0.95rem;
-  color: #64748b;
+  color: var(--color-slate-500);
   font-style: italic;
 }
 
@@ -397,21 +397,21 @@ body_class: page-guide guide-professional
 .stat-card {
   text-align: center;
   padding: 2rem;
-  background: linear-gradient(135deg, #f8fafc, white);
+  background: linear-gradient(135deg, var(--color-slate-50), white);
   border-radius: 12px;
-  border: 2px solid #e2e8f0;
+  border: 2px solid var(--color-slate-200);
 }
 
 .stat-number {
   font-size: 3rem;
   font-weight: 900;
-  color: #0d9aaa;
+  color: var(--color-brand-teal-500);
   line-height: 1;
   margin-bottom: 0.5rem;
 }
 
 .stat-label {
-  color: #64748b;
+  color: var(--color-slate-500);
   font-size: 0.95rem;
   font-weight: 600;
 }
@@ -427,7 +427,7 @@ body_class: page-guide guide-professional
 .resource-card {
   padding: 1.5rem;
   background: white;
-  border: 2px solid #e2e8f0;
+  border: 2px solid var(--color-slate-200);
   border-radius: 12px;
   transition: all 0.3s;
   text-decoration: none;
@@ -436,7 +436,7 @@ body_class: page-guide guide-professional
 }
 
 .resource-card:hover {
-  border-color: #0d9aaa;
+  border-color: var(--color-brand-teal-500);
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(13, 154, 170, 0.15);
 }
@@ -449,13 +449,13 @@ body_class: page-guide guide-professional
 .resource-title {
   font-weight: 700;
   font-size: 1.1rem;
-  color: #1e293b;
+  color: var(--color-slate-800);
   margin-bottom: 0.5rem;
 }
 
 .resource-desc {
   font-size: 0.9rem;
-  color: #64748b;
+  color: var(--color-slate-500);
   margin: 0;
 }
 
@@ -463,7 +463,7 @@ body_class: page-guide guide-professional
 .guide-footer {
   margin-top: 4rem;
   padding: 3rem 3rem 2rem;
-  background: linear-gradient(135deg, #1e293b, #0f172a);
+  background: linear-gradient(135deg, var(--color-slate-800), var(--color-slate-900));
   color: white;
   text-align: center;
   border-radius: 12px 12px 0 0;
@@ -500,7 +500,7 @@ body_class: page-guide guide-professional
 }
 
 .btn-print {
-  background: linear-gradient(135deg, #64748b, #475569);
+  background: linear-gradient(135deg, var(--color-slate-500), var(--color-slate-600));
   color: white;
 }
 
@@ -510,7 +510,7 @@ body_class: page-guide guide-professional
 }
 
 .btn-download {
-  background: linear-gradient(135deg, #0d9aaa, #086470);
+  background: linear-gradient(135deg, var(--color-brand-teal-500), var(--color-brand-teal-700));
   color: white;
 }
 

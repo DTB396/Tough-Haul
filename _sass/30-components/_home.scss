@@ -278,7 +278,7 @@
   font-weight: 600;
   color: var(--ts-color-primary);
   background: transparent;
-  border: 1px solid var(--ts-color-border, #e2e8f0);
+  border: 1px solid var(--ts-color-border, var(--color-slate-200));
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease;

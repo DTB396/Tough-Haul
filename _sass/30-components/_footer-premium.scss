@@ -6,9 +6,9 @@
 .site-footer {
   background: linear-gradient(
     165deg,
-    #0b6b5c 0%,
-    #053a2e 55%,
-    #022318 100%
+    var(--color-brand-teal-700) 0%,
+    var(--color-brand-teal-900) 55%,
+    var(--color-brand-teal-950) 100%
   );
   color: rgb(255, 255, 255, 0.9);
   position: relative;
@@ -128,7 +128,7 @@
 
 .footer-phone:hover,
 .footer-email:hover {
-  color: #ffffff;
+  color: var(--ts-white);
 }
 
 .footer-separator {
@@ -199,7 +199,7 @@
 }
 
 .footer-link:hover {
-  color: #ffffff;
+  color: var(--ts-white);
 }
 
 .footer-link:hover::after {
@@ -347,8 +347,8 @@
 /* Print */
 @media print {
   .site-footer {
-    background: #ffffff !important;
-    color: #000000 !important;
+    background: var(--ts-white) !important;
+    color: var(--ts-color-ink) !important;
   }
   
   .site-footer::before,

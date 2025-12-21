@@ -41,8 +41,8 @@ body {
   font-family: var(--font-sans, system-ui, Arial, sans-serif);
   font-size: var(--font-size-base, 1rem);
   line-height: var(--font-line-height-base, 1.6);
-  color: var(--ts-color-text, #222222);
-  background: var(--ts-color-bg, #ffffff);
+  color: var(--ts-color-text, var(--ts-color-text));
+  background: var(--ts-color-bg, var(--ts-white));
   overflow-x: hidden;
 }
 
@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading, var(--font-sans, system-ui, Arial, sans-serif));
   font-weight: 600;
   line-height: var(--font-line-height-tight, 1.15);
-  color: var(--ts-color-heading, #181818);
+  color: var(--ts-color-heading, var(--ts-color-heading));
 }
 
 /* Paragraphs: clear separation and readability */
@@ -92,7 +92,7 @@ img:not([alt]) {
 
 /* Links: accessible, visually distinct, and compliant with color contrast standards */
 a {
-  color: var(--ts-color-primary, #0057b8);
+  color: var(--ts-color-primary, var(--color-navy-600));
   text-decoration: underline;
   text-decoration-thickness: from-font;
   text-underline-offset: 0.18em;
@@ -102,12 +102,12 @@ a {
 
 a:hover,
 a:focus-visible {
-  color: var(--ts-color-primary-strong, #003a75);
+  color: var(--ts-color-primary-strong, var(--color-navy-700));
   text-decoration-color: color-mix(in srgb, currentcolor 65%, transparent);
 }
 
 a:focus-visible {
-  outline: 2px solid var(--ts-color-primary, #0057b8);
+  outline: 2px solid var(--ts-color-primary, var(--color-navy-600));
   outline-offset: 3px;
 }
 
@@ -172,8 +172,8 @@ table {
   position: absolute;
   top: -40px;
   left: 0;
-  background: var(--ts-color-primary, #0057b8);
-  color: var(--ts-white, #ffffff);
+  background: var(--ts-color-primary, var(--color-navy-600));
+  color: var(--ts-white, var(--ts-white));
   padding: 0.5rem 1rem;
   text-decoration: none;
   z-index: 10000;
@@ -184,7 +184,7 @@ table {
 
 .skip-link:focus {
   top: 0;
-  outline: 2px solid var(--ts-color-primary, #0057b8);
+  outline: 2px solid var(--ts-color-primary, var(--color-navy-600));
   outline-offset: 3px;
 }
 

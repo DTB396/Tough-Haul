@@ -11,7 +11,7 @@
 
 .ts-deliver {
   padding: clamp(3rem, 6vw, 4.5rem) clamp(1.5rem, 4vw, 3rem);
-  background: var(--ts-color-bg, #f8fafc);
+  background: var(--ts-color-bg, var(--color-slate-50));
 
   /* Ensures full-width background for visual separation (STYLE.md) */
 }
@@ -27,7 +27,7 @@
 
 .ts-deliver__card,
 .ts-deliver__intro {
-  background: var(--ts-color-surface, #ffffff);
+  background: var(--ts-color-surface, var(--ts-white));
   border-radius: var(--ts-radius-xl, 1.25rem);
   border: 1px solid var(--ts-color-border, rgb(15,23,42,0.08));
   box-shadow: var(--ts-shadow-soft, 0 10px 30px rgb(15,23,42,0.12));

@@ -9,7 +9,7 @@
   --tiller-social-gap: 0.75rem;
   --tiller-social-border: var(--ts-color-border-strong, rgb(12, 40, 54, 0.2));
   --tiller-social-bg: var(--ts-color-surface-elevated, rgb(255, 255, 255, 0.9));
-  --tiller-social-icon-color: var(--ts-color-heading, #12212c);
+  --tiller-social-icon-color: var(--ts-color-heading, var(--color-navy-900));
 
   display: inline-flex;
   align-items: center;
@@ -78,7 +78,7 @@
 .social-links--header {
   --tiller-social-border: rgb(255, 255, 255, 0.3);
   --tiller-social-bg: rgb(255, 255, 255, 0.1);
-  --tiller-social-icon-color: var(--ts-white, #ffffff);
+  --tiller-social-icon-color: var(--ts-white, var(--ts-white));
 }
 
 .social-links--header .social-link:hover,
@@ -101,8 +101,8 @@
   }
 
   .social-link {
-   --tiller-social-bg: var(--ts-color-surface, #ffffff);
-   --tiller-social-icon-color: var(--ts-color-heading, #12212c);
+   --tiller-social-bg: var(--ts-color-surface, var(--ts-white));
+   --tiller-social-icon-color: var(--ts-color-heading, var(--color-navy-900));
    --tiller-social-border: var(--ts-color-border-strong, rgb(12, 40, 54, 0.2));
   }
 }

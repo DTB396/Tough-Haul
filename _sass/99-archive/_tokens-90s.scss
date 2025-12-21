@@ -71,16 +71,16 @@
      Clean backdrop for vibrant accents
      =========================== */
   
-  --color-cool-gray-50: #f8fafc;
-  --color-cool-gray-100: #f1f5f9;
-  --color-cool-gray-200: #e2e8f0;
-  --color-cool-gray-300: #cbd5e1;
-  --color-cool-gray-400: #94a3b8;
-  --color-cool-gray-500: #64748b;
-  --color-cool-gray-600: #475569;
-  --color-cool-gray-700: #334155;
-  --color-cool-gray-800: #1e293b;
-  --color-cool-gray-900: #0f172a;
+  --color-cool-gray-50: var(--color-slate-50);
+  --color-cool-gray-100: var(--color-slate-100);
+  --color-cool-gray-200: var(--color-slate-200);
+  --color-cool-gray-300: var(--color-slate-300);
+  --color-cool-gray-400: var(--color-slate-400);
+  --color-cool-gray-500: var(--color-slate-500);
+  --color-cool-gray-600: var(--color-slate-600);
+  --color-cool-gray-700: var(--color-slate-700);
+  --color-cool-gray-800: var(--color-slate-800);
+  --color-cool-gray-900: var(--color-slate-900);
 
   /* ===========================
      🎨 COMIC BOOK SYSTEM
@@ -94,7 +94,7 @@
   --color-comic-outline-thin: 1px;
   
   /* Speech bubble colors */
-  --color-bubble-bg: #ffffff;
+  --color-bubble-bg: var(--ts-white);
   --color-bubble-border: var(--tiller-cool-gray-900);
   --color-bubble-shadow: rgb(0, 0, 0, 0.25);
   
@@ -187,7 +187,7 @@
      =========================== */
   
   --ts-surface-base: var(--tiller-cool-gray-50);
-  --ts-surface-raised: #ffffff;
+  --ts-surface-raised: var(--ts-white);
   --ts-surface-overlay: rgb(255, 255, 255, 0.95);
   --ts-surface-tinted-teal: rgb(0, 151, 167, 0.05);
   --ts-surface-tinted-orange: rgb(255, 152, 0, 0.05);
@@ -201,7 +201,7 @@
   --ts-text-primary: var(--tiller-cool-gray-900);
   --ts-text-secondary: var(--tiller-cool-gray-700);
   --ts-text-muted: var(--tiller-cool-gray-500);
-  --ts-text-on-color: #ffffff;
+  --ts-text-on-color: var(--ts-white);
   --ts-text-on-light: var(--tiller-cool-gray-900);
   
   /* ===========================

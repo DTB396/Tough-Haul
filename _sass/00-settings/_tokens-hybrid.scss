@@ -26,10 +26,10 @@
   --color-brand-teal-50: #e0f2f7;
   --color-brand-teal-100: #b3dce8;
   --color-brand-teal-400: #2ba9ba;      /* Lighter accent */
-  --color-brand-teal-500: #0d9aaa;      /* Primary brand */
-  --color-brand-teal-600: #0a7f8d;      /* Hover state */
-  --color-brand-teal-700: #086470;      /* Deep emphasis */
-  --color-brand-teal-900: #053d45;      /* Dark text */
+  --color-brand-teal-500: var(--color-brand-teal-500);      /* Primary brand */
+  --color-brand-teal-600: var(--color-brand-teal-600);      /* Hover state */
+  --color-brand-teal-700: var(--color-brand-teal-700);      /* Deep emphasis */
+  --color-brand-teal-900: var(--color-brand-teal-900);      /* Dark text */
 
   /* ===========================
      🌅 NOSTALGIC WARMTH
@@ -47,10 +47,10 @@
   /* Golden Hour (warm, inviting) */
   --color-golden-50: #fffbeb;
   --color-golden-100: #fef3c7;
-  --color-golden-400: #fbbf24;
-  --color-golden-500: #f59e0b;          /* Accent gold */
-  --color-golden-600: #d97706;          /* Rich gold */
-  --color-golden-700: #b45309;          /* Deep bronze */
+  --color-golden-400: var(--color-golden-400);
+  --color-golden-500: var(--color-golden-500);          /* Accent gold */
+  --color-golden-600: var(--color-golden-600);          /* Rich gold */
+  --color-golden-700: var(--color-golden-700);          /* Deep bronze */
 
   /* ===========================
      🎪 STRATEGIC ENERGY POPS
@@ -60,37 +60,37 @@
   /* Success Green (fresh, positive) */
   --color-success-50: #ecfdf5;
   --color-success-100: #d1fae5;
-  --color-success-500: #10b981;
-  --color-success-600: #059669;
-  --color-success-700: #047857;
+  --color-success-500: var(--color-success-500);
+  --color-success-600: var(--color-success-600);
+  --color-success-700: var(--color-success-700);
 
   /* Attention Yellow (badges, highlights) */
   --color-attention-50: #fffbeb;
   --color-attention-400: #fcd34d;
-  --color-attention-500: #fbbf24;
-  --color-attention-600: #f59e0b;
+  --color-attention-500: var(--color-golden-400);
+  --color-attention-600: var(--color-golden-500);
 
   /* Alert Coral (not aggressive, just clear) */
   --color-alert-50: #fef2f2;
   --color-alert-500: #ef4444;
-  --color-alert-600: #dc2626;
-  --color-alert-700: #b91c1c;
+  --color-alert-600: var(--color-alert-600);
+  --color-alert-700: var(--color-alert-700);
 
   /* ===========================
      📐 REFINED NEUTRALS
      Clean, professional foundation
      =========================== */
   
-  --color-slate-50: #f8fafc;
-  --color-slate-100: #f1f5f9;
-  --color-slate-200: #e2e8f0;
-  --color-slate-300: #cbd5e1;
-  --color-slate-400: #94a3b8;
-  --color-slate-500: #64748b;
-  --color-slate-600: #475569;
-  --color-slate-700: #334155;
-  --color-slate-800: #1e293b;
-  --color-slate-900: #0f172a;
+  --color-slate-50: var(--color-slate-50);
+  --color-slate-100: var(--color-slate-100);
+  --color-slate-200: var(--color-slate-200);
+  --color-slate-300: var(--color-slate-300);
+  --color-slate-400: var(--color-slate-400);
+  --color-slate-500: var(--color-slate-500);
+  --color-slate-600: var(--color-slate-600);
+  --color-slate-700: var(--color-slate-700);
+  --color-slate-800: var(--color-slate-800);
+  --color-slate-900: var(--color-slate-900);
 
   /* ===========================
      🎨 SEMANTIC MAPPING
@@ -142,10 +142,10 @@
      =========================== */
   
   --ts-color-bg: var(--tiller-slate-50);
-  --ts-color-surface: #ffffff;
+  --ts-color-surface: var(--ts-white);
   --ts-color-surface-muted: var(--tiller-slate-100);
-  --ts-color-surface-elevated: #ffffff;
-  --ts-color-surface-highlight: #ffffff;
+  --ts-color-surface-elevated: var(--ts-white);
+  --ts-color-surface-highlight: var(--ts-white);
   --ts-color-surface-tinted-teal: rgb(13, 154, 170, 0.04);
   --ts-color-surface-tinted-warm: rgb(255, 132, 97, 0.04);
   --ts-color-surface-tinted-gold: rgb(245, 158, 11, 0.04);
@@ -158,8 +158,8 @@
   --ts-color-heading: var(--tiller-slate-900);
   --ts-color-muted: var(--tiller-slate-600);
   --ts-color-text-subtle: var(--tiller-slate-500);
-  --ts-text-on-primary: #ffffff;
-  --ts-text-on-secondary: #ffffff;
+  --ts-text-on-primary: var(--ts-white);
+  --ts-text-on-secondary: var(--ts-white);
   --ts-text-on-accent: var(--tiller-slate-900);
   --ts-text-on-light: var(--tiller-slate-900);
 
@@ -400,7 +400,7 @@
      =========================== */
   
   --spacing-hero-bg: var(--tiller-gradient-hero);
-  --spacing-hero-text: #ffffff;
+  --spacing-hero-text: var(--ts-white);
   --spacing-hero-text-muted: rgb(255, 255, 255, 0.85);
 
   /* ===========================
@@ -488,7 +488,7 @@
   --ts-stone-warm: var(--tiller-slate-600);
   --ts-stone-cool: var(--tiller-slate-500);
   --ts-ink: var(--tiller-slate-900);
-  --ts-white: #ffffff;
+  --ts-white: var(--ts-white);
 
   /* Parchment mapped to warm surfaces */
   --ts-parchment: var(--tiller-slate-50);

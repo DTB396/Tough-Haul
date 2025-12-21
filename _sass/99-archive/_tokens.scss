@@ -23,8 +23,8 @@
   --color-ink-900: #1c231f;          /* Primary text */
   --color-ink-700: #3a413c;          /* Secondary text */
 
-  --color-emerald-600: #0b6b5c;      /* Brand emerald (TCNA: colorfast, mold-resistant) */
-  --color-emerald-700: #084c3d;      /* Emerald hover */
+  --color-emerald-600: var(--color-brand-teal-700);      /* Brand emerald (TCNA: colorfast, mold-resistant) */
+  --color-emerald-700: var(--color-brand-teal-800);      /* Emerald hover */
 
   /* Shadow colors for depth and accessibility */
   --color-shadow-soft: rgb(28, 35, 31, 0.12);
@@ -40,10 +40,10 @@
   /* ===========================
      Brand Palette (WCAG 2.1 AA Verified)
      =========================== */
-  --ts-emerald: #0b6b5c;
-  --ts-emerald-soft: #16a384;
-  --ts-emerald-deep: #084c3d;
-  --ts-emerald-text: #053a2e;
+  --ts-emerald: var(--color-brand-teal-700);
+  --ts-emerald-soft: var(--color-brand-teal-400);
+  --ts-emerald-deep: var(--color-brand-teal-800);
+  --ts-emerald-text: var(--color-brand-teal-900);
   --ts-gold: #c89d4f;
   --ts-gold-soft: #e4c980;
   --ts-parchment: #f9f5eb;
@@ -52,7 +52,7 @@
   --ts-stone-warm: #3a413c;
   --ts-stone-cool: #58615c;
   --ts-ink: #1c231f;
-  --ts-white: #ffffff;
+  --ts-white: var(--ts-white);
 
   /* ===========================
      Surface & Text — Contrast-Optimized
@@ -61,21 +61,21 @@
   --ts-color-surface: var(--color-stone-50);         /* Card/section surface */
   --ts-color-surface-muted: #f5f0e0;
   --ts-color-surface-elevated: #fcfaf4;
-  --ts-color-surface-highlight: #ffffff;
+  --ts-color-surface-highlight: var(--ts-white);
 
   --ts-color-text: #1c231f;                    /* Primary text */
   --ts-color-muted: #3a413c;                   /* Secondary text */
   --ts-color-text-subtle: #58615c;             /* Tertiary text */
   --ts-color-heading: #1c231f;                 /* Headings */
 
-  --ts-color-primary: #053a2e;                 /* Primary action (emerald, AA+) */
-  --ts-color-primary-strong: #022318;          /* Primary hover */
+  --ts-color-primary: var(--color-brand-teal-900);                 /* Primary action (emerald, AA+) */
+  --ts-color-primary-strong: var(--color-brand-teal-950);          /* Primary hover */
   --ts-color-primary-soft: rgb(11, 107, 92, 0.08);
-  --ts-color-primary-bg: #0b6b5c;
-  --ts-color-primary-bg-hover: #084c3d;
+  --ts-color-primary-bg: var(--color-brand-teal-700);
+  --ts-color-primary-bg-hover: var(--color-brand-teal-800);
 
-  --ts-color-accent: #053a2e;
-  --ts-color-accent-strong: #022318;
+  --ts-color-accent: var(--color-brand-teal-900);
+  --ts-color-accent-strong: var(--color-brand-teal-950);
   --ts-color-accent-soft: rgb(11, 107, 92, 0.06);
 
   --ts-color-border: rgb(58, 65, 60, 0.18);
@@ -89,7 +89,7 @@
   --ts-color-error-bg: #fef2f2;
   --ts-color-error-dark: #7f1d1d;
 
-  --ts-color-success: #053a2e;
+  --ts-color-success: var(--color-brand-teal-900);
   --ts-color-success-bg: #ecfdf5;
 
   --ts-color-warning: #92400e;
@@ -101,7 +101,7 @@
   --tiller-footer-bg: #0f1713;
   --tiller-footer-text: #e8f0ec;
   --tiller-footer-text-muted: #9fb4a5;
-  --tiller-footer-link: #16a384;
+  --tiller-footer-link: var(--color-brand-teal-400);
   --tiller-footer-link-hover: #84d1b8;
   --tiller-footer-border: rgb(22, 163, 132, 0.2);
   --ts-footer-link: #84d1b8;
@@ -112,7 +112,7 @@
      Hero (Light text on dark overlay)
      =========================== */
   --tiller-hero-bg: linear-gradient(180deg, #1c231f 0%, #0f1713 100%);
-  --tiller-hero-text: #ffffff;
+  --tiller-hero-text: var(--ts-white);
   --tiller-hero-text-muted: rgb(255, 255, 255, 0.85);
 
   /* ===========================

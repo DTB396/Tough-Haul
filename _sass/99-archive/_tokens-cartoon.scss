@@ -41,13 +41,13 @@
   --color-cartoon-green-dark: #388E3C;    /* Deep green */
   
   /* Support: Inky Black (Outline, text, graphic punch) */
-  --color-cartoon-black: #1A1A1A;         /* True cartoon black */
+  --color-cartoon-black: var(--ts-color-heading);         /* True cartoon black */
   --color-cartoon-gray-dark: #2C3E50;     /* Charcoal */
-  --color-cartoon-gray: #555555;          /* Medium gray */
+  --color-cartoon-gray: var(--color-slate-600);          /* Medium gray */
   --color-cartoon-gray-light: #95A5A6;    /* Light gray */
   
   /* Support: Pure White (Highlights, backgrounds) */
-  --color-cartoon-white: #FFFFFF;         /* Pure white */
+  --color-cartoon-white: var(--ts-white);         /* Pure white */
   --color-cartoon-off-white: #F8F9FA;     /* Slightly off */
   --color-cartoon-cream: #FFF8DC;         /* Cream/cornsilk */
 

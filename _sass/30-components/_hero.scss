@@ -12,7 +12,7 @@
   overflow: hidden;
   background: linear-gradient(
     165deg,
-    #ffffff 0%,
+    var(--ts-white) 0%,
     #fafbfc 50%,
     #f5f7fa 100%
   );
@@ -226,8 +226,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--ts-color-primary) 0%, color-mix(in srgb, var(--ts-color-primary) 80%, #000000) 100%);
-  color: #ffffff;
+  background: linear-gradient(135deg, var(--ts-color-primary) 0%, color-mix(in srgb, var(--ts-color-primary) 80%, var(--ts-color-ink)) 100%);
+  color: var(--ts-white);
   border-radius: 10px;
   box-shadow: 0 4px 12px rgb(13, 154, 170, 0.25);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -295,11 +295,11 @@
 .hero--dark {
   background: linear-gradient(
     135deg,
-    #0b6b5c 0%,
-    #053a2e 55%,
-    #022318 100%
+    var(--color-brand-teal-700) 0%,
+    var(--color-brand-teal-900) 55%,
+    var(--color-brand-teal-950) 100%
   );
-  color: #ffffff;
+  color: var(--ts-white);
   
   /* Different tile pattern for dark version */
   &::before {
@@ -319,10 +319,10 @@
 .hero--dark .hero__title,
 .ts-hero--dark .ts-hero__headline,
 .ts-hero--dark .ts-hero__title {
-  color: #ffffff;
+  color: var(--ts-white);
   background: linear-gradient(
     135deg,
-    #ffffff 0%,
+    var(--ts-white) 0%,
     rgb(255, 255, 255, 0.9) 100%
   );
   -webkit-text-fill-color: transparent;
@@ -342,7 +342,7 @@
 
 .hero--dark .ts-hero__fact-label,
 .ts-hero--dark .ts-hero__fact-label {
-  color: #ffffff;
+  color: var(--ts-white);
 }
 
 .hero--dark .ts-hero__fact-text,
@@ -404,7 +404,7 @@
   .ts-hero,
   .hero {
     padding-block: 2rem;
-    background: #ffffff !important;
+    background: var(--ts-white) !important;
   }
   
   .ts-hero::before,
