@@ -83,10 +83,10 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) backwards;
+  animation: fade-in-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) backwards;
 }
 
-@keyframes fadeInUp {
+@keyframes fade-in-up {
   from {
     opacity: 0;
     transform: translateY(30px);
@@ -202,7 +202,7 @@
     0 2px 8px rgb(0, 0, 0, 0.04),
     0 4px 16px rgb(0, 0, 0, 0.02);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) backwards;
+  animation: fade-in-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) backwards;
 }
 
 .ts-hero__fact:nth-child(1) { animation-delay: 0.5s; }
@@ -268,10 +268,10 @@
   box-shadow: 
     0 10px 40px rgb(0, 0, 0, 0.1),
     0 20px 60px rgb(0, 0, 0, 0.05);
-  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s backwards;
+  animation: fade-in 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s backwards;
 }
 
-@keyframes fadeIn {
+@keyframes fade-in {
   from {
     opacity: 0;
   }

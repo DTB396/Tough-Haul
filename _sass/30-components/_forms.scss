@@ -28,6 +28,7 @@
   content: "*";
   color: var(--ts-color-error);
   margin-left: 0.25rem;
+  /* stylelint-disable-next-line property-no-unknown */
   aria-hidden: true;
 }
 
@@ -74,7 +75,7 @@ input[type="password"]:focus,
 textarea:focus,
 select:focus {
   border-color: var(--ts-color-primary);
-  box-shadow: 0 0 0 3px rgb(14 165 233 / 0.25);
+  box-shadow: 0 0 0 3px rgb(14, 165, 233, 0.25);
   outline: 2px solid var(--ts-color-primary);
   outline-offset: 1px;
   background: var(--ts-color-surface-elevated);
@@ -109,19 +110,20 @@ select:disabled {
   margin-top: var(--ts-spacing-sm);
   font-weight: 600;
   font-size: var(--font-size-base);
+  /* stylelint-disable-next-line property-no-unknown */
   aria-live: polite;
 }
 
 .form-status.is-success {
   color: var(--ts-color-success);
-  background: rgb(16 185 129 / 0.12);
-  border: 1px solid rgb(16 185 129 / 0.3);
+  background: rgb(16, 185, 129, 0.12);
+  border: 1px solid rgb(16, 185, 129, 0.3);
 }
 
 .form-status.is-error {
   color: var(--ts-color-error);
-  background: rgb(239 68 68 / 0.1);
-  border: 1px solid rgb(239 68 68 / 0.3);
+  background: rgb(239, 68, 68, 0.1);
+  border: 1px solid rgb(239, 68, 68, 0.3);
 }
 
 /* Action row — clear separation, mobile-friendly */
