@@ -10,26 +10,15 @@
     <!-- Left side navigation -->
     <nav class="site-nav site-nav--left" role="navigation" aria-label="Primary navigation">
       <ul class="site-menu site-menu--left">
-        {% assign nav_items = site.data.navigation.primary | where_exp: "item", "item.children == nil" %}
-        {% for item in nav_items limit:3 %}
-          {% assign is_current = false %}
-          {% if item.exact %}
-            {% if page.url == item.exact %}
-              {% assign is_current = true %}
-            {% endif %}
-          {% elsif item.match %}
-            {% if page.url == item.match or page.url contains item.match and item.match != "/" %}
-              {% assign is_current = true %}
-            {% endif %}
-          {% endif %}
-          <li class="nav-item">
-            <a href="{{ item.url | relative_url }}"
-               class="nav-link{% if is_current %} active{% endif %}"
-               {% if is_current %} aria-current="page"{% endif %}>
-              {{ item.title }}
-            </a>
-          </li>
-        {% endfor %}
+        <li class="nav-item">
+          <a href="{{ '/services/' | relative_url }}" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ '/portfolio/' | relative_url }}" class="nav-link">Our Work</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ '/recommended-products/' | relative_url }}" class="nav-link">Products</a>
+        </li>
       </ul>
     </nav>
 
@@ -41,25 +30,15 @@
     <!-- Right side navigation -->
     <nav class="site-nav site-nav--right" role="navigation" aria-label="Secondary navigation">
       <ul class="site-menu site-menu--right">
-        {% for item in nav_items offset:3 limit:3 %}
-          {% assign is_current = false %}
-          {% if item.exact %}
-            {% if page.url == item.exact %}
-              {% assign is_current = true %}
-            {% endif %}
-          {% elsif item.match %}
-            {% if page.url == item.match or page.url contains item.match and item.match != "/" %}
-              {% assign is_current = true %}
-            {% endif %}
-          {% endif %}
-          <li class="nav-item">
-            <a href="{{ item.url | relative_url }}"
-               class="nav-link{% if is_current %} active{% endif %}"
-               {% if is_current %} aria-current="page"{% endif %}>
-              {{ item.title }}
-            </a>
-          </li>
-        {% endfor %}
+        <li class="nav-item">
+          <a href="{{ '/reviews/' | relative_url }}" class="nav-link">Reviews</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ '/about/' | relative_url }}" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ '/contact/' | relative_url }}" class="nav-link">Contact</a>
+        </li>
       </ul>
     </nav>
 
