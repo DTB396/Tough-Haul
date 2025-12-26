@@ -1,183 +1,41 @@
-﻿# Portfolio slider entries for /portfolio/
+# Portfolio slider entries for /portfolio/
+# Updated with AVAILABLE images - conversion-optimized for NJ tile jobs
+
 projects:
-  - id: marble-floor-finish
+  - id: bathroom-complete
     tags: [showers, floors]
-    file: tillerstead-work/bathrooms/bathroom-marble-floor-finish.jpg
-    file_webp: tillerstead-work/bathrooms/bathroom-marble-floor-finish.webp
-    alt: Flood-tested marble-look shower with curbless entry and TCNA-compliant expansion joints
-    caption: "Curbless marble bath — matched veins, perimeter movement joints, and grout-ready surfaces per TCNA EJ171."
+    file: tillerstead-work/bathrooms/after-entry-shot.jpg
+    alt: Completed bathroom tile installation by Tillerstead LLC—TCNA-compliant waterproofing and professional finish
+    caption: "Code-compliant bathroom installation: waterproof assembly per ANSI A118.10, expansion joints per TCNA EJ171, and NJ HIC #13VH10808800 licensed work."
 
-  - id: marble-shower-niche
+  - id: lft-vanity-wall
     tags: [showers]
-    file: tillerstead-work/bathrooms/bathroom-marble-shower-niche.jpg
-    file_webp: tillerstead-work/bathrooms/bathroom-marble-shower-niche.webp
-    alt: Porcelain slab shower wall with mosaic niche, waterproof window returns, and sealed shelf
-    caption: "Slab shower niche — straight miters, waterproof shelf, and natural light. All penetrations sealed per ANSI A118.10."
+    file: tillerstead-work/bathrooms/after-lft-vanity-wall.jpg
+    alt: Large-format tile vanity wall with precision layout and TCNA-compliant substrate preparation
+    caption: "Large-format tile vanity: substrate flattened to TCNA tolerance, full thinset coverage, and professional trim work."
 
-  - id: floor-install-progress
+  - id: wall-tile-detail
+    tags: [showers, floors]
+    file: tillerstead-work/bathrooms/bathroom-wall-tile-detail-pre-grout.jpg
+    file_webp: tillerstead-work/bathrooms/bathroom-wall-tile-detail-pre-grout.webp
+    alt: Bathroom wall tile laid with precision spacing, ready for grout—shows TCNA-compliant installation process
+    caption: "Pre-grout detail: tiles set with proper spacing, substrate prepped to TCNA flatness specs, ready for epoxy grout."
+
+  - id: lft-installation
     tags: [floors]
-    file: tillerstead-work/bathrooms/bathroom-floor-install-progress.jpg
-    file_webp: tillerstead-work/bathrooms/bathroom-floor-install-progress.webp
-    alt: Large-format porcelain tile set over Schluter uncoupling membrane with perimeter expansion gap
-    caption: "Plank install — directional layout, perimeter expansion, and heat-ready substrate per TCNA F148."
+    file: tillerstead-work/bathrooms/large-format-tile-installation.jpg
+    file_webp: tillerstead-work/bathrooms/large-format-tile-installation.webp
+    alt: Large-format tile installation in progress with leveling clips and TCNA-compliant thinset coverage
+    caption: "Large-format tile process: leveling clips for lippage control, 95% thinset coverage per TCNA standards, and laser-checked flatness."
 
-  - id: floor-ditra-progress
+  - id: waterproof-membrane
     tags: [floors, showers]
-    file: tillerstead-work/bathrooms/bathroom-floor-ditra-progress.jpg
-    file_webp: tillerstead-work/bathrooms/bathroom-floor-ditra-progress.webp
-    alt: Ditra membrane installation with layout lines and tile spacers for waterproof bathroom floor
-    caption: "Waterproof floor prep — membranes bonded, layout locked, and substrate tested for flatness per ANSI A108."
+    file: tillerstead-work/bathrooms/lft-decoupling-membrane-sealed.jpeg
+    alt: Waterproof decoupling membrane installed over properly prepared substrate for TCNA-compliant tile assembly
+    caption: "Substrate prep: uncoupling membrane bonded to flat substrate, ready for large-format tile. Prevents cracking and ensures long-term durability."
 
-  - id: shower-wall-progress
-    tags: [showers]
-    file: tillerstead-work/bathrooms/bathroom-shower-wall-progress.jpg
-    file_webp: tillerstead-work/bathrooms/bathroom-shower-wall-progress.webp
-    alt: Marble-look shower walls with leveling clips and ledgers for precise seam alignment
-    caption: "Shower wall layout — leveling clips and ledgers ensure tight seams and TCNA-compliant lippage control."
-
-  - id: shower-valve-wall
-    tags: [showers]
-    file: tillerstead-work/bathrooms/bathroom-shower-valve-wall-progress.jpg
-    file_webp: tillerstead-work/bathrooms/bathroom-shower-valve-wall-progress.webp
-    alt: Valve penetration in large-format porcelain wall tile with waterproof backing and sealed edges
-    caption: "Valve wall prep — plumbing, sealant, and slab cuts per TCNA B421 for wet area durability."
-
-  - id: accent-wall-progress
-    tags: [showers]
-    file: tillerstead-work/bathrooms/bathroom-accent-wall-progress.jpg
-    file_webp: tillerstead-work/bathrooms/bathroom-accent-wall-progress.webp
-    alt: Wood-look accent wall installation with Schluter trims and flush outlets
-    caption: "Feature wall — long rip cuts, precision trims, and outlets set flush for code-compliant finish."
-
-  - id: accent-wall-detail
-    tags: [showers, backsplashes]
-    file: tillerstead-work/bathrooms/bathroom-accent-wall-detail.jpg
-    file_webp: tillerstead-work/bathrooms/bathroom-accent-wall-detail.webp
-    alt: Close-up of wood-look tile returns and outlet box cuts with horizontal alignment
-    caption: "Outlet detail — clean box cuts, horizontal alignment, and electrical safety per NEC."
-
-  - id: accent-wall-with-shower
-    tags: [showers]
-    file: tillerstead-work/bathrooms/bathroom-accent-wall-and-shower.jpg
-    file_webp: tillerstead-work/bathrooms/bathroom-accent-wall-and-shower.webp
-    alt: Accent wall flowing into marble shower and heated floor with seamless transitions
-    caption: "Accent + shower — blended design, seamless transitions, and integrated heated floor."
-
-  - id: threshold-leveling
+  - id: hardwood-flooring
     tags: [floors]
-    file: tillerstead-work/bathrooms/bathroom-threshold-leveling-progress.jpg
-    file_webp: tillerstead-work/bathrooms/bathroom-threshold-leveling-progress.webp
-    alt: Threshold marble leveled between tile and carpet using laser checks
-    caption: "Threshold control — custom stone, laser leveling, and clean transition to carpet per ADA guidelines."
-
-  - id: remodel-progress-1
-    tags: [remodels, showers]
-    file: tillerstead-work/bathrooms/bathroom-remodel-progress-1.webp
-    file_webp: tillerstead-work/bathrooms/bathroom-remodel-progress-1.webp
-    alt: Bathroom remodel prep with walls stripped to studs and plumbing roughed in
-    caption: "Demo & prep — walls stripped, plumbing roughed, and layout lines locked for TCNA-compliant installation."
-
-  - id: remodel-progress-2
-    tags: [remodels, floors]
-    file: tillerstead-work/bathrooms/bathroom-remodel-progress-2.webp
-    file_webp: tillerstead-work/bathrooms/bathroom-remodel-progress-2.webp
-    alt: Subfloor materials, membranes, and layout strings for bathroom remodel
-    caption: "Subfloor prep — membranes fastened, level checks complete, and tile layout snapped per TCNA F125."
-
-  - id: remodel-finished
-    tags: [remodels, showers, floors]
-    file: tillerstead-work/bathrooms/bathroom-remodel-finished.webp
-    file_webp: tillerstead-work/bathrooms/bathroom-remodel-finished.webp
-    alt: Finished bathroom remodel with waterproof tile, marble trim, and curated fixtures
-    caption: "Finished remodel — waterproof tile, polished stone, and hardware installed per NJ HIC standards."
-
-  - id: ceiling-repair
-    tags: [repairs]
-    file: tillerstead-work/repairs/ceiling-repair.webp
-    file_webp: tillerstead-work/repairs/ceiling-repair.webp
-    alt: Finished ceiling repair with skimmed patch and sanded surface ready for paint
-    caption: "Ceiling repair — patched, skimmed, and sanded for paint. All repairs per ASTM C840."
-
-  - id: shower-white
-    tags: [showers]
-    file: tillerstead-work/showers/shower-white.jpg    alt: Waterproof shower with white tile, bench, and niche installed to TCNA B421 standards
-    caption: "Waterproof shower — bench, hex floor, movement joints, and sealed edges for NJ code compliance."
-
-  - id: shower-blue
-    tags: [showers]
-    file: tillerstead-work/showers/shower-blue.jpg    alt: Patterned blue tile feature wall with aligned layout around fixtures and niche
-    caption: "Patterned feature wall — precise layout, fixture alignment, and waterproofing per ANSI A118.10."
-
-  - id: bathroom-gray
-    tags: [showers, floors]
-    file: tillerstead-work/bathrooms/bathroom-floor-install-progress.jpg
-    file_webp: tillerstead-work/bathrooms/bathroom-floor-install-progress.webp
-    alt: Large-format tile floor and shower installation with flat substrate and clean transitions
-    caption: "Large-format layout — flat substrate, clean transitions, and movement joints per TCNA F125."
-
-  - id: marble-bath
-    tags: [showers]
-    file: tillerstead-work/bathrooms/bathroom-marble-floor-finish.jpg
-    file_webp: tillerstead-work/bathrooms/bathroom-marble-floor-finish.webp
-    alt: Marble-look bathroom tile installation with matched setting materials and sealed stone
-    caption: "Stone installation — matched setting materials, sealed stone, and expansion joints per TCNA EJ171."
-
-  - id: kitchen-green
-    tags: [backsplashes]
-    file: tillerstead-work/kitchens/kitchen-green.jpg    alt: Kitchen backsplash tile installation with tight outlet cuts and caulked edges
-    caption: "Subway backsplash — precise outlet cuts, caulked edges, and grout per ANSI A118.4."
-
-  - id: kitchen-hex
-    tags: [backsplashes]
-    file: tillerstead-work/kitchens/kitchen-hex.jpg    alt: Hex backsplash tile detail with balanced cuts and clean terminations
-    caption: "Hex feature — balanced cuts, clean terminations, and lippage control per TCNA standards."
-
-  - id: backsplash-white
-    tags: [backsplashes]
-    file: tillerstead-work/backsplashes/backsplash-white.jpg
-    file_webp: tillerstead-work/backsplashes/backsplash-white.webp
-    alt: Classic subway backsplash installed with lippage control and even joints
-    caption: "Classic subway — lippage control, even joints, and caulked perimeter for NJ HIC compliance."
-
-  - id: hardwood-room
-    tags: [floors]
-    file: tillerstead-work/floors/hardwood-room.jpg    alt: Tile-ready substrate and flooring prep with straight lines and clean scribe work
-    caption: "Flooring & trim — straight lines, clean scribe work, and substrate prep per TCNA F185."
-
-  - id: tile-pattern-dark
-    tags: [floors]
-    file: tillerstead-work/floors/tile-pattern-dark.jpg    alt: Modular tile pattern layout with consistent reveals for commercial fit-out
-    caption: "Pattern layout — modular grid, consistent reveals, and movement joints per TCNA EJ171."
-
-  - id: drywall-greenboard
-    tags: [repairs]
-    file: tillerstead-work/repairs/drywall-greenboard.jpg    alt: Tile substrate preparation with moisture-resistant board and seam treatment
-    caption: "Drywall repairs — blocking, fasteners, and seam treatment for tile-ready walls per ASTM C1396."
-
-  - id: bathroom-final
-    tags: [showers]
-    file: tillerstead-work/bathrooms/bathroom-remodel-final.webp
-    file_webp: tillerstead-work/bathrooms/bathroom-remodel-final.webp
-    alt: Finished bathroom remodel tile scope with code-compliant wet area
-    caption: "Bathroom remodel (final) — code-compliant wet area, waterproofing, and movement joints per TCNA B421."
-
-  - id: bathroom-final-2
-    tags: [showers]
-    file: tillerstead-work/bathrooms/bathroom-remodel-final-2.webp
-    file_webp: tillerstead-work/bathrooms/bathroom-remodel-final-2.webp
-    alt: Alternate angle of finished bathroom remodel tile scope with clean lines and sealed transitions
-    caption: "Bathroom remodel (final, angle 2) — clean lines, sealed transitions, and compliant installation."
-
-  - id: bathroom-detail
-    tags: [showers]
-    file: tillerstead-work/bathrooms/bathroom-remodel-2.webp
-    file_webp: tillerstead-work/bathrooms/bathroom-remodel-2.webp
-    alt: Shower detail showcasing tile layout and niche with even joints and proper cuts
-    caption: "Shower detail — even joints, proper cuts, and waterproofing per ANSI A118.10."
-
-  - id: bathroom-progress
-    tags: [showers]
-    file: tillerstead-work/bathrooms/bathroom-remodel.webp
-    file_webp: tillerstead-work/bathrooms/bathroom-remodel.webp
-    alt: Bathroom remodel in progress with waterproofing underway and substrate prep prior to grout
-    caption: "In-progress — substrate prep, waterproofing, and layout checks for TCNA compliance."
+    file: tillerstead-work/floors/hardwood-room.jpg
+    alt: Professional hardwood flooring installation showing scope diversity and craftsmanship
+    caption: "Hardwood installation: straight lines, clean transitions, and substrate prep per manufacturer specs."
