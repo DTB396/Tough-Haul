@@ -38,6 +38,7 @@
   align-items: center;
   gap: 2rem;
   transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative; /* Establish positioning context for toggle */
 }
 
 .site-header.is-scrolled .site-header-inner {
@@ -165,12 +166,15 @@
 /* ========== Mobile Navigation Toggle ========== */
 .nav-toggle {
   display: none;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   border: none;
-  padding: 0.5rem;
+  padding: 0.75rem;
   cursor: pointer;
   z-index: 1500;
   position: relative;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav-toggle-icon {

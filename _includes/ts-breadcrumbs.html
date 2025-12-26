@@ -5,9 +5,10 @@ Tillerstead.com Breadcrumbs Component
 - All labels and links are explicit, conversion-focused, and legally accurate
 - No dead ends, broken logic, or vague copy
 {% endcomment %}
-{% unless page.url == '/' or page.url == '/index.html' %}
-{%- assign is_home = page.url == '/' or page.url == '/index.html' -%}
+{%- assign is_home = page.url == '/' or page.url == '/index.html' or page.is_home == true -%}
 {%- assign render_breadcrumbs = true -%}
+
+{%- comment -%} Never show breadcrumbs on homepage {%- endcomment -%}
 {%- if is_home or page.show_breadcrumbs == false -%}
   {%- assign render_breadcrumbs = false -%}
 {%- endif -%}
@@ -127,4 +128,3 @@ Tillerstead.com Breadcrumbs Component
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{ json_items }}]}
   </script>
 {%- endif -%}
-{% endunless %}
