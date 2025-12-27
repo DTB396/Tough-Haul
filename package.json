@@ -32,6 +32,8 @@
     "test:report": "npx playwright show-report",
     "test:debug": "npx playwright test --debug",
     "verify": "npm run lint && npm run build && npm test",
+    "test:contrast": "node scripts/check-contrast.js",
+    "scan:contrast": "node scripts/scan-css-contrast.cjs",
     "deploy": "pwsh -File deploy-to-stone.ps1",
     "deploy:force": "pwsh -File deploy-to-stone.ps1 -Force",
     "deploy:skip-tests": "pwsh -File deploy-to-stone.ps1 -SkipTests",

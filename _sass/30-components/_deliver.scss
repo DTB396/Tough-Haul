@@ -25,6 +25,14 @@
   /* Responsive: no media query needed (OUTPUT_RULES.md) */
 }
 
+/* Mobile optimization: ensure single column on narrow screens */
+@media (max-width: 480px) {
+  .ts-deliver__grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
 .ts-deliver__card,
 .ts-deliver__intro {
   background: var(--ts-color-surface, var(--ts-white));
@@ -36,8 +44,20 @@
   flex-direction: column;
   gap: var(--ts-spacing-sm);
   min-height: 100%;
+  width: 100%; /* Prevent overflow on mobile */
+  max-width: 100%; /* Ensure cards don't exceed container */
+  box-sizing: border-box;
 
   /* Ensures cards meet minimum touch target and accessibility (DOMAIN.md) */
+}
+
+/* Mobile: tighten padding for better fit */
+@media (max-width: 480px) {
+  .ts-deliver__card,
+  .ts-deliver__intro {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
 }
 
 .ts-deliver__eyebrow {

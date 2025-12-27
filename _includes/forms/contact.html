@@ -1,5 +1,10 @@
 <!-- _includes/forms/contact.html -->
-<form class="ts-form contact-form" action="#" method="post" novalidate>
+<form class="ts-form contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success/">
+    <!-- Honeypot field for spam protection -->
+    <p style="position: absolute; left: -9999px;" aria-hidden="true">
+        <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+    </p>
+    
     <div class="field">
         <label for="name">Name</label>
         <input id="name" name="name" autocomplete="name" required>
