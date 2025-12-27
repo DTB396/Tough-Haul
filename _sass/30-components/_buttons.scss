@@ -93,8 +93,9 @@
 .btn-primary:focus-visible,
 .btn--color-primary:hover:not(:disabled),
 .btn--color-primary:focus-visible {
-  background: var(--ts-color-primary-bg-hover);
-  box-shadow: var(--color-shadow-teal-glow);
+  background: var(--ts-color-accent);
+  color: var(--hex-charcoal);
+  box-shadow: 0 8px 20px rgba(252, 221, 9, 0.3);
 }
 
 /* Secondary — outlined, for less prominent actions */
