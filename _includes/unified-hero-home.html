@@ -40,19 +40,16 @@ Unified Hero for Homepage + Tillerstead.com
       svg_class="ts-logo ts-logo--hero"
       %}
 
-      <p class="ts-hero__tagline">
-        ANSI A108-compliant installation, ANSI A108.10 waterproofing,
-        L/360 deflection verified—engineered, not estimated.
-      </p>
-
-      {% if hero_badge %}
-      <p class="ts-hero__badge">{{ hero_badge }}</p>
-      {% endif %}
+      <p class="ts-hero__eyebrow eyebrow">{{ hero_eyebrow }}</p>
 
       <h1 id="hero-title" class="ts-hero__title">{{ hero_title }}</h1>
 
       {% if hero_summary %}
       <p class="ts-hero__lede">{{ hero_summary }}</p>
+      {% endif %}
+
+      {% if hero_badge %}
+      <p class="ts-hero__badge">{{ hero_badge }}</p>
       {% endif %}
 
       {% if bullets %}
@@ -78,11 +75,7 @@ Unified Hero for Homepage + Tillerstead.com
       </div>
       {% endif %}
 
-      <p class="ts-hero__trust-line">
-        <strong>NJ HIC #13VH10808800</strong>
-        <span aria-hidden="true">&middot;</span> TCNA-certified installation
-        <span aria-hidden="true">&middot;</span> Serving New Jersey since 2019
-      </p>
+
 
     </div>
 
