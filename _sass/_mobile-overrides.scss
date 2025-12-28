@@ -79,3 +79,11 @@
         padding-left: 1.1rem;
     }
 }
+/* Financing page: mobile layout fix */
+@media (max-width: 768px) {
+    .page-financing .financing-shell {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+}

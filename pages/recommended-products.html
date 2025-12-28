@@ -3,578 +3,189 @@ layout: default
 title: Recommended Products & Materials | Tillerstead LLC
 permalink: /recommended-products/
 body_class: page-products
-description: Tile installation materials and tools field-tested by Tillerstead LLC. These Amazon affiliate links support our TCNA-compliant technical blog—get pro-grade gear, fund independent guides.
+description: Field-tested tile tools and materials we actually use on South Jersey jobs. Affiliate links help fund our
+free installation guides and site improvements at no extra cost to you.
 hero_eyebrow: Recommended Products
 hero_title: Make Your Renovation Simpler
 hero_summary: >-
-  From precision measurement to ANSI-compliant mortars, these are the products we trust on real jobs. Whether you’re estimating, DIYing, or vetting your contractor’s specs, this list eliminates guesswork. We earn a small commission—every dollar funds free, code-compliant technical content.
+From measurement tools to mortars and membranes, these are products we’ve used on real jobs.
+If you’re estimating, DIYing, or vetting a contractor’s spec list, this page helps you avoid guesswork.
+We may earn a small commission—at no extra cost to you—which supports free educational content and site development.
 hero_kpis:
-  - label: "Field-Tested, Not Sponsored"
-    text: "Every product listed is used in actual installations—no paid placements or untested gear."
-  - label: "Expert Guidance"
-    text: "Unsure about sizing or standards? Contact us for ANSI/TCNA-compliant recommendations."
-  - label: "Direct-to-Home Delivery"
-    text: "Order pro-grade materials without supply house minimums or contractor-only restrictions."
+- label: "Field-Tested"
+text: "No paid placements. We only list products we’ve actually used or vetted by spec sheet."
+- label: "Standards-Driven"
+text: "We reference manufacturer instructions plus TCNA methods and ANSI A108/A118 where applicable."
+- label: "Support the Guides"
+text: "Affiliate commissions fund independent, contractor-authored articles—no paywalls."
 ---
 
-<main class="ts-section" role="main">
-  <div class="ts-container container-narrow">
+<main class="ts-section ts-surface products products--page" role="main">
+  <div class="container container-narrow">
 
-    <!-- FTC Disclosure -->
-    <aside class="disclosure-card" role="complementary" aria-label="Amazon Affiliate Disclosure">
-      <h2>Amazon Affiliate Disclosure</h2>
+    <!-- FTC / Amazon Disclosure -->
+    <aside class="ts-card products-disclosure" role="complementary" aria-label="Affiliate disclosure">
+      <h2 class="heading-3">Affiliate Disclosure</h2>
       <p>
-        <strong>Tillerstead LLC participates in the Amazon Services LLC Associates Program</strong>, an affiliate advertising program enabling sites to earn fees by linking to Amazon.com.
+        <strong>Tillerstead LLC participates in the Amazon Services LLC Associates Program</strong>, an affiliate
+        advertising program designed
+        to provide a means for sites to earn advertising fees by linking to Amazon.com and affiliated sites.
       </p>
       <p>
-        Purchases made through these links generate a commission <strong>at no additional cost to you</strong>. These funds directly support our technical blog, TCNA-compliant installation guides, and site development.
+        If you purchase through these links, we may earn a commission <strong>at no additional cost to you</strong>.
+        These funds support our free installation notes, standards-based homeowner guides, and ongoing site development.
       </p>
-      <p>
-        We only recommend products proven in field installations. Your support sustains independent, code-compliant content for homeowners and contractors.
+      <p class="muted">
+        We do not accept paid placement for this list. Product specifications can change—always confirm the current
+        manufacturer data sheet
+        and installation instructions before purchase or use.
       </p>
     </aside>
 
-    <!-- Intro Section -->
-    <section class="products-intro" aria-labelledby="intro-heading">
-      <h1 id="intro-heading" class="visually-hidden">Tillerstead Product Recommendations</h1>
+    <!-- Intro -->
+    <section class="products-intro" aria-labelledby="products-intro-heading">
+      <h1 id="products-intro-heading" class="visually-hidden">Recommended Products</h1>
       <p class="lead">
-        Renovation is complex—our goal is to simplify it. Every product here is used by Tillerstead on New Jersey projects, selected for compliance with ANSI/TCNA standards and real-world reliability. No paid placements, no marketing fluff—just proven solutions for South Jersey’s unique conditions.
+        Renovations fail when planning is sloppy or materials are mismatched to the application.
+        This list is organized the way we think on real jobs: <em>plan → prep → install → finish → protect</em>.
       </p>
       <p>
-        Whether you’re managing a DIY project or verifying your contractor’s specs, this list is organized for clarity. Click any product for full details and direct Amazon purchase.
-      </p>
-      <p>
-        <strong>Need technical guidance?</strong> Unsure about joint size, substrate prep, or code compliance? <a href="/contact/" aria-label="Contact Tillerstead for product guidance">Contact us—our advice is always ANSI/TCNA-based.</a>
+        If you want a second opinion on a materials list (mortar type, membrane choice, grout category, movement
+        joints),
+        <a href="{{ '/contact/' | relative_url }}">contact us</a>. We’ll give you guidance based on manufacturer
+        instructions and standard methods.
       </p>
     </section>
 
-    <!-- Project Planning & Measurement -->
-    <section class="product-category" aria-labelledby="planning-heading">
-      <h2 id="planning-heading">Project Planning & Measurement Tools</h2>
-      <p class="category-intro">
-        Start here for accurate estimates and scope definition. These tools streamline planning and ensure your project meets code from day one.
-      </p>
+    {% assign product_data = site.data.products %}
+    {% if product_data == nil or product_data.categories == nil or product_data.categories.size == 0 %}
+    <p class="microcopy center mt-2">
+      Products are being updated. Check back soon.
+    </p>
+    {% else %}
 
-      <article class="product-card">
-        <h3>
-          <a href="https://amzn.to/4qls9kO" rel="nofollow noopener" target="_blank" aria-label="Room By Room Project Planner on Amazon">
-            Room By Room Project Planner: Organize Interior Design Ideas & Contractor Quotes
-          </a>
-        </h3>
-        <p class="product-meta">Project Documentation & Organization</p>
-        <p>
-          Consolidate layouts, specs, quotes, and timelines. Essential for multi-trade coordination and code documentation. Documenting existing conditions before demo is critical for New Jersey HIC compliance.
-        </p>
-        <p class="product-note">
-          <strong>Pro tip:</strong> Photograph and sketch all utilities and framing before demolition. This record is invaluable for code inspections and warranty claims.
-        </p>
-      </article>
+    <!-- Categories -->
+    {% for cat in product_data.categories %}
+    <section class="product-category" id="{{ cat.id | escape }}" aria-labelledby="cat-{{ cat.id | escape }}">
+      <header class="product-category-header">
+        <h2 class="heading-2" id="cat-{{ cat.id | escape }}">{{ cat.name | escape }}</h2>
+        {% if cat.description %}
+        <p class="category-intro">{{ cat.description }}</p>
+        {% endif %}
+      </header>
 
-      <article class="product-card">
-        <h3>
-          <a href="https://amzn.to/4atkxIk" rel="nofollow noopener" target="_blank" aria-label="BOSCH GLM100-23 Laser Distance Measure on Amazon">
-            BOSCH GLM100-23 Laser Distance Measure (100 Ft Range)
-          </a>
-        </h3>
-        <p class="product-meta">Precision Measurement | ±1/16" Accuracy</p>
-        <p>
-          Enables fast, accurate room measurements for material takeoffs and TCNA flatness verification. Eliminates manual errors and supports digital project records.
-        </p>
-        <p class="product-note">
-          <strong>Compliance tip:</strong> Measure diagonals and multiple axes to confirm squareness—critical for large-format tile layouts per TCNA guidelines.
-        </p>
-      </article>
+      {% if cat.products and cat.products.size > 0 %}
+      <div class="product-grid" role="list">
+        {% for p in cat.products %}
+        <article class="ts-card product-card" role="listitem">
+          <h3 class="heading-3 product-title">
+            {% if p.amazon_url %}
+            <a href="{{ p.amazon_url | escape }}" rel="nofollow noopener" target="_blank">
+              {{ p.full_name | default: p.name | escape }}
+            </a>
+            {% else %}
+            {{ p.full_name | default: p.name | escape }}
+            {% endif %}
+          </h3>
+
+          {% capture meta_line %}
+          {% if p.type %}{{ p.type }}{% endif %}
+          {% if p.specs %}{% if p.type %} · {% endif %}{{ p.specs }}{% endif %}
+          {% if p.brand %}{% if p.type or p.specs %} · {% endif %}{{ p.brand }}{% endif %}
+          {% endcapture %}
+          {% if meta_line | strip != "" %}
+          <p class="product-meta">{{ meta_line | strip }}</p>
+          {% endif %}
+
+          {% if p.description %}
+          <p class="product-desc">{{ p.description }}</p>
+          {% endif %}
+
+          {% if p.pro_tip %}
+          <p class="product-note"><strong>Pro tip:</strong> {{ p.pro_tip }}</p>
+          {% endif %}
+
+          {% if p.note %}
+          <p class="product-note">{{ p.note }}</p>
+          {% endif %}
+        </article>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="muted">No products listed yet in this category.</p>
+      {% endif %}
     </section>
-
-    <!-- Tile Installation Systems -->
-    <section class="product-category" aria-labelledby="tile-systems-heading">
-      <h2 id="tile-systems-heading">Tile Installation Systems</h2>
-      <p class="category-intro">
-        Products in this section are selected for ANSI/TCNA compliance and proven performance in South Jersey’s climate.
-      </p>
-
-      <article class="product-card">
-        <h3>
-          <a href="https://amzn.to/49rOXIT" rel="nofollow noopener" target="_blank" aria-label="DGSL Tile Leveling System on Amazon">
-            DGSL Tile Leveling System (1200 Spacers + 300 Wedges + Plier)
-          </a>
-        </h3>
-        <p class="product-meta">Lippage Control | 1/16" Joint Width</p>
-        <p>
-          Ensures flat, code-compliant installations by minimizing lippage. Suitable for floors and walls. Prevents the most common DIY failures.
-        </p>
-        <p class="product-note">
-          <strong>Spec guidance:</strong> Joint width depends on tile size and edge type. <a href="/contact/" aria-label="Contact for joint size guidance">Contact us</a> with your tile specs for ANSI-compliant recommendations.
-        </p>
-      </article>
-
-      <article class="product-card">
-        <h3>
-          <a href="https://amzn.to/4p6jqBU" rel="nofollow noopener" target="_blank" aria-label="Cotton Farm Grade 100 XL Cheesecloth on Amazon">
-            Cotton Farm Grade 100 XL Cheesecloth (36x36", Unbleached)
-          </a>
-        </h3>
-        <p class="product-meta">Grout Haze Removal | Ultra-Dense Butter Muslin</p>
-        <p>
-          Outperforms sponges for final grout cleanup. Reusable and compliant with best practices for surface protection.
-        </p>
-        <p class="product-note">
-          <strong>Technique:</strong> Use nearly dry for haze removal. Wait 72 hours post-grout for final buffing per manufacturer instructions.
-        </p>
-      </article>
-    </section>
-
-    <!-- Waterproofing & Substrate Prep -->
-    <section class="product-category" aria-labelledby="waterproofing-heading">
-      <h2 id="waterproofing-heading">Waterproofing & Substrate Preparation</h2>
-      <p class="category-intro">
-        Proper substrate prep is the foundation of a code-compliant installation. See our <a href="/blog/waterproofing-redgard-vs-kerdi-vs-hydroban/" aria-label="Waterproofing systems comparison">waterproofing systems comparison</a>.
-      </p>
-
-      <article class="product-card">
-        <h3>
-          <a href="https://www.amazon.com/dp/B001QUZEEU?tag=YOUR-AMAZON-TAG&linkCode=ogi&th=1" rel="nofollow noopener" target="_blank" aria-label="RedGard Waterproofing Membrane on Amazon">
-            Custom Building Products RedGard Waterproofing Membrane (1 Gallon)
-          </a>
-        </h3>
-        <p class="product-meta"><strong>ANSI A118.10</strong> | Liquid-Applied Membrane</p>
-        <p>
-          Field-proven for cement board showers and tub surrounds. Apply with mesh at all plane changes. Meets New Jersey code for wet area waterproofing.
-        </p>
-        <p class="product-note">
-          <strong>Field tip:</strong> Use a wet-film gauge to verify 30–35 mil thickness per coat. Allow full cure before flood testing.
-        </p>
-      </article>
-
-      <article class="product-card">
-        <h3>
-          <a href="https://www.amazon.com/dp/B00KK9Y3CI?tag=YOUR-AMAZON-TAG&linkCode=ogi&th=1" rel="nofollow noopener" target="_blank" aria-label="Schluter KERDI 200 Waterproofing Membrane on Amazon">
-            Schluter KERDI 200 Waterproofing Membrane Roll (3'3" x 33')
-          </a>
-        </h3>
-        <p class="product-meta"><strong>ANSI A118.10</strong> | Sheet Membrane System</p>
-        <p>
-          The industry benchmark for full shower waterproofing. Use only with unmodified thinset (ANSI A118.1) for warranty compliance.
-        </p>
-        <p class="product-note">
-          <strong>Compliance tip:</strong> Modified mortars void manufacturer warranty. Always check current spec sheets.
-        </p>
-      </article>
-
-      <article class="product-card">
-        <h3>
-          <a href="https://www.amazon.com/dp/B07H2X8M3P?tag=YOUR-AMAZON-TAG&linkCode=ogi&th=1" rel="nofollow noopener" target="_blank" aria-label="LATICRETE HYDRO BAN Board on Amazon">
-            LATICRETE HYDRO BAN Board (32" x 48" x 1/2")
-          </a>
-        </h3>
-        <p class="product-meta"><strong>ANSI A118.10</strong> | Waterproof Tile Backer</p>
-        <p>
-          Combines substrate and waterproofing in one step. Ideal for retrofits and time-sensitive projects. Requires HYDRO BAN sealant at all seams.
-        </p>
-      </article>
-
-      <article class="product-card">
-        <h3>
-          <a href="https://www.amazon.com/dp/B000BKSK9M?tag=YOUR-AMAZON-TAG&linkCode=ogi&th=1" rel="nofollow noopener" target="_blank" aria-label="Mapei Self-Leveler Plus on Amazon">
-            Mapei Self-Leveler Plus (50 lbs)
-          </a>
-        </h3>
-        <p class="product-meta"><strong>ASTM C1708</strong> | Self-Leveling Underlayment</p>
-        <p>
-          Corrects out-of-level floors for large-format tile. Meets TCNA flatness requirements (≤1/8" in 10'). Walkable in 2–4 hours.
-        </p>
-      </article>
-
-      <article class="product-card">
-        <h3>
-          <a href="https://www.amazon.com/dp/B002PJFJ2I?tag=YOUR-AMAZON-TAG&linkCode=ogi&th=1" rel="nofollow noopener" target="_blank" aria-label="Schluter DITRA Uncoupling Membrane on Amazon">
-            Schluter DITRA Uncoupling Membrane (54 SF Roll)
-          </a>
-        </h3>
-        <p class="product-meta"><strong>ANSI A118.12</strong> | Crack Isolation & Waterproofing</p>
-        <p>
-          Uncouples tile from substrate movement and provides waterproofing when seams are sealed. Essential for wood subfloors and radiant heat.
-        </p>
-      </article>
-    </section>
-
-    <!-- Mortars & Grouts -->
-    <section class="product-category" aria-labelledby="mortars-heading">
-      <h2 id="mortars-heading">Mortars & Grouts</h2>
-      <p class="category-intro">
-        All mortars and grouts listed meet or exceed ANSI and ISO standards. See our <a href="/blog/large-format-tile-flatness-mortars-trowels/" aria-label="Large-format tile mortar and trowel guidance">large-format tile guidance</a>.
-      </p>
-
-      <article class="product-card">
-        <h3>
-          <a href="https://www.amazon.com/dp/B00II0WLQE?tag=YOUR-AMAZON-TAG&linkCode=ogi&th=1" rel="nofollow noopener" target="_blank" aria-label="Mapei Ultraflex LFT Large Format Tile Mortar on Amazon">
-            Mapei Ultraflex LFT Large Format Tile Mortar (50 lbs)
-          </a>
-        </h3>
-        <p class="product-meta"><strong>ANSI A118.15 / ISO 13007</strong> | Large-Format Mortar</p>
-        <p>
-          Non-sag, extended open time for tiles up to 18". Used for rectified porcelain and large-format installations.
-        </p>
-        <p class="product-note">
-          <strong>Mixing:</strong> 6–7 quarts water per 50 lb bag. Mix to mayonnaise consistency for optimal bond.
-        </p>
-      </article>
-
-      <article class="product-card">
-        <h3>
-          <a href="https://www.amazon.com/dp/B004GXZAZC?tag=YOUR-AMAZON-TAG&linkCode=ogi&th=1" rel="nofollow noopener" target="_blank" aria-label="Custom Building Products VersaBond Thinset on Amazon">
-            Custom Building Products VersaBond Fortified Thinset (50 lbs)
-          </a>
-        </h3>
-        <p class="product-meta"><strong>ANSI A118.4 / A118.11</strong> | Modified Thinset</p>
-        <p>
-          Reliable for ceramic and porcelain up to 12". Polymer-modified for bond strength. Readily available for urgent repairs.
-        </p>
-      </article>
-
-      <article class="product-card">
-        <h3>
-          <a href="https://www.amazon.com/dp/B00KW8ZJII?tag=YOUR-AMAZON-TAG&linkCode=ogi&th=1" rel="nofollow noopener" target="_blank" aria-label="Schluter SET Unmodified Thinset Mortar on Amazon">
-            Schluter SET Unmodified Thinset Mortar (50 lbs)
-          </a>
-        </h3>
-        <p class="product-meta"><strong>ANSI A118.1</strong> | Unmodified for KERDI Systems</p>
-        <p>
-          Required for bonding Schluter membranes. Do not substitute with modified mortars—check manufacturer requirements.
-        </p>
-      </article>
-
-      <article class="product-card">
-        <h3>
-          <a href="https://www.amazon.com/dp/B000BZX5YW?tag=YOUR-AMAZON-TAG&linkCode=ogi&th=1" rel="nofollow noopener" target="_blank" aria-label="Mapei Ultracolor Plus FA Grout on Amazon">
-            Mapei Ultracolor Plus FA Rapid-Set Grout (10 lbs)
-          </a>
-        </h3>
-        <p class="product-meta"><strong>ANSI A118.7</strong> | Polymer-Modified Rapid-Set Grout</p>
-        <p>
-          Consistent color, minimal efflorescence, and fast cure. Used on 80% of Tillerstead residential jobs.
-        </p>
-        <p class="product-note">
-          <strong>Mix small batches:</strong> Pot life is 30–45 minutes. Clean tools immediately—sets fast.
-        </p>
-      </article>
-
-      <article class="product-card">
-        <h3>
-          <a href="https://www.amazon.com/dp/B00R4JG8HO?tag=YOUR-AMAZON-TAG&linkCode=ogi&th=1" rel="nofollow noopener" target="_blank" aria-label="Laticrete SpectraLOCK PRO Epoxy Grout Kit on Amazon">
-            Laticrete SpectraLOCK PRO Premium Epoxy Grout Kit
-          </a>
-        </h3>
-        <p class="product-meta"><strong>ANSI A118.3</strong> | Epoxy Grout System</p>
-        <p>
-          Chemical-resistant and stain-proof. Required for commercial kitchens, labs, and high-abuse areas. Not recommended for first-time DIYers.
-        </p>
-        <p class="product-note">
-          <strong>Installation warning:</strong> Requires speed and experience. Practice on sample boards before live installs.
-        </p>
-      </article>
-    </section>
-
-    <!-- Tools & Equipment -->
-    <section class="product-category" aria-labelledby="tools-heading">
-      <h2 id="tools-heading">Tools & Equipment</h2>
-      <p class="category-intro">
-        Professional tools ensure code-compliant results and reduce installation risk.
-      </p>
-
-      <article class="product-card">
-        <h3>
-          <a href="https://www.amazon.com/dp/B00004YUPI?tag=YOUR-AMAZON-TAG&linkCode=ogi&th=1" rel="nofollow noopener" target="_blank" aria-label="QEP 24-inch Aluminum Tile Saw Fence on Amazon">
-            QEP 24" Aluminum Tile Saw Fence
-          </a>
-        </h3>
-        <p>
-          Delivers straight, accurate cuts for rectified tile. Essential for maintaining 1/16" joint consistency per TCNA standards.
-        </p>
-      </article>
-
-      <article class="product-card">
-        <h3>
-          <a href="https://www.amazon.com/dp/B0000DD415?tag=YOUR-AMAZON-TAG&linkCode=ogi&th=1" rel="nofollow noopener" target="_blank" aria-label="Marshalltown 11x11 U-Notch Trowel on Amazon">
-            Marshalltown 11" x 11" U-Notch Trowel (1/2" x 1/2")
-          </a>
-        </h3>
-        <p class="product-meta">Large-Format Tile Coverage</p>
-        <p>
-          Ensures proper mortar coverage for tiles 12" and larger. Use with back-buttering for complete coverage as required by TCNA.
-        </p>
-      </article>
-
-      <article class="product-card">
-        <h3>
-          <a href="https://www.amazon.com/dp/B00IZLP5NS?tag=YOUR-AMAZON-TAG&linkCode=ogi&th=1" rel="nofollow noopener" target="_blank" aria-label="Empire 48-inch True Blue Laser Level on Amazon">
-            Empire 48" True Blue Laser Level
-          </a>
-        </h3>
-        <p>
-          Validates substrate flatness to TCNA tolerance (≤1/8" in 10'). Prevents lippage and installation failures.
-        </p>
-      </article>
-
-      <article class="product-card">
-        <h3>
-          <a href="https://www.amazon.com/dp/B07X5H8K5L?tag=YOUR-AMAZON-TAG&linkCode=ogi&th=1" rel="nofollow noopener" target="_blank" aria-label="Rubi DW-250N Wet Tile Saw on Amazon">
-            Rubi DW-250N Wet Tile Saw (10")
-          </a>
-        </h3>
-        <p>
-          Professional-grade saw for porcelain and large-format tile. Rent for single projects or purchase for ongoing work.
-        </p>
-        <p class="product-note">
-          <strong>DIY tip:</strong> Rental available at Home Depot for one-off projects.
-        </p>
-      </article>
-    </section>
-
-    <!-- Safety & PPE -->
-    <section class="product-category" aria-labelledby="safety-heading">
-      <h2 id="safety-heading">Safety & PPE</h2>
-      <p class="category-intro">
-        OSHA and New Jersey code require silica dust protection. Don’t compromise on safety.
-      </p>
-
-      <article class="product-card">
-        <h3>
-          <a href="https://www.amazon.com/dp/B07571LR2P?tag=YOUR-AMAZON-TAG&linkCode=ogi&th=1" rel="nofollow noopener" target="_blank" aria-label="3M 6300 Half Facepiece Respirator on Amazon">
-            3M 6300 Half Facepiece Reusable Respirator (Large)
-          </a>
-        </h3>
-        <p class="product-meta">NIOSH-Approved P100 Filters</p>
-        <p>
-          Protects against silica dust during cutting and grinding. Replace filters every 40 hours. Required PPE for all tile work.
-        </p>
-      </article>
-
-      <article class="product-card">
-        <h3>
-          <a href="https://www.amazon.com/dp/B003DZ0DKI?tag=YOUR-AMAZON-TAG&linkCode=ogi&th=1" rel="nofollow noopener" target="_blank" aria-label="Pro Comfort Gel Knee Pads on Amazon">
-            Knee Pads Pro Comfort Gel Construction (1 Pair)
-          </a>
-        </h3>
-        <p>
-          Protects knees during extended installs. Hard cap and gel cushioning prevent injury and fatigue.
-        </p>
-      </article>
-    </section>
+    {% endfor %}
 
     <!-- Support CTA -->
-    <section class="support-cta" aria-labelledby="support-heading">
-      <h2 id="support-heading">How Your Purchase Supports Independent Content</h2>
+    <section class="ts-card products-support" aria-labelledby="support-heading">
+      <h2 class="heading-2" id="support-heading">How Your Purchase Supports Independent Content</h2>
       <p class="lead">
-        Every purchase through these links funds:
+        Affiliate commissions help us publish contractor-grade guides with real photos and real job notes.
       </p>
-      <ul class="checklist">
-        <li>Free technical blog content covering ANSI/TCNA standards, waterproofing, and material science</li>
-        <li>Personalized product guidance for homeowners and contractors</li>
-        <li>Site development and hosting costs</li>
-        <li>Direct answers to your renovation questions—no paywalls, no lead-gen traps</li>
+      <ul class="products-checklist">
+        <li>Standards-based articles (TCNA methods + applicable ANSI A108/A118 references)</li>
+        <li>Material and system explainers (what matters, what doesn’t, and what to verify)</li>
+        <li>Ongoing site improvements and hosting</li>
+        <li>Direct homeowner Q&amp;A—without paywalls</li>
       </ul>
-      <p>
-        We don’t run ads, sell your data, or gate content. Affiliate commissions keep our technical content open and independent.
-      </p>
-      <p>
-        <strong>Thank you for supporting code-compliant, contractor-authored resources.</strong>
+      <p class="muted">
+        We don’t sell your data or run invasive ads. This page is how we keep the content independent.
       </p>
     </section>
 
     <!-- FAQ -->
     <section class="product-faq" aria-labelledby="faq-heading">
-      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <h2 class="heading-2" id="faq-heading">FAQ</h2>
       <dl>
         <dt><strong>Do affiliate links increase my cost?</strong></dt>
+        <dd>No. Amazon’s pricing is the same. The commission is paid by Amazon.</dd>
+
+        <dt><strong>Are these the exact products you use?</strong></dt>
         <dd>
-          No. Amazon’s prices are the same whether you use our link or not. The commission is paid by Amazon, not you.
+          Often, yes—especially tools. For materials (mortar/membrane/grout), we sometimes source locally for speed and
+          freshness.
+          If you need an exact match, confirm the manufacturer data sheet and batch availability.
         </dd>
-        <dt><strong>Are these the exact products Tillerstead uses?</strong></dt>
+
+        <dt><strong>Do these products guarantee a “code-compliant” installation?</strong></dt>
         <dd>
-          Yes. We source most materials locally for speed, but these links match our field specs for homeowners and contractors.
+          No product guarantees a compliant install. Compliance comes from using the right product for the application
+          and installing it
+          per manufacturer instructions and recognized methods (e.g., TCNA) with proper substrate prep and detailing.
         </dd>
-        <dt><strong>Can I hire Tillerstead for my project?</strong></dt>
+
+        <dt><strong>What if a product is out of stock or a link breaks?</strong></dt>
         <dd>
-          We serve Atlantic, Cape May, and Ocean counties, New Jersey. <a href="/contact/" aria-label="Contact Tillerstead for availability">Contact us for availability</a>. Outside our area? Use these specs to vet your contractor’s material choices.
+          Amazon listings change. Search by the product name/brand. If you notice a broken link, tell us and we’ll
+          update it.
         </dd>
-        <dt><strong>What if a product link is broken or out of stock?</strong></dt>
+
+        <dt><strong>Can I hire Tillerstead?</strong></dt>
         <dd>
-          Amazon changes product IDs frequently. If a link fails, search by product name and brand. We update links quarterly.
-        </dd>
-        <dt><strong>Do you recommend products from other retailers?</strong></dt>
-        <dd>
-          Currently, only Amazon offers a viable affiliate program for independent contractors. We’re evaluating other partnerships.
+          Yes—Atlantic, Ocean, and Cape May Counties primarily. <a href="{{ '/contact/' | relative_url }}">Request
+            availability here</a>.
         </dd>
       </dl>
     </section>
 
-    <!-- Legal Footer -->
+    <!-- Legal / Safety Footer -->
     <footer class="product-legal" role="contentinfo">
       <p class="legal-text">
         <small>
-          <strong>Disclaimer:</strong> Tillerstead LLC provides these recommendations for informational purposes only. Product specs, availability, and pricing may change. Always verify ANSI/TCNA compliance on manufacturer sheets before purchase. We are not liable for installation errors, product defects, or injuries. Consult a licensed contractor for project-specific advice.
+          <strong>Important:</strong> Recommendations are informational. Product specs, labeling, and standards claims
+          come from manufacturers and may change.
+          Always verify current data sheets and installation instructions. Use appropriate PPE and follow safety rules
+          for cutting/grinding dust control.
         </small>
       </p>
       <p class="legal-text">
         <small>
-          <strong>Amazon Disclaimer:</strong> As an Amazon Associate, Tillerstead LLC earns from qualifying purchases. Last updated: December 2025.
+          <strong>Amazon disclosure:</strong> As an Amazon Associate, Tillerstead LLC earns from qualifying purchases.
         </small>
       </p>
     </footer>
+
+    {% endif %}
   </div>
 </main>
-
-<style>
-/* Product Page Specific Styles */
-.disclosure-card {
-  background: var(--ts-color-surface-elevated, #fef7f3);
-  border-left: 4px solid var(--ts-color-primary, var(--color-brand-teal-400));
-  padding: 1.5rem;
-  margin: 2rem 0 3rem;
-  border-radius: var(--ts-radius-md, 0.5rem);
-}
-.disclosure-card h2 {
-  margin-top: 0;
-  font-size: 1.25rem;
-  color: var(--ts-color-primary-strong, var(--color-brand-teal-600));
-}
-.disclosure-card p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 0.75rem;
-}
-.disclosure-card p:last-child {
-  margin-bottom: 0;
-}
-.products-intro {
-  margin-bottom: 3rem;
-}
-.product-category {
-  margin: 4rem 0;
-  padding-top: 2rem;
-  border-top: 2px solid var(--ts-color-border, rgba(0, 0, 0, 0.1));
-}
-.product-category h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--ts-color-heading, var(--color-navy-900));
-}
-.category-intro {
-  font-size: 1.05rem;
-  color: var(--ts-color-text-muted, #5a6a7a);
-  margin-bottom: 2rem;
-}
-.product-card {
-  background: var(--ts-color-surface, var(--ts-white));
-  border: 1px solid var(--ts-color-border, rgba(0, 0, 0, 0.1));
-  border-radius: var(--ts-radius-md, 0.5rem);
-  padding: 1.75rem;
-  margin-bottom: 1.5rem;
-  transition: box-shadow 0.2s ease;
-}
-.product-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-.product-card h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.35rem;
-  line-height: 1.3;
-}
-.product-card h3 a {
-  color: var(--ts-color-primary, var(--color-brand-teal-400));
-  text-decoration: none;
-}
-.product-card h3 a:hover {
-  text-decoration: underline;
-  color: var(--ts-color-primary-strong, var(--color-brand-teal-600));
-}
-.product-meta {
-  font-size: 0.875rem;
-  color: var(--ts-color-text-muted, #5a6a7a);
-  font-weight: 600;
-  margin: 0.5rem 0 1rem;
-}
-.product-note {
-  background: var(--ts-color-surface-muted, #f7f9fa);
-  border-left: 3px solid var(--ts-color-accent, #e9a852);
-  padding: 0.75rem 1rem;
-  margin-top: 1rem;
-  font-size: 0.925rem;
-  border-radius: 0 var(--ts-radius-sm, 0.25rem) var(--ts-radius-sm, 0.25rem) 0;
-}
-.support-cta {
-  background: var(--ts-gradient-surface, linear-gradient(135deg, #f7f9fa 0%, var(--ts-white) 100%));
-  border: 2px solid var(--ts-color-primary, var(--color-brand-teal-400));
-  border-radius: var(--ts-radius-lg, 0.75rem);
-  padding: 2.5rem;
-  margin: 4rem 0;
-  text-align: center;
-}
-.support-cta h2 {
-  margin-top: 0;
-}
-.support-cta .checklist {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0;
-  text-align: left;
-  max-width: 40rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-.support-cta .checklist li {
-  padding-left: 2rem;
-  margin-bottom: 0.75rem;
-  position: relative;
-}
-.support-cta .checklist li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: var(--ts-color-primary, var(--color-brand-teal-400));
-  font-weight: bold;
-  font-size: 1.25rem;
-}
-.product-faq {
-  margin: 4rem 0;
-}
-.product-faq dl {
-  margin: 1.5rem 0;
-}
-.product-faq dt {
-  font-size: 1.1rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--ts-color-heading, var(--color-navy-900));
-}
-.product-faq dd {
-  margin-left: 0;
-  margin-bottom: 1rem;
-  padding-left: 1.5rem;
-  border-left: 3px solid var(--ts-color-border, rgba(0, 0, 0, 0.1));
-}
-.product-legal {
-  margin-top: 4rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--ts-color-border, rgba(0, 0, 0, 0.1));
-}
-.legal-text {
-  font-size: 0.825rem;
-  color: var(--ts-color-text-muted, #5a6a7a);
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .product-card {
-    padding: 1.25rem;
-  }
-  .product-category h2 {
-    font-size: 1.5rem;
-  }
-  .support-cta {
-    padding: 1.5rem;
-  }
-}
-</style>
