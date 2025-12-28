@@ -1,76 +1,107 @@
 primary:
   - id: services
-    title: Services
-    url: /services/
-    match: /services/
+    title: "Services"
+    url: "/services/"
+    match: "^/services(/|$)"
+    external: false
+
   - id: portfolio
-    title: Our Work
-    url: /portfolio/
-    match: /portfolio/
+    title: "Our Work"
+    url: "/portfolio/"
+    match: "^/portfolio(/|$)"
+    external: false
+
   - id: products
-    title: Products
-    url: /recommended-products/
-    match: /recommended-products/
+    title: "Products"
+    url: "/recommended-products/"
+    match: "^/recommended-products(/|$)"
+    external: false
+
   - id: reviews
-    title: Reviews
-    url: /reviews/
-    match: /reviews/
+    title: "Reviews"
+    url: "/reviews/"
+    match: "^/reviews(/|$)"
+    external: false
+
   - id: about
-    title: About
-    url: /about/
-    match: /about/
+    title: "About"
+    url: "/about/"
+    match: "^/about(/|$)"
+    external: false
+
   - id: contact
-    title: Contact
-    url: /contact/
-    match: /contact/
+    title: "Contact"
+    url: "/contact/"
+    match: "^/contact(/|$)"
+    external: false
+
   - id: blog
-    title: Blog
-    url: /blog/
-    match: /blog/
+    title: "Blog"
+    url: "/blog/"
+    match: "^/blog(/|$)"
+    external: false
+
   - id: financing
-    title: Financing
-    url: /financing/
-    match: /financing/
+    title: "Financing"
+    url: "/financing/"
+    match: "^/financing(/|$)"
+    external: false
+
   - id: gc
-    title: Contractors
-    url: /for-general-contractors/
-    match: /for-general-contractors/
+    title: "Contractors"
+    url: "/for-general-contractors/"
+    match: "^/for-general-contractors(/|$)"
+    external: false
+
   - id: counties
-    title: Service Areas (New Jersey licensed)
+    title: "Service Areas"
+    aria_label: "Service Areas (New Jersey licensed)"
     children:
       - id: atlantic-county
-        title: Atlantic County NJ
-        url: /atlantic-county-nj/
-        match: /atlantic-county-nj/
+        title: "Atlantic County NJ"
+        url: "/atlantic-county-nj/"
+        match: "^/atlantic-county-nj(/|$)"
+        external: false
+
       - id: ocean-county
-        title: Ocean County NJ
-        url: /ocean-county-nj/
-        match: /ocean-county-nj/
+        title: "Ocean County NJ"
+        url: "/ocean-county-nj/"
+        match: "^/ocean-county-nj(/|$)"
+        external: false
+
       - id: cape-may-county
-        title: Cape May County NJ
-        url: /cape-may-county-nj/
-        match: /cape-may-county-nj/
+        title: "Cape May County NJ"
+        url: "/cape-may-county-nj/"
+        match: "^/cape-may-county-nj(/|$)"
+        external: false
+
       - id: nj-hic-license
-        title: New Jersey HIC License & Compliance
-        url: /nj-hic-license/
-        match: /nj-hic-license/
+        title: "NJ HIC License & Compliance"
+        url: "/nj-hic-license/"
+        match: "^/nj-hic-license(/|$)"
+        external: false
+
   - id: download-guide
-    title: Free NJ Tile Guide
-    url: /download/nj-tile-guide/
-    match: /download/
+    title: "Free NJ Tile Guide"
+    url: "/download/nj-tile-guide/"
+    match: "^/download(/|$)"
+    external: false
 
 secondary:
   - id: privacy
-    title: Privacy
-    url: /privacy/
-    match: /privacy/
+    title: "Privacy"
+    url: "/privacy/"
+    match: "^/privacy(/|$)"
+    external: false
+
   - id: terms
-    title: Terms & Conditions
-    url: /terms/
-    match: /terms/
+    title: "Terms & Conditions"
+    url: "/terms/"
+    match: "^/terms(/|$)"
+    external: false
 
 footer:
-  - group: Main
+  - group: "Main"
     items:
       - ref: services
       - ref: portfolio
@@ -82,12 +113,15 @@ footer:
       - ref: financing
       - ref: gc
       - ref: download-guide
-  - group: Service Areas
+
+  - group: "Service Areas"
     items:
       - ref: atlantic-county
       - ref: ocean-county
       - ref: cape-may-county
-  - group: Legal
+      - ref: nj-hic-license
+
+  - group: "Legal"
     items:
       - ref: privacy
       - ref: terms

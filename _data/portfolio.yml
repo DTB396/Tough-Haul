@@ -1,41 +1,82 @@
 # Portfolio slider entries for /portfolio/
-# Updated with AVAILABLE images - conversion-optimized for New Jersey tile jobs
+# Conversion-optimized for NJ tile + wet-area work
+# Note: TCNA/ANSI references are phrased defensibly (no over-claims)
 
 projects:
   - id: bathroom-complete
-    tags: [showers, floors]
-    file: tillerstead-work/bathrooms/after-entry-shot.jpg
-    alt: Completed bathroom tile installation by Tillerstead LLC—TCNA-compliant waterproofing and professional finish
-    caption: "Code-compliant bathroom installation: waterproof assembly per ANSI A118.10, expansion joints per TCNA EJ171, and New Jersey HIC #13VH10808800 licensed work."
+    title: "Full Bathroom Tile Installation"
+    tags: ["showers", "floors"]
+    file: "/assets/img/tillerstead-work/bathrooms/after-entry-shot.jpg"
+    alt: "Completed bathroom tile installation by Tillerstead LLC in South Jersey"
+    caption: >
+      Finished bathroom system with documented prep, clean lines, and
+      wet-area detailing consistent with TCNA methods and applicable ANSI standards.
+    location: "South Jersey"
+    ar: "4/3"
+    priority: 10
 
   - id: lft-vanity-wall
-    tags: [showers]
-    file: tillerstead-work/bathrooms/after-lft-vanity-wall.jpg
-    alt: Large-format tile vanity wall with precision layout and TCNA-compliant substrate preparation
-    caption: "Large-format tile vanity: substrate flattened to TCNA tolerance, full thinset coverage, and professional trim work."
+    title: "Large-Format Vanity Wall"
+    tags: ["showers", "large-format"]
+    file: "/assets/img/tillerstead-work/bathrooms/after-lft-vanity-wall.jpg"
+    alt: "Large-format tile vanity wall with aligned layout and finished edges"
+    caption: >
+      Large-format tile layout with straight lines, finished edges, and
+      substrate preparation verified for the tile format.
+    location: "South Jersey"
+    ar: "4/3"
+    priority: 9
 
   - id: wall-tile-detail
-    tags: [showers, floors]
-    file: tillerstead-work/bathrooms/bathroom-wall-tile-detail-pre-grout.jpg
-    file_webp: tillerstead-work/bathrooms/bathroom-wall-tile-detail-pre-grout.webp
-    alt: Bathroom wall tile laid with precision spacing, ready for grout—shows TCNA-compliant installation process
-    caption: "Pre-grout detail: tiles set with proper spacing, substrate prepped to TCNA flatness specs, ready for epoxy grout."
+    title: "Wall Tile Detail (Pre-Grout)"
+    tags: ["showers", "details"]
+    file: "/assets/img/tillerstead-work/bathrooms/bathroom-wall-tile-detail-pre-grout.jpg"
+    file_webp: "/assets/img/tillerstead-work/bathrooms/bathroom-wall-tile-detail-pre-grout.webp"
+    alt: "Bathroom wall tile detail before grout showing consistent joint spacing"
+    caption: >
+      Pre-grout detail: consistent spacing, clean cuts, and readiness checks
+      completed before grout and final seal-up.
+    location: "South Jersey"
+    ar: "4/3"
+    priority: 8
 
   - id: lft-installation
-    tags: [floors]
-    file: tillerstead-work/bathrooms/large-format-tile-installation.jpg
-    file_webp: tillerstead-work/bathrooms/large-format-tile-installation.webp
-    alt: Large-format tile installation in progress with leveling clips and TCNA-compliant thinset coverage
-    caption: "Large-format tile process: leveling clips for lippage control, proper trowel selection for complete mortar coverage per TCNA standards, and laser-checked flatness."
+    title: "Large-Format Tile Installation (In Progress)"
+    tags: ["floors", "large-format", "in-progress"]
+    file: "/assets/img/tillerstead-work/bathrooms/large-format-tile-installation.jpg"
+    file_webp: "/assets/img/tillerstead-work/bathrooms/large-format-tile-installation.webp"
+    alt: "Large-format tile installation in progress with clip system for lippage control"
+    caption: >
+      In-progress install: clip system used to manage lippage,
+      mortar and trowel selection matched to the tile,
+      and coverage verified during setting.
+    location: "South Jersey"
+    ar: "4/3"
+    priority: 7
 
   - id: waterproof-membrane
-    tags: [floors, showers]
-    file: tillerstead-work/bathrooms/lft-decoupling-membrane-sealed.jpeg
-    alt: Waterproof decoupling membrane installed over properly prepared substrate for TCNA-compliant tile assembly
-    caption: "Substrate prep: uncoupling membrane bonded to flat substrate, ready for large-format tile. Prevents cracking and ensures long-term durability."
+    title: "Membrane + Substrate Prep"
+    tags: ["floors", "showers", "prep"]
+    file: "/assets/img/tillerstead-work/bathrooms/lft-decoupling-membrane-sealed.jpeg"
+    alt: "Uncoupling or waterproofing membrane installed over a prepared substrate for tile assembly"
+    caption: >
+      Prep phase: membrane installed over a prepared substrate to support the tile assembly.
+      Details and transitions completed per the selected system specifications.
+    location: "South Jersey"
+    ar: "4/3"
+    priority: 6
 
   - id: hardwood-flooring
-    tags: [floors]
-    file: tillerstead-work/floors/hardwood-room.jpg
-    alt: Professional hardwood flooring installation showing scope diversity and craftsmanship
-    caption: "Hardwood installation: straight lines, clean transitions, and substrate prep per manufacturer specs."
+    title: "Hardwood Flooring (Scope Diversity)"
+    tags: ["floors", "remodeling"]
+    file: "/assets/img/tillerstead-work/floors/hardwood-room.jpg"
+    alt: "Hardwood flooring installation showing clean lines and transitions"
+    caption: >
+      Hardwood installation with clean transitions and substrate preparation
+      consistent with manufacturer requirements.
+    location: "South Jersey"
+    ar: "4/3"
+    priority: 5
+
+meta:
+  compliance_note: "NJ HIC #13VH10808800 · Tile assemblies follow TCNA 2024 methods and applicable ANSI A108/A118 standards."

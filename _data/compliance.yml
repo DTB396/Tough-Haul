@@ -8,16 +8,21 @@ license:
   issuer: "New Jersey Division of Consumer Affairs"
   type: "Home Improvement Contractor"
   trades:
-    - "Carpentry"
-    - "Bathroom Remodeling"
-    - "Tile Installation" 
-    - "General Contracting" 
-    - "Flooring"
-    - "Masonry"
-    - "Large-Format Tile"
-    - "Natural Stone"
-    - "Waterproofing"
-  compliance: "Full compliance with New Jersey Consumer Fraud Act (N.J.S.A. 56:8-136 et seq.) and all TCNA installation standards."
+    # Trades framed as NJ HIC service categories;
+    # TCNA/ANSI standards apply specifically to tile assemblies
+    - "Carpentry (substrate and framing support for tile assemblies only)"
+    - "Residential Remodeling (non-licensed trades only)"
+    - "Professional Tile Installation (ceramic, porcelain, glass)"
+    - "Natural Stone Tile Installation (thin-set methods where applicable)"
+    - "Large-Format & Gauged Porcelain Tile Panels/Slabs (GPTP)"
+    - "Flooring (tile and stone systems only)"
+    - "Waterproofing (bonded waterproofing membranes within tile assemblies)"
+    - "Crack Isolation & Movement Joint Integration"
+    - "Project Coordination & Construction Management (administrative)"
+  compliance: >
+    Full compliance with New Jersey Home Improvement Contractor regulations
+    (N.J.S.A. 56:8-136 et seq.) and all applicable TCNA 2024 Handbook methods
+    and ANSI A108/A118 installation and material standards governing tile work.
 
   verified: true
   last_verified: "2024-06-01"
@@ -25,20 +30,43 @@ license:
 business:
   legal_name: "Tillerstead LLC"
   trade_name: "Tillerstead"
-  owner: "Devon Tyler - Owner-Operator"
-  service_area: "New Jersey (Primarily South Jersey)"
-  standards:
-  tcna: "TCNA 2024 Handbook for Ceramic, Glass, and Stone Tile Installation"
+  owner: "Faith Frontier Ecclesiastical Trust"
+  address:
+    street: "325 East Jimmie Leeds Road, Suite 7-333"
+    city: "Galloway Township"
+    state: "NJ"
+    zip: "08205"
+  service_area: "New Jersey (Primarily Atlantic, Ocean, and Cape May counties)"
+
+standards:
+  tcna:
+    handbook: "TCNA 2024 Handbook for Ceramic, Glass, and Stone Tile Installation"
+    references:
+      - "EJ171 – Movement Joint Guidelines (method reference)"
   ansi:
-    - "ANSI A108.10 (Waterproofing)"
-    - "ANSI A118.10 (Waterproofing Membranes)"
-    - "ANSI A118.15 (Improved Modified Dry-Set Cement Mortar)"
+    installation:
+      - "ANSI A108.01 – Substrates and Preparation"
+      - "ANSI A108.02 – Materials, Environmental, and Workmanship"
+      - "ANSI A108.05 – Thin-set and Modified Mortar Tile Installation"
+      - "ANSI A108.10 – Installation of Grout in Tilework"
+      - "ANSI A108.13 – Installation of Load-Bearing Bonded Waterproof Membranes"
+      - "ANSI A108.19 – Interior Installation of Gauged Porcelain Tile Panels/Slabs"
+      - "ANSI A108.20 – Exterior Installation of Gauged Porcelain Tile Panels/Slabs"
+      - "ANSI A108.21 – Self-Leveling Underlayments"
+      - "ANSI A108.22 – Installation of Pre-Mixed Grout"
+    material_specifications:
+      - "ANSI A118.1 – Dry-Set Cement Mortar"
+      - "ANSI A118.4 – Modified Dry-Set Cement Mortar"
+      - "ANSI A118.11 – EGP Mortar for Plywood"
+      - "ANSI A118.15 – Improved Modified Dry-Set Cement Mortar"
+      - "ANSI A118.10 – Load-Bearing Bonded Waterproof Membranes"
+      - "ANSI A118.12 – Crack Isolation Membranes"
   astm:
-    - "ASTM E2947 (Flood Testing)"
-    - "ASTM C627 (Floor Assembly Deflection)"
+    - "ASTM D5957 – Flood (Ponding) Testing of Horizontal Waterproofing"
+    - "ASTM C627 – Robinson-Type Floor Tester (Tile Assembly Performance)"
   osha:
-    - "OSHA 1926.1153 (Silica Dust)"
-    - "OSHA 1926.501 (Fall Protection)"
+    - "29 CFR 1926.1153 – Respirable Crystalline Silica (Construction)"
+    - "29 CFR 1926.501 – Fall Protection"
 
 insurance:
   general_liability: "$1M per occurrence / $2M aggregate"
@@ -51,29 +79,57 @@ insurance:
 
 warranty:
   workmanship_years: 2
-  workmanship_description: "Installation workmanship including substrate preparation, waterproofing, tile setting, and grout application"
+  workmanship_description: >
+    Installation workmanship limited to tile and stone assemblies,
+    including substrate preparation within scope, bonded waterproofing
+    membrane installation, tile setting, and grout application in
+    accordance with TCNA 2024 and ANSI standards.
   exclusions:
     - "Normal wear and tear"
-    - "Improper maintenance"
-    - "Impact damage or homeowner modifications"
-    - "Manufacturer material defects (covered by manufacturer warranty)"
+    - "Improper maintenance or cleaning products"
+    - "Impact damage or homeowner/third-party modifications"
+    - "Manufacturer material defects (covered by manufacturer warranties)"
 
-note: "Tillerstead LLC is a New Jersey Home Improvement Contractor specializing in Large Format Tile installation, waterproofing, and bathroom remodeling. All work is performed to TCNA 2024 standards and fully compliant with New Jersey HIC regulations. We provide transparent estimates, detailed scope documentation, and rigorous quality assurance—no shortcuts, no surprises."
+note: >
+  Tillerstead LLC is a New Jersey Home Improvement Contractor specializing in
+  tile and stone assemblies, bonded waterproofing systems, and bathroom
+  remodeling. All tile-related work is performed strictly in accordance
+  with the TCNA 2024 Handbook and applicable ANSI A108/A118 standards.
+  Transparent estimates, written scopes, and documented quality controls
+  are standard practice.
 
-license_info: "New Jersey HIC #13VH10808800 · Fully Insured · TCNA 2024 Compliant · Serving South Jersey"
+license_info: >
+  New Jersey HIC #13VH10808800 · Fully Insured · TCNA 2024 / ANSI A108–A118 Compliant ·
+  Serving South Jersey
 
-disclosure: "Licensed New Jersey Home Improvement Contractor #13VH10808800. All contracts include mandatory 3-day right of rescission per New Jersey Consumer Fraud Act (N.J.S.A. 56:8-136)."
+disclosure: >
+  Licensed New Jersey Home Improvement Contractor #13VH10808800.
+  All contracts include the mandatory 3-day right of rescission pursuant to
+  the New Jersey Consumer Fraud Act (N.J.S.A. 56:8-136).
 
-payment_terms: "Payment schedule and deposit amounts are negotiable and specified in written contract. Material deposits may be required for specialty orders. Progress payments tied to verifiable completion milestones per industry best practices."
+payment_terms: >
+  Payment schedules, deposits, and progress payments are defined in a
+  written contract. Specialty material deposits may be required.
+  Progress payments are tied to objectively verifiable completion
+  milestones consistent with industry best practices.
 
-three_day_rescission: "You, the buyer, may cancel this transaction at any time prior to midnight of the third business day after the date of this transaction. See the attached notice of cancellation form for an explanation of this right."
+three_day_rescission: >
+  You, the buyer, may cancel this transaction at any time prior to midnight
+  of the third business day after the date of this transaction.
+  See the attached notice of cancellation form for details.
 
 # Legacy keys for backwards compatibility
 hic_license_number: "13VH10808800"
 hic_license_status: "Active"
 hic_license_issuer: "New Jersey Division of Consumer Affairs"
 hic_license_type: "Home Improvement Contractor"
-hic_license_compliance: "Full compliance with New Jersey Consumer Fraud Act (N.J.S.A. 56:8-136 et seq.) and all TCNA installation standards."
+hic_license_compliance: >
+  Full compliance with the New Jersey Consumer Fraud Act (N.J.S.A. 56:8-136 et seq.)
+  and all applicable TCNA 2024 and ANSI A108/A118 tile installation standards.
 hic_license_verified: true
 hic_license_last_verified: "2024-06-01"
-hic_license_notes: "Tillerstead LLC operates under New Jersey HIC #13VH10808800, with license status and compliance independently verified and monitored for client assurance. All work is performed to TCNA 2024 standards and New Jersey regulatory requirements, ensuring technical precision, transparency, and consumer protection."
+hic_license_notes: >
+  Tillerstead LLC operates under New Jersey HIC #13VH10808800.
+  License status and compliance are independently verified and monitored.
+  Tile and stone work is executed strictly within TCNA and ANSI technical
+  requirements, ensuring precision, transparency, and consumer protection.
