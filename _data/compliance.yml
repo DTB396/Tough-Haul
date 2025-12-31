@@ -73,44 +73,44 @@ standards:
     - "29 CFR 1926.501 – Fall Protection"
 
 insurance:
-	general_liability: "$1M per occurrence / $2M aggregate"
-	workers_comp: "Compliant where applicable"
-	coverage:
-		- "General Liability"
-		- "Property Damage"
-		- "Bodily Injury"
-		- "Surety Bond (where required)"
+  general_liability: "$1M per occurrence / $2M aggregate"
+  workers_comp: "Compliant where applicable"
+  coverage:
+    - "General Liability"
+    - "Property Damage"
+    - "Bodily Injury"
+    - "Surety Bond (where required)"
 
 warranty:
-	workmanship_years: 2
-	workmanship_description: >
-		Limited workmanship warranty covering tile and stone installation work
-		performed by Tillerstead LLC, including substrate preparation within scope,
-		bonded waterproofing membrane installation, tile setting, and grout
-		application, when performed in accordance with published TCNA 2024 and
-		ANSI A108/A118 standards.
-	exclusions:
-		- "Normal wear and tear"
-		- "Improper maintenance, misuse, or incompatible cleaning products"
-		- "Impact damage or alterations by others"
-		- "Manufacturer material defects (covered by manufacturer warranties)"
+  workmanship_years: 2
+  workmanship_description: >
+    Limited workmanship warranty covering tile and stone installation work
+    performed by Tillerstead LLC, including substrate preparation within scope,
+    bonded waterproofing membrane installation, tile setting, and grout
+    application, when performed in accordance with published TCNA 2024 and
+    ANSI A108/A118 standards.
+  exclusions:
+    - "Normal wear and tear"
+    - "Improper maintenance, misuse, or incompatible cleaning products"
+    - "Impact damage or alterations by others"
+    - "Manufacturer material defects (covered by manufacturer warranties)"
 
 consumer_protection:
-	three_day_rescission: >
-		You, the buyer, may cancel this transaction at any time prior to midnight of
-		the third business day after the date of this transaction, pursuant to the
-		New Jersey Consumer Fraud Act (N.J.S.A. 56:8-136).
-	payment_terms: >
-		Deposits, progress payments, and final payment terms are defined in a
-		written contract. Progress payments are tied to objectively verifiable
-		completion milestones. Specialty or custom materials may require advance
-		deposit.
-	public_notice: >
-		Tillerstead LLC is a New Jersey Licensed Home Improvement Contractor
-		(HIC #13VH10808800). Tile and stone work is performed within the scope of
-		published industry standards for tile assemblies. All projects are governed
-		by written contracts, documented scope, and applicable consumer protections
-		under New Jersey law.
+  three_day_rescission: >
+    You, the buyer, may cancel this transaction at any time prior to midnight of
+    the third business day after the date of this transaction, pursuant to the
+    New Jersey Consumer Fraud Act (N.J.S.A. 56:8-136).
+  payment_terms: >
+    Deposits, progress payments, and final payment terms are defined in a
+    written contract. Progress payments are tied to objectively verifiable
+    completion milestones. Specialty or custom materials may require advance
+    deposit.
+  public_notice: >
+    Tillerstead LLC is a New Jersey Licensed Home Improvement Contractor
+    (HIC #13VH10808800). Tile and stone work is performed within the scope of
+    published industry standards for tile assemblies. All projects are governed
+    by written contracts, documented scope, and applicable consumer protections
+    under New Jersey law.
 
 hic_license_number: "13VH10808800"
 hic_license_status: "Active"
