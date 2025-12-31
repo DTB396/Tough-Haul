@@ -183,6 +183,6 @@ cta:
     label: "Request a Written Estimate"
     url: /contact/
   secondary:
-    label: "Call/Text""
+    label: "Call/Text"
     url: "tel:+16098628808"
   note: "NJ HIC #13VH10808800 · Serving Atlantic, Ocean & Cape May"
