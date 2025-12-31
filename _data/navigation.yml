@@ -218,15 +218,9 @@ secondary:
 footer:
   - group: "Start Here"
     items:
-      - ref: build
-      - ref: portfolio
-      - ref: reviews
-      - ref: contact
-<<<<<<< HEAD
       - ref: blog
       - ref: financing
       - ref: gc
-=======
 
   - group: "Resources"
     items:
@@ -235,7 +229,6 @@ footer:
       - ref: blog
       - ref: products
       - ref: financing
->>>>>>> cc9afaaa7f526c39fe24b77ebadb576abfdceae3
 
   - group: "Service Areas"
     items:
