@@ -2,20 +2,21 @@
 layout: default
 title: Privacy Policy | Tillerstead LLC
 permalink: /privacy/
-description: Tillerstead LLC’s New Jersey HIC-compliant privacy policy—how we collect, use, and safeguard your information per TCNA and New Jersey law.
+description: How Tillerstead LLC collects, uses, and safeguards information shared through our website, contact forms, and service communications. NJ HIC #13VH10808800.
 body_class: page-legal
 hero_eyebrow: Legal
 hero_title: Privacy Policy
 hero_summary: >
-  How Tillerstead LLC collects, uses, and protects information shared through our
-  website, contact forms, and service communications, in strict compliance with TCNA standards and New Jersey HIC regulations.
+  How Tillerstead LLC collects, uses, and protects information shared through our website,
+  contact forms, and service communications. We collect only what we need to respond,
+  schedule, and perform contracted work.
 hero_kpis:
   - label: "Data use"
-    text: "Collected solely to deliver, document, and support licensed services"
+    text: "Collected only to respond, schedule, estimate, and support contracted services"
   - label: "Sharing"
-    text: "Never sold or traded; only disclosed to vetted service partners as required"
+    text: "Not sold; shared only with service providers needed to operate the site or deliver service"
   - label: "Control"
-    text: "You may update or request deletion of your data at any time"
+    text: "You may request access, correction, or deletion where feasible"
 ---
 
 ## Privacy Policy
@@ -26,94 +27,120 @@ hero_kpis:
 
 ## 1. Who we are
 
-Tillerstead LLC (“we,” “our,” or “us”) is a New Jersey-licensed and insured home improvement contractor (New Jersey HIC #13VH11754600), specializing in tile, bath, and remodeling per TCNA 2024 standards.  
-We operate [tillerstead.com](https://tillerstead.com) and collect only the minimum information required to:
-
-- Respond to project inquiries  
-- Schedule and document work  
-- Fulfill legal, insurance, and technical obligations under NJ law and TCNA guidelines  
+Tillerstead LLC (“we,” “our,” or “us”) is a New Jersey Home Improvement Contractor (NJ HIC **#13VH10808800**).  
+We operate this website and use it to communicate with homeowners, provide estimates, and deliver contracted services.
 
 ---
 
 ## 2. Information we collect
 
-- **Contact details** – Name, phone, email, and project address, as provided by you.
-- **Project details** – Project scope, measurements, site photos, timelines, and budget goals, as relevant to TCNA-compliant work.
-- **Technical data** – IP address, browser, and device type, collected by our hosting provider or analytics for security and performance.
+We collect information you choose to provide and limited technical data that is automatically logged by our website and service providers.
 
-We do **not** collect sensitive personal data (e.g., Social Security numbers, financial account details) via our website.
+### Information you provide
+
+- **Contact details:** name, phone number, email address
+- **Project details:** address/location, scope notes, measurements, photos you upload, scheduling preferences
+- **Service communications:** messages you send by email, text, phone, or contact form
+
+### Information collected automatically
+
+- **Technical data:** IP address, device/browser type, basic site usage logs, and error logs (typically through our hosting provider and security tooling)
+
+**We do not intentionally collect sensitive personal information** (e.g., Social Security numbers, bank account numbers) through this website.
 
 ---
 
 ## 3. How we use your information
 
-- To respond to your inquiries, schedule consultations, and provide detailed, TCNA-compliant estimates.
-- To plan, perform, document, and invoice licensed contracting services in accordance with New Jersey HIC and TCNA requirements.
-- To improve our website, communications, and service processes for accessibility and compliance.
-- To meet New Jersey licensing, insurance, and record-keeping obligations.
+We use information to:
 
-**We never sell or trade your personal data.** Information is shared only with trusted service providers (e.g., hosting, email, CRM, payment processors) as necessary to fulfill your request and always in compliance with applicable privacy laws.
+- Respond to inquiries and requests
+- Schedule consultations or site visits
+- Prepare estimates and written proposals
+- Perform, document, and support contracted services
+- Send administrative communications (scheduling, scope clarification, invoices, closeout documentation)
+- Maintain basic business records (as required for tax, warranty, insurance, and legal purposes)
+- Protect the website and prevent fraud or abuse
 
----
-
-## 4. Cookies & analytics
-
-Our site may use essential cookies and analytics to monitor traffic and ensure site performance.
-
-- Cookies are optional and can be disabled in your browser settings.
-- Disabling cookies will not prevent you from accessing site content.
-- Some interactive features (e.g., forms) may be limited if cookies or scripts are blocked.
-
-We do not use third-party advertising or behavioral tracking cookies.
+**We do not sell your personal information.**
 
 ---
 
-## 5. Data retention
+## 4. When we share information
 
-We retain contact and project details only as long as necessary to:
+We may share information only as needed to operate our business and deliver services, such as with:
 
-- Respond to your requests and deliver contracted services
-- Maintain accurate, TCNA-compliant service records
-- Meet legal, tax, and insurance requirements under NJ law
+- Website hosting and security providers
+- Email and communications providers
+- Payment processors (if used)
+- Subcontracted or licensed specialty trades (only when needed for your project and with scope relevance)
+- Insurers or legal/financial professionals when required for a claim, contract, or lawful request
 
-Routine backups and server logs are retained for a limited period for security and troubleshooting, then securely deleted.
-
----
-
-## 6. Security
-
-We implement industry-standard safeguards (SSL/TLS encryption, access controls, secure backups) to protect information submitted through our forms and communications.  
-While we strive for robust security, no online system is infallible; we cannot guarantee absolute protection against threats beyond our control.
+These providers receive only what is necessary to perform their function.
 
 ---
 
-## 7. Your rights & choices
+## 5. Cookies and analytics
 
-- You may request to update or delete your contact details at any time.
-- You may opt out of non-essential communications.
-- You may disable cookies in your browser settings.
+This site may use:
 
-Where applicable law grants additional rights (e.g., data access, correction, or portability), we will make a good-faith effort to honor those requests in compliance with NJ and federal regulations.
+- **Essential cookies** for core functionality and security
+- **Basic analytics** to understand site performance and traffic trends
 
----
+You can control cookies through your browser settings. Disabling cookies may affect certain features (such as forms) depending on your browser and privacy settings.
 
-## 8. Policy updates
-
-We may update this Privacy Policy as our services or legal requirements evolve.
-
-- The **“Last updated”** date reflects the most recent revision.
-- Continued use of the site after changes are posted constitutes acceptance of the updated policy.
+We do not use this site for third-party behavioral advertising that tracks you across other websites.
 
 ---
 
-## 9. Contact & compliance
+## 6. Data retention
+
+We retain information only as long as reasonably necessary to:
+
+- Respond to your request
+- Provide contracted services
+- Maintain business records for tax, warranty, insurance, and legal purposes
+
+Server logs and backups may exist for a limited period due to standard hosting and security practices.
+
+---
+
+## 7. Security
+
+We use reasonable safeguards to protect information, such as:
+
+- Encryption in transit (SSL/TLS)
+- Access controls on accounts and systems
+- Routine security updates and backups where supported by our providers
+
+No system can guarantee absolute security. If you believe you have identified a security issue, please contact us promptly.
+
+---
+
+## 8. Your choices and requests
+
+You may request, where feasible:
+
+- Access to the personal information you provided
+- Corrections to inaccurate information
+- Deletion of your personal information (subject to record-keeping obligations and legitimate business needs)
+
+To make a request, contact us using the information below. We may need to verify your identity before processing certain requests.
+
+---
+
+## 9. Changes to this policy
+
+We may update this policy from time to time. The “Last updated” date reflects the most recent revision. Continued use of the site after an update means the updated policy applies going forward.
+
+---
+
+## 10. Contact
 
 **Tillerstead LLC**  
-New Jersey HIC #13VH11754600  
+NJ HIC #13VH10808800  
 325 E. Jimmie Leeds Road, Suite 7-333  
-Galloway, New Jersey 08205
+Galloway, NJ 08205
 
-Email: [info@tillerstead.com](mailto:info@tillerstead.com)  
-Phone: [(609) 862-8808](tel:+16098628808)
-
-For privacy or compliance concerns, please reference our New Jersey HIC license and TCNA standards in your inquiry.
+Email: <info@tillerstead.com>  
+Phone: (609) 862-8808

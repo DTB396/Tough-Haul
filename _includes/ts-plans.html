@@ -1,69 +1,88 @@
-<!-- Unified Maintenance Plans Section -->
+<!-- Unified Maintenance Plans Section (Owner-Operated, Flexible) -->
 {% assign section_id = include.section_id | default: 'ts-plans' %}
 {% assign heading_id = include.heading_id | default: section_id | append: '-title' %}
 
 <section class="ts-plans ts-section" id="{{ section_id }}" aria-labelledby="{{ heading_id }}">
   <div class="container">
     <header class="ts-plans__header">
-      <span class="eyebrow text-accent">Property Care Programs</span>
-      <h2 id="{{ heading_id }}" class="heading-2 text-primary">Monthly Maintenance Plans for Shore Properties</h2>
+      <span class="eyebrow text-accent">Property Maintenance</span>
+      <h2 id="{{ heading_id }}" class="heading-2 text-primary">Owner-Operated Maintenance Plans for South Jersey Homes
+      </h2>
       <p class="lead">
-        Proactive, TCNA-compliant maintenance for New Jersey shore homes—protecting your investment, minimizing risk, and ensuring every visit meets New Jersey HIC standards. All plans include written documentation, rapid response, and transparent communication.
+        I’m a one-man contractor. That means you get the same person every visit—consistent eyes on your home,
+        honest prioritization, and documented service notes you can keep. Plans are flexible: monthly, seasonal,
+        or tailored to your property and budget.
+      </p>
+      <p class="muted">
+        Maintenance plans focus on inspection, prevention, and small repairs. Larger repairs or remodel scopes are
+        quoted separately
+        with a written proposal.
       </p>
     </header>
 
     <div class="ts-plans__grid" role="list">
+      <!-- Plan 1 -->
       <article class="ts-card ts-plan-card" role="listitem">
         <div class="ts-plan-card__body">
           <h3 class="heading-3 text-primary">
-            <span aria-hidden="true" style="margin-right:0.5rem;display:inline-block;vertical-align:middle">{% include ts-icon.html name="icon-plan" size="22" class="ts-icon" %}</span>
-            Core Checklist
+            <span aria-hidden="true" style="margin-right:0.5rem;display:inline-block;vertical-align:middle">{% include
+              ts-icon.html name="icon-plan" size="22" class="ts-icon" %}</span>
+            Core Visit Plan
           </h3>
           <p class="ts-plan-card__summary">
-            TCNA-guided inspections and preventive care for rentals, shore homes, and primary residences. All findings documented per New Jersey HIC requirements.
+            Recurring checkups and small fixes to keep the home stable—especially helpful for busy homeowners, rentals,
+            and seasonal properties.
           </p>
           <ul>
-            <li>Moisture, leak, and HVAC system checks (per ANSI A108/A118)</li>
-            <li>Minor repairs completed during visit—no upcharge for routine fixes</li>
-            <li>Direct access to licensed support between appointments</li>
+            <li>Visual checks for leaks, staining, ventilation issues, and seasonal wear</li>
+            <li>Basic touch-ups and minor repairs when feasible during the visit</li>
+            <li>Clear “now vs. later” recommendations to prevent surprise expenses</li>
           </ul>
         </div>
       </article>
 
+      <!-- Plan 2 -->
       <article class="ts-card ts-plan-card" role="listitem">
         <div class="ts-plan-card__body">
           <h3 class="heading-3 text-primary">
-            <span aria-hidden="true" style="margin-right:0.5rem;display:inline-block;vertical-align:middle">{% include ts-icon.html name="icon-concierge" size="22" class="ts-icon" %}</span>
-            Concierge Add-ons
+            <span aria-hidden="true" style="margin-right:0.5rem;display:inline-block;vertical-align:middle">{% include
+              ts-icon.html name="icon-concierge" size="22" class="ts-icon" %}</span>
+            Seasonal / Shore Add-Ons
           </h3>
           <p class="ts-plan-card__summary">
-            Owner advocacy and guest readiness—vendor management, storm prep, and secure key holding, all with written logs for legal compliance.
+            Optional support for storm prep, arrivals, and property readiness—built around your checklist and how you
+            use the home.
           </p>
           <ul>
-            <li>Vetted vendor coordination &amp; secure key management</li>
-            <li>Storm preparation and post-event photo documentation</li>
-            <li>Supply restocking and turnover preparation per client checklist</li>
+            <li>Storm prep and post-weather checks (photos provided)</li>
+            <li>Key coordination and access notes (by agreement)</li>
+            <li>Basic readiness tasks: supplies, minor hardware, small punch items</li>
           </ul>
         </div>
       </article>
 
+      <!-- Plan 3 -->
       <article class="ts-card ts-plan-card ts-plan-card--accent" role="listitem">
         <div class="ts-plan-card__body">
           <h3 class="heading-3 text-primary">
-            <span aria-hidden="true" style="margin-right:0.5rem;display:inline-block;vertical-align:middle">{% include ts-icon.html name="icon-report" size="22" class="ts-icon" %}</span>
-            Transparent Reporting
+            <span aria-hidden="true" style="margin-right:0.5rem;display:inline-block;vertical-align:middle">{% include
+              ts-icon.html name="icon-report" size="22" class="ts-icon" %}</span>
+            Documentation & Communication
           </h3>
           <p class="ts-plan-card__summary">
-            Every visit includes time-stamped photos, written notes, and actionable next steps—delivered within 24 hours for full New Jersey HIC and TCNA compliance.
+            Every visit includes notes and time-stamped photos with clear next steps. If something needs a larger
+            repair,
+            you’ll receive a written scope before work expands.
           </p>
+
           <dl class="ts-plan-stats">
             <div>
-              <dt class="heading-4 text-primary">&lt;24 hrs</dt>
-              <dd>Guaranteed response for maintenance clients</dd>
+              <dt class="heading-4 text-primary">Photo log</dt>
+              <dd>Key areas + any findings documented</dd>
             </div>
             <div>
-              <dt class="heading-4 text-primary">100%</dt>
-              <dd>Change orders documented in writing</dd>
+              <dt class="heading-4 text-primary">Written notes</dt>
+              <dd>What was done + what’s recommended next</dd>
             </div>
           </dl>
         </div>
@@ -71,8 +90,13 @@
     </div>
 
     <nav class="ts-plans__actions" aria-label="Maintenance plan actions">
-      <a class="btn btn--primary" href="{{ '/services/#maintenance' | relative_url }}">See Full Maintenance Coverage</a>
-      <a class="btn btn--ghost" href="{{ '/contact/' | relative_url }}">Request a Plan Walkthrough</a>
+      <a class="btn btn--primary" href="{{ '/contact/' | relative_url }}">Request a Plan Walkthrough</a>
+      <a class="btn btn--ghost" href="{{ '/services/#maintenance' | relative_url }}">See Typical Coverage</a>
     </nav>
+
+    <p class="microcopy center mt-2">
+      Plans are written and scoped. Scheduling depends on season and workload. Emergency plumbing/electrical hazards
+      should be handled by the appropriate licensed trade first.
+    </p>
   </div>
 </section>

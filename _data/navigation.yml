@@ -1,8 +1,8 @@
 primary:
-  - id: services
-    title: "Services"
-    url: "/services/"
-    match: "^/services(/|$)"
+  - id: build
+    title: "Build Phase Guide"
+    url: "/build/"
+    match: "^/build(/|$)"
     external: false
 
   - id: portfolio
@@ -81,12 +81,6 @@ primary:
         match: "^/nj-hic-license(/|$)"
         external: false
 
-  - id: download-guide
-    title: "Free NJ Tile Guide"
-    url: "/download/nj-tile-guide/"
-    match: "^/download(/|$)"
-    external: false
-
 secondary:
   - id: privacy
     title: "Privacy"
@@ -103,7 +97,7 @@ secondary:
 footer:
   - group: "Main"
     items:
-      - ref: services
+      - ref: build
       - ref: portfolio
       - ref: products
       - ref: reviews
@@ -112,7 +106,6 @@ footer:
       - ref: blog
       - ref: financing
       - ref: gc
-      - ref: download-guide
 
   - group: "Service Areas"
     items:

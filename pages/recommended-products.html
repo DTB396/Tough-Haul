@@ -3,21 +3,23 @@ layout: default
 title: Recommended Products & Materials | Tillerstead LLC
 permalink: /recommended-products/
 body_class: page-products
-description: Field-tested tile tools and materials we actually use on South Jersey jobs. Affiliate links help fund our
-free installation guides and site improvements at no extra cost to you.
+description: Field-tested tile tools and materials we actually use or select by spec for South Jersey projects.
+Affiliate links help fund our free homeowner guides—at no extra cost to you.
 hero_eyebrow: Recommended Products
 hero_title: Make Your Renovation Simpler
 hero_summary: >-
-From measurement tools to mortars and membranes, these are products we’ve used on real jobs.
-If you’re estimating, DIYing, or vetting a contractor’s spec list, this page helps you avoid guesswork.
-We may earn a small commission—at no extra cost to you—which supports free educational content and site development.
+From measurement tools to mortars and membranes, these are products we use on real jobs—or we select by current
+manufacturer data sheets.
+If you’re estimating, DIYing, or vetting a contractor’s materials list, this page helps you avoid guesswork and
+mismatched systems.
+We may earn a small commission at no extra cost to you, which supports our free homeowner guides and site improvements.
 hero_kpis:
 - label: "Field-Tested"
-text: "No paid placements. We only list products we’ve actually used or vetted by spec sheet."
+text: "No paid placements. Products listed are used in the field or selected by published specs."
 - label: "Standards-Driven"
-text: "We reference manufacturer instructions plus TCNA methods and ANSI A108/A118 where applicable."
-- label: "Support the Guides"
-text: "Affiliate commissions fund independent, contractor-authored articles—no paywalls."
+text: "Always follow current manufacturer instructions and recognized tile-industry methods where applicable."
+- label: "Supports the Guides"
+text: "Affiliate commissions fund free, contractor-authored education—no paywalls."
 ---
 
 <main class="ts-section ts-surface products products--page" role="main">
@@ -28,36 +30,59 @@ text: "Affiliate commissions fund independent, contractor-authored articles—no
       <h2 class="heading-3">Affiliate Disclosure</h2>
       <p>
         <strong>Tillerstead LLC participates in the Amazon Services LLC Associates Program</strong>, an affiliate
-        advertising program designed
-        to provide a means for sites to earn advertising fees by linking to Amazon.com and affiliated sites.
+        program that allows
+        sites to earn advertising fees by linking to Amazon and affiliated sites.
       </p>
       <p>
         If you purchase through these links, we may earn a commission <strong>at no additional cost to you</strong>.
-        These funds support our free installation notes, standards-based homeowner guides, and ongoing site development.
+        That revenue supports our free homeowner guides, installation notes, and ongoing site development.
       </p>
       <p class="muted">
-        We do not accept paid placement for this list. Product specifications can change—always confirm the current
-        manufacturer data sheet
-        and installation instructions before purchase or use.
+        We do not accept paid placement for this list. Product packaging and specifications can change—always confirm
+        the current
+        manufacturer data sheet and installation instructions before purchase or use.
       </p>
     </aside>
 
     <!-- Intro -->
     <section class="products-intro" aria-labelledby="products-intro-heading">
       <h1 id="products-intro-heading" class="visually-hidden">Recommended Products</h1>
+
       <p class="lead">
-        Renovations fail when planning is sloppy or materials are mismatched to the application.
-        This list is organized the way we think on real jobs: <em>plan → prep → install → finish → protect</em>.
+        Renovations fail when planning is rushed or materials are mismatched to the application.
+        This list is organized the way we think on real jobs:
+        <em>plan → prep → install → finish → protect</em>.
       </p>
+
       <p>
         If you want a second opinion on a materials list (mortar type, membrane choice, grout category, movement
         joints),
-        <a href="{{ '/contact/' | relative_url }}">contact us</a>. We’ll give you guidance based on manufacturer
-        instructions and standard methods.
+        <a href="{{ '/contact/' | relative_url }}">contact us</a>. We’ll point you to what matters most in the current
+        manufacturer instructions for your intended assembly.
       </p>
+
+      <div class="highlight-box" role="note" aria-label="Important note about systems">
+        <strong>Important:</strong> Tile products are not “mix-and-match” by default.
+        Many waterproofing assemblies require compatible accessories (banding, corners, drain parts) from the same
+        system.
+        If you’re unsure, choose a complete system and follow the manufacturer’s method—then verify substrate readiness
+        before tile.
+      </div>
     </section>
 
+    <!-- Quick Jump Links -->
     {% assign product_data = site.data.products %}
+    {% if product_data and product_data.categories and product_data.categories.size > 0 %}
+    <nav class="products-jump" aria-label="Jump to product category">
+      <h2 class="heading-4">Jump to a Category</h2>
+      <ul class="ts-list">
+        {% for cat in product_data.categories %}
+        <li><a href="#{{ cat.id | escape }}">{{ cat.name | escape }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    {% endif %}
+
     {% if product_data == nil or product_data.categories == nil or product_data.categories.size == 0 %}
     <p class="microcopy center mt-2">
       Products are being updated. Check back soon.
@@ -71,6 +96,10 @@ text: "Affiliate commissions fund independent, contractor-authored articles—no
         <h2 class="heading-2" id="cat-{{ cat.id | escape }}">{{ cat.name | escape }}</h2>
         {% if cat.description %}
         <p class="category-intro">{{ cat.description }}</p>
+        {% endif %}
+
+        {% if cat.buying_tip %}
+        <p class="muted"><strong>Buying tip:</strong> {{ cat.buying_tip }}</p>
         {% endif %}
       </header>
 
@@ -97,8 +126,16 @@ text: "Affiliate commissions fund independent, contractor-authored articles—no
           <p class="product-meta">{{ meta_line | strip }}</p>
           {% endif %}
 
+          {% if p.best_for %}
+          <p class="product-tag"><strong>Best for:</strong> {{ p.best_for }}</p>
+          {% endif %}
+
           {% if p.description %}
           <p class="product-desc">{{ p.description }}</p>
+          {% endif %}
+
+          {% if p.watch_out %}
+          <p class="product-note"><strong>Watch out:</strong> {{ p.watch_out }}</p>
           {% endif %}
 
           {% if p.pro_tip %}
@@ -121,16 +158,16 @@ text: "Affiliate commissions fund independent, contractor-authored articles—no
     <section class="ts-card products-support" aria-labelledby="support-heading">
       <h2 class="heading-2" id="support-heading">How Your Purchase Supports Independent Content</h2>
       <p class="lead">
-        Affiliate commissions help us publish contractor-grade guides with real photos and real job notes.
+        Affiliate commissions help us publish practical guides that explain what matters on real tile and shower builds.
       </p>
       <ul class="products-checklist">
-        <li>Standards-based articles (TCNA methods + applicable ANSI A108/A118 references)</li>
-        <li>Material and system explainers (what matters, what doesn’t, and what to verify)</li>
+        <li>Build-phase education for homeowners (planning, sequencing, verification)</li>
+        <li>Material and system explainers (what to match, what to verify, what to avoid)</li>
         <li>Ongoing site improvements and hosting</li>
         <li>Direct homeowner Q&amp;A—without paywalls</li>
       </ul>
       <p class="muted">
-        We don’t sell your data or run invasive ads. This page is how we keep the content independent.
+        We don’t sell your data or run invasive ads. This page is one way we keep the content independent.
       </p>
     </section>
 
@@ -139,32 +176,31 @@ text: "Affiliate commissions fund independent, contractor-authored articles—no
       <h2 class="heading-2" id="faq-heading">FAQ</h2>
       <dl>
         <dt><strong>Do affiliate links increase my cost?</strong></dt>
-        <dd>No. Amazon’s pricing is the same. The commission is paid by Amazon.</dd>
+        <dd>No. Pricing is the same; Amazon pays the commission.</dd>
 
         <dt><strong>Are these the exact products you use?</strong></dt>
         <dd>
           Often, yes—especially tools. For materials (mortar/membrane/grout), we sometimes source locally for speed and
           freshness.
-          If you need an exact match, confirm the manufacturer data sheet and batch availability.
+          Always confirm the current data sheet and system requirements for your application.
         </dd>
 
-        <dt><strong>Do these products guarantee a “code-compliant” installation?</strong></dt>
+        <dt><strong>Do these products guarantee a “compliant” installation?</strong></dt>
         <dd>
-          No product guarantees a compliant install. Compliance comes from using the right product for the application
-          and installing it
-          per manufacturer instructions and recognized methods (e.g., TCNA) with proper substrate prep and detailing.
+          No. Compliance and performance depend on using the right product for the application and installing it
+          correctly—
+          including substrate prep, detailing, and verification—per current manufacturer instructions.
         </dd>
 
         <dt><strong>What if a product is out of stock or a link breaks?</strong></dt>
         <dd>
-          Amazon listings change. Search by the product name/brand. If you notice a broken link, tell us and we’ll
-          update it.
+          Listings change. Search by product name/brand. If you notice a broken link, tell us and we’ll update it.
         </dd>
 
         <dt><strong>Can I hire Tillerstead?</strong></dt>
         <dd>
-          Yes—Atlantic, Ocean, and Cape May Counties primarily. <a href="{{ '/contact/' | relative_url }}">Request
-            availability here</a>.
+          Yes—Atlantic, Ocean, and Cape May Counties primarily.
+          <a href="{{ '/contact/' | relative_url }}">Request availability here</a>.
         </dd>
       </dl>
     </section>
@@ -173,10 +209,10 @@ text: "Affiliate commissions fund independent, contractor-authored articles—no
     <footer class="product-legal" role="contentinfo">
       <p class="legal-text">
         <small>
-          <strong>Important:</strong> Recommendations are informational. Product specs, labeling, and standards claims
-          come from manufacturers and may change.
+          <strong>Important:</strong> Recommendations are informational. Product specs and labeling may change.
           Always verify current data sheets and installation instructions. Use appropriate PPE and follow safety rules
-          for cutting/grinding dust control.
+          for
+          cutting/grinding and dust control.
         </small>
       </p>
       <p class="legal-text">
