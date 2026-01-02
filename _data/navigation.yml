@@ -1,53 +1,53 @@
 primary:
   - id: build
-    title: "Build Phase Guides"
+    title: "Build Guides"
     url: "/pages/build/"
     match: "^/pages/build(/|$)"
     external: false
     children:
       - id: nj-codes-permits
-        title: "Codes, Permits & Inspections"
+        title: "Codes & Permits"
         url: "/pages/build/nj-codes-permits/"
         match: "^/pages/build/nj-codes-permits(/|$)"
         external: false
       - id: shower-pans-slopes
-        title: "Shower Pans, Slopes & Drains"
+        title: "Shower Pans & Slopes"
         url: "/pages/build/shower-pans-slopes-drains/"
         match: "^/pages/build/shower-pans-slopes-drains(/|$)"
         external: false
       - id: waterproofing-systems
-        title: "Waterproofing Systems"
+        title: "Waterproofing"
         url: "/pages/build/waterproofing-systems/"
         match: "^/pages/build/waterproofing-systems(/|$)"
         external: false
       - id: curbs-curbless
-        title: "Curbs & Curbless Showers"
+        title: "Thresholds & Curbs"
         url: "/pages/build/curbs-curbless/"
         match: "^/pages/build/curbs-curbless(/|$)"
         external: false
       - id: framing-benches
-        title: "Framing Benches & Niches"
+        title: "Benches & Niches"
         url: "/pages/build/framing-benches-niches/"
         match: "^/pages/build/framing-benches-niches(/|$)"
         external: false
       - id: tile-installation
-        title: "Tile Installation Standards"
+        title: "Tile Installation"
         url: "/pages/build/tile-installation-standards/"
         match: "^/pages/build/tile-installation-standards(/|$)"
         external: false
       - id: flood-testing
-        title: "Flood Testing & Verification"
+        title: "Verification & Testing"
         url: "/pages/build/flood-testing/"
         match: "^/pages/build/flood-testing(/|$)"
         external: false
       - id: common-failures
-        title: "Common Failures & Red Flags"
+        title: "Common Failures"
         url: "/pages/build/common-build-failures/"
         match: "^/pages/build/common-build-failures(/|$)"
         external: false
 
   - id: portfolio
-    title: "Our Work"
+    title: "Portfolio"
     url: "/portfolio/"
     match: "^/portfolio(/|$)"
     external: false
@@ -59,8 +59,8 @@ primary:
     external: false
 
   - id: resources
-    title: "Resources"
-    aria_label: "Resources for New Jersey homeowners"
+    title: "Learn"
+    aria_label: "Educational resources for homeowners"
     children:
       - id: faq
         title: "FAQ"
@@ -68,24 +68,24 @@ primary:
         match: "^/faq(/|$)"
         external: false
       - id: download-guide
-        title: "Free NJ Tile Guide"
+        title: "Free Tile Guide"
         url: "/download/nj-tile-guide/"
         match: "^/download(/|$)"
         external: false
       - id: blog
-        title: "Blog"
+        title: "Articles"
         url: "/blog/"
         match: "^/blog(/|$)"
         external: false
       - id: products
-        title: "Recommended Products"
+        title: "Materials"
         url: "/recommended-products/"
         match: "^/recommended-products(/|$)"
         external: false
 
   - id: service-areas
     title: "Service Areas"
-    aria_label: "Service Areas in South Jersey"
+    aria_label: "Coverage areas in South Jersey"
     children:
       - id: atlantic-county
         title: "Atlantic County"
@@ -104,21 +104,21 @@ primary:
         external: false
 
   - id: company
-    title: "Company"
+    title: "About"
     aria_label: "Company information"
     children:
       - id: about
-        title: "About"
+        title: "About Tillerstead"
         url: "/about/"
         match: "^/about(/|$)"
         external: false
       - id: contact
-        title: "Request an Estimate"
+        title: "Get an Estimate"
         url: "/contact/"
         match: "^/contact(/|$)"
         external: false
       - id: for-gcs
-        title: "For General Contractors"
+        title: "For Contractors"
         url: "/for-general-contractors/"
         match: "^/for-general-contractors(/|$)"
         external: false
@@ -144,7 +144,7 @@ footer:
       - ref: waterproofing-systems
       - ref: curbs-curbless
 
-  - group: "Resources"
+  - group: "Learn"
     items:
       - ref: faq
       - ref: download-guide
