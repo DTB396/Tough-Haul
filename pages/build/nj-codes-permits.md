@@ -1,8 +1,12 @@
 ---
 layout: build-page
-title: "NJ Codes, Permits & Inspections - Step 1"
-description: "Why permits exist, how inspections work, and what New Jersey actually requires for bathroom and shower renovations. Built on TCNA standards."
-permalink: /pages/build/nj-codes-permits/
+title: "Build Phase 1: Codes, Permits & Inspections"
+description: "Why permits exist, how inspections work, and what New Jersey actually requires for bathroom and shower projects."
+permalink: /build/nj-codes-permits/
+build_phase: 1
+build_title: "Codes, Permits & Inspections"
+build_order: 1
+toc: true
 ---
 
 # NJ Codes, Permits & Inspections
