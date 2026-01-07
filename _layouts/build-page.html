@@ -1,27 +1,27 @@
 ---
 layout: default
 ---
-<div class="ts-section ts-build-content">
+
+<section class="ts-section ts-build-content">
   <div class="container container-wide">
     <div class="build-content-grid">
-      <aside class="build-content-sidebar">
+      <aside class="build-content-sidebar" aria-label="Build phase navigation">
         {% include content/build-sidenav.html %}
-        {% if page.toc != false %}
-          {% include utilities/toc.html min=2 max=3 %}
-        {% endif %}
       </aside>
 
       <div class="build-content-main">
-        {{ content }}
+        {% if page.toc %}
+          <nav class="toc" data-toc data-toc-scope=".build-content-main" aria-label="On this page"></nav>
+        {% endif %}
 
-        {% unless page.is_build_hub %}
-          {% include content/build-prev-next.html %}
-        {% endunless %}
+        <article class="prose">
+          {{ content }}
+        </article>
+
+        {% include content/build-prev-next.html %}
       </div>
     </div>
   </div>
-</div>
+</section>
 
-{% unless page.is_build_hub %}
-  {% include schema/schema-build-phase.html %}
-{% endunless %}
+{% include schema/build-phase-schema.html %}
