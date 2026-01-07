@@ -232,9 +232,9 @@ og_image_abs = og_image | absolute_url -%}
 {% endif %}
 
 <!-- Styles -->
-<link rel="stylesheet" href="/assets/css/main.css" />
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
 {% if page.styles %} {% for style in page.styles %}
-<link rel="stylesheet" href="/assets/css/main.css" />
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
 {% endfor %} {% endif %} {% if page.schema %} {% for schema in page.schema %}
 <script type="application/ld+json">
   {{ schema | jsonify }}
