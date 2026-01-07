@@ -1,11 +1,10 @@
 ---
 layout: build-page
-title: "Build Phase Guides – TCNA-Compliant Construction"
-description: "A complete, phase-by-phase guide to TCNA-standard bathroom and shower construction in New Jersey—from permits to final verification."
+title: Build Phase Guides - TCNA Compliant Construction
+description: Complete guide to TCNA-standard bathroom and shower construction in New Jersey. 8 phases covering codes, permits, waterproofing, tile installation, and verification.
 permalink: /build/
 is_build_hub: true
-hide_hero: true
-toc: false
+toc: true
 ---
 # The Build Phase
 
