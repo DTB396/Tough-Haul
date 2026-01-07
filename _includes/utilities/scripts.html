@@ -38,7 +38,7 @@ endcomment %} {% assign cache_version = site.cache_version | default:
 ></script>
 
 <!-- Build Phase Calculators (conditionally loaded) -->
-{% if page.url contains '/pages/build/' %}
+{% if page.url contains '/build/' %}
 <script
   src="{{ '/assets/js/build-calculators.js' | relative_url }}?v={{ cache_version }}"
   defer
