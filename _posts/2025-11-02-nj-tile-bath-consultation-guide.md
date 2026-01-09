@@ -5,7 +5,7 @@ description: "A 15-minute prep guide for South Jersey homeowners—photos, measu
 accessibility: "All content uses semantic headings, lists, and descriptive links for screen reader compatibility and New Jersey HIC compliance."
 ---
 
-If you’ve never hired a licensed home improvement contractor in New Jersey, your first consultation can feel opaque. **Tillerstead LLC** makes it straightforward: a calm walkthrough, clear expectations, and a proposal based on your real space—not guesswork or “ballpark” numbers.
+If you’ve never hired a licensed home improvement contractor in New Jersey, your first consultation can feel uncertain. **Tillerstead LLC** makes it straightforward: a calm walkthrough, clear expectations, and a proposal based on your real space—not guesswork or “ballpark” numbers.
 
 This guide shows you how to prep in **15 minutes** for a consultation (Atlantic County and all South Jersey) that’s efficient, accurate, and fully New Jersey HIC/TCNA compliant.
 

@@ -77,7 +77,7 @@
   $light-contrast: contrast-ratio($light, $background);
   $dark-contrast: contrast-ratio($dark, $background);
 
-  @return if($light-contrast > $dark-contrast, $light, $dark);
+    @return if($light-contrast > $dark-contrast, $light, $dark);
 }
 
 // Returns accessible text color meeting minimum contrast (default AA)

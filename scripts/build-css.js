@@ -16,10 +16,9 @@ try {
   // Use sass Node.js API instead of CLI for better Windows compatibility
   const loadPaths = [path.resolve(__dirname, '..', '_sass')];
 
-  const raw = readFileSync(scssPath, 'utf8');
-  const cleaned = raw.replace(/^---\s*[\s\S]*?---\s*/m, '');
 
-  const result = sass.compileString(cleaned, {
+  // Use sass.compile for correct import/module resolution
+  const result = sass.compile(scssPath, {
     sourceMap: false,
     style: 'compressed',
     loadPaths,

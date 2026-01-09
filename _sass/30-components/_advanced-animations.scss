@@ -1,16 +1,13 @@
 /* ============================================
    🎊 TILLERSTEAD ADVANCED ANIMATIONS
    Premium Animation Patterns for Complex Interactions
-   
-   Optimizations:
-   - GPU-accelerated transforms
-   - Efficient transition timing
+
+  /* End of Advanced Animations */
    - Scroll-triggered reveals
    - Staggered patterns with balanced delays
    - Accessibility-first (prefers-reduced-motion)
    ============================================ */
 
-@use "../00-settings/tokens-modern" as *;
 
 /* ========================================
    🎬 SCROLL-TRIGGERED ANIMATIONS
@@ -22,6 +19,7 @@
   transition:
     opacity var(--duration-base) var(--easing-in-out),
     transform var(--duration-base) var(--easing-in-out);
+<<<<<<< HEAD
 
 [data-scroll-animate="fade-in"] {
   transform: translateY(40px);
@@ -30,6 +28,9 @@
     opacity: 1;
     transform: translateY(0);
   }
+=======
+// ...existing code...
+>>>>>>> 98d0d4a5 (fix: force-add all outstanding changes except tillerstead/ submodule)
 
 [data-scroll-animate="fade-in-left"] {
   transform: translateX(-40px);
@@ -96,10 +97,16 @@
     > *:nth-child(#{$i}) {
       animation-delay: #{($i - 1) * 75ms};
     }
-  }
+        // Modern Dart Sass random and math.div usage
+        $rand: math.random();
+        $rand100: math.round($rand * 100);
+        $rand500: math.round($rand * 500);
+        $rand2: math.round($rand * 2);
 
   &.animation-complete > * {
     will-change: auto;
+        width: #{2 + math.round($rand * 8)}px;
+        height: #{2 + math.round($rand * 8)}px;
   }
 
 /* Fade up stagger for large lists */
@@ -1015,7 +1022,6 @@
       rgba(255, 255, 255, 0.1) 50%,
       rgba(255, 255, 255, 0.05) 100%
     );
+    /* End of Advanced Animations */
   }
 }
-
-/* End of Advanced Animations */

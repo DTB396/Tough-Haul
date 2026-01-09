@@ -6,9 +6,9 @@
 # Site identity
 # ----------------------------
 title: "Tillerstead LLC"
-tagline: "TCNA-Compliant Tile & Stone Installation — South Jersey"
+tagline: "Expert Tile & Stone Installation — South Jersey"
 description: >-
-  TCNA-standard tile and stone installation: custom showers, heated floors, waterproof assemblies,
+  TCNA-compliant tile and stone installation: custom showers, heated floors, waterproof assemblies,
   and natural stone surfaces. New Jersey HIC #13VH10808800. Serving Atlantic, Ocean, and Cape May
   Counties with precision, transparency, and owner oversight.
 
@@ -34,7 +34,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate
-  - jekyll-build
 
 # ----------------------------
 # Markdown / Kramdown
@@ -142,7 +141,6 @@ forms:
 # ----------------------------
 # Exclusions
 # ----------------------------
-<<<<<<< HEAD
 exclude:
   - "*.bak*"
   - "**/*.bak*"
@@ -168,15 +166,6 @@ exclude:
   - "recommended-products.md"
   - "reviews.md"
   - "terms/index.md"
-=======
-exclude:
-  - .backups
-  - scripts
-  - reports
-  - vendor
-  - node_modules
-  - dist
->>>>>>> 73f77f53 (Finalize canonical Tillerstead build + preserve live footer gradient)
   - "README.md"
   - "LICENSE"
   - "node_modules/"
@@ -197,17 +186,7 @@ exclude:
   - ".jekyll-cache"
   - ".jekyll-metadata"
 
-
 keep_files:
   - "CNAME"
   - "assets/"
-<<<<<<< HEAD
 
-=======
-
-
-exclude:
-  - "*.bak_keep_*"
-  - ".backups"
-  - "reports"
->>>>>>> 73f77f53 (Finalize canonical Tillerstead build + preserve live footer gradient)

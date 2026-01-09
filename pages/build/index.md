@@ -1,23 +1,16 @@
 ---
-layout: build-page
-<<<<<<< HEAD
-title: Build Phase Guides - TCNA Compliant Construction
-description: Complete guide to TCNA-standard bathroom and shower construction in New Jersey. 8 phases covering codes, permits, waterproofing, tile installation, and verification.
+title: Build Process
+layout: default
 permalink: /build/
-is_build_hub: true
-toc: true
-schema_type: TechArticle
-=======
-title: "Build Phase — Standards-First Bathroom & Shower Construction (NJ)"
-description: "A standards-forward, inspection-aware guide to how compliant shower and bathroom projects are planned, built, and verified in New Jersey."
-permalink: /pages/build/
-keywords:
-  - New Jersey shower construction
-  - TCNA bathroom construction
-  - shower waterproofing NJ
-  - tile installation standards ANSI
-  - NJ permits inspections bathroom remodel
+---
+
+# Tillerstead Build Process
+
+Welcome to the official build documentation for Tillerstead.com. This page outlines our site generation, deployment, and quality control workflows. All steps comply with TCNA 2024 and New Jersey HIC standards.
+<<<<<<< HEAD
 >>>>>>> 73f77f53 (Finalize canonical Tillerstead build + preserve live footer gradient)
+=======
+
 ---
 # The Build Phase
 

@@ -2,22 +2,5 @@
    Spacing System (premium rhythm)
    ========================================== */
 
-:root{
-  --container: 1120px;
-  --gutter: clamp(16px, 3vw, 28px);
-  --section-y: clamp(44px, 6vw, 86px);
-  --section-gap: clamp(14px, 2vw, 22px);
-}
 
-.container{
-  width: min(var(--container), calc(100% - (var(--gutter) * 2)));
-  margin-inline: auto;
-}
-
-main > section{
-  padding-block: var(--section-y);
-}
-
-.section-header{
-  margin-bottom: var(--section-gap);
-}
+// All top-level CSS moved to _root-vars.scss for Dart Sass module compliance.

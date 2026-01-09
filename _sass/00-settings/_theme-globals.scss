@@ -4,27 +4,21 @@
    Last Updated: 2026-01-01
    ==================================================================== */
 
-// ====================================================================
-// 1. COLOR PALETTE (Primary Authority)
-// ====================================================================
 
-$color-primary: #1a5c3a; // Tillerstead green (TCNA-aligned)
-$color-primary-light: #2d8b54; // Hover state
-$color-primary-dark: #0f3a23; // Dark variant
 
-$color-secondary: #c9a961; // Bronze/gold accent
+// All top-level CSS moved to root-vars.css for Dart Sass module compliance.
+
+// Color palette (must be defined for all $color-* variables used below)
+$color-primary: #1a5c3a;
+$color-primary-light: #2d8b54;
+$color-primary-dark: #0f3a23;
+$color-secondary: #c9a961;
 $color-secondary-light: #dbb876;
 $color-secondary-dark: #a87e38;
-
-$color-accent: #e74c3c; // Alert/emphasis red
-$color-success: #27ae60; // Success green
-$color-warning: #f39c12; // Warning orange
-$color-error: #c0392b; // Error red
-
-// ====================================================================
-// 2. NEUTRAL PALETTE (Backgrounds & Text)
-// ====================================================================
-
+$color-accent: #e74c3c;
+$color-success: #27ae60;
+$color-warning: #f39c12;
+$color-error: #c0392b;
 $color-white: #ffffff;
 $color-gray-50: #f9fafb;
 $color-gray-100: #f3f4f6;

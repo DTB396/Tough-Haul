@@ -1,41 +1,26 @@
-<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
 ---
 layout: default
-hide_hero: true
 ---
-<article class="ts-section ts-surface section blog-post" itemscope itemtype="https://schema.org/BlogPosting">
-=======
-{% include breadcrumbs.html %}
-<!doctype html>
---- layout: default hide_hero: true ---
 
-<article
-  class="ts-section ts-surface section blog-post"
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
-  tabindex="-1"
->
+{% include breadcrumbs.html %}
+<article class="ts-section ts-surface section blog-post" itemscope itemtype="https://schema.org/BlogPosting" tabindex="-1">
   <!-- SEO & Schema.org metadata -->
->>>>>>> 73f77f53 (Finalize canonical Tillerstead build + preserve live footer gradient)
   <meta itemprop="headline" content="{{ page.title }}" />
   <meta itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%dT%H:%M:%SZ' }}" />
-
   {% if page.date_modified %}
     <meta itemprop="dateModified" content="{{ page.date_modified | date: '%Y-%m-%dT%H:%M:%SZ' }}" />
   {% endif %}
-
   {% if page.author %}
     <meta itemprop="author" content="{{ page.author }}" />
   {% endif %}
-
   {% if page.description %}
     <meta itemprop="description" content="{{ page.description }}" />
   {% endif %}
-
   {% if page.featured_image %}
     <meta itemprop="image" content="{{ page.featured_image | absolute_url }}" />
   {% endif %}
-
   <div class="container container-wide shell">
     <header class="post-header stack-md">
       <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
@@ -130,9 +115,4 @@ hide_hero: true
     </div>
   </div>
 </section>
-<<<<<<< HEAD
 {% endif %}
-=======
-{% endif %}
-
->>>>>>> 73f77f53 (Finalize canonical Tillerstead build + preserve live footer gradient)
