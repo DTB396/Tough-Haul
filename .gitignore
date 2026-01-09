@@ -69,3 +69,6 @@ vendor/
 # build + generated outputs
 _site/
 vendor/
+
+assets/css/style.css
+assets/css/*.css
