@@ -16,7 +16,40 @@ Usage:
 Set-StrictMode -Version Latest
 
 $script:CommandCenterRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$script:CommandDatabasePath = Join-Path $script:CommandCenterRoot "command-database.json"
+$script:CommandCenterScriptsRoot = Split-Path -Parent $script:CommandCenterRoot
+$script:CommandCenterRepoRoot = Split-Path -Parent $script:CommandCenterScriptsRoot
+$script:CommandDatabasePath = Join-Path $script:CommandCenterRepoRoot "data/command-db.json"
+$script:CommandCenterConfigPath = Join-Path $script:CommandCenterRepoRoot "data/command-center-config.json"
+$script:CommandCenterLogsRoot = Join-Path $script:CommandCenterRepoRoot "logs"
+$script:SystemHealthLogPath = Join-Path $script:CommandCenterLogsRoot "system-health.log"
+
+function Initialize-CommandCenterLogs {
+    if (-not (Test-Path $script:CommandCenterLogsRoot)) {
+        New-Item -Path $script:CommandCenterLogsRoot -ItemType Directory | Out-Null
+    }
+}
+
+function Write-SystemHealthLog {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Message,
+        [string]$Level = "INFO",
+        [string]$LogPath = $script:SystemHealthLogPath
+    )
+
+    Initialize-CommandCenterLogs
+    $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    "$timestamp [$Level] $Message" | Out-File -FilePath $LogPath -Append
+}
+
+function Get-CommandCenterConfig {
+    if (-not (Test-Path $script:CommandCenterConfigPath)) {
+        throw "Command center config not found at $script:CommandCenterConfigPath"
+    }
+
+    $raw = Get-Content -Path $script:CommandCenterConfigPath -Raw
+    return $raw | ConvertFrom-Json
+}
 
 function Get-CommandDatabase {
     if (-not (Test-Path $script:CommandDatabasePath)) {
@@ -55,6 +88,18 @@ function Test-CommandDatabase {
     return $issues
 }
 
+function Write-AvailableCommands {
+    param(
+        [Parameter(Mandatory = $true)]
+        [object[]]$Commands
+    )
+
+    $available = $Commands | Where-Object { $_.name } | ForEach-Object { $_.name } | Sort-Object
+    if ($available.Count -gt 0) {
+        Write-Host "Available commands: $($available -join ', ')" -ForegroundColor Yellow
+    }
+}
+
 function Get-CommandFromDb {
     param(
         [Parameter(Mandatory = $true)]
@@ -62,12 +107,27 @@ function Get-CommandFromDb {
     )
 
     $db = Get-CommandDatabase
+    if ([string]::IsNullOrWhiteSpace($Name)) {
+        Write-AvailableCommands -Commands $db.commands
+        throw "Command name is required."
+    }
+
     $entry = $db.commands | Where-Object { $_.name -eq $Name } | Select-Object -First 1
     if (-not $entry) {
+        Write-AvailableCommands -Commands $db.commands
         throw "Command '$Name' not found in database."
     }
 
     return $entry
+}
+
+function get-command-from-db {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Name
+    )
+
+    return Get-CommandFromDb -Name $Name
 }
 
 function Resolve-CommandStrings {
@@ -173,7 +233,7 @@ function Invoke-CommandSet {
     Invoke-MassExecute -Commands $commands -ContinueOnError:$ContinueOnError -DryRun:$DryRun -RequireConfirmation:$RequireConfirmation -LogPath $LogPath
 }
 
-function Invoke-CommandByName {
+function invoke-command-from-db {
     param(
         [Parameter(Mandatory = $true)]
         [string]$Name,
@@ -183,8 +243,8 @@ function Invoke-CommandByName {
         [string]$LogPath = (Join-Path $script:CommandCenterRoot "command-center.log")
     )
 
-    $command = Get-CommandFromDb -Name $Name
-    Invoke-MassExecute -Commands @($command.command) -ContinueOnError:$ContinueOnError -DryRun:$DryRun -RequireConfirmation:$RequireConfirmation -LogPath $LogPath
+    $commands = Resolve-CommandStrings -Names @($Name)
+    Invoke-MassExecute -Commands $commands -ContinueOnError:$ContinueOnError -DryRun:$DryRun -RequireConfirmation:$RequireConfirmation -LogPath $LogPath
 }
 
 function Show-CommandCenter {
@@ -241,7 +301,7 @@ function Show-CommandCenter {
     }
 
     $commandIndex = $selection - $sets.Count
-    Invoke-CommandByName -Name $commands[$commandIndex].name
+    invoke-command-from-db -Name $commands[$commandIndex].name
 }
 
 function Monitor-DiskSpace {
@@ -289,6 +349,132 @@ function Send-CommandCenterErrorNotification {
     )
 
     Send-MailMessage -To $ToEmail -From $FromEmail -Subject "Command Center Error" -Body $ErrorMessage -SmtpServer $SmtpServer
+}
+
+function monitor-disk-space {
+    param(
+        [int]$WarningThresholdGB = 80,
+        [string]$DriveName = "C",
+        [string]$LogPath = $script:SystemHealthLogPath
+    )
+
+    $disk = Get-PSDrive -Name $DriveName
+    if (-not $disk) {
+        Write-Host "Drive $DriveName not found." -ForegroundColor Yellow
+        Write-SystemHealthLog -Message "Drive $DriveName not found." -Level "WARN" -LogPath $LogPath
+        return
+    }
+
+    $usedGB = [Math]::Round($disk.Used / 1GB, 2)
+    if ($usedGB -gt $WarningThresholdGB) {
+        $message = "Warning: $DriveName drive usage is ${usedGB}GB, above ${WarningThresholdGB}GB."
+        Write-Host $message -ForegroundColor Red
+        Write-SystemHealthLog -Message $message -Level "WARN" -LogPath $LogPath
+    }
+    else {
+        $message = "Drive $DriveName usage: ${usedGB}GB."
+        Write-Host $message -ForegroundColor Green
+        Write-SystemHealthLog -Message $message -Level "INFO" -LogPath $LogPath
+    }
+}
+
+function clean-temp-files {
+    [CmdletBinding(SupportsShouldProcess = $true)]
+    param(
+        [string]$TempPath = $env:TEMP,
+        [string]$LogPath = $script:SystemHealthLogPath
+    )
+
+    if ([string]::IsNullOrWhiteSpace($TempPath)) {
+        throw "Temp path is required."
+    }
+
+    $resolvedTemp = [System.IO.Path]::GetFullPath($TempPath)
+    $userTempRoot = [System.IO.Path]::GetFullPath($env:TEMP)
+
+    if (-not ($resolvedTemp -like "$userTempRoot*")) {
+        throw "Safety check failed: $resolvedTemp is outside user temp path $userTempRoot."
+    }
+
+    $targetPath = Join-Path $resolvedTemp "*"
+    if ($PSCmdlet.ShouldProcess($targetPath, "Remove temporary files")) {
+        Remove-Item -Path $targetPath -Recurse -Force -ErrorAction SilentlyContinue
+        $message = "Temp files cleaned at $resolvedTemp."
+        Write-Host $message -ForegroundColor Green
+        Write-SystemHealthLog -Message $message -Level "INFO" -LogPath $LogPath
+    }
+}
+
+function send-error-notification {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$ErrorMessage,
+        [string]$ConfigPath = $script:CommandCenterConfigPath
+    )
+
+    if (-not (Test-Path $ConfigPath)) {
+        throw "SMTP config not found at $ConfigPath"
+    }
+
+    $config = Get-Content -Path $ConfigPath -Raw | ConvertFrom-Json
+    $smtp = $config.smtp
+    if (-not $smtp) {
+        throw "SMTP configuration missing in $ConfigPath"
+    }
+
+    $params = @{
+        To = $smtp.toEmail
+        From = $smtp.fromEmail
+        Subject = "Command Center Error"
+        Body = $ErrorMessage
+        SmtpServer = $smtp.server
+    }
+
+    if ($smtp.port) {
+        $params.Port = [int]$smtp.port
+    }
+
+    if ($smtp.useSsl -ne $null) {
+        $params.UseSsl = [bool]$smtp.useSsl
+    }
+
+    if ($smtp.username -and $smtp.password) {
+        $securePassword = ConvertTo-SecureString $smtp.password -AsPlainText -Force
+        $params.Credential = [PSCredential]::new($smtp.username, $securePassword)
+    }
+
+    Send-MailMessage @params
+}
+
+function Register-CommandCenterMaintenanceTask {
+    param(
+        [string]$TaskName = "CommandCenterSystemHealth",
+        [int]$IntervalMinutes,
+        [string]$ScriptPath = (Join-Path $script:CommandCenterRoot "run-system-health.ps1")
+    )
+
+    if (-not $IsWindows) {
+        Write-Host "Scheduled tasks are only supported on Windows." -ForegroundColor Yellow
+        return
+    }
+
+    if (-not $IntervalMinutes) {
+        $config = Get-CommandCenterConfig
+        $IntervalMinutes = $config.systemHealth.scheduleMinutes
+    }
+
+    if (-not $IntervalMinutes) {
+        throw "IntervalMinutes is required to schedule maintenance."
+    }
+
+    if (-not (Test-Path $ScriptPath)) {
+        throw "System health script not found at $ScriptPath"
+    }
+
+    $action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-NoProfile -ExecutionPolicy Bypass -File `"$ScriptPath`""
+    $trigger = New-ScheduledTaskTrigger -Once -At (Get-Date).AddMinutes(1) -RepetitionInterval (New-TimeSpan -Minutes $IntervalMinutes) -RepetitionDuration ([TimeSpan]::MaxValue)
+    Register-ScheduledTask -TaskName $TaskName -Action $action -Trigger $trigger -Force | Out-Null
+    Write-Host "Scheduled task '$TaskName' registered to run every $IntervalMinutes minutes." -ForegroundColor Green
 }
 
 function Enable-CommandCenterProfile {
