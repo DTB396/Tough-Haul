@@ -279,6 +279,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-remote-theme
   jekyll-watch (~> 2.2)
   tzinfo-data (~> 1.2024)
   webrick (~> 1.8)
