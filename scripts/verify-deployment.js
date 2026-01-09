@@ -1,296 +1,810 @@
-#!/usr/bin/env node
-/**
- * Automated Sandbox Verification System
- * Monitors GitHub Actions, runs live tests, validates deployment
- * Reports pass/fail without manual intervention
- */
+/* ============================================
+   🎊 TILLERSTEAD ADVANCED ANIMATIONS
+   Premium Animation Patterns for Complex Interactions
+   ============================================ */
 
-import https from 'https';
-
-import { _spawn } from 'child_process';
-
-const REPO_OWNER = 'XTX33';
-const REPO_NAME = 'tillerstead-sandbox';
-const LIVE_URL = `https://${REPO_OWNER.toLowerCase()}.github.io/${REPO_NAME}/`;
-const GITHUB_API = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}`;
-
-console.log('\n╔════════════════════════════════════════════════════════╗');
-console.log('║  AUTOMATED SANDBOX VERIFICATION - TILLERSTEAD         ║');
-console.log('╚════════════════════════════════════════════════════════╝\n');
-
-let totalTests = 0;
-let passedTests = 0;
-let failedTests = 0;
-
-function pass(msg) {
-  console.log(`✓ ${msg}`);
-  passedTests++;
-  totalTests++;
+/* Fade in as element enters viewport (GPU accelerated) */
+[data - scroll - animate] {
+  opacity: 0;
+  transition:
+    opacity var(--duration - base) var(--easing -in -out),
+    transform var(--duration - base) var(--easing -in -out);
 }
 
-function fail(msg) {
-  console.log(`✗ ${msg}`);
-  failedTests++;
-  totalTests++;
+[data - scroll - animate="fade-in-left"] {
+  transform: translateX(-40px);
+
+  &.in - view {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-function info(msg) {
-  console.log(`ℹ ${msg}`);
+[data - scroll - animate="fade-in-right"] {
+  transform: translateX(40px);
+
+  &.in - view {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-function section(title) {
-  console.log(`\n━━━ ${title} ━━━`);
+[data - scroll - animate="scale-in"] {
+  transform: scale(0.95);
+  opacity: 0;
+
+  &.in - view {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-// Fetch from GitHub API
-async function fetchGitHub(endpoint) {
-  return new Promise((resolve, reject) => {
-    https
-      .get(
-        `${GITHUB_API}${endpoint}`,
-        {
-          headers: {
-            'User-Agent': 'Tillerstead-Automated-Verification',
-            Accept: 'application/vnd.github.v3+json',
-          },
-        },
-        (res) => {
-          let data = '';
-          res.on('data', (chunk) => (data += chunk));
-          res.on('end', () => {
-            try {
-              resolve(JSON.parse(data));
-            } catch (e) {
-              reject(e);
-            }
-          });
-        },
-      )
-      .on('error', reject);
-  });
+/* ========================================
+   🎨 STAGGERED GRID ANIMATIONS
+   ======================================== */
+
+/* Staggered children with scroll trigger (optimized delays) */
+[data - stagger - animate] {
+  > * {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+      opacity var(--duration - base) var(--easing -in -out),
+        transform var(--duration - base) var(--easing -in -out);
+  will - change: transform, opacity;
 }
 
-// Fetch live URL
-async function fetchLiveURL(url) {
-  return new Promise((resolve, reject) => {
-    https
-      .get(
-        url,
-        {
-          headers: {
-            'User-Agent': 'Tillerstead-Automated-Verification',
-          },
-        },
-        (res) => {
-          let data = '';
-          res.on('data', (chunk) => (data += chunk));
-          res.on('end', () => resolve({ status: res.statusCode, html: data }));
-        },
-      )
-      .on('error', reject);
-  });
+  &.in - view > * {
+  opacity: 1;
+  transform: translateY(0);
+  will- change: auto;
+  }
+
+@for $i from 1 through 12 {
+    &.in - view > *: nth - child(#{ $i }) {
+    transition - delay: #{ ($i - 1) * 60ms };
+  }
+}
 }
 
-// Wait for deployment to complete
-async function waitForDeployment(maxWaitSeconds = 300) {
-  section('Phase 1: Monitoring GitHub Actions Workflow');
+/* Grid animation with bounce effect */
+[data - grid - animate="bounce"] {
+  > * {
+    opacity: 0;
+    animation: bounceEnter var(--duration - base) var(--easing - bounce) both;
+  will - change: transform, opacity;
+}
 
-  const startTime = Date.now();
-  let lastStatus = null;
+@for $i from 1 through 12 {
+    > *: nth - child(#{ $i }) {
+    animation - delay: #{ ($i - 1) * 75ms };
+  }
+}
 
-  while (Date.now() - startTime < maxWaitSeconds * 1000) {
-    try {
-      const runs = await fetchGitHub('/actions/runs?per_page=1');
-      const latestRun = runs.workflow_runs[0];
+$rand: math.random();
+$rand100: math.round($rand * 100);
+$rand500: math.round($rand * 500);
+$rand2: math.round($rand * 2);
 
-      if (latestRun.status !== lastStatus) {
-        lastStatus = latestRun.status;
-        info(
-          `Workflow status: ${latestRun.status} (${latestRun.conclusion || 'running'})`,
-        );
+  &.animation - complete > * {
+  will- change: auto;
+width: #{ 2 + math.round($rand * 8) } px;
+height: #{ 2 + math.round($rand * 8) } px;
+  }
+}
+
+/* Fade up stagger for large lists */
+[data - list - animate] {
+  > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity var(--duration - base) var(--easing - out),
+        transform var(--duration - base) var(--easing - out);
+}
+
+  &.in - view > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@for $i from 1 through 20 {
+    &.in - view > *: nth - child(#{ $i }) {
+    transition - delay: #{ ($i - 1) * 40ms };
+  }
+}
+}
+
+/* ========================================
+   🔄 COMPLEX STATE TRANSITIONS
+   ======================================== */
+
+/* Smooth state transitions for modals, dropdowns */
+[data - state - transition] {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Expand/collapse with smooth height & opacity transition */
+[data - expand - toggle] {
+  max - height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+  max - height var(--duration - base) var(--easing -in -out),
+    opacity var(--duration - base) var(--easing -in -out),
+      padding var(--duration - base) var(--easing -in -out);
+
+  &.is - open {
+    max - height: 1000px;
+    opacity: 1;
+  }
+}
+
+/* Slide panel from side (GPU accelerated) */
+[data - slide - panel] {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 400px;
+  max - width: 80vw;
+  background: white;
+  box - shadow: -4px 0 16px rgba(0, 0, 0, 0.1);
+  transform: translateX(100 %);
+  transition: transform var(--duration - base) var(--easing -in -out);
+  z - index: 1000;
+  will - change: transform;
+
+  &.is - open {
+    transform: translateX(0);
+    will - change: auto;
+  }
+}
+
+/* Fade overlay behind panel */
+[data - overlay] {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background var(--duration - base) var(--easing -in -out);
+  z - index: 999;
+  pointer - events: none;
+
+  &.is - active {
+    background: rgba(0, 0, 0, 0.3);
+    pointer - events: auto;
+  }
+}
+
+/* Modal animation - scale + fade */
+[data - modal] {
+  opacity: 0;
+  transform: scale(0.95);
+  transition:
+    opacity var(--duration - base) var(--easing -in -out),
+    transform var(--duration - base) var(--easing -in -out);
+
+  &.is - visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Dropdown animation - slide down */
+[data - dropdown] {
+  max - height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+  max - height var(--duration - base) var(--easing - out),
+    opacity var(--duration - base) var(--easing - out),
+      transform var(--duration - base) var(--easing - out);
+  overflow: hidden;
+
+  &.is - open {
+    max - height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   📈 ADVANCED LOADING PATTERNS
+   ======================================== */
+
+/* Segmented loader - balanced animation */
+.loader - segmented {
+  display: flex;
+  gap: 4px;
+  align - items: center;
+
+  span {
+    width: 4px;
+    height: 20px;
+    background: var(--color - primary);
+    border - radius: 2px;
+    animation: loaderSegment 1s ease -in -out infinite;
+    will - change: transform, opacity;
+  }
+
+  @for $i from 1 through 4 {
+    span: nth - child(#{ $i }) {
+      animation - delay: #{ ($i - 1) * 200ms };
+    }
+  }
+}
+
+@keyframes loaderSegment {
+  0 %,
+    100 % {
+      opacity: 0.3;
+      transform: scaleY(1);
+    }
+  50 % {
+    opacity: 1;
+    transform: scaleY(1.5);
+  }
+}
+
+/* Spinner loader - smooth rotation */
+.loader - spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(7, 137, 48, 0.1);
+  border - top - color: var(--color - primary);
+  border - radius: 50 %;
+  animation: spin 1s linear infinite;
+  will - change: transform;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pulse loader - gentle opacity animation */
+.loader - pulse {
+  width: 40px;
+  height: 40px;
+  background: var(--color - primary);
+  border - radius: 50 %;
+  opacity: 1;
+  animation: pulseFade 1.5s ease -in -out infinite;
+  will - change: opacity, transform;
+}
+
+@keyframes pulseFade {
+  0 %,
+    100 % {
+      opacity: 1;
+      transform: scale(1);
+    }
+  50 % {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+/* Progress bar animation */
+.progress - bar {
+  height: 4px;
+  background: var(--color - surface - muted);
+  border - radius: 2px;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 100 %;
+    background: var(--color - primary);
+    border - radius: 2px;
+    animation: progressFill 1.5s ease -in -out forwards;
+    will - change: width;
+  }
+}
+
+@keyframes progressFill {
+  from {
+    width: 0 %;
+  }
+  to {
+    width: 100 %;
+  }
+}
+
+/* ========================================
+   ✨ ENTRANCE & EXIT ANIMATIONS
+   ======================================== */
+
+@keyframes bounceEnter {
+  0 % {
+    opacity: 0;
+    transform: scale(0.3) translateY(20px);
+  }
+  50 % {
+    opacity: 1;
+  }
+  70 % {
+    transform: scale(1.12);
+  }
+  100 % {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes slideOutDown {
+  to {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+
+@keyframes slideOutUp {
+  to {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}
+
+/* ========================================
+   ♿ ACCESSIBILITY OPTIMIZATIONS
+   ======================================== */
+
+@media(prefers - reduced - motion: reduce) {
+  [data - scroll - animate],
+    [data - stagger - animate],
+    [data - grid - animate],
+    [data - state - transition],
+    [data - expand - toggle],
+    [data - slide - panel],
+    [data - overlay],
+    [data - modal],
+    [data - dropdown],
+    [data - list - animate] {
+    opacity: 1!important;
+    transform: none!important;
+    transition: none!important;
+    animation: none!important;
+    will - change: auto!important;
+
+    * {
+      opacity: 1!important;
+      transform: none!important;
+      transition: none!important;
+      animation: none!important;
+      will- change: auto!important;
+  }
+}
+
+  .loader - segmented,
+  .loader - spinner,
+  .loader - pulse,
+  .progress - bar {
+  animation: none!important;
+  will - change: auto!important;
+}
+}
+
+@media(prefers - contrast: more) {
+  [data - scroll - animate],
+    [data - stagger - animate],
+    [data - expand - toggle] {
+    transition - duration: var(--duration - fast)!important;
+  }
+}
+
+@media print {
+  [data - scroll - animate],
+    [data - stagger - animate],
+    [data - grid - animate],
+    [data - state - transition],
+    [data - expand - toggle],
+    [data - modal],
+    [data - dropdown],
+  .loader - segmented,
+  .loader - spinner,
+  .loader - pulse,
+  .progress - bar {
+    opacity: 1!important;
+    transform: none!important;
+    animation: none!important;
+    will - change: auto!important;
+
+    * {
+      opacity: 1!important;
+      transform: none!important;
+      animation: none!important;
+      will- change: auto!important;
+  }
+}
+}
+
+/* ========================================
+   🎯 INTERACTIVE FEEDBACK LOOPS
+   ======================================== */
+
+/* Ripple effect on click (Material Design) */
+[data - ripple] {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50 %;
+    left: 50 %;
+    width: 0;
+    height: 0;
+    border - radius: 50 %;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50 %, -50 %);
+    pointer - events: none;
+  }
+
+  &: active::after {
+    animation: rippleEffect 0.6s ease - out;
+  }
+}
+
+@keyframes rippleEffect {
+  0 % {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100 % {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+/* Toggle switch animation */
+.toggle -switch {
+  --toggle - size: 20px;
+--toggle - gap: 4px;
+
+input[type = "checkbox"] {
+  display: none;
+
+    &: checked + label {
+    background: var(--color - primary);
+
+      &::after {
+      transform: translateX(calc(var(--toggle - size) + var(--toggle - gap)));
+    }
+  }
+}
+
+  label {
+  display: inline - block;
+  width: calc((var(--toggle - size) * 2) + (var(--toggle - gap) * 3));
+  height: calc(var(--toggle - size) + (var(--toggle - gap) * 2));
+  background: var(--color - border);
+  border - radius: 100px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+    &::after {
+    content: "";
+    position: absolute;
+    width: var(--toggle - size);
+    height: var(--toggle - size);
+    background: white;
+    border - radius: 50 %;
+    top: var(--toggle - gap);
+    left: var(--toggle - gap);
+    transition: transform 0.3s cubic - bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+}
+
+/* ========================================
+   🎪 FORM INTERACTION PATTERNS
+   ======================================== */
+
+/* Input with animated placeholder */
+.input - floating {
+  position: relative;
+
+  input,
+    textarea {
+    padding - top: 1.5rem;
+    padding - bottom: 0.5rem;
+    border: none;
+    border - bottom: 2px solid var(--color - border);
+    transition: border - color 0.3s ease;
+    background: transparent;
+
+    &: focus,
+    &:valid {
+      border - bottom - color: var(--color - primary);
+      outline: none;
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    font - size: 0.75rem;
+    color: var(--color - text - muted);
+    transition: all 0.3s cubic - bezier(0.4, 0, 0.2, 1);
+    transform - origin: left;
+  }
+
+  input:focus ~label,
+    input:valid ~label,
+      textarea:focus ~label {
+    transform: translateY(-1.2rem) scale(0.85);
+    color: var(--color - primary);
+  }
+}
+
+/* Animated form field error shake */
+[data - form - error] {
+  animation: errorShake 0.4s ease -in -out;
+
+  input,
+    textarea,
+    select {
+    border - color: var(--color - error);
+  }
+}
+
+@keyframes errorShake {
+  0 %,
+    100 % {
+      transform: translateX(0);
+    }
+  25 % {
+    transform: translateX(-4px);
+  }
+  75 % {
+    transform: translateX(4px);
+  }
+}
+
+/* ========================================
+   📱 SCROLL-BASED TRANSFORMATIONS
+   ======================================== */
+
+/* Parallax effect (for images/backgrounds) */
+[data - parallax] {
+  --parallax - offset: 0;
+  background - attachment: fixed;
+  background - position: center calc(50 % + var(--parallax - offset));
+}
+
+/* Sticky header animation on scroll */
+[data - sticky - animate] {
+  transition: all 0.3s cubic - bezier(0.4, 0, 0.2, 1);
+
+  &.is - scrolled {
+    box - shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding - block: 0.5rem;
+  }
+}
+
+/* ========================================
+   🎨 COMPLEX COLOR TRANSITIONS
+   ======================================== */
+
+/* Multi-color animated gradient */
+@keyframes gradientShift {
+  0 % {
+    background- position: 0 % 50 %;
+}
+50 % {
+  background- position: 100 % 50 %;
+  }
+100 % {
+  background- position: 0 % 50 %;
+  }
+}
+
+.gradient - shift {
+  background: linear - gradient(
+    -45deg,
+    var(--color - primary),
+    var(--color - accent),
+    var(--color - highlight),
+    var(--color - primary - light)
+  );
+  background - size: 400 % 400 %;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* ========================================
+   🎯 ATTENTION SEQUENCES
+   ======================================== */
+
+/* Complex attention sequence (pulse + scale + glow) */
+.attention - sequence {
+  animation: attentionSeq 2s cubic - bezier(0.4, 0, 0.6, 1) infinite;
+
+  &:hover {
+    animation: none;
+  }
+}
+
+@keyframes attentionSeq {
+  0 % {
+    transform: scale(1);
+    box- shadow: 0 0 0 0 rgba(7, 137, 48, 0.4);
+}
+50 % {
+  transform: scale(1.02);
+  box- shadow: 0 0 0 10px rgba(7, 137, 48, 0);
+  }
+100 % {
+  transform: scale(1);
+  box- shadow: 0 0 0 0 rgba(7, 137, 48, 0);
+  }
+}
+
+/* ========================================
+   ♿ ACCESSIBILITY ENHANCEMENTS
+   ======================================== */
+
+/* Ensure animations work with screen readers */
+[aria - busy="true"] {
+  &::after {
+    content: attr(data - loading - text, " Loading...");
+  }
+}
+
+/* Announce state changes */
+[role = "status"],
+  [role = "alert"] {
+  animation: statusChange 0.3s ease -in -out;
+}
+
+@keyframes statusChange {
+  0 % {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100 % {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   📊 DATA VISUALIZATION ANIMATIONS
+   ======================================== */
+
+/* Animated bar chart */
+.chart - bar {
+  display: flex;
+  align - items: flex - end;
+  gap: 0.5rem;
+  height: 200px;
+
+  .bar {
+    flex: 1;
+    background: var(--color - primary);
+    border - radius: var(--radius - md) var(--radius - md) 0 0;
+    animation: barGrow 0.8s cubic - bezier(0.4, 0, 0.2, 1) forwards;
+    min - height: 4px;
+
+    @for $i from 1 through 12 {
+      &: nth - child(#{ $i }) {
+        animation - delay: #{ ($i - 1) * 60ms };
       }
+    }
+  }
+}
 
-      if (latestRun.status === 'completed') {
-        if (latestRun.conclusion === 'success') {
-          pass('GitHub Actions workflow completed successfully');
-          return true;
-        } else {
-          fail(`GitHub Actions workflow failed: ${latestRun.conclusion}`);
-          return false;
-        }
-      }
+@keyframes barGrow {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100 %;
+  }
+}
 
-      // Wait 10 seconds before checking again
-      await new Promise((resolve) => setTimeout(resolve, 10000));
-    } catch (error) {
-      fail(`Error checking workflow: ${error.message}`);
-      return false;
+/* Animated counter/number increment */
+.counter - animate {
+  font - size: 2rem;
+  font - weight: bold;
+  color: var(--color - primary);
+}
+
+/* ========================================
+   🎊 CELEBRATION PATTERNS
+   ======================================== */
+
+/* Confetti rain animation */
+@keyframes confettiFall {
+  0 % {
+    transform: translateY(-10vh) rotateZ(0deg);
+    opacity: 1;
+  }
+  90 % {
+    opacity: 1;
+  }
+  100 % {
+    transform: translateY(100vh) rotateZ(360deg);
+    opacity: 0;
+  }
+}
+
+.confetti - piece {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: var(--color - primary);
+  pointer - events: none;
+  animation: confettiFall 3s linear forwards;
+
+  @for $i from 1 through 10 {
+    &: nth - child(#{ $i }) {
+      left: #{ random(100) }%;
+      animation - delay: #{ random(500) / 1000 } s;
+      background: var(--color -#{ if (random(2) == 1, "primary", "accent")});
+      width: #{ 2 + random(8) } px;
+      height: #{ 2 + random(8) } px;
+    }
+  }
+}
+
+/* Badge explosion/pop animation */
+@keyframes badgeExplode {
+  0 % {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100 % {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.badge - pop {
+  animation: badgeExplode 0.6s cubic - bezier(0.6, 0, 0.84, 0.07);
+}
+
+/* ========================================
+   ♿ MOTION PREFERENCE COMPLIANCE
+   ======================================== */
+
+@media(prefers - reduced - motion: reduce) {
+  *,
+  *:: before,
+  *::after {
+    animation - duration: 0.01ms!important;
+    animation - iteration - count: 1!important;
+    transition - duration: 0.01ms!important;
+  }
+}
+
+/* Dark mode adjustments */
+@media(prefers - color - scheme: dark) {
+  [data - overlay] {
+    &.is - active {
+      background: rgba(255, 255, 255, 0.1);
     }
   }
 
-  fail('Timeout waiting for deployment');
-  return false;
-}
-
-// Test live site availability
-async function testLiveSite() {
-  section('Phase 2: Testing Live Site Availability');
-
-  try {
-    const { status, html } = await fetchLiveURL(LIVE_URL);
-
-    if (status === 200) {
-      pass(`Site is live at ${LIVE_URL}`);
-      pass(`HTTP Status: ${status}`);
-
-      // Check HTML content (case insensitive)
-      if (
-        html.toLowerCase().includes('<!doctype html>') ||
-        html.includes('<!DOCTYPE html>')
-      ) {
-        pass('Valid HTML document structure');
-      } else {
-        fail('Invalid HTML structure');
-      }
-
-      return html;
-    } else {
-      fail(`Site returned HTTP ${status}`);
-      return null;
-    }
-  } catch (error) {
-    fail(`Cannot reach site: ${error.message}`);
-    return null;
-  }
-}
-
-// Test mobile navigation elements
-function testMobileNavigation(html) {
-  section('Phase 3: Mobile Navigation Structure Test');
-
-  const checks = [
-    { pattern: /class="mobile-nav-shell"/, name: 'mobile-nav-shell element' },
-    {
-      pattern: /class="mobile-nav-backdrop"/,
-      name: 'mobile-nav-backdrop element',
-    },
-    { pattern: /id="mobile-nav"/, name: 'mobile-nav element' },
-    { pattern: /class="nav-toggle"/, name: 'nav-toggle button' },
-    { pattern: /data-nav-container/, name: 'data-nav-container attribute' },
-    { pattern: /data-nav-overlay/, name: 'data-nav-overlay attribute' },
-    { pattern: /aria-label=".*navigation.*"/i, name: 'ARIA navigation labels' },
-    { pattern: /role="navigation"/, name: 'Navigation role' },
-  ];
-
-  checks.forEach((check) => {
-    if (check.pattern.test(html)) {
-      pass(check.name);
-    } else {
-      fail(`${check.name} missing`);
-    }
-  });
-}
-
-// Test CSS inclusion
-function testAssets(html) {
-  section('Phase 4: Asset Loading Test');
-
-  if (html.includes('/assets/css/style.css')) {
-    pass('Main CSS file linked');
-  } else {
-    fail('Main CSS file not linked');
+  [data - slide - panel] {
+    background: var(--color - charcoal - 800);
+    box - shadow: -4px 0 16px rgba(0, 0, 0, 0.3);
   }
 
-  if (html.includes('/assets/js/nav.js')) {
-    pass('Navigation JavaScript linked');
-  } else {
-    fail('Navigation JavaScript not linked');
-  }
-
-  if (html.includes('/assets/js/main.js')) {
-    pass('Main JavaScript linked');
-  } else {
-    fail('Main JavaScript not linked');
+  .skeleton - loader {
+    background: linear - gradient(
+      90deg,
+      rgba(255, 255, 255, 0.05) 0 %,
+      rgba(255, 255, 255, 0.1) 50 %,
+      rgba(255, 255, 255, 0.05) 100 %
+    );
   }
 }
-
-// Run Playwright tests if available
-async function runPlaywrightTests() {
-  section('Phase 5: Automated Browser Tests');
-
-  // Skip Playwright for now - tests are too strict for live environment
-  // Manual testing is sufficient for navigation verification
-  pass('Skipping Playwright tests - manual verification recommended');
-  info('  Core functionality verified in Phases 1-4');
-  return true;
-}
-
-// Generate final report
-function generateReport() {
-  section('FINAL VERIFICATION REPORT');
-
-  console.log('\n📊 Test Results:');
-  console.log(`  ✓ Passed: ${passedTests}`);
-  console.log(`  ✗ Failed: ${failedTests}`);
-  console.log(`  Total: ${totalTests}`);
-
-  const successRate =
-    totalTests > 0 ? ((passedTests / totalTests) * 100).toFixed(1) : 0;
-  console.log(`  Success Rate: ${successRate}%`);
-
-  if (failedTests === 0) {
-    console.log('\n🎉 ALL TESTS PASSED - READY TO BRIDGE TO STONE');
-    console.log('\n✅ RECOMMENDATION: APPROVE FOR PRODUCTION DEPLOYMENT');
-    return true;
-  } else if (successRate >= 80) {
-    console.log('\n⚠️  MOST TESTS PASSED - REVIEW FAILURES');
-    console.log('\n⚠️  RECOMMENDATION: FIX FAILURES BEFORE DEPLOYMENT');
-    return false;
-  } else {
-    console.log('\n❌ SIGNIFICANT FAILURES - DO NOT DEPLOY');
-    console.log('\n❌ RECOMMENDATION: FIX ALL ISSUES IN SANDBOX');
-    return false;
-  }
-}
-
-// Main execution
-async function main() {
-  try {
-    // Phase 1: Wait for GitHub Actions
-    const workflowSuccess = await waitForDeployment();
-    if (!workflowSuccess) {
-      info('Workflow failed, but continuing to check current deployment...');
-    }
-
-    // Wait a bit for Pages to update
-    info('Waiting 30 seconds for GitHub Pages to update...');
-    await new Promise((resolve) => setTimeout(resolve, 30000));
-
-    // Phase 2: Test live site
-    const html = await testLiveSite();
-    if (!html) {
-      fail('Cannot continue - site is not accessible');
-      generateReport();
-      process.exit(1);
-    }
-
-    // Phase 3: Test mobile navigation
-    testMobileNavigation(html);
-
-    // Phase 4: Test assets
-    testAssets(html);
-
-    // Phase 5: Run Playwright tests
-    await runPlaywrightTests();
-
-    // Generate report
-    const approved = generateReport();
-
-    process.exit(approved ? 0 : 1);
-  } catch (error) {
-    console.error('\n❌ Verification system error:', error.message);
-    process.exit(1);
-  }
-}
-
-main();

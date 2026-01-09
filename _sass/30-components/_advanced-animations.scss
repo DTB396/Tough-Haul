@@ -1,17 +1,7 @@
 /* ============================================
    🎊 TILLERSTEAD ADVANCED ANIMATIONS
    Premium Animation Patterns for Complex Interactions
-
-  /* End of Advanced Animations */
-   - Scroll-triggered reveals
-   - Staggered patterns with balanced delays
-   - Accessibility-first (prefers-reduced-motion)
    ============================================ */
-
-
-/* ========================================
-   🎬 SCROLL-TRIGGERED ANIMATIONS
-   ======================================== */
 
 /* Fade in as element enters viewport (GPU accelerated) */
 [data-scroll-animate] {
@@ -19,18 +9,7 @@
   transition:
     opacity var(--duration-base) var(--easing-in-out),
     transform var(--duration-base) var(--easing-in-out);
-<<<<<<< HEAD
-
-[data-scroll-animate="fade-in"] {
-  transform: translateY(40px);
-
-  &.in-view {
-    opacity: 1;
-    transform: translateY(0);
-  }
-=======
-// ...existing code...
->>>>>>> 98d0d4a5 (fix: force-add all outstanding changes except tillerstead/ submodule)
+}
 
 [data-scroll-animate="fade-in-left"] {
   transform: translateX(-40px);
@@ -39,6 +18,7 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
 
 [data-scroll-animate="fade-in-right"] {
   transform: translateX(40px);
@@ -47,6 +27,7 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
 
 [data-scroll-animate="scale-in"] {
   transform: scale(0.95);
@@ -56,6 +37,7 @@
     opacity: 1;
     transform: scale(1);
   }
+}
 
 /* ========================================
    🎨 STAGGERED GRID ANIMATIONS
@@ -63,7 +45,7 @@
 
 /* Staggered children with scroll trigger (optimized delays) */
 [data-stagger-animate] {
-  > * {
+  >* {
     opacity: 0;
     transform: translateY(40px);
     transition:
@@ -72,46 +54,48 @@
     will-change: transform, opacity;
   }
 
-  &.in-view > * {
+  &.in-view>* {
     opacity: 1;
     transform: translateY(0);
     will-change: auto;
   }
 
-  /* Optimized stagger delays - balanced for smoothness */
   @for $i from 1 through 12 {
-    &.in-view > *:nth-child(#{$i}) {
+    &.in-view>*:nth-child(#{$i}) {
       transition-delay: #{($i - 1) * 60ms};
     }
   }
+}
 
 /* Grid animation with bounce effect */
 [data-grid-animate="bounce"] {
-  > * {
+  >* {
     opacity: 0;
     animation: bounceEnter var(--duration-base) var(--easing-bounce) both;
     will-change: transform, opacity;
   }
 
   @for $i from 1 through 12 {
-    > *:nth-child(#{$i}) {
+    >*:nth-child(#{$i}) {
       animation-delay: #{($i - 1) * 75ms};
     }
-        // Modern Dart Sass random and math.div usage
-        $rand: math.random();
-        $rand100: math.round($rand * 100);
-        $rand500: math.round($rand * 500);
-        $rand2: math.round($rand * 2);
-
-  &.animation-complete > * {
-    will-change: auto;
-        width: #{2 + math.round($rand * 8)}px;
-        height: #{2 + math.round($rand * 8)}px;
   }
+
+  $rand: math.random();
+  $rand100: math.round($rand * 100);
+  $rand500: math.round($rand * 500);
+  $rand2: math.round($rand * 2);
+
+  &.animation-complete>* {
+    will-change: auto;
+    width: #{2 + math.round($rand * 8)}px;
+    height: #{2 + math.round($rand * 8)}px;
+  }
+}
 
 /* Fade up stagger for large lists */
 [data-list-animate] {
-  > * {
+  >* {
     opacity: 0;
     transform: translateY(20px);
     transition:
@@ -119,16 +103,17 @@
       transform var(--duration-base) var(--easing-out);
   }
 
-  &.in-view > * {
+  &.in-view>* {
     opacity: 1;
     transform: translateY(0);
   }
 
   @for $i from 1 through 20 {
-    &.in-view > *:nth-child(#{$i}) {
+    &.in-view>*:nth-child(#{$i}) {
       transition-delay: #{($i - 1) * 40ms};
     }
   }
+}
 
 /* ========================================
    🔄 COMPLEX STATE TRANSITIONS
@@ -155,7 +140,6 @@
     opacity: 1;
   }
 }
-}
 
 /* Slide panel from side (GPU accelerated) */
 [data-slide-panel] {
@@ -177,7 +161,6 @@
     will-change: auto;
   }
 }
-}
 
 /* Fade overlay behind panel */
 [data-overlay] {
@@ -193,7 +176,6 @@
     pointer-events: auto;
   }
 }
-}
 
 /* Modal animation - scale + fade */
 [data-modal] {
@@ -207,7 +189,6 @@
     opacity: 1;
     transform: scale(1);
   }
-}
 }
 
 /* Dropdown animation - slide down */
@@ -226,7 +207,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
 }
 
 /* ========================================
@@ -247,7 +227,6 @@
     animation: loaderSegment 1s ease-in-out infinite;
     will-change: transform, opacity;
   }
-}
 
   @for $i from 1 through 4 {
     span:nth-child(#{$i}) {
@@ -255,20 +234,19 @@
     }
   }
 }
-}
 
 @keyframes loaderSegment {
+
   0%,
   100% {
     opacity: 0.3;
     transform: scaleY(1);
   }
-}
+
   50% {
     opacity: 1;
     transform: scaleY(1.5);
   }
-}
 }
 
 /* Spinner loader - smooth rotation */
@@ -287,7 +265,6 @@
     transform: rotate(360deg);
   }
 }
-}
 
 /* Pulse loader - gentle opacity animation */
 .loader-pulse {
@@ -301,17 +278,17 @@
 }
 
 @keyframes pulseFade {
+
   0%,
   100% {
     opacity: 1;
     transform: scale(1);
   }
-}
+
   50% {
     opacity: 0.5;
     transform: scale(0.8);
   }
-}
 }
 
 /* Progress bar animation */
@@ -331,17 +308,15 @@
     will-change: width;
   }
 }
-}
 
 @keyframes progressFill {
   from {
     width: 0%;
   }
-}
+
   to {
     width: 100%;
   }
-}
 }
 
 /* ========================================
@@ -353,20 +328,19 @@
     opacity: 0;
     transform: scale(0.3) translateY(20px);
   }
-}
+
   50% {
     opacity: 1;
   }
-}
+
   70% {
     transform: scale(1.12);
   }
-}
+
   100% {
     opacity: 1;
     transform: scale(1) translateY(0);
   }
-}
 }
 
 @keyframes slideOutDown {
@@ -375,7 +349,6 @@
     transform: translateY(40px);
   }
 }
-}
 
 @keyframes slideOutUp {
   to {
@@ -383,14 +356,13 @@
     transform: translateY(-40px);
   }
 }
-}
 
 /* ========================================
    ♿ ACCESSIBILITY OPTIMIZATIONS
    ======================================== */
 
-/* Respect user's motion preferences */
 @media (prefers-reduced-motion: reduce) {
+
   [data-scroll-animate],
   [data-stagger-animate],
   [data-grid-animate],
@@ -415,7 +387,6 @@
       will-change: auto !important;
     }
   }
-}
 
   .loader-segmented,
   .loader-spinner,
@@ -425,20 +396,18 @@
     will-change: auto !important;
   }
 }
-}
 
-/* High contrast mode - reduce animation duration */
 @media (prefers-contrast: more) {
+
   [data-scroll-animate],
   [data-stagger-animate],
   [data-expand-toggle] {
     transition-duration: var(--duration-fast) !important;
   }
 }
-}
 
-/* Print styles - disable all animations */
 @media print {
+
   [data-scroll-animate],
   [data-stagger-animate],
   [data-grid-animate],
@@ -463,178 +432,6 @@
     }
   }
 }
-}
-
-/* ========================================
-   🔄 COMPLEX STATE TRANSITIONS
-   ======================================== */
-
-/* Smooth state transitions for modals, dropdowns */
-[data-state-transition] {
-  position: relative;
-  overflow: hidden;
-}
-
-/* Expand/collapse with smooth height transition */
-[data-expand-toggle] {
-  --transition-height: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition:
-    var(--transition-height),
-    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
-  &.is-open {
-    max-height: 1000px;
-    opacity: 1;
-  }
-}
-}
-
-/* Slide panel from side */
-[data-slide-panel] {
-  position: fixed;
-  right: 0;
-  top: 0;
-  height: 100vh;
-  width: 400px;
-  max-width: 80vw;
-  background: white;
-  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.1);
-  transform: translateX(100%);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1000;
-
-  &.is-open {
-    transform: translateX(0);
-  }
-}
-}
-
-/* Fade overlay behind panel */
-[data-overlay] {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0);
-  transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 999;
-  pointer-events: none;
-
-  &.is-active {
-    background: rgba(0, 0, 0, 0.3);
-    pointer-events: auto;
-  }
-}
-}
-
-/* ========================================
-   📈 ADVANCED LOADING PATTERNS
-   ======================================== */
-
-/* Multi-part loader (segmented progress) */
-.loader-segmented {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-
-  span {
-    width: 4px;
-    height: 20px;
-    background: var(--color-primary);
-    border-radius: 2px;
-    animation: loaderSegment 1s ease-in-out infinite;
-  }
-}
-
-  @for $i from 1 through 4 {
-    span:nth-child(#{$i}) {
-      animation-delay: #{($i - 1) * 200ms};
-    }
-  }
-}
-}
-
-@keyframes loaderSegment {
-  0%,
-  100% {
-    opacity: 0.3;
-    transform: scaleY(1);
-  }
-}
-  50% {
-    opacity: 1;
-    transform: scaleY(1.5);
-  }
-}
-}
-
-/* Circular progress with animated stroke */
-.circular-progress {
-  --size: 60px;
-  --stroke: 4px;
-  width: var(--size);
-  height: var(--size);
-  position: relative;
-
-  svg {
-    width: 100%;
-    height: 100%;
-    transform: rotate(-90deg);
-  }
-}
-
-  circle {
-    &.background {
-      stroke: rgba(0, 0, 0, 0.1);
-      fill: none;
-    }
-
-    &.progress {
-      stroke: var(--color-primary);
-      fill: none;
-      stroke-dasharray: 157;
-      stroke-dashoffset: 157;
-      animation: circleProgress 2s ease-out forwards;
-    }
-  }
-}
-}
-
-@keyframes circleProgress {
-  0% {
-    stroke-dashoffset: 157;
-  }
-}
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-}
-
-/* Skeleton loading animation */
-.skeleton-loader {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.05) 0%,
-    rgba(0, 0, 0, 0.1) 50%,
-    rgba(0, 0, 0, 0.05) 100%
-  );
-  background-size: 200% 100%;
-  animation: skeltonLoad 1.5s infinite;
-  border-radius: var(--radius-md);
-}
-
-@keyframes skeltonLoad {
-  0% {
-    background-position: 200% 0;
-  }
-}
-  100% {
-    background-position: -200% 0;
-  }
-}
-}
 
 /* ========================================
    🎯 INTERACTIVE FEEDBACK LOOPS
@@ -658,12 +455,10 @@
     transform: translate(-50%, -50%);
     pointer-events: none;
   }
-}
 
   &:active::after {
     animation: rippleEffect 0.6s ease-out;
   }
-}
 }
 
 @keyframes rippleEffect {
@@ -672,6 +467,7 @@
     height: 0;
     opacity: 1;
   }
+
   100% {
     width: 300px;
     height: 300px;
@@ -687,7 +483,7 @@
   input[type="checkbox"] {
     display: none;
 
-    &:checked + label {
+    &:checked+label {
       background: var(--color-primary);
 
       &::after {
@@ -754,9 +550,9 @@
     transform-origin: left;
   }
 
-  input:focus ~ label,
-  input:valid ~ label,
-  textarea:focus ~ label {
+  input:focus~label,
+  input:valid~label,
+  textarea:focus~label {
     transform: translateY(-1.2rem) scale(0.85);
     color: var(--color-primary);
   }
@@ -774,13 +570,16 @@
 }
 
 @keyframes errorShake {
+
   0%,
   100% {
     transform: translateX(0);
   }
+
   25% {
     transform: translateX(-4px);
   }
+
   75% {
     transform: translateX(4px);
   }
@@ -816,22 +615,22 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
 
 .gradient-shift {
-  background: linear-gradient(
-    -45deg,
-    var(--color-primary),
-    var(--color-accent),
-    var(--color-highlight),
-    var(--color-primary-light)
-  );
+  background: linear-gradient(-45deg,
+      var(--color-primary),
+      var(--color-accent),
+      var(--color-highlight),
+      var(--color-primary-light));
   background-size: 400% 400%;
   animation: gradientShift 8s ease infinite;
 }
@@ -854,10 +653,12 @@
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(7, 137, 48, 0.4);
   }
+
   50% {
     transform: scale(1.02);
     box-shadow: 0 0 0 10px rgba(7, 137, 48, 0);
   }
+
   100% {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(7, 137, 48, 0);
@@ -886,6 +687,7 @@
     opacity: 0;
     transform: translateY(-10px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -922,6 +724,7 @@
   from {
     height: 0;
   }
+
   to {
     height: 100%;
   }
@@ -944,9 +747,11 @@
     transform: translateY(-10vh) rotateZ(0deg);
     opacity: 1;
   }
+
   90% {
     opacity: 1;
   }
+
   100% {
     transform: translateY(100vh) rotateZ(360deg);
     opacity: 0;
@@ -978,6 +783,7 @@
     transform: scale(1);
     opacity: 1;
   }
+
   100% {
     transform: scale(1.5);
     opacity: 0;
@@ -993,6 +799,7 @@
    ======================================== */
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -1016,12 +823,9 @@
   }
 
   .skeleton-loader {
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.05) 0%,
-      rgba(255, 255, 255, 0.1) 50%,
-      rgba(255, 255, 255, 0.05) 100%
-    );
-    /* End of Advanced Animations */
+    background: linear-gradient(90deg,
+        rgba(255, 255, 255, 0.05) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0.05) 100%);
   }
 }
