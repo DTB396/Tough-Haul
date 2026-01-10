@@ -54,6 +54,6 @@ export default defineConfig({
         command: 'http-server _site -p 4000 -c-1',
         url: baseURL,
         reuseExistingServer: !process.env.CI,
-        timeout: 60000,
-      },
+          timeout: 60000,
+        },
 });
