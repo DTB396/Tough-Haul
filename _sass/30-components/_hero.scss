@@ -36,7 +36,7 @@
     inset: 0;
     background: radial-gradient(
       ellipse at 50% 20%,
-      rgb(13, 154, 170, 0.08) 0%,
+      rgba(13, 154, 170, 0.08) 0%,
       transparent 60%
     );
     pointer-events: none;
@@ -110,7 +110,7 @@
   letter-spacing: var(--tiller-tracking-wider);
   text-transform: uppercase;
   color: var(--ts-color-primary);
-  background: rgb(13, 154, 170, 0.06);
+  background: rgba(13, 154, 170, 0.06);
   border: var(--color-border-width-thin) solid var(--color-border-color-teal);
   border-radius: 100px;
   width: fit-content;
@@ -118,17 +118,14 @@
   transition: all var(--tiller-duration-base) var(--tiller-ease-standard);
 
   &:hover {
-    background: rgb(13, 154, 170, 0.1);
+    background: rgba(13, 154, 170, 0.1);
     transform: translateY(-1px);
   }
 }
 
 /* Headline - Luxury typography */
-.ts-hero__headline,
-.ts-hero__title,
-.hero__headline,
-.hero__title {
-  font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+.ts-hero__headline {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
   line-height: var(--tiller-leading-tight);
   font-weight: var(--font-weight-bold);
   letter-spacing: var(--tiller-tracking-tighter);
@@ -140,8 +137,7 @@
   background: linear-gradient(
     135deg,
     var(--ts-color-heading) 0%,
-    color-mix(in srgb, var(--ts-color-heading) 85%, var(--ts-color-primary) 15%)
-      100%
+    color-mix(in srgb, var(--ts-color-heading) 85%, var(--ts-color-primary) 15%) 100%
   );
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -189,31 +185,6 @@
   justify-content: center;
 }
 
-/* ========== Hero Facts/Features ========== */
-.ts-hero__facts,
-.hero__features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-top: 3rem;
-}
-
-.ts-hero__fact,
-.hero__feature {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.5rem;
-  background: rgb(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgb(13, 154, 170, 0.12);
-  border-radius: 12px;
-  box-shadow:
-    0 2px 8px rgb(0, 0, 0, 0.04),
-    0 4px 16px rgb(0, 0, 0, 0.02);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  animation: fade-in-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) backwards;
-}
 
 .ts-hero__fact:nth-child(1) {
   animation-delay: 0.5s;
@@ -230,10 +201,11 @@
 .ts-hero__fact:hover,
 .hero__feature:hover {
   transform: translateY(-4px);
-  border-color: rgb(13, 154, 170, 0.3);
+  border-color: rgba(13, 154, 170, 0.3);
+    border-color: rgba(13, 154, 170, 0.3);
   box-shadow:
-    0 8px 20px rgb(0, 0, 0, 0.08),
-    0 12px 32px rgb(0, 0, 0, 0.04);
+    0 8px 20px rgba(0, 0, 0, 0.08),
+    0 12px 32px rgba(0, 0, 0, 0.04);
 }
 
 .ts-hero__fact-icon,
@@ -251,7 +223,8 @@
   );
   color: var(--ts-white);
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgb(13, 154, 170, 0.25);
+  box-shadow: 0 4px 12px rgba(13, 154, 170, 0.25);
+    box-shadow: 0 4px 12px rgba(13, 154, 170, 0.25);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -288,8 +261,8 @@
   border-radius: 16px;
   overflow: hidden;
   box-shadow:
-    0 10px 40px rgb(0, 0, 0, 0.1),
-    0 20px 60px rgb(0, 0, 0, 0.05);
+    0 10px 40px rgba(0, 0, 0, 0.1),
+    0 20px 60px rgba(0, 0, 0, 0.05);
   animation: fade-in 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s backwards;
 }
 
@@ -331,7 +304,7 @@
   &::after {
     background: radial-gradient(
       ellipse at 50% 20%,
-      rgb(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.08) 0%,
       transparent 60%
     );
   }
@@ -345,7 +318,7 @@
   background: linear-gradient(
     135deg,
     var(--ts-white) 0%,
-    rgb(255, 255, 255, 0.9) 100%
+    rgba(255, 255, 255, 0.9) 100%
   );
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -353,13 +326,13 @@
 
 .hero--dark .hero__lead,
 .ts-hero--dark .ts-hero__lead {
-  color: rgb(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .hero--dark .ts-hero__fact,
 .ts-hero--dark .ts-hero__fact {
-  background: rgb(255, 255, 255, 0.08);
-  border-color: rgb(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
 .hero--dark .ts-hero__fact-label,
@@ -369,7 +342,7 @@
 
 .hero--dark .ts-hero__fact-text,
 .ts-hero--dark .ts-hero__fact-text {
-  color: rgb(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* ========== Responsive ========== */

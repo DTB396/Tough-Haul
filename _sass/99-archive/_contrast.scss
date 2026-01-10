@@ -35,7 +35,7 @@
 
 // Calculate relative luminance (per WCAG 2.1 formula)
 @function luminance($color) {
-  $rgb: hex-to-rgb($color);
+  $rgb: hex-to-rgb($color); // No direct rgb() with 4 args, but check for future use
   $r: linearize-channel(map-get($rgb, red));
   $g: linearize-channel(map-get($rgb, green));
   $b: linearize-channel(map-get($rgb, blue));

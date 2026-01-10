@@ -308,12 +308,12 @@
   background-image:
     radial-gradient(
       circle at 20% 20%,
-      rgb(255, 255, 255, 0.1) 2px,
+      rgba(255, 255, 255, 0.1) 2px,
       transparent 2px
     ),
     radial-gradient(
       circle at 80% 80%,
-      rgb(255, 255, 255, 0.1) 2px,
+      rgba(255, 255, 255, 0.1) 2px,
       transparent 2px
     );
   background-size: 30px 30px;
@@ -333,7 +333,7 @@
   line-height: 1.1;
   text-shadow:
     3px 3px 0 var(--color-cool-gray-900),
-    6px 6px 0 rgb(0, 0, 0, 0.2);
+    6px 6px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: var(--spacing-space-6);
 }
 

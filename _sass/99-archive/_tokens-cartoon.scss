@@ -73,8 +73,8 @@
   --color-surface-yellow-tint: #fff9c4; /* Light yellow wash */
 
   /* Shadows (animation cel style) */
-  --color-shadow-cartoon: rgb(0, 0, 0, 0.25);
-  --color-shadow-cartoon-soft: rgb(0, 0, 0, 0.15);
+  --color-shadow-cartoon: rgba(0, 0, 0, 0.25);
+  --color-shadow-cartoon-soft: rgba(0, 0, 0, 0.15);
 
   /* ===========================
      ✍️ TEXT & OUTLINES
@@ -188,9 +188,9 @@
   --color-shadow-cel-xl: 12px 12px 0 var(--tiller-cartoon-black);
 
   /* Soft shadow (modern touch) */
-  --color-shadow-soft: 0 2px 8px rgb(0, 0, 0, 0.1);
-  --color-shadow-medium: 0 4px 16px rgb(0, 0, 0, 0.15);
-  --color-shadow-strong: 0 8px 24px rgb(0, 0, 0, 0.2);
+  --color-shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --color-shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --color-shadow-strong: 0 8px 24px rgba(0, 0, 0, 0.2);
 
   /* ===========================
      ✍️ TYPOGRAPHY SYSTEM
