@@ -53,7 +53,7 @@
     "fix:encoding": "node scripts/fix-encoding.js"
   },
   "devDependencies": {
-    "@hint/configuration-development": "^8.3.1",
+    
     "@playwright/test": "^1.57.0",
     "cheerio": "1.1.2",
     "concurrently": "9.2.1",
@@ -63,12 +63,12 @@
     "eslint-plugin-n": "16.6.2",
     "eslint-plugin-promise": "6.6.0",
     "glob": "^13.0.0",
-    "hint": "^2.0.0",
+    
     "htmlhint": "1.8.0",
     "http-server": "^14.1.1",
     "imagemin": "^8.0.1",
-    "imagemin-mozjpeg": "^7.0.0",
-    "imagemin-pngquant": "^5.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0",
     "imagemin-svgo": "^10.0.1",
     "js-yaml": "4.1.1",
     "playwright": "^1.57.0",
