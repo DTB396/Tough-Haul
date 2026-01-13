@@ -85,28 +85,28 @@ Generated: 2025-12-25 21:15:00
   **Reference**: `/assets/img/tillerstead-work/bathrooms/bathroom-floor-install-progress.jpg'`
 
 - **File**: `\_includes\responsive-image.html`
-  **Reference**: `/assets/img/optimized/{{`
+  **Reference**: `/assets/img/optimized/[MISSING-VALUE]`
 
 - **File**: `\_includes\responsive-image.html`
-  **Reference**: `/assets/img/optimized/{{`
+  **Reference**: `/assets/img/optimized/[MISSING-VALUE]`
 
 - **File**: `\_includes\responsive-image.html`
-  **Reference**: `/assets/img/optimized/{{`
+  **Reference**: `/assets/img/optimized/[MISSING-VALUE]`
 
 - **File**: `\_includes\responsive-image.html`
-  **Reference**: `/assets/img/optimized/{{`
+  **Reference**: `/assets/img/optimized/[MISSING-VALUE]`
 
 - **File**: `\_includes\responsive-image.html`
-  **Reference**: `/assets/img/{{`
+  **Reference**: `/assets/img/[MISSING-VALUE]`
 
 - **File**: `\_includes\responsive-image.html`
-  **Reference**: `/assets/img/optimized/{{`
+  **Reference**: `/assets/img/optimized/[MISSING-VALUE]`
 
 - **File**: `\_includes\responsive-image.html`
-  **Reference**: `/assets/img/optimized/{{`
+  **Reference**: `/assets/img/optimized/[MISSING-VALUE]`
 
 - **File**: `\_includes\responsive-image.html`
-  **Reference**: `/assets/img/optimized/{{`
+  **Reference**: `/assets/img/optimized/[MISSING-VALUE]`
 
 - **File**: `\_includes\ts-portfolio.html`
   **Reference**: `/assets/img/patterns/herringbone-subtle.svg'`

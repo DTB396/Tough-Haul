@@ -133,6 +133,10 @@ forms:
 # ----------------------------
 exclude:
   - node_modules
+  - .sass-cache
+  - .jekyll-metadata
+  - Gemfile
+  - Gemfile.lock
   - vendor
   - .git
   - .github
@@ -140,8 +144,6 @@ exclude:
   - scripts
   - tools
   - _audit
-  - Gemfile
-  - Gemfile.lock
   - package.json
   - package-lock.json
   - README.md
@@ -151,7 +153,6 @@ exclude:
   - "*.bak*"
   - "**/*.bak*"
   - "*.bak_keep_*"
-  - ".sass-cache"
   - ".backups"
   - "vendor/**"
   - "root-archive/**"
@@ -175,13 +176,9 @@ exclude:
   - "**/*.bak.*"
   - "_site"
   - ".jekyll-cache"
-  - ".jekyll-metadata"
   - ".DS_Store"
   - ".gitignore"
 
 keep_files:
   - "CNAME"
-  - "assets/"exclude:
-  - "*.bak_keep_*"
-  - ".backups"
-  - "reports"
+  - "assets/"

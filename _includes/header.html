@@ -2,14 +2,22 @@
 {% assign primary_nav = site.data.navigation.primary %}
 {% assign current_url = page.url | default: '' %}
 
-<header class="site-header">
-  <div class="site-header-inner">
-    <!-- Navigation drawer -->
-    {% include nav-drawer.html %}
-
-    <!-- Branding/logo -->
-    <div class="site-branding">
-      {% include logo-header.html symbol="logo-full" svg_class="ts-logo ts-logo--header" %}
-    </div>
-  </div>
+<!-- Updated header with new navigation system -->
+<header class="nav-container">
+  <img src="/assets/images/main-logo.svg" alt="Tillerstead Logo" class="nav-logo">
+  <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+  <nav class="nav-menu mobile">
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/services.html">Services</a>
+    <a href="/portfolio.html">Portfolio</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+  <nav class="nav-menu desktop">
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/services.html">Services</a>
+    <a href="/portfolio.html">Portfolio</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
 </header>

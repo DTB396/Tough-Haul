@@ -12,6 +12,11 @@ $report = Join-Path $ReportDir "tillerstead-repo-audit_$timestamp.txt"
 "Timestamp: $(Get-Date)" | Out-File $report -Append
 "" | Out-File $report -Append
 
+if (-not (Test-Path $Root)) {
+    Write-Host "Root directory does not exist: $Root" -ForegroundColor Red
+    exit 1
+}
+
 Get-ChildItem $Root -Directory -Filter "tillerstead*" | ForEach-Object {
 
     $path = $_.FullName
@@ -48,15 +53,16 @@ Get-ChildItem $Root -Directory -Filter "tillerstead*" | ForEach-Object {
         "  tools/      : $(Test-Path tools)"       | Out-File $report -Append
         "  dist/       : $(Test-Path dist)"        | Out-File $report -Append
         "  _site/      : $(Test-Path _site)"       | Out-File $report -Append
-        "  .backups/   : $(Test-Path .backups)"    | Out-File $report -Append
 
         if ($name -match "__backup|FINALKEEP") {
             "⚠️  Marked as BACKUP/ARCHIVE" | Out-File $report -Append
         } else {
             "✅ Candidate for canonical repo" | Out-File $report -Append
         }
-    }
-    finally {
+    } catch {
+        Write-Host "Error processing repo: $name" -ForegroundColor Yellow
+        Write-Host $_.Exception.Message -ForegroundColor Red
+    } finally {
         Pop-Location
     }
 

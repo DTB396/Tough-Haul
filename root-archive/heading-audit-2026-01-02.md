@@ -250,8 +250,8 @@
   - H2: Jump to a Category
   - H2: {{ cat.name | escape }}
     - H3: {% if p.amazon_url %}
-      <a
-      href="{{ p.amazon_url | escape }}"
+      <a href="{{ p.amazon_url | escape }}">Amazon Link</a>
+    {% endif %}
   - H2: How Your Purchase Supports Independent Content
   - H2: FAQ
 
