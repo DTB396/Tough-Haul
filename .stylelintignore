@@ -32,3 +32,5 @@ tmp.css
 
 # Ignore VS Code settings (if accidentally present)
 .vscode/
+playwright-report/
+scripts/test-results/

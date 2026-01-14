@@ -8,3 +8,7 @@ coverage/
 # Ignore SCSS/CSS and animation pattern files
 scripts/verify-deployment.scss
 *.scss
+
+# Exclude generated reports and test results
+playwright-report/
+scripts/test-results/
