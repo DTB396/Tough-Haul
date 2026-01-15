@@ -178,6 +178,7 @@ exclude:
   - ".jekyll-cache"
   - ".DS_Store"
   - ".gitignore"
+  # Ensure assets/ or assets/css/ is NOT listed here
 
 keep_files:
   - "CNAME"
