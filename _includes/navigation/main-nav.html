@@ -1,19 +1,29 @@
 <!-- Main Navigation Component -->
+
 <nav class="main-nav" aria-label="Main Navigation">
   <ul class="nav-list">
     {% for item in site.data.navigation.primary %}
-      <li class="nav-item">
-        <a href="{{ item.url }}">{{ item.title }}</a>
-        {% if item.children %}
-          <ul class="sub-nav-list">
-            {% for child in item.children %}
-              <li class="sub-nav-item">
-                <a href="{{ child.url }}">{{ child.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-      </li>
+      {% if item.url %}
+        <li class="nav-item">
+          <a href="{{ item.url }}">{{ item.title }}</a>
+          {% if item.children %}
+            <ul class="sub-nav-list">
+              {% for child in item.children %}
+                <li class="sub-nav-item">
+                  <a href="{{ child.url }}">{{ child.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endif %}
+      {% if item.children and not item.url %}
+        {% for child in item.children %}
+          <li class="nav-item">
+            <a href="{{ child.url }}">{{ child.title }}</a>
+          </li>
+        {% endfor %}
+      {% endif %}
     {% endfor %}
   </ul>
 </nav>
@@ -24,11 +34,16 @@
   <div id="mobile-nav" class="mobile-nav-shell">
     <button class="nav-close" aria-label="Close navigation menu">✖</button>
     <ul class="mobile-nav-list">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/services.html">Services</a></li>
-      <li><a href="/portfolio.html">Portfolio</a></li>
-      <li><a href="/contact.html">Contact</a></li>
+      {% for item in site.data.navigation.primary %}
+        {% if item.url %}
+          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endif %}
+        {% if item.children %}
+          {% for child in item.children %}
+            <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
     </ul>
   </div>
 </div>
