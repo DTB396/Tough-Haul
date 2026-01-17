@@ -9,8 +9,8 @@ import * as sass from 'sass';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const scssPath = path.resolve(__dirname, '..', 'assets', 'css', 'style.scss');
-const cssOutPath = path.resolve(__dirname, '..', 'assets', 'css', 'style.css');
+const scssPath = path.resolve(__dirname, '..', 'assets', 'css', 'main.css');
+const cssOutPath = path.resolve(__dirname, '..', 'assets', 'css', 'main.css');
 
 try {
   // Use sass Node.js API instead of CLI for better Windows compatibility

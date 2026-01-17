@@ -7,11 +7,11 @@ const __dirname = path.dirname(__filename);
 
 // Analyze CSS structure and identify unused files
 const sassDir = path.join(__dirname, '..', '_sass');
-const mainScss = path.join(__dirname, '..', 'assets', 'css', 'style.scss');
+const mainScss = path.join(__dirname, '..', 'assets', 'css', 'main.css');
 
 console.log('📊 CSS Structure Analysis\n');
 
-// Read style.scss to see what's imported
+// Read main.css to see what's imported
 const mainContent = fs.readFileSync(mainScss, 'utf8');
 const importedFiles = [];
 const importRegex = /@import\s+["']([^"']+)["'];?/g;
@@ -21,7 +21,7 @@ while ((match = importRegex.exec(mainContent)) !== null) {
   importedFiles.push(match[1]);
 }
 
-console.log('✅ Files imported in style.scss:');
+console.log('✅ Files imported in main.css:');
 importedFiles.forEach((f) => console.log(`   - ${f}`));
 
 // Find all SCSS files

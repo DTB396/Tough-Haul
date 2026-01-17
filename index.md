@@ -32,11 +32,11 @@ hero_image_position: top
     </div>
     <div class="ts-service-card card-service">
       <h3 class="service-title bright-blue mb-service">Waterproofing</h3>
-      <p class="service-desc">Certified waterproof assemblies using industry-leading materials and methods. Protecting homes for the next generation.</p>
+      <p class="service-desc">Certified waterproof assemblies using industry-leading materials and methods. Protecting homes for the next generation. <a href="/blog/waterproofing-redgard-vs-kerdi-vs-hydroban/" class="blog-link">Learn more</a></p>
     </div>
     <div class="ts-service-card card-service">
       <h3 class="service-title bright-blue mb-service">Bathroom Remodels</h3>
-      <p class="service-desc">From design to finish, we deliver beautiful, code-compliant bathrooms with transparent pricing and a focus on lasting value for your family.</p>
+      <p class="service-desc">From design to finish, we deliver beautiful, code-compliant bathrooms with transparent pricing and a focus on lasting value for your family. <a href="/blog/nj-tile-bath-consultation-guide/" class="blog-link">What to expect</a></p>
     </div>
   </div>
 </section>
@@ -56,8 +56,8 @@ hero_image_position: top
     </ul>
   </div>
 </section>
-{% include ts-peace-of-mind.html}
+{% include ts-peace-of-mind.html %}
 <!-- Call to Action Section -->
 {% include cta-estimate.html %}
-{% include ts-plans.html}
+{% include ts-plans.html %}
 
