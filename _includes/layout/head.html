@@ -1,6 +1,9 @@
 <!-- Jekyll include: no DOCTYPE needed, ensure space indentation -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#10b981" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#059669" media="(prefers-color-scheme: dark)" />
 
 <title>{% if page.title %}{{ page.title | strip | escape }} | {% endif %}{{ site.title | strip | escape }}</title>
 
@@ -10,27 +13,41 @@
 <meta name="description" content="{{ site.description | strip_html | strip_newlines | escape }}" />
 {% endif %}
 
+<!-- DNS Prefetch & Preconnect for external resources -->
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//formsubmit.co" />
+<link rel="preconnect" href="https://www.thumbtack.com" crossorigin />
 
 <!-- Favicons & App Icons -->
 {% include icons/favicon-meta.html %}
 
+<!-- Resource Hints: Preload critical CSS (render-blocking) -->
+<link rel="preload" href="{{ '/assets/css/root-vars.css' | relative_url }}" as="style" />
+<link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" />
+{% if page.url == '/' or page.url == '/index.html' %}
+<link rel="preload" href="{{ '/assets/css/pages/home.css' | relative_url }}" as="style" />
+{% endif %}
+
+<!-- Module Preload for critical JS -->
+<link rel="modulepreload" href="{{ '/assets/js/main.js' | relative_url }}" />
+
 <!-- Core & Utility CSS: Load variables first, then base, then layout, then components, then page/utilities -->
-<link rel="stylesheet" href="{{ '/assets/css/root-vars.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/tile-patterns.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/tile-integrations.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/retro-enhancements.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/logo-wolf-crest.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/nav-drawer.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/navigation.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/root-vars.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/tile-patterns.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/tile-integrations.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/retro-enhancements.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/logo-wolf-crest.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/nav-drawer.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/navigation.css' | relative_url }}" />
 {% if page.layout == 'build-page' %}
-<link rel="stylesheet" href="{{ '/assets/css/build-guide.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/build-guide.css' | relative_url }}" />
 {% endif %}
 
 <!-- Page-specific stylesheets -->
 {% if page.stylesheets %}
   {% for stylesheet in page.stylesheets %}
-  <link rel="stylesheet" href="{{ stylesheet | relative_url }}">
+  <link rel="stylesheet" href="{{ stylesheet | relative_url }}" />
   {% endfor %}
 {% endif %}
 
@@ -39,6 +56,13 @@
   {% for script in page.scripts %}
   <script src="{{ script | relative_url }}" defer></script>
   {% endfor %}
+{% endif %}
+
+<!-- Prefetch secondary pages for instant navigation -->
+{% if page.url == '/' or page.url == '/index.html' %}
+<link rel="prefetch" href="{{ '/portfolio/' | relative_url }}" as="document" />
+<link rel="prefetch" href="{{ '/contact/' | relative_url }}" as="document" />
+<link rel="prefetch" href="{{ '/services/' | relative_url }}" as="document" />
 {% endif %}
 
 <!-- Page-specific styles/scripts can be added below -->
