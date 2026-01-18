@@ -1,18 +1,13 @@
 {% comment %} JavaScript Assets - Core and feature-specific scripts Loads all
 JavaScript modules with cache busting and proper defer/async attributes {%
 endcomment %} {% assign cache_version = site.cache_version | default:
-'2025-11-23.1' %}
+'2026-01-18.1' %}
 
-<!-- Core JavaScript -->
+<!-- Core JavaScript (ES Module) -->
 <script
+  type="module"
   src="{{ '/assets/js/main.js' | relative_url }}?v={{ cache_version }}"
-  defer
 ></script>
-<!-- nav.js disabled - navigation handled by inline script in main-nav.html -->
-<!-- <script
-  src="{{ '/assets/js/nav.js' | relative_url }}?v={{ cache_version }}"
-  defer
-></script> -->
 
 <!-- Feature-specific scripts -->
 <script

@@ -1,61 +1,69 @@
 {% assign footer_groups = site.data.navigation.footer %}
-<footer class="ts-footer" aria-label="Site Footer">
+<footer class="ts-footer" aria-label="Site Footer" role="contentinfo">
   <div class="footer-main">
     <!-- Logo Section -->
     <div class="footer-logo-section">
       <a href="/" aria-label="Tillerstead Home">
-        <img src="/assets/img/logo/4k-logo.png" alt="Tillerstead Logo" class="footer-logo" width="200" height="200" loading="lazy">
+        <img src="/assets/img/logo/4k-logo.png" alt="Tillerstead LLC - Professional Tile and Stone Installation" class="footer-logo" width="200" height="200" loading="lazy">
       </a>
       <p class="footer-tagline">Expert Tile & Stone Installation — South Jersey</p>
     </div>
 
     <!-- Footer Navigation Sections (skip Legal - it's in footer-bottom) -->
-    <div class="footer-sections">
+    <nav class="footer-sections" aria-label="Footer navigation">
       {% for group in footer_groups %}{% unless group.group == "Legal" %}
-      <section class="footer-group" aria-label="{{ group.group }}">
-        <h3 class="footer-group-title">{{ group.group }}</h3>
-        <ul class="footer-list">{% for item in group.items %}
+      <section class="footer-group" aria-labelledby="footer-group-{{ forloop.index }}">
+        <h3 class="footer-group-title" id="footer-group-{{ forloop.index }}">{{ group.group }}</h3>
+        <ul class="footer-list" role="list">{% for item in group.items %}
           <li><a href="{{ item.url }}">{{ item.title }}</a></li>{% endfor %}
         </ul>
       </section>
       {% endunless %}{% endfor %}
-    </div>
+    </nav>
 
     <!-- Contact Section -->
-    <div class="footer-contact">
-      <h3 class="footer-group-title">Contact</h3>
-      <p class="footer-license">NJ HIC #{{ site.company.hic }}</p>
+    <section class="footer-contact" aria-labelledby="footer-contact-heading">
+      <h3 class="footer-group-title" id="footer-contact-heading">Contact</h3>
+      <p class="footer-license">
+        <abbr title="New Jersey Home Improvement Contractor">NJ HIC</abbr> #{{ site.company.hic }}
+      </p>
       <address class="footer-address">
         {{ site.company.address_line }}<br>
         {{ site.company.address_city }}, {{ site.company.address_region }} {{ site.company.address_postal_code }}
       </address>
       <p class="footer-contact-phone">
-        <a href="tel:{{ site.company.phone_link }}">{{ site.company.phone_display }}</a>
+        <a href="tel:{{ site.company.phone_link }}" aria-label="Call us at {{ site.company.phone_display }}">
+          <span aria-hidden="true">📞</span> {{ site.company.phone_display }}
+        </a>
       </p>
       <p class="footer-contact-email">
-        <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>
+        <a href="mailto:{{ site.company.email }}" aria-label="Email us at {{ site.company.email }}">
+          <span aria-hidden="true">✉️</span> {{ site.company.email }}
+        </a>
       </p>
-    </div>
+    </section>
 
     <!-- Bottom Bar: Social + Legal -->
     <div class="footer-bottom">
-      <div class="footer-social">
-        <a href="https://www.facebook.com/people/Tillerstead-LLC/61580414460056/" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      <nav class="footer-social" aria-label="Social media links">
+        <a href="https://www.facebook.com/people/Tillerstead-LLC/61580414460056/" target="_blank" rel="noopener noreferrer" aria-label="Visit Tillerstead on Facebook (opens in new window)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
-        <a href="https://www.thumbtack.com/nj/galloway/tile-installation/tillerstead-llc/service/517596655270674461" target="_blank" rel="noopener" aria-label="Thumbtack">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="10" r="3"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+        <a href="https://www.thumbtack.com/nj/galloway/tile-installation/tillerstead-llc/service/517596655270674461" target="_blank" rel="noopener noreferrer" aria-label="View Tillerstead on Thumbtack (opens in new window)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><circle cx="12" cy="10" r="3"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
         </a>
-      </div>
-      <div class="footer-legal">
-        <a href="/privacy/">Privacy</a>
-        <span class="footer-divider">|</span>
-        <a href="/terms/">Terms</a>
-        <span class="footer-divider">|</span>
-        <span class="footer-copyright">&copy; {{ 'now' | date: '%Y' }} Tillerstead LLC</span>
-      </div>
+      </nav>
+      <nav class="footer-legal" aria-label="Legal links">
+        <a href="/privacy/">Privacy Policy</a>
+        <span class="footer-divider" aria-hidden="true">|</span>
+        <a href="/terms/">Terms of Service</a>
+        <span class="footer-divider" aria-hidden="true">|</span>
+        <span class="footer-copyright">&copy; {{ 'now' | date: '%Y' }} Tillerstead LLC. All rights reserved.</span>
+      </nav>
     </div>
   </div>
 </footer>
 
+<!-- Accessibility JavaScript -->
+<script src="{{ '/assets/js/accessibility.js' | relative_url }}" defer></script>
 

@@ -3,7 +3,7 @@
 /**
  * Tillerstead Logo System Generator
  * Fortune 500-level logo and icon optimization
- * 
+ *
  * Creates optimized logos, favicons, and icons from source assets
  * Implements responsive loading, WebP support, and PWA compliance
  */
@@ -91,10 +91,10 @@ async function ensureDir(dir) {
 async function optimizeLogo(sourcePath, outputPath, width, quality) {
   const image = sharp(sourcePath);
   const metadata = await image.metadata();
-  
+
   // Maintain aspect ratio
   const height = Math.round((width / metadata.width) * metadata.height);
-  
+
   return image
     .resize(width, height, {
       fit: 'contain',
@@ -112,12 +112,12 @@ async function createWebP(pngBuffer, quality = 80) {
 
 async function createIcon(sourcePath, size, outputPath, options = {}) {
   const image = sharp(sourcePath);
-  
+
   let pipeline = image.resize(size, size, {
     fit: 'contain',
     background: { r: 0, g: 0, b: 0, alpha: 0 }
   });
-  
+
   // Add safe zone for maskable icons (20% padding)
   if (options.maskable) {
     const safeSize = Math.round(size * 0.8);
@@ -130,7 +130,7 @@ async function createIcon(sourcePath, size, outputPath, options = {}) {
       background: CONFIG.brand.themeColor
     });
   }
-  
+
   return pipeline.png({ quality: 90, compressionLevel: 9 }).toBuffer();
 }
 
@@ -152,32 +152,32 @@ async function createFavicon() {
 // Main optimization functions
 async function optimizeLogos() {
   console.log('\n🎨 Optimizing Logo Variations...\n');
-  
+
   for (const logo of LOGOS) {
     const baseName = logo.name;
     const pngPath = path.join(CONFIG.outputDirs.logos, `${baseName}.png`);
     const webpPath = path.join(CONFIG.outputDirs.logos, `${baseName}.webp`);
     const png2xPath = path.join(CONFIG.outputDirs.logos, `${baseName}@2x.png`);
     const webp2xPath = path.join(CONFIG.outputDirs.logos, `${baseName}@2x.webp`);
-    
+
     // 1x PNG
     const pngBuffer = await optimizeLogo(CONFIG.sourceImage, pngPath, logo.width, logo.quality);
     await fs.writeFile(pngPath, pngBuffer);
     const pngSize = pngBuffer.length;
     console.log(`✓ ${baseName}.png - ${formatBytes(pngSize)} ${pngSize <= logo.maxSize ? '✓' : '⚠️ over target'}`);
-    
+
     // 1x WebP
     const webpBuffer = await createWebP(pngBuffer, 80);
     await fs.writeFile(webpPath, webpBuffer);
     const webpSize = webpBuffer.length;
     const savings = Math.round((1 - webpSize / pngSize) * 100);
     console.log(`✓ ${baseName}.webp - ${formatBytes(webpSize)} (${savings}% smaller)`);
-    
+
     // 2x PNG (Retina)
     const png2xBuffer = await optimizeLogo(CONFIG.sourceImage, png2xPath, logo.width * 2, logo.quality);
     await fs.writeFile(png2xPath, png2xBuffer);
     console.log(`✓ ${baseName}@2x.png - ${formatBytes(png2xBuffer.length)}`);
-    
+
     // 2x WebP
     const webp2xBuffer = await createWebP(png2xBuffer, 80);
     await fs.writeFile(webp2xPath, webp2xBuffer);
@@ -187,7 +187,7 @@ async function optimizeLogos() {
 
 async function generateFavicons() {
   console.log('🔖 Generating Favicons...\n');
-  
+
   for (const icon of ICONS.favicons) {
     const outputPath = path.join(CONFIG.outputDirs.icons, `${icon.name}.png`);
     const buffer = await createIcon(CONFIG.sourceImage, icon.size, outputPath);
@@ -198,7 +198,7 @@ async function generateFavicons() {
 
 async function generateAppleIcons() {
   console.log('\n🍎 Generating Apple Touch Icons...\n');
-  
+
   for (const icon of ICONS.appleTouchIcons) {
     const outputPath = path.join(CONFIG.outputDirs.icons, `${icon.name}.png`);
     const buffer = await createIcon(CONFIG.sourceImage, icon.size, outputPath);
@@ -209,7 +209,7 @@ async function generateAppleIcons() {
 
 async function generateAndroidIcons() {
   console.log('\n🤖 Generating Android/Chrome Icons...\n');
-  
+
   for (const icon of ICONS.androidChrome) {
     const outputPath = path.join(CONFIG.outputDirs.icons, `${icon.name}.png`);
     const buffer = await createIcon(CONFIG.sourceImage, icon.size, outputPath, { maskable: icon.maskable });
@@ -220,17 +220,17 @@ async function generateAndroidIcons() {
 
 async function generateMSTiles() {
   console.log('\n🪟 Generating Microsoft Tiles...\n');
-  
+
   for (const tile of ICONS.msTiles) {
     const outputPath = path.join(CONFIG.outputDirs.icons, `${tile.name}.png`);
     let buffer;
-    
+
     if (tile.width && tile.height) {
       buffer = await createRectangularIcon(CONFIG.sourceImage, tile.width, tile.height, outputPath);
     } else {
       buffer = await createIcon(CONFIG.sourceImage, tile.size, outputPath);
     }
-    
+
     await fs.writeFile(outputPath, buffer);
     console.log(`✓ ${tile.name}.png - ${formatBytes(buffer.length)}`);
   }
@@ -238,7 +238,7 @@ async function generateMSTiles() {
 
 async function generateSocialImages() {
   console.log('\n📱 Generating Social Media Images...\n');
-  
+
   for (const social of ICONS.social) {
     const outputPath = path.join(CONFIG.outputDirs.icons, `${social.name}.png`);
     const buffer = await createRectangularIcon(CONFIG.sourceImage, social.width, social.height, outputPath);
@@ -259,12 +259,12 @@ async function main() {
   console.log('  🐺 TILLERSTEAD LOGO SYSTEM GENERATOR');
   console.log('  Fortune 500-Level Brand Asset Optimization');
   console.log('═══════════════════════════════════════════════════════');
-  
+
   try {
     // Ensure output directories exist
     await ensureDir(CONFIG.outputDirs.logos);
     await ensureDir(CONFIG.outputDirs.icons);
-    
+
     // Generate all assets
     await optimizeLogos();
     await generateFavicons();
@@ -274,11 +274,11 @@ async function main() {
     await generateSocialImages();
     await generateSafariPinnedTab();
     await createFavicon();
-    
+
     console.log('\n═══════════════════════════════════════════════════════');
     console.log('  ✅ LOGO SYSTEM GENERATION COMPLETE!');
     console.log('═══════════════════════════════════════════════════════\n');
-    
+
     // Summary
     const logoFiles = await fs.readdir(CONFIG.outputDirs.logos);
     const iconFiles = await fs.readdir(CONFIG.outputDirs.icons);
@@ -291,7 +291,7 @@ async function main() {
     console.log(`   3. Update _includes with new logo components`);
     console.log(`   4. Update manifest.webmanifest and browserconfig.xml`);
     console.log(`   5. Test on all devices and browsers\n`);
-    
+
   } catch (error) {
     console.error('❌ Error:', error.message);
     process.exit(1);

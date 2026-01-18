@@ -8,12 +8,14 @@
   <meta property="og:description" content="{{ page.description }}" />
   <meta property="og:image" content="{{ page.featured_image | absolute_url }}" />
   <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Tillerstead LLC" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{{ page.title }}" />
   <meta name="twitter:description" content="{{ page.description }}" />
   <meta name="twitter:image" content="{{ page.featured_image | absolute_url }}" />
+  <link rel="canonical" href="{{ page.url | absolute_url }}" />
   <title>{% if page.title %}{{ page.title }} | {% endif %}Tillerstead NJ HIC</title>
-  <meta name="theme-color" content="#1a3d2e">
   {% if page.url == "/contact/" %}
 
   {% include forms/contact-page.html %}
@@ -72,18 +74,32 @@
   </head>
 
 <body class="ts-body">
-  <!-- Skip Link for Accessibility -->
-  <a href="#main-content" class="skip-link">Skip to content</a>
+  <!-- Skip Links for Accessibility - Multiple Targets -->
+  <nav class="skip-links" aria-label="Skip navigation">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#footer-contact-heading" class="skip-link">Skip to contact</a>
+  </nav>
 
   {% include layout/header.html %}
 
   {% include navigation/ts-breadcrumbs.html %}
 
-  <main class="ts-main-content" role="main" id="main-content">
+  <main class="ts-main-content" role="main" id="main-content" aria-label="Main content">
     {{ content }}
   </main>
 
   {% include layout/footer.html %}
+
+  <!-- Service Worker Registration for Offline Support -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('[SW] Registered:', reg.scope))
+          .catch(err => console.warn('[SW] Registration failed:', err));
+      });
+    }
+  </script>
 </body>
 
 </html>
