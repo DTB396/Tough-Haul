@@ -188,8 +188,10 @@ exclude:
   - "archive"
   - "archive/**"
   - "ACCESSIBILITY.md"
-  - "*.md"
-  - "!index.md"
+  - "CHANGELOG*.md"
+  - "LOGO*.md"
+  - "README.md"
+  # Note: Don't use "*.md" - it excludes index.md and breaks the homepage
   # Ensure assets/ or assets/css/ is NOT listed here
 
 keep_files:
