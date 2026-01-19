@@ -32,13 +32,24 @@
 })();
 </script>
 
-<title>{% if page.title %}{{ page.title | strip | escape }} | {% endif %}{{ site.title | strip | escape }}</title>
+<title>{% if page.meta_title %}{{ page.meta_title | strip | escape }}{% elsif page.title %}{{ page.title | strip | escape }} | {{ site.title | strip | escape }}{% else %}{{ site.title | strip | escape }}{% endif %}</title>
 
-{% if page.description %}
-<meta name="description" content="{{ page.description | strip_html | strip_newlines | escape }}" />
+{% if page.meta_description %}
+<meta name="description" content="{{ page.meta_description | strip_html | strip_newlines | truncate: 160 | escape }}" />
+{% elsif page.description %}
+<meta name="description" content="{{ page.description | strip_html | strip_newlines | truncate: 160 | escape }}" />
 {% elsif site.description %}
-<meta name="description" content="{{ site.description | strip_html | strip_newlines | escape }}" />
+<meta name="description" content="{{ site.description | strip_html | strip_newlines | truncate: 160 | escape }}" />
 {% endif %}
+
+{% if page.keywords %}
+<meta name="keywords" content="{{ page.keywords | join: ', ' | escape }}" />
+{% elsif site.keywords %}
+<meta name="keywords" content="{{ site.keywords | join: ', ' | escape }}" />
+{% endif %}
+
+<meta name="author" content="Tillerstead LLC" />
+<meta name="robots" content="{{ page.robots | default: 'index, follow' }}" />
 
 <!-- DNS Prefetch & Preconnect for external resources -->
 <link rel="dns-prefetch" href="//www.google-analytics.com" />

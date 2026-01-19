@@ -99,7 +99,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Waterproof Shower Systems",
-          "description": "Certified waterproof assemblies using Schluter, RedGard, and ANSI A118.10-compliant membranes. New Jersey HIC# 13VH11744200."
+          "description": "Certified waterproof assemblies using Schluter, RedGard, and ANSI A118.10-compliant membranes. New Jersey HIC# 13VH10808800."
         }
       },
       {
@@ -151,7 +151,7 @@
     "Large Format Tile",
     "Custom Showers"
   ],
-  "slogan": "Expert Tile & Stone Installation. TCNA-Literate. New Jersey HIC# 13VH11744200.",
+  "slogan": "Expert Tile & Stone Installation. TCNA-Literate. New Jersey HIC# 13VH10808800.",
   "howTo": {
     "@type": "HowTo",
     "name": "How to Install Tile",

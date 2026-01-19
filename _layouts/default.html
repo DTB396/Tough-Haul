@@ -4,18 +4,35 @@
 <head>
   {% include layout/head.html %}
   {% include schema/schema-combined.js %}
-  <meta property="og:title" content="{{ page.title }}" />
-  <meta property="og:description" content="{{ page.description }}" />
-  <meta property="og:image" content="{{ page.featured_image | absolute_url }}" />
-  <meta property="og:url" content="{{ page.url | absolute_url }}" />
-  <meta property="og:type" content="website" />
+  
+  {%- assign og_title = page.meta_title | default: page.title | default: site.title -%}
+  {%- assign og_desc = page.meta_description | default: page.description | default: site.description -%}
+  {%- assign og_image = page.og_image | default: page.featured_image | default: site.default_og_image -%}
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="{{ page.og_type | default: 'website' }}" />
   <meta property="og:site_name" content="Tillerstead LLC" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="{{ page.title }}" />
-  <meta name="twitter:description" content="{{ page.description }}" />
-  <meta name="twitter:image" content="{{ page.featured_image | absolute_url }}" />
-  <link rel="canonical" href="{{ page.url | absolute_url }}" />
-  <title>{% if page.title %}{{ page.title }} | {% endif %}Tillerstead NJ HIC</title>
+  <meta property="og:title" content="{{ og_title | escape }}" />
+  <meta property="og:description" content="{{ og_desc | strip_html | truncate: 200 | escape }}" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <meta property="og:image" content="{{ og_image | absolute_url }}" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="{{ page.twitter_card | default: 'summary_large_image' }}" />
+  <meta name="twitter:site" content="@tillerstead" />
+  <meta name="twitter:title" content="{{ og_title | escape }}" />
+  <meta name="twitter:description" content="{{ og_desc | strip_html | truncate: 200 | escape }}" />
+  <meta name="twitter:image" content="{{ og_image | absolute_url }}" />
+  
+  <!-- Geo/Local SEO -->
+  <meta name="geo.region" content="US-NJ" />
+  <meta name="geo.placename" content="Galloway, New Jersey" />
+  <meta name="geo.position" content="39.4784;-74.4771" />
+  <meta name="ICBM" content="39.4784, -74.4771" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ page.canonical_url | default: page.url | absolute_url }}" />
   {% if page.url == "/contact/" %}
 
   {% include forms/contact-page.html %}
