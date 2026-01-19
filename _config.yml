@@ -147,7 +147,7 @@ exclude:
   - .github
   - .vscode
   - scripts
-  - tools
+  - tools/
   - _audit
   - package.json
   - package-lock.json

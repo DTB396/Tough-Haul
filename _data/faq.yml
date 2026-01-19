@@ -1,3 +1,4 @@
+- category: "General Questions"
   items:
     - question: "What areas do you cover?"
       answer: |
@@ -12,6 +13,7 @@
       answer: |
         Yes. Every project over $500 includes a detailed written contract per New Jersey law, outlining scope, materials, timeline, payment schedule, and your 3-day right to cancel. No surprises—everything is clearly documented.
 
+- category: "Project Process"
   items:
     - question: "How do I request an estimate?"
       answer: |
@@ -38,6 +40,7 @@
         </ul>
         Smaller jobs may use a 50/50 split. All terms are in your contract.
 
+- category: "Technical Standards & Methods"
   items:
     - question: "What is TCNA compliance?"
       answer: |
@@ -68,6 +71,7 @@
       answer: |
         Yes, we install electric radiant floor heating under tile. This includes subfloor evaluation, uncoupling membrane, electrician coordination, and compatible thinset. Heated floors add comfort to any tiled space.
 
+- category: "Materials & Products"
   items:
     - question: "Do you supply tile, or should I?"
       answer: |

@@ -8,13 +8,190 @@ body_class: page-products
 
 <section class="hero-section">
   <div class="container">
-    <h1 class="hero-title">Products</h1>
-    <p class="hero-summary">Explore our recommended products for tile, waterproofing, and bathroom remodeling projects in South Jersey.</p>
+    <h1 class="hero-title">Recommended Products</h1>
+    <p class="hero-summary">{{ site.data.products.metadata.editorial_policy }}</p>
   </div>
 </section>
 
-<section class="products-list">
+<section class="ts-section products-intro bg-soft">
   <div class="container">
-    <h2 class="section-title">Our Recommendations</h2>
+    <div class="affiliate-disclosure">
+      <p><strong>Affiliate Disclosure:</strong> {{ site.data.products.metadata.disclosure }}</p>
+      <p><em>{{ site.data.products.metadata.transparency_note }}</em></p>
+    </div>
   </div>
 </section>
+
+{% for category in site.data.products.categories %}
+<section class="ts-section products-category" aria-labelledby="category-{{ category.id }}">
+  <div class="container">
+    <header class="section-header">
+      <h2 id="category-{{ category.id }}" class="heading-2">{{ category.name }}</h2>
+      <p class="lead">{{ category.description }}</p>
+    </header>
+
+    <div class="products-grid">
+      {% for product in category.products %}
+      <article class="product-card">
+        <header class="product-header">
+          <h3 class="product-title">{{ product.name }}</h3>
+          {% if product.brand %}
+          <span class="product-brand">{{ product.brand }}</span>
+          {% endif %}
+        </header>
+
+        <div class="product-body">
+          {% if product.type %}
+          <p class="product-type"><strong>Type:</strong> {{ product.type }}</p>
+          {% endif %}
+          
+          {% if product.specs %}
+          <p class="product-specs"><strong>Specs:</strong> {{ product.specs }}</p>
+          {% endif %}
+
+          {% if product.why_we_like_it %}
+          <div class="product-reason">
+            <strong>Why we recommend it:</strong>
+            <p>{{ product.why_we_like_it }}</p>
+          </div>
+          {% endif %}
+
+          {% if product.pro_tip %}
+          <div class="product-tip">
+            <strong>💡 Pro Tip:</strong>
+            <p>{{ product.pro_tip }}</p>
+          </div>
+          {% endif %}
+
+          {% if product.notes %}
+          <p class="product-notes"><em>{{ product.notes }}</em></p>
+          {% endif %}
+        </div>
+
+        <footer class="product-footer">
+          {% if product.used_by_tillerstead %}
+          <span class="product-badge">✓ Used by Tillerstead</span>
+          {% endif %}
+          <a href="{{ product.amazon_url }}" class="btn btn--primary" target="_blank" rel="noopener noreferrer sponsored">
+            View on Amazon
+          </a>
+        </footer>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+<section class="ts-section ts-cta-final bg-primary text-white" aria-labelledby="products-cta">
+  <div class="container text-center">
+    <h2 id="products-cta" class="heading-2">Need Help Choosing?</h2>
+    <p class="lead">
+      Not sure which products are right for your project? Contact us for personalized recommendations based on your specific needs.
+    </p>
+    <div class="cta-actions">
+      <a href="/contact/" class="btn btn--secondary">Request Free Consultation</a>
+      <a href="tel:+16098628808" class="btn btn--ghost-white">Call (609) 862-8808</a>
+    </div>
+  </div>
+</section>
+
+<style>
+.affiliate-disclosure {
+  background: var(--ts-color-surface-soft, #f8f9fa);
+  padding: var(--ts-space-md, 1.5rem);
+  border-radius: var(--ts-radius-md, 8px);
+  border-left: 4px solid var(--ts-color-primary, #2c5530);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--ts-space-lg, 2rem);
+  margin-top: var(--ts-space-lg, 2rem);
+}
+
+.product-card {
+  background: var(--ts-color-surface, #fff);
+  border-radius: var(--ts-radius-lg, 12px);
+  box-shadow: var(--ts-shadow-card, 0 2px 8px rgba(0,0,0,0.08));
+  padding: var(--ts-space-lg, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: var(--ts-shadow-elevated, 0 4px 16px rgba(0,0,0,0.12));
+  transform: translateY(-2px);
+}
+
+.product-header {
+  margin-bottom: var(--ts-space-sm, 1rem);
+}
+
+.product-title {
+  font-size: var(--ts-font-size-lg, 1.25rem);
+  margin: 0 0 0.25rem;
+  color: var(--ts-color-text, #1a1a1a);
+}
+
+.product-brand {
+  font-size: var(--ts-font-size-sm, 0.875rem);
+  color: var(--ts-color-text-muted, #666);
+}
+
+.product-body {
+  flex: 1;
+}
+
+.product-type,
+.product-specs {
+  font-size: var(--ts-font-size-sm, 0.875rem);
+  margin-bottom: var(--ts-space-xs, 0.5rem);
+}
+
+.product-reason,
+.product-tip {
+  margin: var(--ts-space-sm, 1rem) 0;
+  padding: var(--ts-space-sm, 0.75rem);
+  border-radius: var(--ts-radius-sm, 6px);
+}
+
+.product-reason {
+  background: var(--ts-color-surface-soft, #f0f4f0);
+}
+
+.product-tip {
+  background: var(--ts-color-accent-soft, #fff8e6);
+  border-left: 3px solid var(--ts-color-accent, #f5a623);
+}
+
+.product-reason p,
+.product-tip p {
+  margin: 0.5rem 0 0;
+  font-size: var(--ts-font-size-sm, 0.875rem);
+}
+
+.product-notes {
+  font-size: var(--ts-font-size-sm, 0.875rem);
+  color: var(--ts-color-text-muted, #666);
+}
+
+.product-footer {
+  margin-top: var(--ts-space-md, 1rem);
+  padding-top: var(--ts-space-sm, 1rem);
+  border-top: 1px solid var(--ts-color-border, #e5e5e5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--ts-space-sm, 0.75rem);
+}
+
+.product-badge {
+  font-size: var(--ts-font-size-sm, 0.75rem);
+  color: var(--ts-color-success, #28a745);
+  font-weight: 600;
+}
+</style>
