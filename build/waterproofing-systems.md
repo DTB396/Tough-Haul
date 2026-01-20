@@ -16,7 +16,7 @@ schema_type: HowTo
 
 This page explains **how showers are waterproofed**, the two primary system types used in New Jersey residential construction, and why continuity and compatibility matter more than brand names.
 
-This guide references [**TCNA Handbook**](https://www.tcnatile.com/products/handbook.html) wet-area assembly methods and [**ANSI A118.10**](https://www.tcnatile.com/faqs/ansi-standards.html) standards for bonded waterproof membranes.
+This guide references [**TCNA Handbook**](https://www.tcnatile.com/products/handbook.html) wet-area assembly methods and [**ANSI A118.10**](https://www.tcnatile.com/tcna-committees/ansi-standards.html) standards for bonded waterproof membranes.
 
 Waterproofing is a system—not a product.
 
@@ -27,8 +27,8 @@ Waterproofing is a system—not a product.
 | Standard | What It Covers | Official Link |
 |----------|----------------|---------------|
 | **TCNA Handbook** | Methods B412, B414, B421, B422 for wet areas | [tcnatile.com](https://www.tcnatile.com/products/handbook.html) |
-| **ANSI A118.10** | Load-bearing bonded waterproof membranes | [tcnatile.com/faqs](https://www.tcnatile.com/faqs/ansi-standards.html) |
-| **ANSI A118.12** | Crack isolation membranes | [tcnatile.com/faqs](https://www.tcnatile.com/faqs/ansi-standards.html) |
+| **ANSI A118.10** | Load-bearing bonded waterproof membranes | [tcnatile.com/faqs](https://www.tcnatile.com/tcna-committees/ansi-standards.html) |
+| **ANSI A118.12** | Crack isolation membranes | [tcnatile.com/faqs](https://www.tcnatile.com/tcna-committees/ansi-standards.html) |
 | **IPC Section 417.5** | Shower liner requirements | [codes.iccsafe.org](https://codes.iccsafe.org/) |
 | **ASTM C627** | Floor tile installation load testing | [astm.org](https://www.astm.org/) |
 
@@ -89,7 +89,7 @@ New Jersey inspectors generally encounter two code-compliant shower waterproofin
 * The entire waterproofing layer is sloped
 * No saturated mortar bed beneath tile
 * Rapid drying and clear inspection visibility
-* System must meet [ANSI A118.10](https://www.tcnatile.com/faqs/ansi-standards.html)
+* System must meet [ANSI A118.10](https://www.tcnatile.com/tcna-committees/ansi-standards.html)
 
 ### Advantages for NJ Homeowners
 
@@ -149,7 +149,7 @@ When properly constructed, traditional systems are code-compliant—but executio
 
 ## ANSI A118.10: The Critical Standard
 
-[**ANSI A118.10**](https://www.tcnatile.com/faqs/ansi-standards.html) specifies requirements for **load-bearing, bonded waterproof membranes**.
+[**ANSI A118.10**](https://www.tcnatile.com/tcna-committees/ansi-standards.html) specifies requirements for **load-bearing, bonded waterproof membranes**.
 
 ### What ANSI A118.10 Tests
 
@@ -275,7 +275,7 @@ Once tile is installed, waterproofing defects are hidden and costly to correct.
 | Resource | Topic | Link |
 |----------|-------|------|
 | TCNA Handbook | Waterproofing methods | [tcnatile.com](https://www.tcnatile.com/products/handbook.html) |
-| ANSI A118.10 | Waterproof membrane standard | [tcnatile.com/faqs](https://www.tcnatile.com/faqs/ansi-standards.html) |
+| ANSI A118.10 | Waterproof membrane standard | [tcnatile.com/faqs](https://www.tcnatile.com/tcna-committees/ansi-standards.html) |
 | NTCA Reference Manual | Installation best practices | [tile-assn.com](https://www.tile-assn.com/) |
 | Schluter Systems | KERDI installation guides | [schluter.com](https://www.schluter.com/) |
 | Laticrete | Hydro Ban technical data | [laticrete.com](https://www.laticrete.com/) |

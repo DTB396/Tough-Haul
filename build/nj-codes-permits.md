@@ -40,7 +40,7 @@ Before diving in, here are the authoritative bodies and standards that govern ti
 
 ## The Governing System: New Jersey Uniform Construction Code (UCC)
 
-All construction in New Jersey is regulated under the **Uniform Construction Code (UCC)** ([N.J.A.C. 5:23](https://www.nj.gov/dca/divisions/codes/codreg/ucc.html)).
+All construction in New Jersey is regulated under the **Uniform Construction Code (UCC)** ([N.J.A.C. 5:23](https://www.nj.gov/dca/codes/codreg/)).
 
 Key characteristics:
 
@@ -69,7 +69,7 @@ The **Authority Having Jurisdiction (AHJ)** is the local Construction Office or 
 Every NJ municipality has a Construction Office. To find yours:
 
 1. Search "[your town] NJ construction office" online
-2. Visit [NJ League of Municipalities Directory](https://www.njlm.org/753/Directory)
+2. Visit [NJ League of Municipalities Directory](https://www.njlm.org/directory.aspx)
 3. Call your town hall and ask for the Construction Department
 
 ### What the AHJ Does
@@ -294,11 +294,11 @@ When your contractor says "we follow TCNA methods," they're referencing a specif
 
 | Standard | What It Covers | Why It Matters |
 |----------|----------------|----------------|
-| [**ANSI A108**](https://www.tcnatile.com/faqs/ansi-standards.html) | Installation methods for ceramic tile | Defines how tile is properly installed |
-| [**ANSI A118.1**](https://www.tcnatile.com/faqs/ansi-standards.html) | Dry-set portland cement mortar | Standard thinset specifications |
-| [**ANSI A118.4**](https://www.tcnatile.com/faqs/ansi-standards.html) | Modified dry-set cement mortar | Enhanced mortars for wet areas |
-| [**ANSI A118.10**](https://www.tcnatile.com/faqs/ansi-standards.html) | Load-bearing bonded waterproof membranes | Critical for shower pans |
-| [**ANSI A118.12**](https://www.tcnatile.com/faqs/ansi-standards.html) | Crack isolation membranes | Prevents substrate cracks from telegraphing |
+| [**ANSI A108**](https://www.tcnatile.com/tcna-committees/ansi-standards.html) | Installation methods for ceramic tile | Defines how tile is properly installed |
+| [**ANSI A118.1**](https://www.tcnatile.com/tcna-committees/ansi-standards.html) | Dry-set portland cement mortar | Standard thinset specifications |
+| [**ANSI A118.4**](https://www.tcnatile.com/tcna-committees/ansi-standards.html) | Modified dry-set cement mortar | Enhanced mortars for wet areas |
+| [**ANSI A118.10**](https://www.tcnatile.com/tcna-committees/ansi-standards.html) | Load-bearing bonded waterproof membranes | Critical for shower pans |
+| [**ANSI A118.12**](https://www.tcnatile.com/tcna-committees/ansi-standards.html) | Crack isolation membranes | Prevents substrate cracks from telegraphing |
 | **ANSI A136.1** | Organic adhesives (mastics) | When mastics can/cannot be used |
 
 ### What ANSI A118.10 Means for Your Shower
@@ -368,7 +368,7 @@ Clear answers early prevent delays and redesigns later.
 | NJ UCC Regulations | Full text of N.J.A.C. 5:23 | [nj.gov/dca/codes/codreg](https://www.nj.gov/dca/divisions/codes/codreg/) |
 | NJ DCA License Verification | Verify contractor licensing | [newjersey.mylicense.com](https://newjersey.mylicense.com/verification/) |
 | TCNA Handbook | Tile installation methods | [tcnatile.com](https://www.tcnatile.com/products/handbook.html) |
-| TCNA ANSI Standards FAQ | Overview of tile standards | [tcnatile.com/faqs](https://www.tcnatile.com/faqs/ansi-standards.html) |
+| TCNA ANSI Standards FAQ | Overview of tile standards | [tcnatile.com/faqs](https://www.tcnatile.com/tcna-committees/ansi-standards.html) |
 | NTCA | Contractor certifications & standards | [tile-assn.com](https://www.tile-assn.com/) |
 | ICC Code Library | Model building codes | [codes.iccsafe.org](https://codes.iccsafe.org/) |
 

@@ -16,7 +16,7 @@ schema_type: HowTo
 
 Tile installation is the **final visible phase** of a bathroom or shower build—but its performance is determined entirely by the work completed before it. Tile does not correct structural issues, slope errors, or waterproofing defects. It reveals them.
 
-This guide explains [**TCNA Handbook**](https://www.tcnatile.com/products/handbook.html) and [**ANSI A108/A118**](https://www.tcnatile.com/faqs/ansi-standards.html) standards for substrate preparation, mortar selection, coverage verification, and movement accommodation per **EJ171** guidelines—the practices that work together to produce durable tile installations that perform long after inspections are complete.
+This guide explains [**TCNA Handbook**](https://www.tcnatile.com/products/handbook.html) and [**ANSI A108/A118**](https://www.tcnatile.com/tcna-committees/ansi-standards.html) standards for substrate preparation, mortar selection, coverage verification, and movement accommodation per **EJ171** guidelines—the practices that work together to produce durable tile installations that perform long after inspections are complete.
 
 This is where builders prove they understand tile as a system, not a surface.
 
@@ -26,10 +26,10 @@ This is where builders prove they understand tile as a system, not a surface.
 
 | Standard | What It Covers | Official Link |
 |----------|----------------|---------------|
-| **ANSI A108** | Tile installation methods | [tcnatile.com/faqs](https://www.tcnatile.com/faqs/ansi-standards.html) |
-| **ANSI A118.1** | Dry-set portland cement mortar | [tcnatile.com/faqs](https://www.tcnatile.com/faqs/ansi-standards.html) |
-| **ANSI A118.4** | Modified dry-set cement mortar | [tcnatile.com/faqs](https://www.tcnatile.com/faqs/ansi-standards.html) |
-| **ANSI A118.15** | Improved modified dry-set cement mortar | [tcnatile.com/faqs](https://www.tcnatile.com/faqs/ansi-standards.html) |
+| **ANSI A108** | Tile installation methods | [tcnatile.com/faqs](https://www.tcnatile.com/tcna-committees/ansi-standards.html) |
+| **ANSI A118.1** | Dry-set portland cement mortar | [tcnatile.com/faqs](https://www.tcnatile.com/tcna-committees/ansi-standards.html) |
+| **ANSI A118.4** | Modified dry-set cement mortar | [tcnatile.com/faqs](https://www.tcnatile.com/tcna-committees/ansi-standards.html) |
+| **ANSI A118.15** | Improved modified dry-set cement mortar | [tcnatile.com/faqs](https://www.tcnatile.com/tcna-committees/ansi-standards.html) |
 | **TCNA EJ171** | Movement joint design guide | [tcnatile.com](https://www.tcnatile.com/faqs/movement-joints-background.html) |
 | **TCNA Handbook** | Complete tile installation reference | [tcnatile.com](https://www.tcnatile.com/products/handbook.html) |
 
@@ -80,10 +80,10 @@ Tile assemblies require **flatness**, not level. A properly sloped shower floor 
 
 | Standard | Common Name | Description | Best Used For |
 |----------|-------------|-------------|---------------|
-| [**ANSI A118.1**](https://www.tcnatile.com/faqs/ansi-standards.html) | Dry-set (unmodified) | Basic portland cement mortar | Dry areas, absorptive tiles |
-| [**ANSI A118.4**](https://www.tcnatile.com/faqs/ansi-standards.html) | Modified (polymer-modified) | Enhanced bond and flexibility | Wet areas, exterior, large tiles |
-| [**ANSI A118.15**](https://www.tcnatile.com/faqs/ansi-standards.html) | Improved modified | Higher performance version | Most demanding installations |
-| [**ANSI A118.11**](https://www.tcnatile.com/faqs/ansi-standards.html) | Epoxy | Two-component chemical cure | Chemical resistance, food service |
+| [**ANSI A118.1**](https://www.tcnatile.com/tcna-committees/ansi-standards.html) | Dry-set (unmodified) | Basic portland cement mortar | Dry areas, absorptive tiles |
+| [**ANSI A118.4**](https://www.tcnatile.com/tcna-committees/ansi-standards.html) | Modified (polymer-modified) | Enhanced bond and flexibility | Wet areas, exterior, large tiles |
+| [**ANSI A118.15**](https://www.tcnatile.com/tcna-committees/ansi-standards.html) | Improved modified | Higher performance version | Most demanding installations |
+| [**ANSI A118.11**](https://www.tcnatile.com/tcna-committees/ansi-standards.html) | Epoxy | Two-component chemical cure | Chemical resistance, food service |
 
 ### Mortar Selection for Bathroom/Shower Projects
 
@@ -172,7 +172,7 @@ Large-format tile (any edge 15" or longer) increases sensitivity to:
 
 ### Additional Requirements for Large Format
 
-Per [ANSI A108.02](https://www.tcnatile.com/faqs/ansi-standards.html):
+Per [ANSI A108.02](https://www.tcnatile.com/tcna-committees/ansi-standards.html):
 
 * Substrate flatness: **1/8" in 10 feet maximum**
 * Coverage: **95% minimum**
@@ -271,7 +271,7 @@ These failures often appear months after completion—well after inspections hav
 | Resource | Topic | Link |
 |----------|-------|------|
 | TCNA Handbook | Complete installation reference | [tcnatile.com](https://www.tcnatile.com/products/handbook.html) |
-| ANSI A108/A118 Standards | Technical specifications | [tcnatile.com/faqs](https://www.tcnatile.com/faqs/ansi-standards.html) |
+| ANSI A108/A118 Standards | Technical specifications | [tcnatile.com/faqs](https://www.tcnatile.com/tcna-committees/ansi-standards.html) |
 | TCNA EJ171 | Movement joint guide | [tcnatile.com](https://www.tcnatile.com/faqs/movement-joints-background.html) |
 | NTCA Reference Manual | Best practices | [tile-assn.com](https://www.tile-assn.com/) |
 | Ceramic Tile Education Foundation | Training programs | [tileschool.org](https://www.tileschool.org/) |

@@ -29,7 +29,7 @@ Curbs are not decorative. They are a water-containment device.
 | **TCNA Handbook** | Curb and threshold detailing | [tcnatile.com](https://www.tcnatile.com/products/handbook.html) |
 | **IPC Section 417.5.2** | Shower receptor requirements | [codes.iccsafe.org](https://codes.iccsafe.org/) |
 | **ICC A117.1** | Accessible design (when triggered) | [iccsafe.org](https://www.iccsafe.org/) |
-| **ANSI A118.10** | Waterproof membrane standards | [tcnatile.com/faqs](https://www.tcnatile.com/faqs/ansi-standards.html) |
+| **ANSI A118.10** | Waterproof membrane standards | [tcnatile.com/faqs](https://www.tcnatile.com/tcna-committees/ansi-standards.html) |
 
 ---
 

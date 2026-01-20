@@ -27,7 +27,7 @@ Most failures blamed on tile or waterproofing actually begin at framing.
 | Standard | What It Covers | Official Link |
 |----------|----------------|---------------|
 | **TCNA Handbook** | Substrate and structural requirements | [tcnatile.com](https://www.tcnatile.com/products/handbook.html) |
-| **ANSI A108.01** | Deflection requirements for tile | [tcnatile.com/faqs](https://www.tcnatile.com/faqs/ansi-standards.html) |
+| **ANSI A108.01** | Deflection requirements for tile | [tcnatile.com/faqs](https://www.tcnatile.com/tcna-committees/ansi-standards.html) |
 | **IRC Section R301** | Structural design criteria | [codes.iccsafe.org](https://codes.iccsafe.org/) |
 | **IRC Section R502** | Floor framing | [codes.iccsafe.org](https://codes.iccsafe.org/) |
 
@@ -45,7 +45,7 @@ Benches, seats, and niches are not accessories. They are part of the building st
 
 ### ANSI Deflection Requirements
 
-Per [ANSI A108.01](https://www.tcnatile.com/faqs/ansi-standards.html), substrates for ceramic tile must meet specific deflection limits:
+Per [ANSI A108.01](https://www.tcnatile.com/tcna-committees/ansi-standards.html), substrates for ceramic tile must meet specific deflection limits:
 
 | Installation | Maximum Deflection |
 |--------------|-------------------|
@@ -307,7 +307,7 @@ Before framing is inspected:
 | Resource | Topic | Link |
 |----------|-------|------|
 | TCNA Handbook | Substrate requirements | [tcnatile.com](https://www.tcnatile.com/products/handbook.html) |
-| ANSI A108.01 | Deflection standards | [tcnatile.com/faqs](https://www.tcnatile.com/faqs/ansi-standards.html) |
+| ANSI A108.01 | Deflection standards | [tcnatile.com/faqs](https://www.tcnatile.com/tcna-committees/ansi-standards.html) |
 | IRC | Framing requirements | [codes.iccsafe.org](https://codes.iccsafe.org/) |
 | NTCA Reference Manual | Best practices | [tile-assn.com](https://www.tile-assn.com/) |
 

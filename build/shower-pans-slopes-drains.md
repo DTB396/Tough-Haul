@@ -27,7 +27,7 @@ Most shower failures originate here.
 | Standard | What It Covers | Official Link |
 |----------|----------------|---------------|
 | **TCNA Handbook** | Shower receptor methods B421, B422, B415 | [tcnatile.com](https://www.tcnatile.com/products/handbook.html) |
-| **ANSI A118.10** | Bonded waterproof membranes for shower pans | [tcnatile.com/faqs](https://www.tcnatile.com/faqs/ansi-standards.html) |
+| **ANSI A118.10** | Bonded waterproof membranes for shower pans | [tcnatile.com/faqs](https://www.tcnatile.com/tcna-committees/ansi-standards.html) |
 | **IPC Section 417** | Shower receptor requirements | [codes.iccsafe.org](https://codes.iccsafe.org/) |
 | **IRC Section P2709** | Shower receptors in residential construction | [codes.iccsafe.org](https://codes.iccsafe.org/) |
 
@@ -101,7 +101,7 @@ Characteristics per [TCNA B421](https://www.tcnatile.com/):
 **Critical requirements:**
 * Drain must be designed for bonded systems (matching flange)
 * Membrane must achieve full contact with flange
-* System must meet [ANSI A118.10](https://www.tcnatile.com/faqs/ansi-standards.html) for waterproof membranes
+* System must meet [ANSI A118.10](https://www.tcnatile.com/tcna-committees/ansi-standards.html) for waterproof membranes
 
 ### Traditional Clamping Drains — TCNA Method B422
 
@@ -259,7 +259,7 @@ Once tile is installed, these issues are difficult or impossible to correct.
 | Resource | Topic | Link |
 |----------|-------|------|
 | TCNA Handbook | Shower receptor methods | [tcnatile.com](https://www.tcnatile.com/products/handbook.html) |
-| ANSI A118.10 | Waterproof membrane standard | [tcnatile.com/faqs](https://www.tcnatile.com/faqs/ansi-standards.html) |
+| ANSI A118.10 | Waterproof membrane standard | [tcnatile.com/faqs](https://www.tcnatile.com/tcna-committees/ansi-standards.html) |
 | ICC Plumbing Code | Receptor requirements | [codes.iccsafe.org](https://codes.iccsafe.org/) |
 | NTCA Reference Manual | Installation best practices | [tile-assn.com](https://www.tile-assn.com/) |
 

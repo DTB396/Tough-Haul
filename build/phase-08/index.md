@@ -144,7 +144,7 @@ Understanding these categories helps homeowners ask better questions before prob
 
 ### Why It Fails
 
-Per [ANSI A108.01](https://www.tcnatile.com/faqs/ansi-standards.html), tile installations have specific deflection limits:
+Per [ANSI A108.01](https://www.tcnatile.com/tcna-committees/ansi-standards.html), tile installations have specific deflection limits:
 
 | Element | Requirement |
 |---------|-------------|
@@ -203,7 +203,7 @@ Per [ANSI A108.01](https://www.tcnatile.com/faqs/ansi-standards.html), tile inst
 
 ### Why It Fails
 
-Per [ANSI A108.5](https://www.tcnatile.com/faqs/ansi-standards.html):
+Per [ANSI A108.5](https://www.tcnatile.com/tcna-committees/ansi-standards.html):
 
 | Coverage Error | Consequence |
 |----------------|-------------|
@@ -334,7 +334,7 @@ Before signing a contract:
 | Resource | Topic | Link |
 |----------|-------|------|
 | TCNA Handbook | Failure analysis & methods | [tcnatile.com](https://www.tcnatile.com/products/handbook.html) |
-| ANSI Standards | Technical specifications | [tcnatile.com/faqs](https://www.tcnatile.com/faqs/ansi-standards.html) |
+| ANSI Standards | Technical specifications | [tcnatile.com/faqs](https://www.tcnatile.com/tcna-committees/ansi-standards.html) |
 | NJ DCA License Verification | Verify contractor licensing | [newjersey.mylicense.com](https://newjersey.mylicense.com/verification/) |
 | NTCA | Certified contractor finder | [tile-assn.com](https://www.tile-assn.com/) |
 | NJ DCA Codes | Building code requirements | [nj.gov/dca/codes](https://www.nj.gov/dca/divisions/codes/) |

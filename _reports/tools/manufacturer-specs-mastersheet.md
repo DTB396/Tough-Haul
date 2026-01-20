@@ -2,7 +2,8 @@
 ## Tillerstead.com - Technical Data Reference
 
 **Last Updated:** 2026-01-19  
-**Purpose:** Consolidated TDS-sourced specifications for tile installation calculators
+**Purpose:** Consolidated TDS-sourced specifications for tile installation calculators  
+**Data Verified:** January 2026 via manufacturer websites
 
 ---
 
@@ -11,17 +12,19 @@
 | Product | Brand | Coverage | Unit | Conditions | Source |
 |---------|-------|----------|------|------------|--------|
 | **THINSET MORTARS** |||||
-| VersaBond LFT | Custom | 90-100 | sq ft/50 lb | 1/4"×1/4" trowel | [TDS](https://www.custombuildingproducts.com/products/versabond-lft-professional-large-format-tile-mortar) |
-| VersaBond LFT | Custom | 60-67 | sq ft/50 lb | 1/4"×3/8" trowel | [TDS](https://www.custombuildingproducts.com/products/versabond-lft-professional-large-format-tile-mortar) |
-| VersaBond LFT | Custom | 38-47 | sq ft/50 lb | **3/4"×9/16" U-notch @ 30°** ✅ | [TDS](https://www.custombuildingproducts.com/products/versabond-lft-professional-large-format-tile-mortar) |
-| VersaBond LFT | Custom | 34-42 | sq ft/50 lb | 3/4"×9/16" U-notch @ 45° | [TDS](https://www.custombuildingproducts.com/products/versabond-lft-professional-large-format-tile-mortar) |
-| VersaBond LFT | Custom | 42-47 | sq ft/50 lb | ⚠️ 1/2"×1/2" **NOT RECOMMENDED** | [TDS](https://www.custombuildingproducts.com/products/versabond-lft-professional-large-format-tile-mortar) |
+| VersaBond LFT | Custom | 90-100 | sq ft/50 lb | 1/4"×1/4" trowel | [TDS-132](https://www.custombuildingproducts.com/products/versabond-lft-professional-large-format-tile-mortar) |
+| VersaBond LFT | Custom | 60-67 | sq ft/50 lb | 1/4"×3/8" trowel | [TDS-132](https://www.custombuildingproducts.com/products/versabond-lft-professional-large-format-tile-mortar) |
+| VersaBond LFT | Custom | 42-47 | sq ft/50 lb | **3/4"×9/16" U-notch @ 30°** ✅ | [TDS-132](https://www.custombuildingproducts.com/products/versabond-lft-professional-large-format-tile-mortar) |
+| VersaBond LFT | Custom | 34-38 | sq ft/50 lb | 3/4"×9/16" U-notch @ 45° | [TDS-132](https://www.custombuildingproducts.com/products/versabond-lft-professional-large-format-tile-mortar) |
+| VersaBond LFT | Custom | 42-47 | sq ft/50 lb | ⚠️ 1/2"×1/2" **NOT RECOMMENDED** | [TDS-132](https://www.custombuildingproducts.com/products/versabond-lft-professional-large-format-tile-mortar) |
 | Kerabond T | Mapei | 75-100 | sq ft/50 lb | 1/4"×1/4" trowel | [TDS](https://www.mapei.com/us/en-us/products-and-solutions/products/detail/kerabond-t) |
 | **WATERPROOFING** |||||
-| RedGard | Custom | 55 | sq ft/gal | 2 coats @ 20 mils wet | [TDS-104](https://www.custombuildingproducts.com/wp-content/uploads/TDS-104-021425.pdf) |
-| AquaDefense | Mapei | 60 | sq ft/gal | 2 coats total | [TDS](https://www.wjgrosvenor.com/wp-content/uploads/2024/05/AquaDefense_TDS.pdf) |
+| RedGard | Custom | 55 | sq ft/gal | Waterproof membrane (2 coats) | [TDS-104](https://www.custombuildingproducts.com/products/redgard-waterproofing-and-crack-prevention-membrane) |
+| RedGard | Custom | 40 | sq ft/gal | IAPMO pan liner ANSI A118.10 | [TDS-104](https://www.custombuildingproducts.com/products/redgard-waterproofing-and-crack-prevention-membrane) |
+| RedGard | Custom | 100 | sq ft/gal | Crack prevention only | [TDS-104](https://www.custombuildingproducts.com/products/redgard-waterproofing-and-crack-prevention-membrane) |
+| Mapelastic AquaDefense | Mapei | Varies | sq ft/gal | 2 coats @ 25 mil wet | [TDS](https://www.mapei.com/us/en-us/products-and-solutions/products/detail/mapelastic-aquadefense) |
 | Hydro Ban | LATICRETE | 50 | sq ft/gal | 2 coats total | [TDS](https://cdn-global.laticrete.com/-/media/project/laticrete-international/north-america/product-documents/product-data-sheets/lds6630_hydro-ban.ashx) |
-| KERDI | Schluter | 54.5-646 | sq ft/roll | Sheet membrane | [TDS](https://assets.schluter.com/asset/570120892212/document_6plrad34eh1rj0g61f54npqu6c/Waterproofing%20Data%20Sheet.pdf) |
+| KERDI | Schluter | 54.5-646 | sq ft/roll | Sheet membrane | [TDS](https://www.schluter.com/schluter-us/en_US/Membranes/Waterproofing-(KERDI)/Schluter%C2%AE-KERDI/p/KERDI) |
 | **SELF-LEVELERS** |||||
 | Self-Leveler Plus | Mapei | 0.5 | cu ft/50 lb | 48 sq ft @ 1/8" | [TDS](https://www.mapei.com/us/en-us/products-and-solutions/products/detail/self-leveler-plus) |
 | ARDEX K 15 | ARDEX | 0.4 | cu ft/50 lb | 44 sq ft @ 1/8" | [TDS](https://www.ardexamericas.com/product/ardex-k-15/) |
@@ -36,21 +39,21 @@
 
 | Specification | Value | Source |
 |---------------|-------|--------|
-| Package Size | 50 lb bag | TDS |
-| Type | Medium-bed modified thin-set | TDS |
-| Standards | ANSI A118.4, A118.11, A118.15 | TDS |
-| Thickness Range | 3/32" min to 3/4" max | TDS |
+| Package Size | 50 lb bag | TDS-132 |
+| Type | Medium-bed modified thin-set | TDS-132 |
+| Standards | ANSI A118.4HT, A118.11 | TDS-132 |
+| Thickness Range | 3/32" min to 3/4" max | TDS-132 |
 
-**Coverage by Trowel Size:**
+**Coverage by Trowel Size (verified Jan 2026):**
 | Trowel | Min Coverage | Max Coverage | Notes |
 |--------|--------------|--------------|-------|
 | 1/4"×1/4" Square | 90 sq ft | 100 sq ft | For tile up to 8"×8" |
 | 1/4"×3/8" Square | 60 sq ft | 67 sq ft | For tile 8"×8" to 13"×13" |
 | 1/2"×1/2" Square | 42 sq ft | 47 sq ft | ⚠️ **NOT RECOMMENDED** for LFT |
-| **3/4"×9/16" U-notch @ 45°** | 34 sq ft | 42 sq ft | ✅ **RECOMMENDED** for LFT ≥15" |
-| **3/4"×9/16" U-notch @ 30°** | 38 sq ft | 47 sq ft | ✅ **RECOMMENDED** - same yield as 1/2" sq, better coverage |
+| **3/4"×9/16" U-notch @ 45°** | 34 sq ft | 38 sq ft | ✅ **RECOMMENDED** for LFT ≥15" |
+| **3/4"×9/16" U-notch @ 30°** | 42 sq ft | 47 sq ft | ✅ **RECOMMENDED** - same yield as 1/2" sq, better coverage |
 
-> ⚠️ **CRITICAL WARNING:** Custom Building Products does NOT recommend 1/2"×1/2" square notch trowel for Large Format Tile. The 1/2" spacing between notches makes it difficult to bed tiles and achieve proper coverage. Use U-notch or ridged trowel that promotes mortar ridge collapse.
+> ⚠️ **CRITICAL WARNING (from CBP TDS):** Custom Building Products does NOT recommend the use of a 1/2"×1/2"×1/2" Square-Notched trowel for Large Format Tile. The 1/2" spacing between each square notch has been shown to make it more difficult to bed tiles and achieve proper mortar coverage. CUSTOM recommends the use of a trowel design that promotes mortar ridge collapse such as either a deeper, slanted, U-notch, V-notch, or ridged large format trowel when applying thicker amounts of mortar.
 
 **Source:** https://www.custombuildingproducts.com/products/versabond-lft-professional-large-format-tile-mortar
 
@@ -101,41 +104,51 @@
 
 | Specification | Value | Source |
 |---------------|-------|--------|
-| Package Sizes | 1 gal, 3.5 gal | TDS |
-| Type | Liquid-applied | TDS |
-| Coverage (2 coats) | 55 sq ft/gal | TDS-104 |
-| Coverage (per coat) | 110 sq ft/gal | TDS-104 |
-| Wet Mil Thickness | 15-20 mils/coat | TDS |
-| Dry Mil Thickness | 24 mils total | TB94 |
-| Standards | ANSI A118.10, A118.12 | TDS |
-| Certifications | IAPMO, ICC-ES ESR-1413 | TDS |
+| Package Sizes | 1 gal, 3.5 gal | TDS-104 |
+| Type | Liquid-applied | TDS-104 |
+| Standards | ANSI A118.10, A118.12 | TDS-104 |
+| Certifications | IAPMO (pan liner), ICC-ES | TDS-104 |
+
+**Coverage Chart (verified Jan 2026 from CBP website):**
+| Application | Coverage per Gallon | 3.5 Gal Coverage |
+|-------------|--------------------|--------------------|
+| Crack Prevention Membrane | 100 sq ft | 350 sq ft |
+| Crack Prevention (ANSI A118.12) | 25 sq ft | 88 sq ft |
+| **Waterproof Membrane** | **55 sq ft** | **192 sq ft** |
+| IAPMO Pan Liner (ANSI A118.10) | 40 sq ft | 140 sq ft |
 
 **Application Notes:**
-- Apply with 3/4" nap roller or V-notch trowel
+- Apply with 3/4" nap roller, brush, or trowel
 - Color changes from pink to red when dry
 - Two coats required for waterproofing compliance
+- Extra heavy-duty rated for steam shower use
 
-**Sources:**
-- TDS-104: https://www.custombuildingproducts.com/wp-content/uploads/TDS-104-021425.pdf
-- TB94: https://www.custombuildingproducts.com/media/60997801/tb94-understanding-the-coverage-rate-for-redgard.pdf
+**Source:** https://www.custombuildingproducts.com/products/redgard-waterproofing-and-crack-prevention-membrane
 
 ---
 
-#### Mapei - AquaDefense
+#### Mapei - Mapelastic AquaDefense
 
 | Specification | Value | Source |
 |---------------|-------|--------|
 | Package Sizes | 1 gal, 5 gal | TDS |
-| Type | Liquid-applied | TDS |
-| Coverage (2 coats) | 60 sq ft/gal | TDS |
-| Dry Mil Thickness | 20 mils total | TDS |
-| Standards | ANSI A118.10, A118.12 | TDS |
+| Type | Liquid-applied (liquid-rubber) | TDS |
+| Wet Film Thickness | 25 mil recommended | TDS |
+| Standards | ANSI A118.10-LV, A118.12 | TDS |
+| Certifications | IAPMO (shower pan liner) | TDS |
+
+**Key Features (verified Jan 2026):**
+- Quick-drying: Install tile after 30-50 minutes drying time
+- Flood-testable after 12 hours of drying time
+- Lighter color for better chalk line visibility
+- No odor - great for confined spaces
 
 **Application Notes:**
-- Embed fabric tape in first coat at seams/corners
-- Flood-testable after 12 hours
+- Embed MAPEI Reinforcing Fabric or Mapeband at seams/corners
+- Apply with roller or brush
+- Compatible with any MAPEI polymer or epoxy mortar
 
-**Source:** https://www.wjgrosvenor.com/wp-content/uploads/2024/05/AquaDefense_TDS.pdf
+**Source:** https://www.mapei.com/us/en-us/products-and-solutions/products/detail/mapelastic-aquadefense
 
 ---
 
@@ -161,12 +174,13 @@
 
 | Specification | Value | Source |
 |---------------|-------|--------|
-| Type | Sheet membrane | TDS |
+| Type | Sheet membrane (PEVA core) | TDS |
 | Thickness | 8 mils | TDS |
 | Standards | ANSI A118.10 | TDS |
-| Thinset Requirement | Unmodified ONLY | TDS |
+| Thinset Requirement | **Unmodified ONLY** | TDS |
+| California Spec 01350 | Compliant (VOC) | TDS |
 
-**Roll Sizes:**
+**Roll Sizes (verified Jan 2026):**
 | Coverage | Dimensions |
 |----------|------------|
 | 54.5 sq ft | 3'3" × 16'5" |
@@ -176,11 +190,12 @@
 | 646 sq ft | 6'7" × 98'5" |
 
 **Application Notes:**
-- MUST use unmodified thinset (ANSI A118.1)
+- **MUST use unmodified thinset** (ANSI A118.1) - modified will NOT bond properly
+- KERDI features non-woven polypropylene on both sides to anchor in thin-set
 - Overlap seams minimum 2 inches
-- Use KERDI-BAND for all seams/corners
+- Use KERDI-BAND for all seams/corners/transitions
 
-**Source:** https://assets.schluter.com/asset/570120892212/document_6plrad34eh1rj0g61f54npqu6c/Waterproofing%20Data%20Sheet.pdf
+**Source:** https://www.schluter.com/schluter-us/en_US/Membranes/Waterproofing-(KERDI)/Schluter%C2%AE-KERDI/p/KERDI
 
 ---
 
@@ -381,39 +396,38 @@
 
 ---
 
-## Source URLs Index
+## Source URLs Index (Verified January 2026)
 
 ### Custom Building Products
-- VersaBond LFT TDS: https://www.custombuildingproducts.com/products/versabond-lft-professional-large-format-tile-mortar
-- VersaBond TDS: https://www.custombuildingproducts.com/products/versabond-professional-thin-set-mortar-2
-- RedGard TDS-104: https://www.custombuildingproducts.com/wp-content/uploads/TDS-104-021425.pdf
-- RedGard TB94: https://www.custombuildingproducts.com/media/60997801/tb94-understanding-the-coverage-rate-for-redgard.pdf
-- Grout Joint TB85: https://www.custombuildingproducts.com/media/60712312/tb85-grout-joint-width.pdf
-- LFT FAQ: https://www.custombuildingproducts.com/wp-content/uploads/2021/08/lft_faq.pdf
+- VersaBond LFT: https://www.custombuildingproducts.com/products/versabond-lft-professional-large-format-tile-mortar
+- VersaBond: https://www.custombuildingproducts.com/products/versabond-professional-thin-set-mortar-2
+- RedGard: https://www.custombuildingproducts.com/products/redgard-waterproofing-and-crack-prevention-membrane
 - Polyblend Sanded: https://www.custombuildingproducts.com/products/polyblend-sanded-grout
 - Polyblend Non-Sanded: https://www.custombuildingproducts.com/products/polyblend-non-sanded-grout
+- Materials Calculator: https://www.custombuildingproducts.com/interactive-tools
 
 ### Mapei
 - Kerabond T: https://www.mapei.com/us/en-us/products-and-solutions/products/detail/kerabond-t
-- AquaDefense: https://www.wjgrosvenor.com/wp-content/uploads/2024/05/AquaDefense_TDS.pdf
+- Mapelastic AquaDefense: https://www.mapei.com/us/en-us/products-and-solutions/products/detail/mapelastic-aquadefense
 - Self-Leveler Plus: https://www.mapei.com/us/en-us/products-and-solutions/products/detail/self-leveler-plus
+- Technical Services: 1-800-992-6273
 
 ### LATICRETE
-- Hydro Ban: https://cdn-global.laticrete.com/-/media/project/laticrete-international/north-america/product-documents/product-data-sheets/lds6630_hydro-ban.ashx
-- TDS196 Trowel Selection: https://laticrete.com/~/media/support-and-downloads/technical-datasheets/tds196.ashx
+- Hydro Ban TDS: https://cdn-global.laticrete.com/-/media/project/laticrete-international/north-america/product-documents/product-data-sheets/lds6630_hydro-ban.ashx
 
 ### Schluter
-- KERDI: https://assets.schluter.com/asset/570120892212/document_6plrad34eh1rj0g61f54npqu6c/Waterproofing%20Data%20Sheet.pdf
-- KERDI Product Page: https://www.schluter.com/schluter-us/en_US/Membranes/Waterproofing-(KERDI)/Schluter%C2%AE-KERDI/p/KERDI
+- KERDI: https://www.schluter.com/schluter-us/en_US/Membranes/Waterproofing-(KERDI)/Schluter%C2%AE-KERDI/p/KERDI
+- KERDI-BAND: https://www.schluter.com/Membranes/Waterproofing-(KERDI)/Schluter%C2%AE-KERDI-BAND/p/KERDI_BAND
+- Shower System Estimator: https://www.schluter.com/schluter-us/en_US/projects/estimator/shower-system-estimator
+- Technical Support: 888-472-4588
 
 ### ARDEX
 - K 15: https://www.ardexamericas.com/product/ardex-k-15/
 
 ### Industry Resources
-- TCNA Handbook: https://tcnatile.com/products/publications/2025-tcna-handbook-for-ceramic-glass-and-stone-tile-installation/
-- TCNA ANSI Standards: https://tcnatile.com/resource-center/ansi-standards/
-- TCNA FAQ Grout: https://tcnatile.com/resource-center/faq/grout/
-- TCNA FAQ Deflection: https://tcnatile.com/resource-center/faq/deflection/
+- TCNA Handbook 2025: https://tcnatile.com/products/publications/2025-tcna-handbook-for-ceramic-glass-and-stone-tile-installation/
+- TCNA ANSI Standards: https://www.tcnatile.com/tcna-committees/ansi-standards.html
+- NTCA (National Tile Contractors Association): https://www.tile-assn.com/
 
 ---
 
