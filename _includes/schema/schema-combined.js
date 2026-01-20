@@ -6,7 +6,7 @@
   "name": "{{ site.company.name | default: site.title }}",
   "legalName": "Tillerstead LLC",
   "url": "{{ site.url }}",
-  "logo": "{{ site.url }}/assets/img/logo/4k-logo.png",
+  "logo": "{{ site.url }}/assets/img/logo/tillerstead_social_square_512.png",
   "image": "{{ site.url }}/assets/img/og.jpg",
   "description": "{{ site.description | escape }}",
   "telephone": "{{ site.company.phone_link }}",
