@@ -5,23 +5,19 @@
   "@id": "{{ site.url }}/contact/#page",
   "url": "{{ site.url }}/contact/",
   "about": {
-    "@type": "HomeAndConstructionBusiness",
-    "name": "Tillerstead LLC",
-    "telephone": "{{ site.company.phone_link }}",
-    "areaServed": [
-      "Atlantic County, New Jersey",
-      "Ocean County, New Jersey",
-      "Cape May County, New Jersey"
-    ],
-    "license": "New Jersey HIC #13VH10808800"
+    "@type": "LocalBusiness",
+    "name": "{{ site.company.name | default: 'Your Company LLC' }}",
+    "telephone": "{{ site.company.phone_link | default: '+15551234567' }}",
+    "areaServed": "{{ site.company.service_area | default: 'Local Service Area' }}",
+    "license": "{{ site.company.license | default: 'Licensed & Insured' }}"
   },
   "mainEntity": {
     "@type": "Action",
-    "name": "Request a Written Estimate",
+    "name": "Request a Free Quote",
     "target": "{{ site.url }}/contact/",
     "result": {
       "@type": "Thing",
-      "name": "Written Proposal"
+      "name": "Project Proposal"
     }
   }
 }

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <linearGradient id="truckGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="iconShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="40" cy="40" r="38" fill="#ffffff" stroke="url(#truckGrad)" stroke-width="3"/>
+  
+  <!-- Truck Icon centered -->
+  <g transform="translate(12, 22)" filter="url(#iconShadow)">
+    <!-- Truck body -->
+    <rect x="0" y="15" width="38" height="25" rx="2" fill="url(#truckGrad)"/>
+    <!-- Truck cab -->
+    <path d="M38,22 L50,22 L55,30 L55,40 L38,40 Z" fill="url(#truckGrad)"/>
+    <!-- Window -->
+    <rect x="40" y="25" width="11" height="8" rx="1.5" fill="#ffffff" opacity="0.9"/>
+    <!-- Wheels -->
+    <circle cx="12" cy="42" r="6" fill="#1f2937"/>
+    <circle cx="12" cy="42" r="3" fill="#4b5563"/>
+    <circle cx="46" cy="42" r="6" fill="#1f2937"/>
+    <circle cx="46" cy="42" r="3" fill="#4b5563"/>
+    <!-- Junk in truck bed -->
+    <rect x="4" y="6" width="9" height="12" rx="1" fill="#d4a574"/>
+    <rect x="15" y="3" width="8" height="15" rx="1" fill="#8b7355"/>
+    <rect x="25" y="8" width="9" height="10" rx="1" fill="#a0522d"/>
+  </g>
+</svg>

@@ -1,0 +1,86 @@
+# =============================================================================
+# SERVICES.YML TEMPLATE
+# =============================================================================
+# Copy this file to _data/services.yml and fill in your client's services.
+# Delete all comments and placeholder text when complete.
+# =============================================================================
+
+services:
+  # Service 1
+  - id: service1                         # Unique ID (used in URLs: /services/#service1)
+    name: "Service Name Here"
+    icon: wrench                         # Icon name for display
+    description: >
+      Full description of this service. 3-4 sentences explaining what it is,
+      who it's for, and why customers should choose you for this service.
+      Focus on benefits and outcomes, not just features.
+    points:                              # 4-6 bullet points
+      - "Key benefit or feature 1"
+      - "Key benefit or feature 2"
+      - "Key benefit or feature 3"
+      - "Key benefit or feature 4"
+      - "Key benefit or feature 5"
+    url: "/services/#service1"
+
+  # Service 2
+  - id: service2
+    name: "Service Name Here"
+    icon: tools
+    description: >
+      Full description of this service.
+    points:
+      - "Key benefit or feature 1"
+      - "Key benefit or feature 2"
+      - "Key benefit or feature 3"
+      - "Key benefit or feature 4"
+    url: "/services/#service2"
+
+  # Service 3
+  - id: service3
+    name: "Service Name Here"
+    icon: shield
+    description: >
+      Full description of this service.
+    points:
+      - "Key benefit or feature 1"
+      - "Key benefit or feature 2"
+      - "Key benefit or feature 3"
+      - "Key benefit or feature 4"
+    url: "/services/#service3"
+
+  # Add more services as needed...
+
+# =============================================================================
+# SERVICE PACKAGES (for pricing page)
+# =============================================================================
+packages:
+  - id: basic
+    name: "Basic Package"
+    description: "Brief description of what's included"
+    includes:
+      - "Item 1"
+      - "Item 2"
+      - "Item 3"
+    turnaround: "Timeline"
+    
+  - id: standard
+    name: "Standard Package"
+    description: "Brief description of what's included"
+    includes:
+      - "Item 1"
+      - "Item 2"
+      - "Item 3"
+      - "Item 4"
+    turnaround: "Timeline"
+    popular: true                        # Mark as most popular
+    
+  - id: premium
+    name: "Premium Package"
+    description: "Brief description of what's included"
+    includes:
+      - "Item 1"
+      - "Item 2"
+      - "Item 3"
+      - "Item 4"
+      - "Item 5"
+    turnaround: "Timeline"

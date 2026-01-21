@@ -2,13 +2,13 @@
 layout: default
 title: Home
 permalink: /
-meta_title: "Expert Tile & Waterproofing Contractor in South Jersey | Tillerstead LLC"
-meta_description: "South Jersey's trusted tile installation & waterproofing experts. Licensed NJ HIC #13VH10808800. TCNA-compliant showers, bathroom remodeling & leak-proof systems. 5-Star rated. Free estimates in Atlantic, Ocean & Cape May Counties."
-description: "Professional tile installation and waterproofing services for South Jersey homeowners. Expert craftsmanship, industry-leading warranties, and TCNA-compliant methods. Licensed NJ HIC #13VH10808800."
+meta_title: "Junk Removal & Hauling Services | Tough Haul Trash & Junk LLC"
+meta_description: "Professional junk removal, furniture pickup, appliance hauling, and property cleanouts. Same-day service available. Upfront pricing, no hidden fees. Get your free estimate today!"
+description: "Tough Haul provides fast, affordable junk removal services. Furniture, appliances, yard debris, and complete cleanouts. We do the heavy lifting so you don't have to."
 body_class: page-home
 is_home: true
-schema_type: LocalBusiness
-canonical_url: "https://tillerstead.com/"
+schema_type: Organization
+canonical_url: "https://toughhauljunk.com/"
 priority: 1.0
 sitemap:
   changefreq: weekly
@@ -24,53 +24,42 @@ preload_assets:
 robots: index, follow
 og_type: website
 og_image: /assets/images/og-home.webp
-og_title: "South Jersey's Premier Tile & Waterproofing Experts | Tillerstead LLC"
-og_description: "Transform your bathroom with leak-proof tile showers & expert waterproofing. Licensed, insured & 5-star rated. Serving Atlantic, Ocean & Cape May Counties."
+og_title: "Junk Removal & Hauling Services | Tough Haul Trash & Junk LLC"
+og_description: "Fast, affordable junk removal. Furniture, appliances, yard debris, property cleanouts. Same-day service. Free estimates!"
 twitter_card: summary_large_image
-twitter_title: "Expert Tile & Waterproofing in South Jersey | Tillerstead LLC"
-twitter_description: "TCNA-compliant tile installation & waterproofing. Licensed NJ contractor with 5-star reviews. Free estimates!"
-keywords: "tile contractor South Jersey, waterproofing contractor NJ, bathroom remodeling Atlantic County, tile shower installation, TCNA certified, Ocean County tile installer, Cape May bathroom contractor"
+twitter_title: "Junk Removal Services | Tough Haul"
+twitter_description: "Professional junk hauling with upfront pricing. Same-day service available. Get your free estimate!"
+keywords: "junk removal, furniture removal, appliance pickup, yard debris hauling, property cleanout, trash removal, hauling service"
 ---
 
 {%- comment -%}
   ============================================================
-  TILLERSTEAD HOMEPAGE - Conversion-Optimized Architecture
+  TOUGH HAUL TRASH & JUNK LLC - Homepage
   ============================================================
   
-  Performance & SEO Optimizations:
-  - Critical CSS inlined via layout
-  - Lazy loading for below-fold content
-  - Structured data for rich snippets
-  - Core Web Vitals optimized (LCP, FID, CLS)
-
+  Professional junk removal and hauling services.
+  Fast, affordable, and reliable.
   
-  1. Hero - ATTENTION: Bold value prop + social proof + urgency
-  2. Trust Bar - INTEREST: Instant credibility (license, 5-star reviews)
-  3. Services - INTEREST: Solution-focused offerings
-  4. Social Proof - DESIRE: Testimonials near decision point
-  5. Why Us - DESIRE: Unique differentiators
-  6. Process - DESIRE: Remove friction, build confidence
-  7. Portfolio - DESIRE: Visual proof of quality
-  8. Materials - DESIRE: Technical authority
-  9. FAQ - DESIRE: Objection handling
-  10. CTA - ACTION: Low-friction conversion
+  SERVICES:
+  - Furniture & appliance removal
+  - Trash & debris hauling
+  - Yard cleanouts
+  - Property & estate cleanouts
+  - Moving help & hauling
   
-  A/B Testing Notes:
-  - Hero CTA variations tracked
-  - Trust bar position tested (winner: after hero)
-  - Testimonials moved higher for social proof impact
+  Content driven from _data/home.yml
 {%- endcomment -%}
 
 {% assign data = site.data.home %}
 
 <!-- Hero Section - Above the Fold Priority -->
-<section id="hero" aria-label="Welcome to Tillerstead">
+<section id="hero" aria-label="Tough Haul Junk Removal Services">
 {% include hero/hero.html data=data.hero %}
 </section>
 
-<!-- Trust Bar - Immediate Credibility (Critical for Conversion) -->
+<!-- Trust Bar - Immediate Credibility -->
 {% if data.trust_bar %}
-<section id="trust" aria-label="Credentials and Reviews">
+<section id="trust" aria-label="Credentials and Trust Indicators">
 {% include sections/section-trust-bar.html data=data.trust_bar %}
 </section>
 {% endif %}
@@ -78,11 +67,6 @@ keywords: "tile contractor South Jersey, waterproofing contractor NJ, bathroom r
 <!-- Services Section - Core Value Proposition -->
 <section id="services" aria-labelledby="services-heading">
 {% include sections/section-services.html data=data.services %}
-</section>
-
-<!-- Testimonials Section - Social Proof (Moved Higher for Impact) -->
-<section id="testimonials" aria-labelledby="testimonials-heading">
-{% include sections/section-testimonials.html data=data.testimonials %}
 </section>
 
 <!-- Why Choose Us - Competitive Differentiation -->
@@ -98,58 +82,41 @@ keywords: "tile contractor South Jersey, waterproofing contractor NJ, bathroom r
 </section>
 
 <!-- Portfolio/Gallery - Visual Social Proof -->
-{% if data.portfolio %}
-<section id="portfolio" aria-labelledby="portfolio-heading" loading="lazy">
-{% include sections/section-portfolio.html data=data.portfolio %}
+<section id="portfolio" aria-labelledby="portfolio-heading">
+{% include sections/section-portfolio-gallery.html %}
 </section>
-{% endif %}
 
-<!-- Materials Section - Technical Authority & Trust -->
-<section id="materials" aria-labelledby="materials-heading">
+<!-- Testimonials Section - Social Proof -->
+<section id="testimonials" aria-labelledby="testimonials-heading">
+{% include sections/section-testimonials.html data=data.testimonials %}
+</section>
+
+<!-- Materials/Technology Stack -->
+{% if data.materials %}
+<section id="technology" aria-labelledby="technology-heading">
 {% include sections/section-materials.html data=data.materials %}
 </section>
-
-<!-- FAQ Section - Objection Handling -->
-{% if data.faq %}
-<section id="faq" aria-labelledby="faq-heading">
-{% include sections/section-faq.html data=data.faq %}
-</section>
 {% endif %}
 
-<!-- Visual Divider - Tile Grout Line -->
-<div class="ts-grout-divider" role="presentation" aria-hidden="true"></div>
+<!-- FAQ Section - Objection Handling -->
+<section id="faq" aria-labelledby="faq-heading">
+{% include sections/home-faq.html %}
+</section>
 
-<!-- Final CTA Section - Clear Conversion Path -->
-<section id="contact" aria-labelledby="cta-heading">
+<!-- Final CTA - Conversion -->
+<section id="cta" aria-label="Contact Call to Action">
 {% include sections/section-cta.html data=data.cta %}
 </section>
 
-<!-- Structured Data for Rich Snippets -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://tillerstead.com/#business",
-  "name": "Tillerstead LLC",
-  "description": "{{ page.description }}",
-  "url": "https://tillerstead.com/",
-  "telephone": "{{ site.data.contact.phone }}",
-  "address": {
-    "@type": "PostalAddress",
-    "addressRegion": "NJ",
-    "addressCountry": "US"
-  },
-  "areaServed": ["Atlantic County", "Ocean County", "Cape May County"],
-  "priceRange": "$$",
-  "image": "https://tillerstead.com/assets/images/logo.png",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "{{ site.data.testimonials.size | default: 10 }}"
-  }
-}
-</script>
-
-<!-- Page-specific styles with preload hint -->
-<link rel="stylesheet" href="/assets/css/pages/home.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="/assets/css/pages/home.css"></noscript>
+<!-- Demo Notice Banner (only shows on demo site) -->
+{% if site.is_demo_template %}
+<aside class="demo-banner" aria-label="Demo Site Notice">
+  <div class="container">
+    <div class="demo-banner__content">
+      <strong>🎨 This is a demo template.</strong>
+      <span>Interested in a professional website like this for your business?</span>
+      <a href="/contact/" class="demo-banner__cta">Get Your Free Consultation</a>
+    </div>
+  </div>
+</aside>
+{% endif %}

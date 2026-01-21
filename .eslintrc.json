@@ -1,5 +1,5 @@
 {
-  // Tillerstead.com ESLint configuration — see /.ai/OUTPUT_RULES.md for code quality standards
+  // WebDevPro ESLint configuration — see /.ai/OUTPUT_RULES.md for code quality standards
   "root": true,
   "env": {
     "browser": true,

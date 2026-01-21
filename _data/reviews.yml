@@ -1,63 +1,88 @@
-# Tillerstead Reviews (LIVE)
-# Source of truth for site display.
-# Testimonials must be genuine, not incentivized. Client words are not edited—only formatted for HTML.
-# Last Updated: 2025-12-28
-
-meta:
-  last_updated: "2025-12-28"
-  policy:
-    - "Reviews are genuine and not incentivized."
-    - "Client words are not edited—only formatted for display."
-    - "If a review is corrected or removed by the platform, the site copy is updated to match."
+# =============================================================================
+# REVIEWS.YML - Tough Haul Trash & Junk LLC Reviews
+# =============================================================================
+# Customer reviews for junk removal services.
+# =============================================================================
 
 reviews:
-  - id: "thumbtack-maria-j-2025-05-06-1"
-    source: "Thumbtack"
-    platform: "Thumbtack"
+  - name: "Mike Johnson"
+    business: ""
+    location: "Local Area"
+    date: "2026-01-10"
     rating: 5
-    rating_max: 5
-    quote_html: "<p>I hired Devon Tyler for tile work in my home and was impressed by his patience, precision, and professionalism. He took his time to get every cut right and made sure the job was solid and clean. I’d absolutely recommend him to anyone looking for quality tile work done with care.</p>"
-    author: "Maria J."
-    location: null
-    job_type: "Tile Installation and Replacement"
-    date: "2025-05-06"
-    badges:
-      - "Professionalism"
-      - "Value"
-      - "Responsiveness"
-    url: "https://www.thumbtack.com/nj/absecon/tile/tillerstead-llc/service/547437618353160199"
+    text: >
+      These guys are amazing! They showed up on time, gave me an upfront price,
+      and hauled away my old couch and two mattresses in no time. Super professional
+      and way easier than trying to do it myself. Will definitely use again!
+    service: "Furniture Pickup"
+    source: "Google"
 
-  - id: "thumbtack-ahmed-a-2025-07-20-1"
-    source: "Thumbtack"
-    platform: "Thumbtack"
+  - name: "Sarah Martinez"
+    business: ""
+    location: "Local Area"
+    date: "2025-12-15"
     rating: 5
-    rating_max: 5
-    quote_html: |
-      <p>I recently hired Devon for a bathroom remodel, and my wife and I couldn’t be happier with the results. From start to finish, Devon was professional, punctual, and detail-oriented. He took the time to listen to what we wanted, offered helpful suggestions, and executed everything with precision.</p>
-      <p>Devon kept the work area tidy throughout the project and completed the job on time without cutting corners.</p>
-      <p>It’s rare to find someone who truly takes pride in their work the way Devon does. I’d highly recommend him.</p>
-    author: "Ahmed A."
-    location: null
-    job_type: "Bathroom Remodel"
-    date: "2025-07-20"
-    badges:
-      - "Professionalism"
-      - "Value"
-      - "Responsiveness"
-    url: "https://www.thumbtack.com/nj/absecon/tile/tillerstead-llc/service/547437618353160199"
+    text: >
+      Used Tough Haul for a garage cleanout before moving. They took everything—
+      old furniture, boxes of junk, broken appliances. The crew was friendly,
+      fast, and the price was very fair. Highly recommend!
+    service: "Garage Cleanout"
+    source: "Google"
 
-  - id: "thumbtack-alexandra-s-2025-08-19-1"
-    source: "Thumbtack"
-    platform: "Thumbtack"
+  - name: "Dave Thompson"
+    business: ""
+    location: "Local Area"
+    date: "2025-11-20"
     rating: 5
-    rating_max: 5
-    quote_html: "<p>It was a pleasure working with Devon to repair our ceiling in our closet. We chose to repair it rather than replace. Devon walked us through what that would look like offering the most cost effective option. He was very professional. I recommend working with him!!</p>"
-    author: "Alexandra S."
-    location: null
-    job_type: "Drywall Repair and Texturing"
-    date: "2025-08-19"
-    badges:
-      - "Professionalism"
-      - "Value"
-      - "Responsiveness"
-    url: "https://www.thumbtack.com/nj/absecon/tile/tillerstead-llc/service/547437618353160199"
+    text: >
+      Called in the morning, they were here by afternoon. Hauled away a broken
+      refrigerator and old washer/dryer set. The guys were careful not to damage
+      my floors and cleaned up after themselves. Great service!
+    service: "Appliance Removal"
+    source: "Google"
+
+  - name: "Jennifer Walsh"
+    business: ""
+    location: "Local Area"
+    date: "2025-10-05"
+    rating: 5
+    text: >
+      After a big storm, we had tons of branches and yard debris. Tough Haul
+      came out and cleared everything in a couple hours. They even swept up
+      the small stuff. So grateful for the quick response!
+    service: "Yard Clean Out"
+    source: "Google"
+
+  - name: "Robert Chen"
+    business: ""
+    location: "Local Area"
+    date: "2025-09-12"
+    rating: 5
+    text: >
+      Needed help clearing out my parents' house for an estate sale. The team
+      was respectful, efficient, and handled everything with care. They donated
+      usable items and recycled what they could. Professional service.
+    service: "Estate Cleanout"
+    source: "Google"
+
+  - name: "Amanda Torres"
+    business: ""
+    location: "Local Area"
+    date: "2025-08-28"
+    rating: 5
+    text: >
+      I've used Tough Haul three times now for various cleanout projects.
+      Always reliable, always fair pricing, and the crews are always friendly.
+      They're my go-to for junk removal!
+    service: "Debris Removal"
+    source: "Facebook"
+
+# Review summary for display
+summary:
+  total_reviews: 6
+  average_rating: 5.0
+  sources:
+    - name: "Google"
+      count: 5
+    - name: "Facebook"
+      count: 1

@@ -1,16 +1,21 @@
 ---
 layout: default
-title: "Our Work | Tillerstead Portfolio"
-meta_title: "Tile & Bathroom Remodeling Portfolio | Tillerstead LLC"
-meta_description: "See completed TCNA-compliant tile showers, waterproofing, and bathroom remodels by Tillerstead LLC in South Jersey."
-description: "Real projects, real results. TCNA-compliant tile installations and bathroom remodels in Atlantic, Ocean, and Cape May Counties."
+title: Our Work | WebDevPro Portfolio
+meta_title: Website Portfolio | WebDevPro
+meta_description: >-
+  See examples of professional websites built for contractors and small
+  businesses. Mobile-optimized, conversion-focused, GitHub-managed.
+description: >-
+  Real projects, real results. Professional websites for contractors and small
+  businesses that generate leads and build trust.
 permalink: /portfolio/
 body_class: page-portfolio
 ---
 
+
 {%- comment -%}
   ============================================================
-  OPTIMIZED PORTFOLIO PAGE - Tillerstead.com
+  WEBDEVPRO PORTFOLIO PAGE
   ============================================================
   
   Architecture:
@@ -19,10 +24,8 @@ body_class: page-portfolio
   - External CSS in assets/css/pages/portfolio.css
   - External JS for filtering in assets/js/portfolio-filter.js
   
-  Sections:
-  1. Hero - Page introduction
-  2. Gallery - Filterable project grid
-  3. CTA - Request estimate
+  Note: For demo purposes, showcases example work.
+  Client portfolios will feature their actual projects.
 {%- endcomment -%}
 
 <!-- Hero Section -->
@@ -30,6 +33,23 @@ body_class: page-portfolio
 
 <!-- Portfolio Gallery with Filtering -->
 {% include sections/section-portfolio-gallery.html %}
+
+<!-- Demo Notice -->
+{% if site.is_demo_template %}
+<section class="portfolio-demo-notice">
+  <div class="container">
+    <div class="portfolio-demo-notice__content">
+      <h2>This Could Be Your Work</h2>
+      <p>
+        Imagine showcasing your best projects with professional photography, 
+        detailed descriptions, and easy filtering by service type. Your portfolio 
+        page will highlight your expertise and build trust with potential customers.
+      </p>
+      <a href="/contact/" class="btn btn--primary">Get Your Portfolio Started</a>
+    </div>
+  </div>
+</section>
+{% endif %}
 
 <!-- CTA Section -->
 {% include sections/section-portfolio-cta.html %}

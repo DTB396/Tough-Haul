@@ -1,0 +1,582 @@
+---
+layout: default
+title: Get Your Free Estimate | Tough Haul
+description: Instant junk removal estimates. Select your load size and get a price in seconds.
+permalink: /estimate/
+body_class: page-estimate
+---
+
+<main class="estimate-page">
+  <!-- Hero -->
+  <section class="estimate-hero">
+    <div class="container">
+      <h1>Get Your Estimate</h1>
+      <p>Select your load size below. Pricing is simple and upfront.</p>
+    </div>
+  </section>
+
+  <!-- Main Estimator -->
+  <section class="estimate-main">
+    <div class="container">
+      
+      <!-- Step 1: Load Size -->
+      <div class="estimate-step">
+        <h2><span class="step-num">1</span> How much are you hauling?</h2>
+        
+        <div class="load-grid" id="load-grid">
+          <button type="button" class="load-option" data-size="single" data-low="75" data-high="125">
+            <span class="load-icon">🪑</span>
+            <span class="load-name">Single Item</span>
+            <span class="load-price">$75 – $125</span>
+            <span class="load-example">Couch, mattress, or appliance</span>
+          </button>
+          
+          <button type="button" class="load-option" data-size="quarter" data-low="150" data-high="225">
+            <span class="load-icon">📦</span>
+            <span class="load-name">1/4 Truck</span>
+            <span class="load-price">$150 – $225</span>
+            <span class="load-example">Small cleanout, few items</span>
+          </button>
+          
+          <button type="button" class="load-option load-option--popular" data-size="half" data-low="275" data-high="375">
+            <span class="load-badge">Most Popular</span>
+            <span class="load-icon">🚚</span>
+            <span class="load-name">1/2 Truck</span>
+            <span class="load-price">$275 – $375</span>
+            <span class="load-example">Room cleanout, multiple items</span>
+          </button>
+          
+          <button type="button" class="load-option" data-size="three-quarter" data-low="400" data-high="500">
+            <span class="load-icon">🏠</span>
+            <span class="load-name">3/4 Truck</span>
+            <span class="load-price">$400 – $500</span>
+            <span class="load-example">Garage or basement cleanout</span>
+          </button>
+          
+          <button type="button" class="load-option" data-size="full" data-low="500" data-high="650">
+            <span class="load-icon">🏢</span>
+            <span class="load-name">Full Truck</span>
+            <span class="load-price">$500 – $650</span>
+            <span class="load-example">Complete property cleanout</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2: Add-ons (Optional) -->
+      <div class="estimate-step" id="step-addons" style="display: none;">
+        <h2><span class="step-num">2</span> Any special items?</h2>
+        <p class="step-hint">These items require extra handling. Select if applicable.</p>
+        
+        <div class="addon-grid">
+          <label class="addon-option">
+            <input type="checkbox" name="addon" value="stairs" data-fee="25">
+            <span class="addon-content">
+              <span class="addon-icon">🪜</span>
+              <span class="addon-text">
+                <strong>Stairs / Difficult Access</strong>
+                <span>+$25</span>
+              </span>
+            </span>
+          </label>
+          
+          <label class="addon-option">
+            <input type="checkbox" name="addon" value="freon" data-fee="25">
+            <span class="addon-content">
+              <span class="addon-icon">❄️</span>
+              <span class="addon-text">
+                <strong>Fridge / AC (Freon)</strong>
+                <span>+$25 per unit</span>
+              </span>
+            </span>
+          </label>
+          
+          <label class="addon-option">
+            <input type="checkbox" name="addon" value="hottub" data-fee="150">
+            <span class="addon-content">
+              <span class="addon-icon">🛁</span>
+              <span class="addon-text">
+                <strong>Hot Tub Removal</strong>
+                <span>+$150</span>
+              </span>
+            </span>
+          </label>
+          
+          <label class="addon-option">
+            <input type="checkbox" name="addon" value="sameday" data-fee="50">
+            <span class="addon-content">
+              <span class="addon-icon">⚡</span>
+              <span class="addon-text">
+                <strong>Same-Day Pickup</strong>
+                <span>+$50</span>
+              </span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="estimate-result" id="estimate-result" style="display: none;">
+        <div class="result-card">
+          <span class="result-label">Your Estimated Price</span>
+          <div class="result-price">
+            <span class="price-low" id="price-low">$0</span>
+            <span class="price-sep">–</span>
+            <span class="price-high" id="price-high">$0</span>
+          </div>
+          <p class="result-note">Final price confirmed on-site. No hidden fees.</p>
+          
+          <div class="result-includes">
+            <h4>Always Included:</h4>
+            <ul>
+              <li>✓ All labor & heavy lifting</li>
+              <li>✓ Loading & transportation</li>
+              <li>✓ Eco-friendly disposal</li>
+              <li>✓ Donation of usable items</li>
+            </ul>
+          </div>
+
+          <div class="result-cta">
+            <a href="/contact/" class="btn btn--primary btn--lg">Schedule Pickup</a>
+            <a href="tel:{{ site.company.phone_link }}" class="btn btn--outline">Call Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Trust Strip -->
+  <section class="estimate-trust">
+    <div class="container">
+      <div class="trust-items">
+        <span>✓ Licensed & Insured</span>
+        <span>✓ Upfront Pricing</span>
+        <span>✓ Same-Day Available</span>
+        <span>✓ Atlantic County, NJ</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function() {
+  const loadOptions = document.querySelectorAll('.load-option');
+  const stepAddons = document.getElementById('step-addons');
+  const resultSection = document.getElementById('estimate-result');
+  const priceLow = document.getElementById('price-low');
+  const priceHigh = document.getElementById('price-high');
+  const addonCheckboxes = document.querySelectorAll('input[name="addon"]');
+  
+  let selectedLoad = null;
+  let baseLow = 0;
+  let baseHigh = 0;
+
+  // Load selection
+  loadOptions.forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Remove active from all
+      loadOptions.forEach(b => b.classList.remove('active'));
+      // Add active to clicked
+      this.classList.add('active');
+      
+      selectedLoad = this.dataset.size;
+      baseLow = parseInt(this.dataset.low);
+      baseHigh = parseInt(this.dataset.high);
+      
+      // Show next steps
+      stepAddons.style.display = 'block';
+      resultSection.style.display = 'block';
+      
+      updatePrice();
+      
+      // Smooth scroll to addons
+      stepAddons.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Add-on changes
+  addonCheckboxes.forEach(cb => {
+    cb.addEventListener('change', updatePrice);
+  });
+
+  function updatePrice() {
+    let addonTotal = 0;
+    addonCheckboxes.forEach(cb => {
+      if (cb.checked) {
+        addonTotal += parseInt(cb.dataset.fee);
+      }
+    });
+    
+    priceLow.textContent = '$' + (baseLow + addonTotal);
+    priceHigh.textContent = '$' + (baseHigh + addonTotal);
+  }
+})();
+</script>
+
+<style>
+/* =========================================
+   ESTIMATE PAGE - Modern Minimal Design
+   ========================================= */
+
+.estimate-page {
+  --accent: #10b981;
+  --accent-dark: #059669;
+  --gold: #c9a227;
+  --bg-dark: #0f1210;
+  --bg-card: #1a1f1c;
+  --bg-hover: #242a26;
+  --text: #ffffff;
+  --text-muted: #9ca3af;
+  --border: rgba(255,255,255,0.1);
+}
+
+/* Hero */
+.estimate-hero {
+  padding: 4rem 0 2rem;
+  text-align: center;
+}
+
+.estimate-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 0.5rem;
+}
+
+.estimate-hero p {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Main Section */
+.estimate-main {
+  padding: 2rem 0 4rem;
+}
+
+.estimate-main .container {
+  max-width: 900px;
+}
+
+/* Steps */
+.estimate-step {
+  margin-bottom: 3rem;
+}
+
+.estimate-step h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.step-hint {
+  color: var(--text-muted);
+  margin: -1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* Load Grid - 5 equal columns on desktop, responsive below */
+.load-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .load-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .load-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.load-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  min-height: 160px;
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.load-option:hover {
+  border-color: var(--gold);
+  background: var(--bg-hover);
+}
+
+.load-option.active {
+  border-color: var(--accent);
+  background: var(--bg-hover);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.load-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.load-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.load-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+}
+
+.load-price {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.load-example {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  line-height: 1.2;
+  padding: 0 0.25rem;
+}
+
+/* Add-ons Grid */
+.addon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.addon-option {
+  cursor: pointer;
+}
+
+.addon-option input {
+  display: none;
+}
+
+.addon-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.addon-option:hover .addon-content {
+  border-color: var(--gold);
+}
+
+.addon-option input:checked + .addon-content {
+  border-color: var(--accent);
+  background: var(--bg-hover);
+}
+
+.addon-icon {
+  font-size: 1.5rem;
+}
+
+.addon-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.addon-text strong {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.addon-text span {
+  font-size: 0.8rem;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* Results */
+.estimate-result {
+  margin-top: 2rem;
+}
+
+.result-card {
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-dark) 100%);
+  border: 2px solid var(--accent);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.result-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.result-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.price-low,
+.price-high {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.price-sep {
+  font-size: 2rem;
+  color: var(--text-muted);
+}
+
+.result-note {
+  color: var(--text-muted);
+  margin: 0 0 2rem;
+}
+
+.result-includes {
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.result-includes h4 {
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.75rem;
+}
+
+.result-includes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.result-includes li {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.result-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.result-cta .btn {
+  min-width: 160px;
+}
+
+.btn--outline {
+  background: transparent;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+}
+
+.btn--outline:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+/* Trust Strip */
+.estimate-trust {
+  padding: 2rem 0;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+}
+
+.trust-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+}
+
+.trust-items span {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .load-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .addon-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .result-includes ul {
+    grid-template-columns: 1fr;
+  }
+  
+  .result-cta {
+    flex-direction: column;
+  }
+  
+  .result-cta .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .load-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

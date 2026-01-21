@@ -1,0 +1,62 @@
+# =============================================================================
+# REVIEWS.YML TEMPLATE
+# =============================================================================
+# Copy this file to _data/reviews.yml and add customer testimonials.
+# Delete all comments and placeholder text when complete.
+# =============================================================================
+
+reviews:
+  # Review 1
+  - name: "Customer Name"                # Full name or "John D." format
+    location: "City, State"              # e.g., "Philadelphia, PA"
+    date: "2026-01-15"                   # Date of review (YYYY-MM-DD)
+    rating: 5                            # 1-5 stars
+    text: >
+      Full review text goes here. Copy from Google, Yelp, or other sources.
+      Make sure you have permission to use the review. 2-4 sentences works best.
+    service: "Service they received"     # e.g., "Emergency Plumbing"
+    source: "Google"                     # Where the review came from
+    verified: true                       # Is this a verified review?
+
+  # Review 2
+  - name: "Customer Name"
+    location: "City, State"
+    date: "2025-12-20"
+    rating: 5
+    text: >
+      Review text here.
+    service: "Service they received"
+    source: "Yelp"
+    verified: true
+
+  # Review 3
+  - name: "Customer Name"
+    location: "City, State"
+    date: "2025-11-10"
+    rating: 5
+    text: >
+      Review text here.
+    service: "Service they received"
+    source: "Google"
+    verified: true
+
+  # Add more reviews as needed...
+  # Aim for at least 5-10 reviews for a good variety
+
+# =============================================================================
+# REVIEW SOURCES (for attribution)
+# =============================================================================
+sources:
+  google:
+    name: "Google Reviews"
+    url: "https://g.page/your-business"  # Link to Google Business profile
+    count: 50                            # Total review count
+    rating: 4.9                          # Average rating
+  
+  yelp:
+    name: "Yelp"
+    url: "https://yelp.com/biz/your-business"
+    count: 25
+    rating: 4.8
+  
+  # Add other sources as applicable (Thumbtack, Angi, BBB, etc.)

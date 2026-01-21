@@ -1,0 +1,201 @@
+# =============================================================================
+# HOME.YML TEMPLATE
+# =============================================================================
+# Copy this file to _data/home.yml and fill in your client's information.
+# Delete all comments and placeholder text when complete.
+#
+# REQUIRED SECTIONS: hero, services, process, cta
+# OPTIONAL SECTIONS: trust_bar, why_us, materials, testimonials
+# =============================================================================
+
+hero:
+  # Eyebrow text appears above the main headline (2 lines max)
+  eyebrow: "Licensed & Insured"          # e.g., "Licensed & Insured", "Est. 2010"
+  eyebrow_line2: "Your Industry Here"    # e.g., "Plumbing Experts", "Hauling Pros"
+  
+  # Main headline - keep short and impactful
+  title: "Your Main Headline Here"       # e.g., "Plumbing That Works"
+  
+  # Subheadline - 3-5 words
+  subtitle: "Your Subheadline"           # e.g., "Fast. Reliable. Affordable."
+  
+  # Summary paragraph - 2-3 sentences about what you do
+  summary: >
+    Write 2-3 sentences describing your main value proposition. What makes 
+    your business the right choice? Focus on customer benefits, not features.
+  
+  # Primary CTA button
+  primary:
+    label: "Get Free Quote"              # Button text
+    url: /contact/                       # Link destination
+  
+  # Secondary CTA button (optional)
+  secondary:
+    label: "View Our Work"
+    url: /portfolio/
+  
+  # Trust facts - 3-4 quick credibility items
+  facts:
+    - icon: "badge"                      # Options: badge, shield, map, star, clock
+      label: "Licensed"
+      text: "License #12345"             # Your license number
+    - icon: "shield"
+      label: "Insured"
+      text: "$1M Coverage"
+    - icon: "map"
+      label: "Service Area"
+      text: "City & Surrounding"
+  
+  # Highlight bullets - 4 key benefits
+  highlights:
+    - "Highlight or benefit 1"
+    - "Highlight or benefit 2"
+    - "Highlight or benefit 3"
+    - "Highlight or benefit 4"
+
+# =============================================================================
+# SERVICES SECTION
+# =============================================================================
+services:
+  eyebrow: "What We Do"
+  title: "Our Services"
+  summary: >
+    Brief description of your service philosophy. What approach do you take?
+    Why should customers trust your work?
+  
+  # Optional note for homeowners/customers
+  homeowner_note: >
+    Don't worry if you're not sure what you need. We'll explain everything 
+    in plain language and help you make the right choice for your situation.
+  
+  # Service cards - add 3-6 services
+  cards:
+    - icon: service1                     # Use descriptive icon name
+      title: "Service Name 1"
+      description: >
+        2-3 sentence description of this service. Focus on what the customer 
+        gets and why they should choose you for this service.
+      details:                           # 4-5 bullet points
+        - "Key feature or benefit 1"
+        - "Key feature or benefit 2"
+        - "Key feature or benefit 3"
+        - "Key feature or benefit 4"
+      url: "/services/#service1"
+    
+    - icon: service2
+      title: "Service Name 2"
+      description: >
+        2-3 sentence description of this service.
+      details:
+        - "Key feature or benefit 1"
+        - "Key feature or benefit 2"
+        - "Key feature or benefit 3"
+        - "Key feature or benefit 4"
+      url: "/services/#service2"
+    
+    # Add more services as needed...
+  
+  actions:
+    primary:
+      label: "Get Your Free Quote"
+      url: /contact/
+    secondary:
+      label: "View Our Work"
+      url: /portfolio/
+  
+  note: >
+    Optional note about your services, guarantees, or approach.
+
+# =============================================================================
+# PROCESS SECTION
+# =============================================================================
+process:
+  eyebrow: "How We Work"
+  title: "Our Simple Process"
+  summary: >
+    Brief description of why your process makes things easy for customers.
+  
+  # Optional fun fact or note
+  fun_fact: >
+    An interesting fact about your industry or approach that builds credibility.
+  
+  # Process steps - typically 4 steps
+  steps:
+    - title: "Step 1 Title"
+      icon: clipboard                    # Options: clipboard, document, check-circle, phone
+      description: >
+        What happens in this step? Keep it customer-focused.
+    
+    - title: "Step 2 Title"
+      icon: document
+      description: >
+        What happens in this step?
+    
+    - title: "Step 3 Title"
+      icon: check-circle
+      description: >
+        What happens in this step?
+    
+    - title: "Step 4 Title"
+      icon: check-circle
+      description: >
+        What happens in this step? End with the customer benefit.
+
+# =============================================================================
+# TESTIMONIALS (uses _data/reviews.yml)
+# =============================================================================
+testimonials:
+  eyebrow: "Customer Reviews"
+  title: "What Our Customers Say"
+  limit: 3                               # Number of reviews to show
+  reviews: null                          # Leave null to use reviews.yml
+
+# =============================================================================
+# CALL TO ACTION
+# =============================================================================
+cta:
+  eyebrow: "Ready to Get Started?"
+  title: "Get Your Free Quote Today"
+  summary: >
+    Brief final pitch. Why should they contact you now?
+  primary:
+    label: "Request Free Quote"
+    url: /contact/
+  secondary:
+    label: "Call Now"
+    url: "tel:+15551234567"              # Update with actual phone
+  note: "Licensed & Insured · Free Estimates · Service Area"
+
+# =============================================================================
+# OPTIONAL: TRUST BAR (remove if not needed)
+# =============================================================================
+trust_bar:
+  items:
+    - icon: "badge"
+      label: "Licensed"
+      text: "#12345"
+    - icon: "shield"
+      label: "Insured"
+      text: "Fully Covered"
+    - icon: "star"
+      label: "5-Star Rated"
+      text: "Google Reviews"
+    - icon: "clock"
+      label: "Fast Service"
+      text: "Same-Day Available"
+
+# =============================================================================
+# OPTIONAL: WHY US SECTION (remove if not needed)
+# =============================================================================
+why_us:
+  eyebrow: "Why Choose Us"
+  title: "What Makes Us Different"
+  items:
+    - title: "Differentiator 1"
+      description: "Brief explanation of why this matters to customers."
+    - title: "Differentiator 2"
+      description: "Brief explanation."
+    - title: "Differentiator 3"
+      description: "Brief explanation."
+    - title: "Differentiator 4"
+      description: "Brief explanation."

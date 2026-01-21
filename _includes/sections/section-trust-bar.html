@@ -1,0 +1,27 @@
+{% comment %}
+============================================================
+TRUST BAR SECTION
+Dynamic trust indicators from data file
+============================================================
+{% endcomment %}
+
+{% assign trust_data = include.data | default: site.data.home.trust_bar %}
+
+{% if trust_data %}
+<div class="trust-bar">
+  <div class="container">
+    <ul class="trust-bar__list" role="list">
+      {% for item in trust_data.items %}
+      <li class="trust-bar__item">
+        {% if item.icon %}
+        <svg class="trust-bar__icon" aria-hidden="true" focusable="false" width="24" height="24">
+          <use href="#icon-{{ item.icon }}"></use>
+        </svg>
+        {% endif %}
+        <span>{{ item.text }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endif %}

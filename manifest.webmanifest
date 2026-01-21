@@ -1,16 +1,16 @@
 {
   "id": "/",
-  "name": "Tillerstead LLC - Professional Tile Installation",
-  "short_name": "Tillerstead",
-  "description": "Where Craft Meets Accountability - TCNA-compliant tile installation in South Jersey",
+  "name": "WebDevPro - Professional Website Development",
+  "short_name": "WebDevPro",
+  "description": "High-quality, conversion-optimized websites for contractors and small businesses",
   "start_url": "/?source=pwa",
   "scope": "/",
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone", "browser"],
   "orientation": "any",
-  "theme_color": "#10b981",
+  "theme_color": "#3B82F6",
   "background_color": "#1f2937",
-  "categories": ["business", "home improvement"],
+  "categories": ["business", "web development"],
   "lang": "en-US",
   "dir": "ltr",
   "prefer_related_applications": false,
@@ -51,44 +51,38 @@
   ],
   "shortcuts": [
     {
-      "name": "TillerPro",
-      "short_name": "Calculator",
+      "name": "Tools",
+      "short_name": "Tools",
       "url": "/tools/",
-      "description": "Open the tile calculator app",
+      "description": "Open business tools and calculators",
       "icons": [{ "src": "/assets/icons/android-chrome-192x192.png", "sizes": "192x192" }]
     },
     {
-      "name": "Tile Calculator",
-      "short_name": "Tile Calc",
-      "url": "/tools/#/calculators",
-      "description": "Calculate tile quantities"
-    },
-    {
-      "name": "View Portfolio",
+      "name": "Portfolio",
       "short_name": "Portfolio",
       "url": "/portfolio/",
-      "description": "See our tile installation work"
+      "description": "See our web design work"
     },
     {
       "name": "Get a Quote",
       "short_name": "Quote",
       "url": "/contact/",
-      "description": "Request a free estimate"
+      "description": "Request a free consultation"
     },
     {
       "name": "Our Services",
       "short_name": "Services",
       "url": "/services/",
-      "description": "View tile installation services"
+      "description": "View web development services"
     }
   ],
   "screenshots": [
     {
-      "src": "/assets/img/tillerstead-work/bathrooms/IMG_7989-800.webp",
+      "src": "/assets/images/portfolio/website-screenshot.webp",
       "sizes": "800x600",
       "type": "image/webp",
       "form_factor": "wide",
-      "label": "TCNA-compliant bathroom tile installation"
+      "label": "Professional website design example"
     }
   ]
 }

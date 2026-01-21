@@ -1,20 +1,28 @@
 # ============================
-#  Tillerstead.com — _config.yml
+#  Tough Haul LLC
+#  Professional Junk Removal & Hauling Services
 # ============================
 
 # ----------------------------
 # Site identity
 # ----------------------------
-title: "Tillerstead LLC"
-tagline: "TCNA-Compliant Tile & Stone Installation — South Jersey"
+title: "Tough Haul LLC"
+tagline: "Professional Junk Removal & Hauling Services"
 description: >-
-  Expert TCNA-compliant tile and stone installation in South Jersey. Specializing in custom showers,
-  heated floors, waterproof assemblies, and natural stone surfaces. Licensed NJ contractor
-  (HIC #13VH10808800) proudly serving Atlantic, Ocean, and Cape May Counties with precision
-  craftsmanship, transparent pricing, and direct owner oversight on every project.
-url: "https://tillerstead.com"
+  Tough Haul LLC provides professional junk removal, trash hauling,
+  furniture and appliance pickup, yard clean out, and moving services.
+  Fully insured and ready to tackle any job. Fast, reliable, and affordable hauling
+  services for homes and businesses.
+url: "https://toughhauljunk.com"
 baseurl: ""
 timezone: "America/New_York"
+
+# ----------------------------
+# Site Configuration
+# ----------------------------
+is_demo_template: false
+client_name: "Tough Haul LLC"
+industry_type: "junk-removal"
 
 # ----------------------------
 # Build settings
@@ -39,13 +47,7 @@ kramdown:
   toc_levels: 2..3
 
 # ----------------------------
-# Collections
-# ----------------------------
-# Build phases now use static /build/ folder structure
-# No collections needed
-
-# ----------------------------
-# Defaults (uniform build pages)
+# Defaults
 # ----------------------------
 defaults:
   - scope:
@@ -58,119 +60,89 @@ defaults:
 # SEO & Social
 # ----------------------------
 keywords:
-  # Primary service keywords
-  - "TCNA-compliant tile installation South Jersey"
-  - "Custom shower waterproofing New Jersey HIC contractor"
-  - "Heated floor tile systems Atlantic County"
-  - "Natural stone and marble tile New Jersey"
-  - "Large format tile installation NJ"
-  - "Licensed tile contractor Atlantic County"
-  - "Owner-supervised tile projects NJ"
-  - "Written scopes and change orders NJ"
-  # Location-based keywords
-  - "tile installer near me South Jersey"
-  - "bathroom remodel Atlantic City NJ"
-  - "tile contractor Ocean County NJ"
-  - "Cape May County tile installation"
-  - "Galloway NJ tile contractor"
-  - "Egg Harbor Township tile installer"
-  - "Margate tile and stone contractor"
-  - "Ventnor bathroom tile installation"
-  - "Brigantine custom tile work"
-  - "Somers Point tile services"
-  # Service-specific keywords
-  - "curbless shower installation NJ"
-  - "walk-in shower tile contractor"
-  - "bathroom floor heating installation"
-  - "radiant floor tile NJ"
-  - "Schluter system installer New Jersey"
-  - "Kerdi waterproofing contractor"
-  - "porcelain tile installation South Jersey"
-  - "ceramic tile contractor Atlantic County"
-  - "backsplash installation NJ"
-  - "kitchen tile contractor South Jersey"
-  - "fireplace tile surround NJ"
-  - "outdoor tile patio installation"
-  - "pool deck tile contractor NJ"
-  # Trust & quality keywords
-  - "insured tile contractor New Jersey"
-  - "bonded tile installer NJ"
-  - "professional tile setter South Jersey"
-  - "expert tile craftsmanship NJ"
-  - "warranty backed tile installation"
-  - "transparent pricing tile contractor"
-  # Long-tail keywords
-  - "best tile contractor Atlantic County reviews"
-  - "affordable tile installation South Jersey"
-  - "residential tile contractor near me"
-  - "commercial tile installation NJ"
-  - "bathroom renovation contractor South Jersey"
+  # Primary Services
+  - "junk removal"
+  - "trash hauling"
+  - "furniture pickup"
+  - "appliance removal"
+  - "yard clean out"
+  - "moving services"
+  - "debris removal"
+  - "estate cleanout"
+  # Local Keywords
+  - "junk removal near me"
+  - "local trash hauling"
+  - "affordable junk removal"
+  - "same day junk pickup"
+  - "residential junk removal"
+  - "commercial junk removal"
+  # Service Keywords
+  - "old furniture pickup"
+  - "appliance disposal"
+  - "garage cleanout"
+  - "basement cleanout"
+  - "construction debris removal"
+  - "property cleanout"
+  - "hoarding cleanup"
+  - "foreclosure cleanout"
 
 # Local business SEO
 locale: "en_US"
 geo:
-  region: "US-NJ"
-  placename: "Galloway, New Jersey"
-  position: "39.4929;-74.4824"
+  region: "US"
+  placename: "Local Service Area"
 
 # Schema.org structured data
 author:
-  name: "Tyler"
-  url: "https://tillerstead.com/about/"
+  name: "Tough Haul LLC"
+  url: "https://toughhauljunk.com/about/"
 
 webmaster_verifications:
-  google: ""  # Add Google Search Console verification code
-  bing: ""    # Add Bing Webmaster verification code
+  google: ""
+  bing: ""
 
 social:
-  name: "Tillerstead LLC"
+  name: "Tough Haul LLC"
   type: "LocalBusiness"
   links:
-    - "https://tillerstead.com"
-    - "https://www.instagram.com/tillerstead?igsh=MWg5NjlwNXBnYXM2Mg%3D%3D&utm_source=qr"
-    - "https://www.facebook.com/share/17ZQCR2zdZ/?mibextid=wwXIfr"
-    - "https://x.com/tillerstead?s=21"
+    - "https://toughhauljunk.com"
+    - "https://facebook.com/toughhauljunk"
 
 # Open Graph & Twitter Cards
 twitter:
-  username: tillerstead
+  username: toughhauljunk
   card: summary_large_image
 
-facebook:
-  publisher: "https://www.facebook.com/share/17ZQCR2zdZ/?mibextid=wwXIfr"
+logo: "/assets/img/logo/tough-haul-logo.svg"
+logo_icon: "/assets/img/logo/tough-haul-icon.svg"
+default_og_image: "/assets/img/logo/tough-haul-logo.png"
+hero_default_image: "/assets/img/logo/tough-haul-logo.png"
+assets_version: "2026-01-20.2"
 
-logo: "/assets/img/logo/tillerstead-logo-header.svg"
-default_og_image: "/assets/img/social/tillerstead-showcase.jpg"
-hero_default_image: "/assets/img/tillerstead-work/bathrooms/bathroom-accent-wall-and-shower.jpg"
-assets_version: "2025-11-23.1"
-
-# Service areas for local SEO
+# Service areas
 service_areas:
-  - "Atlantic County"
-  - "Ocean County"
-  - "Cape May County"
-  - "Burlington County"
-  - "Camden County"
-  - "Gloucester County"
+  - "Local Service Area"
+  - "Surrounding Communities"
 
 # ----------------------------
 # Business variables
 # ----------------------------
 company:
-  owner: "Tyler, Owner/Operator"
-  phone_display: "(609) 862-8808"
-  phone_link: "+16098628808"
-  hic: "13VH10808800"
-  address_line: "325 E. Jimmie Leeds Road, Suite 7-333"
-  address_city: "Galloway"
-  address_region: "NJ"
-  address_postal_code: "08205"
-  email: "info@tillerstead.com"
+  name: "Tough Haul Trash & Junk LLC"
+  owner: "Tough Haul Team"
+  phone_display: "(555) 123-4567"
+  phone_link: "+15551234567"
+  license: "Licensed & Insured"
+  address_line: ""
+  address_city: ""
+  address_region: ""
+  address_postal_code: ""
+  email: "info@toughhauljunk.com"
 
 # ----------------------------
 # UX flags
 # ----------------------------
-site_preset: "brand-2025"
+site_preset: "brand-2026"
 ui:
   animations_enabled: true
   respect_reduced_motion: true
@@ -179,35 +151,65 @@ ui:
 # Accessibility Settings
 # ----------------------------
 accessibility:
-  toolbar: false  # Set true to show a11y toolbar by default (or use ?a11y-tools URL param)
+  toolbar: false
   auto_detect_preferences: true
   text_to_speech: true
   visual_alerts: true
 
 ux:
-  cta_primary_label: "Book a TCNA-Compliant Consultation"
-  cta_secondary_label: "See Tile Services"
+  cta_primary_label: "Get a Free Quote"
+  cta_secondary_label: "Call Now"
   reassurances:
-    - "New Jersey licensed & insured • HIC #13VH10808800"
-    - "Written scopes, change orders, and transparent pricing"
-    - "Owner on site — no subcontracted labor"
-    - "Waterproof assemblies per TCNA standards"
-    - "All work documented for warranty and compliance"
+    - "Fully Licensed & Insured"
+    - "Same-Day Service Available"
+    - "Upfront Transparent Pricing"
+    - "We Do the Heavy Lifting"
+    - "Eco-Friendly Disposal"
   value_props:
-    - "Design consultations: align vision, budget, and timeline"
-    - "Transparent scheduling and material lead times"
-    - "Monthly property care plans with photo documentation"
-    - "All installations meet or exceed TCNA and manufacturer specs"
+    - "Fast, reliable junk removal you can count on"
+    - "We haul away furniture, appliances, and more"
+    - "No hidden fees - price quoted is price paid"
+    - "Professional, uniformed team"
 
 # ----------------------------
 # Forms
 # ----------------------------
 forms:
-  endpoint: "https://formsubmit.co/info@tillerstead.com"
-  guide_endpoint: "https://formsubmit.co/info@tillerstead.com"
+  endpoint: "https://formsubmit.co/info@toughhauljunk.com"
+  guide_endpoint: "https://formsubmit.co/info@toughhauljunk.com"
   redirect_path: "/success/?form=contact"
-  guide_redirect_path: "/download/nj-tile-guide/thank-you/"
-  subject: "New Tillerstead LLC inquiry — TCNA/New Jersey HIC Compliant"
+  guide_redirect_path: "/success/?form=quote"
+  subject: "New Junk Removal Quote Request"
+
+# ----------------------------
+# Client Management Options (for documentation)
+# ----------------------------
+# These are documented options for client websites:
+#
+# OPTION 1: Full GitHub Management
+#   - We maintain full control of repository
+#   - Client gets read access to see changes
+#   - All updates handled by our team
+#   - Best for: Clients who want hands-off management
+#
+# OPTION 2: GitHub Collaboration
+#   - Client owns repository
+#   - We are added as collaborators
+#   - Client can make minor edits
+#   - We handle major updates
+#   - Best for: Tech-savvy clients who want involvement
+#
+# OPTION 3: Full Transfer
+#   - We build and transfer complete ownership
+#   - Client manages independently
+#   - Available for support on hourly basis
+#   - Best for: Clients with in-house web team
+#
+# DOMAIN OPTIONS:
+#   - We can manage domain on client's behalf
+#   - Client can own domain, we configure DNS
+#   - Domain registration assistance available
+#   - SSL certificates included with all plans
 
 # ----------------------------
 # Exclusions
@@ -233,42 +235,20 @@ exclude:
   - "*.sh"
   - "*.bak*"
   - "**/*.bak*"
-  - "*.bak_keep_*"
   - ".backups"
   - "vendor/**"
   - "root-archive/**"
   - "reports"
   - "dist"
   - "vendor/bundle"
-  - "root-archive"
   - "_backup/"
   - "**/*.bak"
-  - "*.bak"
-  - "root-archive/README.md"
-  - "for-general-contractors.md"
-  - "recommended-products.md"
-  - "reviews.md"
-  - "terms/index.md"
-  - "root-archive/docs/"
-  - "root-archive/docs/**"
-  - "baseline/"
-  - "baseline/**"
-  - "*.bak.*"
-  - "**/*.bak.*"
   - "_site"
   - ".jekyll-cache"
   - ".DS_Store"
   - ".gitignore"
-  - "backup-pages"
-  - "backup-pages/**"
-  - "archive"
-  - "archive/**"
-  - "ACCESSIBILITY.md"
-  - "CHANGELOG*.md"
-  - "LOGO*.md"
-  - "README.md"
-  # Note: Don't use "*.md" - it excludes index.md and breaks the homepage
-  # Ensure assets/ or assets/css/ is NOT listed here
+  - "SHELL-*.md"
+  - "CLIENT-*.md"
 
 keep_files:
   - "CNAME"

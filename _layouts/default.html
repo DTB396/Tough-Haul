@@ -11,7 +11,7 @@
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="{{ page.og_type | default: 'website' }}" />
-  <meta property="og:site_name" content="Tillerstead LLC" />
+  <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="og:title" content="{{ og_title | escape }}" />
   <meta property="og:description" content="{{ og_desc | strip_html | truncate: 200 | escape }}" />
   <meta property="og:url" content="{{ page.url | absolute_url }}" />
@@ -20,16 +20,18 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="{{ page.twitter_card | default: 'summary_large_image' }}" />
-  <meta name="twitter:site" content="@tillerstead" />
+  <meta name="twitter:site" content="@{{ site.social.twitter | default: 'webdevpro' }}" />
   <meta name="twitter:title" content="{{ og_title | escape }}" />
   <meta name="twitter:description" content="{{ og_desc | strip_html | truncate: 200 | escape }}" />
   <meta name="twitter:image" content="{{ og_image | absolute_url }}" />
   
-  <!-- Geo/Local SEO -->
-  <meta name="geo.region" content="US-NJ" />
-  <meta name="geo.placename" content="Galloway, New Jersey" />
-  <meta name="geo.position" content="39.4784;-74.4771" />
-  <meta name="ICBM" content="39.4784, -74.4771" />
+  <!-- Geo/Local SEO - Update these values for your location -->
+  {% if site.company.geo %}
+  <meta name="geo.region" content="{{ site.company.geo.region | default: 'US' }}" />
+  <meta name="geo.placename" content="{{ site.company.geo.placename }}" />
+  <meta name="geo.position" content="{{ site.company.geo.position }}" />
+  <meta name="ICBM" content="{{ site.company.geo.icbm }}" />
+  {% endif %}
   
   <!-- Canonical -->
   <link rel="canonical" href="{{ page.canonical_url | default: page.url | absolute_url }}" />
@@ -197,12 +199,12 @@
   <section class="build-cta">
     <div class="container text-center">
       <h2>Ready to Start Your Project?</h2>
-      <p>Get a detailed estimate for your bathroom or shower remodel from a licensed NJ contractor.</p>
+      <p>Get a free consultation and project quote from our expert team.</p>
       <div class="cta-buttons">
-        <a href="/contact/" class="btn btn-light btn-lg">Request an Estimate</a>
-        <a href="tel:+16098628808" class="btn btn-outline-light btn-lg">Call (609) 862-8808</a>
+        <a href="/contact/" class="btn btn-light btn-lg">Get a Free Quote</a>
+        <a href="tel:+15551234567" class="btn btn-outline-light btn-lg">Call (555) 123-4567</a>
       </div>
-      <p class="cta-cred"><small>NJ HIC #13VH10808800 • TCNA-Compliant Methods</small></p>
+      <p class="cta-cred"><small>Licensed &amp; Insured • Industry Best Practices</small></p>
     </div>
   </section>
   {% endif %}

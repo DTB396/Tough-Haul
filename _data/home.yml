@@ -1,189 +1,206 @@
 # _data/home.yml
-# Tillerstead.com Homepage Content Data
-# NJ HIC #13VH10808800
+# Tough Haul Trash & Junk LLC - Homepage Content Data
+# Professional Junk Removal & Hauling Services
 
 hero:
-  eyebrow: "Licensed New Jersey HIC #13VH10808800"
-  eyebrow_line2: "Standards-Driven Work"
-  title: "Tile, Waterproofing & Bathroom Remodeling Built the Right Way"
-  subtitle: "Measured. Verified. Documented."
+  eyebrow: "Professional Junk Removal"
+  eyebrow_line2: "Licensed & Fully Insured"
+  title: "We Haul It All Away"
+  subtitle: "Fast. Affordable. Reliable."
   summary: >
-    Beautiful finishes start with the invisible work: flat substrates, correct materials,
-    and a waterproofing system built as a complete assembly. We follow published
-    tile industry methods and manufacturer requirements—so your bathroom performs
-    long after the final photo.
+    Got junk? We've got the muscle. Tough Haul handles furniture removal,
+    appliance pickup, yard debris, and complete property cleanouts. 
+    Same-day service available. Upfront pricing with no hidden fees.
+    We do the heavy lifting so you don't have to.
   primary:
-    label: "Request a Written Estimate"
-    url: /contact/
+    label: "Get Free Estimate"
+    url: /estimate/
   secondary:
-    label: "View Portfolio"
-    url: /portfolio/
+    label: "Call Now"
+    url: "tel:+15551234567"
   facts:
-    - icon: "badge"
-      label: "NJ HIC Licensed"
-      text: "#13VH10808800"
     - icon: "shield"
-      label: "System-Based Builds"
-      text: "Prep · Waterproof · Verify"
-    - icon: "map"
-      label: "Service Area"
-      text: "Atlantic · Ocean · Cape May"
+      label: "Fully Insured"
+      text: "Licensed & Bonded"
+    - icon: "clock"
+      label: "Same-Day"
+      text: "Service Available"
+    - icon: "truck"
+      label: "Full Service"
+      text: "We Load & Haul"
   highlights:
-    - "Substrate flatness verified for the tile size and layout plan"
-    - "Waterproofing assemblies installed as complete systems, per manufacturer specs"
-    - "Flood testing performed where required or method-appropriate (documented)"
-    - "Photo documentation available for owner records and closeout"
+    - "Furniture & appliance removal"
+    - "Complete property cleanouts"
+    - "Yard debris & waste hauling"
+    - "Moving help available"
 
 services:
-  eyebrow: "Built for Durability, Not Just Day-One Looks"
-  title: "Tile & Waterproofing<br>Services That Hold Up"
+  eyebrow: "Full-Service Junk Removal"
+  title: "We Take It<br>So You Don't Have To"
   summary: >
-    Tile performs when the assembly is built correctly: proper substrate preparation,
-    compatible mortars, verified coverage, movement accommodation, and waterproofing
-    where the application demands it. We build to published industry methods and
-    product specifications—not guesswork.
+    From a single couch to a whole house cleanout, Tough Haul handles jobs
+    of all sizes. Our professional team arrives on time, gives you an upfront
+    price, and hauls everything away. No surprises, no hidden fees.
   homeowner_note: >
-    You don’t need to speak “construction” to hire well. We explain the plan in plain language,
-    provide a written scope, and document critical steps so you know what’s behind the finish.
+    Not sure what we can take? Just show us what you've got—we'll give you
+    a quick quote on the spot. Most items we can haul same-day!
   cards:
-    - icon: tile
-      title: "Tile Installation (Ceramic & Porcelain)"
+    - icon: couch
+      title: "Furniture & Appliance Pickup"
       description: >
-        Floors and walls installed with correct prep, layout planning, and compatible materials—
-        designed for clean lines and long-term performance.
+        Old couch, broken fridge, worn mattress? We'll haul away any 
+        furniture or appliance. We do all the heavy lifting—just point
+        and we'll take it from there.
       details:
-        - "Substrate evaluated and corrected for the tile format"
-        - "Mortar and grout selected for the tile, substrate, and exposure"
-        - "Coverage verified during installation, especially in wet areas"
-        - "Movement accommodation at perimeters and changes of plane"
-        - "Layout planned to reduce awkward cuts and narrow slivers"
-      url: "/services/#tile"
+        - "Couches, recliners, and sectionals"
+        - "Mattresses and bed frames"
+        - "Refrigerators, washers, and dryers"
+        - "Stoves, dishwashers, and microwaves"
+        - "Office furniture and desks"
+      url: "/services/#furniture"
 
-    - icon: stone
-      title: "Natural Stone & Large-Format Tile"
+    - icon: trash
+      title: "Trash & Debris Removal"
       description: >
-        Stone and large-format tile require tighter tolerances, stronger support, and careful planning.
-        We build the substrate and setting system to match the material—not the other way around.
+        General trash, construction debris, renovation waste—we haul it all.
+        Perfect for post-project cleanup or when you've got more trash than
+        your regular pickup can handle.
       details:
-        - "Flatness and substrate readiness addressed for large-format requirements"
-        - "Setting methods selected to support full contact and long-term stability"
-        - "Materials matched to stone type and manufacturer specifications"
-        - "Sealers used where appropriate, based on product data and application"
-        - "Heat, sunlight, and transitions considered in the plan"
-      url: "/services/#stone"
+        - "General household trash and clutter"
+        - "Construction and renovation debris"
+        - "Garage and basement cleanouts"
+        - "Attic cleanouts and storage cleanup"
+        - "Post-event cleanup services"
+      url: "/services/#trash"
 
-    - icon: waterproofing
-      title: "Shower Waterproofing Systems"
+    - icon: tree
+      title: "Yard Clean Out"
       description: >
-        Wet areas are built as waterproofing assemblies first—then tiled. We use membranes and system components
-        appropriate to the application, detailed at corners, penetrations, and drains, and verified before finishes.
+        Branches, brush, leaves, and outdoor junk—we clean it up and haul
+        it away. Get your yard back in shape without lifting a finger.
       details:
-        - "Membrane and drain integration planned as one coherent system"
-        - "Corners, seams, niches, curbs, and penetrations detailed per system requirements"
-        - "Slope and drainage confirmed before tile installation"
-        - "Flood testing performed where required or method-appropriate (documented)"
-        - "Closeout guidance provided for care and long-term maintenance"
-      url: "/services/#waterproofing"
+        - "Branches, brush, and tree limbs"
+        - "Leaves and lawn debris"
+        - "Old fencing and deck materials"
+        - "Outdoor furniture and grills"
+        - "Sheds and play equipment removal"
+      url: "/services/#yard"
 
   actions:
     primary:
-      label: "Request a Written Estimate"
+      label: "Get a Free Quote"
       url: /contact/
     secondary:
-      label: "Explore the Portfolio"
-      url: /portfolio/
+      label: "Call Now"
+      url: "tel:+15551234567"
 
   note: >
-    Work is performed using published tile industry methods and applicable product standards,
-    with written scope, change orders (if needed), and warranty terms provided before work begins.
+    We recycle and donate whenever possible. Eco-friendly disposal is part
+    of every job.
 
 process:
-  eyebrow: "A Clear Sequence You Can Understand"
-  title: "Transparent Workflow.<br>Written Scope.<br>Verified Steps."
+  eyebrow: "Simple 3-Step Process"
+  title: "Easy Junk Removal.<br>No Hassle.<br>No Heavy Lifting."
   summary: >
-    A bathroom remodel runs smoothly when decisions are made early and the build follows a defined order.
-    We keep scope clear, document key phases, and confirm readiness before moving forward.
+    Getting rid of junk shouldn't be complicated. We make it simple—schedule,
+    we show up, we haul it away. Done.
   fun_fact: >
-    Many failures originate before the first tile is installed. That’s why we focus on substrate readiness,
-    water management, and verification before finishes conceal the work.
+    The average home accumulates over 300,000 items. Don't let clutter take 
+    over—we'll help you reclaim your space!
   steps:
-    - title: "Site Assessment & Scope Definition"
+    - title: "Schedule Your Pickup"
+      icon: calendar
+      description: >
+        Call or book online. We'll set up a convenient time that works for 
+        your schedule—including same-day and weekend appointments.
+
+    - title: "We Give You a Price"
       icon: clipboard
       description: >
-        We review the space, identify constraints, and define scope boundaries—so the estimate matches reality.
+        Our team arrives, assesses the job, and gives you an upfront price.
+        No hidden fees, no surprises. You approve it before we start.
 
-    - title: "Written Estimate & Approval"
-      icon: document
+    - title: "We Haul It Away"
+      icon: truck
       description: >
-        You receive a written proposal outlining scope, materials, sequencing, and warranty terms.
-        Work begins after approval.
+        We do all the heavy lifting, loading, and hauling. Your junk is gone,
+        your space is clear, and you didn't break a sweat.
 
-    - title: "Build, Verify, Document"
-      icon: check-circle
+    - title: "Responsible Disposal"
+      icon: recycle
       description: >
-        We prepare surfaces, construct waterproofing assemblies where needed, and verify readiness before tile goes in.
-        Key phases are documented.
-
-    - title: "Closeout & Owner Packet"
-      icon: check-circle
-      description: >
-        Walkthrough, care guidance, warranty paperwork, and a photo record of critical stages suitable for owner records.
+        We donate usable items and recycle what we can. We're committed to
+        keeping as much as possible out of landfills.
 
 materials:
-  eyebrow: "Materials Selected for the Application"
-  title: "The Right Components for Wet Areas and High-Traffic Spaces"
+  eyebrow: "What We Haul"
+  title: "If It Fits in Our Truck, We Take It"
   summary: >
-    Materials are selected based on substrate, exposure, and performance requirements—not convenience.
-    Mortars, membranes, and grouts are specified in writing and matched to the installation system.
+    From single items to full property cleanouts, we handle just about
+    everything. Here's a sample of what we commonly haul away.
   callout: >
-    We don’t substitute “one-size-fits-all” products for system components without written approval.
-    Product selection follows published data sheets and the requirements of the method used.
+    Not sure if we can take it? Just ask! We'll let you know—most items
+    are no problem at all.
   items:
-    - icon: tile
-      title: "Mortars & Grouts"
+    - icon: couch
+      title: "Furniture"
       description: >
-        Mortars and grouts are selected based on tile type, size, substrate, and service conditions.
+        Couches, tables, chairs, desks, dressers, mattresses, bed frames—
+        any furniture, any size.
       points:
-        - "Compatible mortars selected for performance and environment"
-        - "Grout selected for joint width, cleaning needs, and exposure"
-        - "Higher-performance options used when the application demands it"
+        - "Living room and bedroom furniture"
+        - "Office furniture and cubicles"
+        - "Outdoor furniture and patio sets"
 
-    - icon: waterproofing
-      title: "Waterproofing Components"
+    - icon: appliance
+      title: "Appliances"
       description: >
-        Waterproofing systems are chosen by application and integrated as complete assemblies, including drain connection and detailing.
+        Refrigerators, washers, dryers, stoves, dishwashers, water heaters,
+        AC units—we haul them all.
       points:
-        - "Membranes and accessories selected as a matched system"
-        - "Seams and penetrations detailed per manufacturer requirements"
-        - "Verification performed before finishes conceal the work"
+        - "Kitchen and laundry appliances"
+        - "HVAC equipment and water heaters"
+        - "Small appliances and electronics"
 
-    - icon: stone
-      title: "Natural Stone & Specialty Materials"
+    - icon: construction
+      title: "Construction Debris"
       description: >
-        Stone installations are planned around support, compatibility, and maintenance expectations.
+        Drywall, lumber, roofing, flooring, tile—cleanup from your 
+        renovation or construction project.
       points:
-        - "Stone-appropriate prep and setting materials"
-        - "Sealers used where appropriate per product data"
-        - "Finish and maintenance guidance provided at closeout"
+        - "Renovation and remodel debris"
+        - "Roofing and siding materials"
+        - "Flooring, tile, and carpet"
 
-  note: "Every installation is built as an assembly and documented for owner records."
+  note: "We cannot haul hazardous materials, chemicals, or certain regulated items. Ask us for details."
 
 testimonials:
-  eyebrow: "Verified Client Feedback"
-  title: "Real Reviews from Real South Jersey Homeowners"
+  eyebrow: "What Our Customers Say"
+  title: "5-Star Service, Every Time"
   limit: 3
   reviews: null # uses site.data.reviews.reviews by default
 
-cta:
-  eyebrow: "Start with a Written Scope"
-  title: "Request a Written Estimate You Can Trust"
-  summary: >
-    Clear scope, transparent pricing, and documentation you can keep.
-    Licensed New Jersey HIC #13VH10808800—serving Atlantic, Ocean & Cape May Counties.
-  primary:
-    label: "Request a Written Estimate"
-    url: /contact/
-  secondary:
-    label: "Call/Text"
-    url: "tel:+16098628808"
-  note: "NJ HIC #13VH10808800 · Serving Atlantic, Ocean & Cape May"
+why_us:
+  eyebrow: "Why Choose Tough Haul"
+  title: "Professional Service You Can Trust"
+  items:
+    - title: "Fully Insured"
+      description: "Licensed, bonded, and insured for your peace of mind."
+    - title: "Upfront Pricing"
+      description: "No hidden fees. The price we quote is the price you pay."
+    - title: "Same-Day Service"
+      description: "Need it gone today? We offer same-day pickup when available."
+    - title: "We Do the Work"
+      description: "No lifting required. We handle everything from start to finish."
+
+trust_bar:
+  items:
+    - icon: "shield"
+      label: "Fully Insured"
+      text: "Licensed & Bonded"
+    - icon: "clock"
+      label: "Fast Service"
+      text: "Same-Day Available"
+    - icon: "star"
+      label: "5-Star Rated"
+      text: "Customer Satisfaction"

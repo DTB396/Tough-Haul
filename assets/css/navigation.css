@@ -109,7 +109,38 @@
   display: block;
   border-radius: 6px;
   overflow: visible;
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 0.2s ease;
+}
+
+/* Responsive logo variants - Full logo vs Icon */
+.ts-header__logo--full {
+  display: block;
+  width: auto;
+  height: 75px;
+  max-height: 75px;
+  object-fit: contain;
+  filter: brightness(1.1) drop-shadow(0 4px 12px rgb(200 50 80 / 40%));
+  transition: all 0.3s ease;
+}
+
+.ts-header__logo--icon {
+  display: none;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: brightness(1.1) drop-shadow(0 3px 8px rgb(200 50 80 / 40%));
+  transition: all 0.3s ease;
+}
+
+/* Mobile: show icon, hide full logo */
+@media (max-width: 768px) {
+  .ts-header__logo--full {
+    display: none;
+  }
+  
+  .ts-header__logo--icon {
+    display: block;
+  }
 }
 
 /* Logo image - direct img element with ts-header__logo class */
@@ -121,15 +152,17 @@
   max-height: 80px;
   object-fit: contain;
 
-  /* White solid bright with emerald glow */
-  filter: brightness(1.1) drop-shadow(0 4px 12px rgb(16 185 129 / 40%));
+  /* White solid bright with crimson glow */
+  filter: brightness(1.1) drop-shadow(0 4px 12px rgb(200 50 80 / 40%));
   transition: all 0.3s ease;
 }
 
-/* Gold glow on hover */
+/* Gold/crimson glow on hover */
 .ts-header__logo.logo-image:hover,
-.ts-header__logo .logo-image:hover {
-  filter: brightness(1.2) drop-shadow(0 6px 20px rgb(201 162 39 / 70%));
+.ts-header__logo .logo-image:hover,
+.ts-header__logo--full:hover,
+.ts-header__logo--icon:hover {
+  filter: brightness(1.2) drop-shadow(0 6px 20px rgb(196 30 58 / 70%));
 }
 
 @keyframes logo-glow {
@@ -140,19 +173,6 @@
   50% {
     filter: drop-shadow(0 2px 16px rgb(16 185 129 / 50%));
   }
-}
-
-/* Bounce animation on scroll */
-.ts-header__logo.bounce {
-  animation: logo-bounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-@keyframes logo-bounce {
-  0% { transform: scale(1) translateY(0); }
-  30% { transform: scale(0.9) translateY(4px); }
-  50% { transform: scale(1.15) translateY(-8px); }
-  70% { transform: scale(0.95) translateY(2px); }
-  100% { transform: scale(1) translateY(0); }
 }
 
 .ts-header__info {
@@ -204,6 +224,17 @@
 .ts-header--minimized .ts-header__logo .logo-image {
   height: 56px;
   max-height: 56px;
+}
+
+/* Minimized state for responsive logos */
+.ts-header--minimized .ts-header__logo--full {
+  height: 56px;
+  max-height: 56px;
+}
+
+.ts-header--minimized .ts-header__logo--icon {
+  width: 40px;
+  height: 40px;
 }
 
 .ts-header--minimized .ts-header__branding {

@@ -1,45 +1,95 @@
 <section class="portfolio-gallery">
   <div class="container">
-    <!-- Filter Buttons -->
-    <nav class="portfolio-filters" role="navigation" aria-label="Portfolio filters">
-      <button class="filter-btn active" data-filter="all" aria-label="Show all projects">All Projects</button>
-      <button class="filter-btn" data-filter="showers" aria-label="Filter by showers">Showers</button>
-      <button class="filter-btn" data-filter="floors" aria-label="Filter by floors">Floors</button>
-      <button class="filter-btn" data-filter="backsplash" aria-label="Filter by backsplash">Backsplash</button>
-      <button class="filter-btn" data-filter="large-format" aria-label="Filter by large-format tile">Large-Format</button>
-      <button class="filter-btn" data-filter="prep" aria-label="Filter by prep and waterproofing">Prep</button>
-    </nav>
+    <header class="section-header text-center">
+      <span class="eyebrow">What We Haul</span>
+      <h2 id="portfolio-heading" class="heading-2">We Take It All</h2>
+      <p class="lead">From single items to complete property cleanouts—we've got you covered.</p>
+    </header>
 
-    <!-- Project Grid -->
-    <div class="project-grid ts-portfolio-tiled" role="region" aria-live="polite">
-      {% assign projects = site.data.portfolio.projects | sort: 'priority' | reverse %}
-      {% for project in projects %}
-      <article class="project-card" data-tags="{{ project.tags | join: ' ' }}">
-        <div class="project-image">
-          <img 
-            src="{{ project.file }}" 
-            alt="{{ project.alt }}"
-            loading="lazy"
-          />
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">{{ project.title }}</h3>
-          <p class="project-caption">{{ project.caption }}</p>
-          {% if project.tags %}
-          <div class="project-tags">
-            {% for tag in project.tags %}
-            <span class="tag">{{ tag }}</span>
-            {% endfor %}
-          </div>
-          {% endif %}
-        </div>
-      </article>
-      {% endfor %}
+    <!-- What We Haul Grid -->
+    <div class="haul-items-grid">
+      <div class="haul-item">
+        <span class="haul-item__icon">🛋️</span>
+        <h3>Furniture</h3>
+        <p>Couches, tables, chairs, beds, dressers—any size</p>
+      </div>
+      <div class="haul-item">
+        <span class="haul-item__icon">🧊</span>
+        <h3>Appliances</h3>
+        <p>Fridges, washers, dryers, stoves, AC units</p>
+      </div>
+      <div class="haul-item">
+        <span class="haul-item__icon">📺</span>
+        <h3>Electronics</h3>
+        <p>TVs, computers, monitors, printers</p>
+      </div>
+      <div class="haul-item">
+        <span class="haul-item__icon">🛏️</span>
+        <h3>Mattresses</h3>
+        <p>Any size mattress and box spring</p>
+      </div>
+      <div class="haul-item">
+        <span class="haul-item__icon">🌿</span>
+        <h3>Yard Debris</h3>
+        <p>Branches, brush, leaves, fencing</p>
+      </div>
+      <div class="haul-item">
+        <span class="haul-item__icon">🏗️</span>
+        <h3>Construction</h3>
+        <p>Drywall, lumber, tile, flooring debris</p>
+      </div>
     </div>
 
-    <!-- Compliance Note -->
-    <div class="portfolio-note">
-      <p>{{ site.data.portfolio.meta.compliance_note }}</p>
+    <!-- CTA -->
+    <div class="section-action text-center">
+      <p class="haul-note">Not sure if we can take it? Just ask—we haul almost everything!</p>
+      <a href="/estimate/" class="btn btn--primary">Get Free Estimate</a>
     </div>
   </div>
 </section>
+
+<style>
+.haul-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.haul-item {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--color-surface, #fff);
+  border-radius: 1rem;
+  border: 1px solid var(--color-border, #e5e7eb);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.haul-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.haul-item__icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.haul-item h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.haul-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted, #6b7280);
+}
+
+.haul-note {
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: var(--color-text-muted, #6b7280);
+}
+</style>

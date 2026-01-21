@@ -1,0 +1,53 @@
+{% comment %}
+============================================================
+WHY CHOOSE US SECTION
+Highlights competitive differentiators
+============================================================
+{% endcomment %}
+
+{% assign why_data = include.data | default: site.data.home.why_us %}
+
+{% if why_data %}
+<div class="why-us">
+  <div class="container">
+    {% if why_data.heading %}
+    <h2 id="why-us-heading" class="section-heading">{{ why_data.heading }}</h2>
+    {% endif %}
+    
+    {% if why_data.subheading %}
+    <p class="section-subheading">{{ why_data.subheading }}</p>
+    {% endif %}
+
+    <div class="why-us__grid">
+      {% for point in why_data.points %}
+      <div class="why-us__item">
+        {% if point.icon %}
+        <div class="why-us__icon">
+          <svg aria-hidden="true" focusable="false" width="48" height="48">
+            <use href="#icon-{{ point.icon }}"></use>
+          </svg>
+        </div>
+        {% endif %}
+        
+        <h3 class="why-us__title">{{ point.title }}</h3>
+        <p class="why-us__description">{{ point.description }}</p>
+        
+        {% if point.details %}
+        <ul class="why-us__details">
+          {% for detail in point.details %}
+          <li>{{ detail }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if why_data.cta %}
+    <div class="why-us__cta">
+      <a href="{{ why_data.cta.url }}" class="btn btn--primary">{{ why_data.cta.text }}</a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}

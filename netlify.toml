@@ -1,10 +1,10 @@
-# Netlify build configuration for Tillerstead LLC
+# Netlify build configuration for WebDevPro
 # Deployment standards: see /.ai/OUTPUT_RULES.md
-# NJ HIC License, TCNA compliance, and accessibility enforced per /.ai/COMPLIANCE.md and _data/compliance.yml
+# Accessibility enforced per /.ai/COMPLIANCE.md and _data/compliance.yml
 
 [build]
-  command = "npm run build:site" # Runs Jekyll build with TCNA/NJ HIC-compliant config
-  publish = "_site"              # Output directory for static site, per OUTPUT_RULES.md
+  command = "npm run build:site" # Runs Jekyll build
+  publish = "_site"              # Output directory for static site
 
 [build.environment]
   RUBY_VERSION = "3.2.2"         # Matches Gemfile.lock for Jekyll compatibility

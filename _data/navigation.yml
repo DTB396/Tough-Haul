@@ -1,91 +1,65 @@
 # =========================================================
-# Tillerstead Navigation - 2026 Contractor UX
+# Tough Haul Navigation - Junk Removal Business
 # Data-driven nav for desktop dropdowns + mobile accordions
 # =========================================================
 
 primary:
-  # --- Top-level links (no dropdown) ---
+  # --- Services ---
   - id: services
     title: "Services"
     url: "/services/"
     match: "^/services(/|$)"
-
-  - id: portfolio
-    title: "Our Work"
-    url: "/portfolio/"
-    match: "^/portfolio(/|$)"
-
-  # --- Build Guides dropdown ---
-  - id: build
-    title: "Guides"
-    url: "/build/"
-    match: "^/build(/|$)"
     has_dropdown: true
     children:
-      - id: codes-permits
-        title: "Codes & Permits"
-        url: "/build/nj-codes-permits/"
-      - id: shower-pans-slopes
-        title: "Shower Pans & Slopes"
-        url: "/build/shower-pans-slopes-drains/"
-      - id: waterproofing-systems
-        title: "Waterproofing Systems"
-        url: "/build/waterproofing-systems/"
-      - id: curbs-curbless
-        title: "Curbless Showers"
-        url: "/build/curbs-curbless/"
-      - id: benches-niches
-        title: "Benches & Niches"
-        url: "/build/framing-benches-niches/"
-      - id: tile-standards
-        title: "Tile Standards (TCNA)"
-        url: "/build/tile-installation-standards/"
-      - id: flood-testing
-        title: "Flood Testing"
-        url: "/build/flood-testing/"
-      - id: common-failures
-        title: "Common Build Failures"
-        url: "/build/common-build-failures/"
+      - id: furniture
+        title: "Furniture & Appliance Pickup"
+        url: "/services/#furniture"
+      - id: trash
+        title: "Trash & Debris Removal"
+        url: "/services/#trash"
+      - id: yard
+        title: "Yard Clean Out"
+        url: "/services/#yard"
+      - id: moving
+        title: "Moving Help"
+        url: "/services/#moving"
+      - id: cleanout
+        title: "Property Cleanouts"
+        url: "/services/#cleanout"
 
-  - id: blog
-    title: "Blog"
-    url: "/blog/"
-    match: "^/blog(/|$)"
+  # --- Free Estimate ---
+  - id: estimate
+    title: "Free Estimate"
+    url: "/estimate/"
+    match: "^/estimate(/|$)"
 
-  - id: reviews
-    title: "Reviews"
-    url: "/reviews/"
-    match: "^/reviews(/|$)"
+  # --- Pricing ---
+  - id: pricing
+    title: "Pricing"
+    url: "/pricing/"
+    match: "^/pricing(/|$)"
 
-  - id: tools
-    title: "Tools"
-    url: "/tools/"
-    match: "^/tools(/|$)"
-
-  # --- About dropdown (merged Company + About) ---
+  # --- About ---
   - id: about
     title: "About"
     url: "/about/"
     match: "^/about(/|$)"
     has_dropdown: true
-    aria_label: "About Tillerstead"
+    aria_label: "About Tough Haul"
     children:
       - id: about-us
-        title: "Our Story"
+        title: "About Us"
         url: "/about/"
-      - id: for-gcs
-        title: "For Contractors"
-        url: "/for-general-contractors/"
+      - id: reviews
+        title: "Reviews"
+        url: "/reviews/"
       - id: faq
         title: "FAQ"
         url: "/faq/"
-      - id: products
-        title: "Products We Use"
-        url: "/products/"
 
   # --- Contact CTA (standalone) ---
   - id: contact
-    title: "Get Estimate"
+    title: "Get a Quote"
     url: "/contact/"
     match: "^/contact(/|$)"
     cta: true
@@ -98,52 +72,46 @@ secondary:
     title: "Terms"
     url: "/terms/"
 
+# Mobile-specific adjustments (if needed)
+mobile:
+  show_phone: true
+  collapse_dropdowns: true
+
+# Footer navigation groups
 footer:
-  - group: "Service Areas"
+  - group: "Services"
     items:
-      - title: "Atlantic County"
-        url: "/atlantic-county-nj/"
-      - title: "Ocean County"
-        url: "/ocean-county-nj/"
-      - title: "Cape May County"
-        url: "/cape-may-county-nj/"
-  - group: "Learn"
-    items:
-      - title: "FAQ"
-        url: "/faq/"
-      - title: "Products"
-        url: "/products/"
-      - title: "Blog"
-        url: "/blog/"
-  - group: "Build Guides"
-    items:
-      - title: "Codes & Permits"
-        url: "/build/nj-codes-permits/"
-      - title: "Shower Pans & Slopes"
-        url: "/build/shower-pans-slopes-drains/"
-      - title: "Waterproofing Systems"
-        url: "/build/waterproofing-systems/"
-      - title: "Curbless Showers"
-        url: "/build/curbs-curbless/"
-      - title: "Benches & Niches"
-        url: "/build/framing-benches-niches/"
-      - title: "Tile Standards (TCNA)"
-        url: "/build/tile-installation-standards/"
-      - title: "Flood Testing"
-        url: "/build/flood-testing/"
-      - title: "Common Build Failures"
-        url: "/build/common-build-failures/"
+      - title: "Furniture Pickup"
+        url: "/services/#furniture"
+      - title: "Trash Removal"
+        url: "/services/#trash"
+      - title: "Yard Clean Out"
+        url: "/services/#yard"
+      - title: "Moving Help"
+        url: "/services/#moving"
+      - title: "Property Cleanouts"
+        url: "/services/#cleanout"
+        
   - group: "Company"
     items:
-      - title: "About"
+      - title: "About Us"
         url: "/about/"
-      - title: "For Contractors"
-        url: "/for-general-contractors/"
+      - title: "Reviews"
+        url: "/reviews/"
+      - title: "FAQ"
+        url: "/faq/"
       - title: "Contact"
         url: "/contact/"
-  - group: "Legal"
+        
+  - group: "Quick Links"
     items:
-      - title: "Privacy"
+      - title: "Free Estimate"
+        url: "/estimate/"
+      - title: "Get a Quote"
+        url: "/contact/"
+      - title: "Pricing"
+        url: "/pricing/"
+      - title: "Privacy Policy"
         url: "/privacy/"
-      - title: "Terms"
+      - title: "Terms of Service"
         url: "/terms/"

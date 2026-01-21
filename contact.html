@@ -1,32 +1,80 @@
 ---
 layout: default
-title: "Contact | Tillerstead | NJ Tile & Bathroom Remodeling"
-description: "Get in touch with Tillerstead LLC for TCNA-compliant tile and bathroom remodeling services in South Jersey. Licensed, insured, and owner-supervised."
+title: Contact | Tough Haul Trash & Junk LLC
+description: >-
+  Get in touch with Tough Haul for fast, affordable junk removal services.
+  Free estimates, upfront pricing, and same-day service available.
 permalink: /contact/
 body_class: page-contact
-meta_title: "Contact Tillerstead | NJ Tile & Bathroom Remodeling Experts"
-meta_description: "Contact Tillerstead LLC for TCNA-compliant tile and bathroom remodeling services in South Jersey. Licensed, insured, and owner-supervised."
+meta_title: Contact Tough Haul | Free Junk Removal Estimate
+meta_description: >-
+  Contact Tough Haul for a free junk removal estimate. Fast, affordable
+  hauling services for furniture, appliances, yard debris, and property cleanouts.
 stylesheets:
   - /assets/css/pages/contact.css
 ---
 
+
 <main class="ts-section ts-surface contact" aria-labelledby="contact-heading" role="main" tabindex="-1">
   <header class="contact-intro">
-    <h1 id="contact-heading">Contact Tillerstead LLC</h1>
+    <h1 id="contact-heading">Get Your Free Estimate</h1>
     <p class="lead">
-      Ready for a tile or bathroom remodel done right? Tillerstead LLC is licensed, insured, and owner-supervised. We serve Atlantic, Ocean, and Cape May Counties with TCNA-compliant systems and clear, honest communication.
+      Got junk? Let us know what you need hauled away and we'll give you an upfront price.
+      No hidden fees, no surprises—just fast, reliable service.
     </p>
     <ul class="ts-list">
-      <li><strong>Phone:</strong> <a href="tel:{{ site.company.phone_link }}">{{ site.company.phone_display }}</a></li>
       <li><strong>Email:</strong> <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a></li>
-      <li><strong>HIC License:</strong> #{{ site.company.hic }} (New Jersey Home Improvement Contractor)</li>
+      <li><strong>Phone:</strong> <a href="tel:{{ site.company.phone_link }}">{{ site.company.phone_display }}</a></li>
+      <li><strong>Response Time:</strong> Within 24 hours (usually same-day!)</li>
     </ul>
   </header>
 
+  <!-- What to Expect -->
+  <section class="contact-expect">
+    <h2>What to Expect</h2>
+    <div class="contact-expect__grid">
+      <div class="contact-expect__item">
+        <span class="contact-expect__number">1</span>
+        <h3>Quick Response</h3>
+        <p>We'll respond within 24 hours to discuss your junk removal needs.</p>
+      </div>
+      <div class="contact-expect__item">
+        <span class="contact-expect__number">2</span>
+        <h3>Upfront Quote</h3>
+        <p>We'll give you an honest price based on what you need hauled.</p>
+      </div>
+      <div class="contact-expect__item">
+        <span class="contact-expect__number">3</span>
+        <h3>Fast Pickup</h3>
+        <p>Schedule a convenient time—same-day service often available!</p>
+      </div>
+    </div>
+  </section>
+
   <section aria-labelledby="form-heading">
-    <h2 id="form-heading">Request an Estimate or Consultation</h2>
-    <p>Contact us today to schedule a consultation or request a free estimate for your tile or bathroom remodeling project. We look forward to working with you to create a space that is both beautiful and functional.</p>
+    <h2 id="form-heading">Tell Us What You Need Hauled</h2>
+    <p>Fill out the form below and we'll get back to you within 24 hours.</p>
     {% include forms/contact.html %}
+  </section>
+
+  <!-- Service Info -->
+  <section class="contact-options">
+    <h2>What We Haul</h2>
+    <p>Not sure if we can take it? Just ask—we haul almost everything!</p>
+    <div class="contact-options__grid">
+      <div class="contact-option">
+        <h3>🛋️ Furniture & Appliances</h3>
+        <p>Couches, beds, fridges, washers, dryers—any size, any weight. We do the lifting.</p>
+      </div>
+      <div class="contact-option">
+        <h3>🗑️ Trash & Debris</h3>
+        <p>General junk, construction debris, renovation waste, garage cleanouts—you name it.</p>
+      </div>
+      <div class="contact-option">
+        <h3>🌿 Yard Waste</h3>
+        <p>Branches, brush, leaves, old fencing, outdoor furniture—we clean it all up.</p>
+      </div>
+    </div>
   </section>
 </main>
 

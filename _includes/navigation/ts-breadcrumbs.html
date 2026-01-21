@@ -1,8 +1,10 @@
-{% comment %} Tillerstead.com Breadcrumbs Component Semantic, accessible
-navigation with SEO optimization TCNA-compliant, New Jersey HIC compliant, WCAG
-2.1 AA+ - Responsive mobile truncation with ellipsis - Optimized touch targets
-for all devices - Clear navigation hierarchy - Structured data for search
-engines {% endcomment %} {%- assign is_home = page.url == '/' or page.url ==
+{% comment %} Breadcrumbs Component - Semantic, accessible
+navigation with SEO optimization - WCAG 2.1 AA+
+- Responsive mobile truncation with ellipsis 
+- Optimized touch targets for all devices 
+- Clear navigation hierarchy 
+- Structured data for search engines 
+{% endcomment %} {%- assign is_home = page.url == '/' or page.url ==
 '/index.html' or page.is_home == true -%} {%- assign render_breadcrumbs = true
 -%} {%- comment -%} Never show breadcrumbs on homepage {%- endcomment -%} {%- if
 is_home or page.show_breadcrumbs == false -%} {%- assign render_breadcrumbs =
@@ -59,15 +61,13 @@ current_path = '' -%} {%- assign json_items = '' -%}
         itemprop="item"
       >
         <span itemprop="name"
-          >Home – Tillerstead: New Jersey licensed Tile & Remodeling
-          Contractor</span
+          >Home – {{ site.title }}</span
         >
       </a>
       <meta itemprop="position" content="{{ crumb_position }}" />
     </li>
     {%- assign json_items = json_items | append:
-    '{"@type":"ListItem","position":1,"name":"Home – Tillerstead: New Jersey
-    licensed Tile & Remodeling Contractor","item":"' | append: site.url |
+    '{"@type":"ListItem","position":1,"name":"Home – ' | append: site.title | append: '","item":"' | append: site.url |
     append: '/"}' -%} {%- assign crumb_position = crumb_position | plus: 1 -%}
     {%- if parent_label and parent_path != '' -%}
     <li

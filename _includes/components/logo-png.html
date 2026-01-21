@@ -1,0 +1,22 @@
+{% comment %}
+  Logo Header Component - PNG Version
+  Displays the company logo as an image
+  
+  Parameters:
+  - class: Additional CSS classes
+  - max_height: Maximum height (default: 60px)
+{% endcomment %}
+
+{% assign logo_class = include.class | default: '' %}
+{% assign max_height = include.max_height | default: '60px' %}
+
+<a href="{{ '/' | relative_url }}" class="site-logo {{ logo_class }}" aria-label="{{ site.title }} - Home">
+  <img 
+    src="{{ site.logo | relative_url }}" 
+    alt="{{ site.title }} Logo" 
+    class="site-logo__img"
+    style="max-height: {{ max_height }}; width: auto; height: auto;"
+    loading="eager"
+    decoding="async"
+  >
+</a>

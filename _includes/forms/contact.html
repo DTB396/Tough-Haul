@@ -1,25 +1,27 @@
 <!-- 
   _includes/forms/contact.html
   WCAG 2.1 AA/AAA Compliant Contact Form
-  Uses FormSubmit.co for direct email delivery to info@tillerstead.com
+  Uses FormSubmit.co for direct email delivery
   - Proper labels with for/id relationships
   - aria-required and aria-describedby for validation
   - Error messaging linked to fields
   - Focus management for errors
   - Screen reader announcements via aria-live
+  
+  UPDATE: Change the action email and _next URL to your client's values
 -->
 <form
   class="ts-form contact-form"
   name="contact"
   id="contact-form"
   method="POST"
-  action="https://formsubmit.co/info@tillerstead.com"
+  action="https://formsubmit.co/{{ site.contact.email | default: 'your-email@example.com' }}"
   aria-label="Contact request form"
   novalidate
 >
   <!-- FormSubmit.co configuration -->
-  <input type="hidden" name="_subject" value="New Tillerstead LLC inquiry — TCNA/New Jersey HIC Compliant" />
-  <input type="hidden" name="_next" value="https://tillerstead.com/success/?form=contact" />
+  <input type="hidden" name="_subject" value="New {{ site.title }} Website Inquiry" />
+  <input type="hidden" name="_next" value="{{ site.url }}/success/?form=contact" />
   <input type="hidden" name="_template" value="table" />
   <input type="hidden" name="_captcha" value="false" />
 
