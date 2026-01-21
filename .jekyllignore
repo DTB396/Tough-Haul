@@ -1,0 +1,77 @@
+# Jekyll Ignore - Exclude from _site build
+# ===========================================
+
+# Development & Build Tools
+node_modules/
+.cache/
+.sass-cache/
+.jekyll-cache/
+.bundle/
+vendor/
+profile/
+
+# Sandbox & Testing
+tillerstead-sandbox/
+**/tillerstead-sandbox/
+
+# Old Assets (Tillerstead tile company - no longer needed)
+assets/img/tillerstead-work/
+assets/img/concepts/
+assets/img/logo/tillerstead*
+assets/img/logo/*wolf*
+assets/img/logo/4k-logo.png
+assets/img/logo/android-chrome-512.png
+assets/img/*tile*.svg
+assets/img/sacred*.svg
+assets/img/vesica*.svg
+assets/img/flower*.svg
+assets/img/metatrons*.svg
+assets/img/moroccan*.svg
+assets/img/basketweave*.svg
+assets/img/hexagon*.svg
+assets/img/herringbone*.svg
+assets/img/grid*.svg
+assets/img/subway*.svg
+assets/downloads/nj-tile-guide.*
+
+# Build Output (old)
+_site/
+.jekyll-metadata
+
+# Scripts & Tooling
+scripts/test-results/
+scripts/command-center/
+tillerstead-toolkit/
+
+# Documentation
+docs/
+profile/
+build/
+*.md
+!README.md
+!LICENSE
+
+# Reports
+*-report.json
+*-report.html
+*-audit*.md
+*-report.md
+lighthouse-report.html
+bandit-report.json
+compliance-audit-report.*
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

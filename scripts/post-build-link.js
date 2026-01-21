@@ -41,9 +41,9 @@ function createJunction() {
 }
 
 function main() {
-  ensureSiteDir();
-  removeExistingLink();
-  createJunction();
+  // Disabled - not needed for GitHub Pages deployment
+  // This was creating a 48MB symlink loop in _site
+  console.log('Post-build link skipped (not needed for production)');
 }
 
 main();
