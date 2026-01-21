@@ -1,88 +1,207 @@
 # =============================================================================
 # REVIEWS.YML - Tough Haul Trash & Junk LLC Reviews
 # =============================================================================
-# Customer reviews for junk removal services.
+# Real Google reviews from verified customers
+# 23 total reviews | 4.8 average rating
 # =============================================================================
 
 reviews:
-  - name: "Mike Johnson"
-    business: ""
-    location: "Local Area"
-    date: "2026-01-10"
+  - name: "Rita Marcon"
+    business: "Dr. Marcon"
+    location: "Atlantic County, NJ"
+    date: "2026-01-14"
     rating: 5
     text: >
-      These guys are amazing! They showed up on time, gave me an upfront price,
-      and hauled away my old couch and two mattresses in no time. Super professional
-      and way easier than trying to do it myself. Will definitely use again!
-    service: "Furniture Pickup"
+      Gabriel really helped me out by getting rid of multiple bags of garbage and boxes 
+      from my mom's house for a very reasonable price. He and his team were prompt, 
+      professional, and very friendly. I will definitely be using his services in the 
+      future and I highly recommend him for your disposal needs.
+    service: "Property Cleanout"
     source: "Google"
 
-  - name: "Sarah Martinez"
+  - name: "Kim Russo"
     business: ""
-    location: "Local Area"
-    date: "2025-12-15"
+    location: "Atlantic County, NJ"
+    date: "2025-12-21"
     rating: 5
     text: >
-      Used Tough Haul for a garage cleanout before moving. They took everything—
-      old furniture, boxes of junk, broken appliances. The crew was friendly,
-      fast, and the price was very fair. Highly recommend!
-    service: "Garage Cleanout"
+      I can't express enough gratitude and praise for Gabriel and Tough Haul Trash and 
+      Junk LLC. He helped us clear our 4 years of accumulated stuff in our storage unit. 
+      He was kind, efficient, fast, and most importantly, the best price in the area (by far). 
+      For any future cleanups, I will not think twice. It will be Gabriel!
+    service: "Storage Unit Cleanout"
     source: "Google"
 
-  - name: "Dave Thompson"
+  - name: "Josh Brockenberry"
     business: ""
-    location: "Local Area"
-    date: "2025-11-20"
+    location: "Atlantic County, NJ"
+    date: "2026-01-14"
     rating: 5
     text: >
-      Called in the morning, they were here by afternoon. Hauled away a broken
-      refrigerator and old washer/dryer set. The guys were careful not to damage
-      my floors and cleaned up after themselves. Great service!
+      Very happy with this service! I called and was able to get rid of the stuff I've 
+      been putting off taking to the dump. They came and took care of everything. 
+      Will be hiring them again.
+    service: "Junk Removal"
+    source: "Google"
+
+  - name: "Alex Mason"
+    business: ""
+    location: "Atlantic County, NJ"
+    date: "2026-01-14"
+    rating: 5
+    text: >
+      Great customer service and good job handling the heavy furniture. Thanks for 
+      helping me clear out my storage unit and for moving me in to my new place!
+    service: "Moving & Storage Cleanout"
+    source: "Google"
+
+  - name: "Lisa Poglitsch"
+    business: ""
+    location: "Atlantic County, NJ"
+    date: "2025-09-21"
+    rating: 5
+    text: >
+      Gabriel was extremely responsive. I would highly recommend Tough Haul Trash and 
+      Junk. The guys worked hard to remove everything out of a unit for my in bad conditions. 
+      We really appreciated all your efforts. Thank you!!!!!
+    service: "Unit Cleanout"
+    source: "Google"
+
+  - name: "Michele Bartle"
+    business: ""
+    location: "Atlantic County, NJ"
+    date: "2025-12-21"
+    rating: 5
+    text: >
+      Gabe and John with Tough Haul Trash & Junk are a pleasure to work with. They are 
+      very professional and on time. I have used them for several jobs and I have always 
+      been completely satisfied with their work. I highly recommend them!!
+    service: "Multiple Jobs"
+    source: "Google"
+
+  - name: "Selena Lamprou"
+    business: ""
+    location: "Atlantic County, NJ"
+    date: "2025-11-21"
+    rating: 5
+    text: >
+      It was a pleasure working with Gabriel. He is responsive, efficient and was willing 
+      to work with me on the price. I would definitely use him again for future projects.
+    service: "Junk Removal"
+    source: "Google"
+
+  - name: "Mabel Louie"
+    business: ""
+    location: "Atlantic County, NJ"
+    date: "2026-01-14"
+    rating: 5
+    text: >
+      Gabriel and his coworker John was punctual professional efficient and trustworthy. 
+      They finished the job the same day I called for an estimate.
+    service: "Same-Day Service"
+    source: "Google"
+
+  - name: "Jessica Zimmerman"
+    business: ""
+    location: "Atlantic County, NJ"
+    date: "2025-10-21"
+    rating: 5
+    text: >
+      I called Tough Haul for a rather interesting request and wow did they deliver! 
+      My fridge was heaping in residue from a long summer of entertaining and I was in 
+      the market for someone to clean the interior head to toe. Tough Haul left it 
+      sparkling and got to the job fast so I could have the fridge ready for a grocery 
+      delivery the same day. Thanks for your hard work and attentiveness.
+    service: "Specialty Cleaning"
+    source: "Google"
+
+  - name: "Marie"
+    business: ""
+    location: "Atlantic County, NJ"
+    date: "2025-12-21"
+    rating: 5
+    text: >
+      I called and had an appointment the next morning. They were on time, very kind, 
+      and removed my dishwasher within ten minutes. I was very pleased with their service!
     service: "Appliance Removal"
     source: "Google"
 
-  - name: "Jennifer Walsh"
+  - name: "Virginia Herbert"
     business: ""
-    location: "Local Area"
-    date: "2025-10-05"
+    location: "Atlantic County, NJ"
+    date: "2025-12-21"
     rating: 5
     text: >
-      After a big storm, we had tons of branches and yard debris. Tough Haul
-      came out and cleared everything in a couple hours. They even swept up
-      the small stuff. So grateful for the quick response!
-    service: "Yard Clean Out"
+      Gabe did an excellent job with the removal of the shed at my house! Highly recommended.
+    service: "Shed Removal"
     source: "Google"
 
-  - name: "Robert Chen"
+  - name: "Mary Beth Friss"
     business: ""
-    location: "Local Area"
-    date: "2025-09-12"
+    location: "Atlantic County, NJ"
+    date: "2025-12-31"
     rating: 5
     text: >
-      Needed help clearing out my parents' house for an estate sale. The team
-      was respectful, efficient, and handled everything with care. They donated
-      usable items and recycled what they could. Professional service.
-    service: "Estate Cleanout"
+      Gabe and his partner did a wonderful job at clearing out years old junk from our 
+      shed and yard. They came on short notice and worked efficiently and at a reasonable price.
+    service: "Shed & Yard Cleanout"
     source: "Google"
 
-  - name: "Amanda Torres"
+  - name: "Robert Blackford"
     business: ""
-    location: "Local Area"
-    date: "2025-08-28"
+    location: "Atlantic County, NJ"
+    date: "2025-12-21"
     rating: 5
     text: >
-      I've used Tough Haul three times now for various cleanout projects.
-      Always reliable, always fair pricing, and the crews are always friendly.
-      They're my go-to for junk removal!
-    service: "Debris Removal"
-    source: "Facebook"
+      Definitely I recommend Gabe Donahue you really won't be disappointed give him a try 
+      a very nice young man can't go wrong really does nice work. You will be satisfied 
+      he's very professional honest give him a call if you need something done.
+    service: "General Services"
+    source: "Google"
+
+  - name: "Kevin Johnson"
+    business: ""
+    location: "Atlantic County, NJ"
+    date: "2025-09-21"
+    rating: 5
+    text: >
+      My name is Kevin we used this service for a house clean out and property removal 
+      and I must say there is no better service, they were the very best that there is 
+      and I definitely recommend them.
+    service: "House Cleanout"
+    source: "Google"
+
+  - name: "Paul Kline"
+    business: ""
+    location: "Atlantic County, NJ"
+    date: "2025-11-21"
+    rating: 5
+    text: >
+      Gabe was fast, professional, and fairly priced.
+    service: "Junk Removal"
+    source: "Google"
+
+  - name: "Darolyn Parker"
+    business: ""
+    location: "Atlantic County, NJ"
+    date: "2026-01-18"
+    rating: 5
+    text: >
+      I would definitely recommend them. They get back to you in a timely manner 
+      and are very professional.
+    service: "Junk Removal"
+    source: "Google"
 
 # Review summary for display
 summary:
-  total_reviews: 6
-  average_rating: 5.0
+  total_reviews: 23
+  average_rating: 4.8
   sources:
     - name: "Google"
-      count: 5
-    - name: "Facebook"
-      count: 1
+      count: 23
+  highlights:
+    - "Best price in the area"
+    - "Same-day service available"
+    - "Professional and efficient"
+    - "Reasonable pricing"
+    - "Highly responsive"
