@@ -1,0 +1,88 @@
+# =============================================================================
+# REVIEWS.YML - Tough Haul Trash & Junk LLC Reviews
+# =============================================================================
+# Customer reviews for junk removal services.
+# =============================================================================
+
+reviews:
+  - name: "Mike Johnson"
+    business: ""
+    location: "Local Area"
+    date: "2026-01-10"
+    rating: 5
+    text: >
+      These guys are amazing! They showed up on time, gave me an upfront price,
+      and hauled away my old couch and two mattresses in no time. Super professional
+      and way easier than trying to do it myself. Will definitely use again!
+    service: "Furniture Pickup"
+    source: "Google"
+
+  - name: "Sarah Martinez"
+    business: ""
+    location: "Local Area"
+    date: "2025-12-15"
+    rating: 5
+    text: >
+      Used Tough Haul for a garage cleanout before moving. They took everything—
+      old furniture, boxes of junk, broken appliances. The crew was friendly,
+      fast, and the price was very fair. Highly recommend!
+    service: "Garage Cleanout"
+    source: "Google"
+
+  - name: "Dave Thompson"
+    business: ""
+    location: "Local Area"
+    date: "2025-11-20"
+    rating: 5
+    text: >
+      Called in the morning, they were here by afternoon. Hauled away a broken
+      refrigerator and old washer/dryer set. The guys were careful not to damage
+      my floors and cleaned up after themselves. Great service!
+    service: "Appliance Removal"
+    source: "Google"
+
+  - name: "Jennifer Walsh"
+    business: ""
+    location: "Local Area"
+    date: "2025-10-05"
+    rating: 5
+    text: >
+      After a big storm, we had tons of branches and yard debris. Tough Haul
+      came out and cleared everything in a couple hours. They even swept up
+      the small stuff. So grateful for the quick response!
+    service: "Yard Clean Out"
+    source: "Google"
+
+  - name: "Robert Chen"
+    business: ""
+    location: "Local Area"
+    date: "2025-09-12"
+    rating: 5
+    text: >
+      Needed help clearing out my parents' house for an estate sale. The team
+      was respectful, efficient, and handled everything with care. They donated
+      usable items and recycled what they could. Professional service.
+    service: "Estate Cleanout"
+    source: "Google"
+
+  - name: "Amanda Torres"
+    business: ""
+    location: "Local Area"
+    date: "2025-08-28"
+    rating: 5
+    text: >
+      I've used Tough Haul three times now for various cleanout projects.
+      Always reliable, always fair pricing, and the crews are always friendly.
+      They're my go-to for junk removal!
+    service: "Debris Removal"
+    source: "Facebook"
+
+# Review summary for display
+summary:
+  total_reviews: 6
+  average_rating: 5.0
+  sources:
+    - name: "Google"
+      count: 5
+    - name: "Facebook"
+      count: 1

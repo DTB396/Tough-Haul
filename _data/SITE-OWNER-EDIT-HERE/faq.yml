@@ -1,0 +1,148 @@
+# =============================================================================
+# FAQ.YML - Tough Haul Trash & Junk LLC FAQ Content
+# =============================================================================
+
+- category: "Getting Started"
+  items:
+    - question: "How do I schedule a pickup?"
+      answer: |
+        Scheduling is easy! You can:
+        <ul>
+          <li><strong>Call us:</strong> Speak directly with our team</li>
+          <li><strong>Book online:</strong> Use our contact form to request a quote</li>
+          <li><strong>Same-day service:</strong> Available for most jobs—just call!</li>
+        </ul>
+        We'll confirm a time window that works for your schedule.
+
+    - question: "Do you offer same-day service?"
+      answer: |
+        Yes! We offer same-day junk removal for most jobs. Give us a call in the morning and we can often be there the same afternoon. Weekend appointments are also available.
+
+    - question: "What areas do you serve?"
+      answer: |
+        We serve the local area and surrounding communities. Not sure if we cover your location? Just give us a call and we'll let you know!
+
+    - question: "Do I need to be home during the pickup?"
+      answer: |
+        For most jobs, yes—you'll need to point us to the items you want removed and approve our quote. However, we can arrange outdoor pickups where items are left accessible if you're unable to be present.
+
+- category: "Pricing & Payment"
+  items:
+    - question: "How do you determine pricing?"
+      answer: |
+        Our pricing is based on <strong>how much space your items take in our truck</strong>, not by the hour. We'll give you an upfront quote before we start:
+        <ul>
+          <li><strong>Single items:</strong> Great for one large piece like a couch or appliance</li>
+          <li><strong>Partial load:</strong> 1/4 to 1/2 truck for small cleanouts</li>
+          <li><strong>Full load:</strong> Complete cleanouts and large jobs</li>
+        </ul>
+        The price we quote is the price you pay—no hidden fees.
+
+    - question: "Do you provide free estimates?"
+      answer: |
+        Yes! We provide free, no-obligation quotes. Our team will assess the job on-site and give you an upfront price before any work begins. You only pay if you want us to proceed.
+
+    - question: "What forms of payment do you accept?"
+      answer: |
+        We accept:
+        <ul>
+          <li>Cash</li>
+          <li>Credit and debit cards</li>
+          <li>Checks</li>
+          <li>Digital payments (Venmo, PayPal, etc.)</li>
+        </ul>
+        Payment is due upon completion of the job.
+
+    - question: "Are there any hidden fees?"
+      answer: |
+        No hidden fees, ever. The quote we give you is the price you pay. We may adjust pricing only if the actual job differs significantly from what was described (more items, heavier than expected, etc.), but we'll always discuss this with you first.
+
+- category: "What We Take"
+  items:
+    - question: "What items do you accept?"
+      answer: |
+        We haul almost anything! Common items include:
+        <ul>
+          <li><strong>Furniture:</strong> Couches, mattresses, desks, tables, chairs</li>
+          <li><strong>Appliances:</strong> Refrigerators, washers, dryers, stoves, AC units</li>
+          <li><strong>Yard debris:</strong> Branches, brush, leaves, old fencing</li>
+          <li><strong>Construction debris:</strong> Drywall, lumber, flooring, tile</li>
+          <li><strong>Electronics:</strong> TVs, computers, monitors</li>
+          <li><strong>General junk:</strong> Boxes, old toys, sporting equipment</li>
+        </ul>
+        If you're not sure, just ask—we can haul most things!
+
+    - question: "What items can't you take?"
+      answer: |
+        For safety and legal reasons, we cannot haul:
+        <ul>
+          <li>Hazardous materials and chemicals</li>
+          <li>Paint and solvents</li>
+          <li>Asbestos-containing materials</li>
+          <li>Medical waste</li>
+          <li>Propane tanks (unless empty and certified)</li>
+        </ul>
+        Tires and certain specialty items may incur additional fees. Contact us if you're unsure.
+
+    - question: "Do you take electronics and e-waste?"
+      answer: |
+        Yes! We accept most electronics including TVs, computers, monitors, printers, and old gaming systems. We ensure e-waste is properly recycled according to local regulations.
+
+    - question: "Can you remove items from anywhere in my home?"
+      answer: |
+        Absolutely! We'll remove items from anywhere—basements, attics, upstairs bedrooms, garages, backyards. You don't need to move anything to the curb. Just point and we'll do the rest.
+
+- category: "Service Details"
+  items:
+    - question: "How long does a typical job take?"
+      answer: |
+        Most jobs take 15-45 minutes depending on the amount of items. Full property cleanouts may take several hours or multiple trips. We work efficiently but carefully to avoid damage to your property.
+
+    - question: "Do I need to prepare anything before you arrive?"
+      answer: |
+        No preparation required! Just make sure items are accessible. We handle all the lifting, loading, and cleanup. However, if you want to speed things up, you can:
+        <ul>
+          <li>Identify all items you want removed</li>
+          <li>Clear pathways to the items</li>
+          <li>Separate items you want to keep</li>
+        </ul>
+
+    - question: "Will you clean up after removing items?"
+      answer: |
+        Yes! We do a quick sweep-up of the area after removing items. We want to leave your space cleaner than we found it. Heavy cleaning or deep cleaning services are not included but can be arranged separately.
+
+    - question: "What happens to my items after you take them?"
+      answer: |
+        We believe in responsible disposal:
+        <ul>
+          <li><strong>Donation:</strong> Usable items are donated to local charities</li>
+          <li><strong>Recycling:</strong> We recycle metals, electronics, and other materials</li>
+          <li><strong>Disposal:</strong> Remaining items are disposed of properly</li>
+        </ul>
+        We aim to keep as much as possible out of landfills.
+
+- category: "Insurance & Trust"
+  items:
+    - question: "Are you licensed and insured?"
+      answer: |
+        Yes! Tough Haul is fully licensed and insured. Our liability insurance protects your property during the removal process. You can trust us to handle your items professionally and responsibly.
+
+    - question: "What if something gets damaged during removal?"
+      answer: |
+        We take great care to protect your property, but accidents can happen. Our insurance covers damage to your property caused during the removal process. Just let us know immediately and we'll make it right.
+
+    - question: "How do I know I can trust your team?"
+      answer: |
+        Our team members are:
+        <ul>
+          <li>Background checked</li>
+          <li>Professionally trained</li>
+          <li>Uniformed and identifiable</li>
+          <li>Customer service focused</li>
+        </ul>
+        Check our reviews—our reputation is built on trust and quality service.
+        Yes, we typically require 50% deposit to begin work, with the balance due at launch. For larger projects, we can arrange milestone-based payments.
+
+    - question: "What's your refund policy?"
+      answer: |
+        If you're not satisfied with the initial design concepts, we'll work with you to make it right. If we can't reach agreement, we'll refund your deposit minus time spent. Once development begins, payments are non-refundable but we're committed to delivering what was agreed.

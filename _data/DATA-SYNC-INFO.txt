@@ -1,0 +1,15 @@
+# ========================================
+# IMPORTANT: This file is a COPY
+# ========================================
+#
+# The MASTER version is in:
+# _data/SITE-OWNER-EDIT-HERE/services.yml
+#
+# Edit THAT file, then run this script to sync:
+#
+#   node scripts/sync-data.js
+#
+# Or manually copy to _data/ root
+#
+# ========================================
+

@@ -12,6 +12,7 @@
     "build:clean": "npm run clean && npm run build",
     "dev:clean": "npm run clean && npm run dev",
     "jekyll": "bundle exec jekyll",
+    "sync:data": "node scripts/sync-data.js",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:all": "node scripts/lint-and-parse.js",
     "lint:autofix": "node scripts/lint-parse-autofix.cjs",

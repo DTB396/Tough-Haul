@@ -1,0 +1,30 @@
+# Portfolio Data - Template
+# Replace with actual client projects
+
+projects:
+  - title: "Sample Web Design Project"
+    file: "/assets/images/portfolio/project-1.jpg"
+    alt: "Sample web design project screenshot"
+    caption: "Modern responsive website design"
+    tags:
+      - web-design
+      - responsive
+    priority: 1
+    
+  - title: "E-commerce Development"
+    file: "/assets/images/portfolio/project-2.jpg"
+    alt: "E-commerce website screenshot"
+    caption: "Full-featured online store"
+    tags:
+      - development
+      - e-commerce
+    priority: 2
+    
+  - title: "Mobile-First Landing Page"
+    file: "/assets/images/portfolio/project-3.jpg"
+    alt: "Landing page design"
+    caption: "High-converting landing page"
+    tags:
+      - web-design
+      - landing-page
+    priority: 3

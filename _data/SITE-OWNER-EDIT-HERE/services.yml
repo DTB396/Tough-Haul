@@ -1,0 +1,167 @@
+# _data/services.yml
+# Tough Haul Trash & Junk LLC - Services Data
+# Professional Junk Removal & Hauling Services
+
+services:
+  - id: furniture
+    name: "Furniture & Appliance Pickup"
+    icon: couch
+    description: >
+      Old couch taking up space? Broken refrigerator? We haul away furniture
+      and appliances of all sizes. Our team does all the heavy lifting—just
+      point and we'll take it from there.
+    points:
+      - "Couches, recliners, sectionals, and love seats"
+      - "Mattresses, box springs, and bed frames"
+      - "Refrigerators, washers, dryers, and stoves"
+      - "Dishwashers, microwaves, and small appliances"
+      - "Office furniture, desks, and filing cabinets"
+    url: "/services/#furniture"
+
+  - id: trash
+    name: "Trash & Debris Removal"
+    icon: trash
+    description: >
+      Whether it's general household junk, construction debris, or renovation
+      waste—we haul it all. Perfect for when your regular trash pickup isn't
+      enough or you need a full cleanout.
+    points:
+      - "General household trash and clutter removal"
+      - "Construction and renovation debris cleanup"
+      - "Garage, basement, and attic cleanouts"
+      - "Storage unit cleanouts"
+      - "Post-event and party cleanup"
+    url: "/services/#trash"
+
+  - id: yard
+    name: "Yard Clean Out"
+    icon: tree
+    description: >
+      Get your yard back in shape. We haul away branches, brush, leaves,
+      old fencing, and outdoor junk. Perfect for storm cleanup, landscaping
+      projects, or general yard maintenance.
+    points:
+      - "Branches, brush, and tree limbs"
+      - "Leaves, grass clippings, and lawn debris"
+      - "Old fencing, deck boards, and lumber"
+      - "Outdoor furniture, grills, and play equipment"
+      - "Shed and hot tub removal"
+    url: "/services/#yard"
+
+  - id: moving
+    name: "Moving Help"
+    icon: truck
+    description: >
+      Moving and need help with the heavy stuff? We can assist with loading
+      and unloading, or haul away items you're not taking with you.
+      Make your move easier with Tough Haul.
+    points:
+      - "Help loading and unloading rental trucks"
+      - "Haul away unwanted items during your move"
+      - "Heavy item moving within your home"
+      - "Donation drop-off for usable items"
+      - "Same-day moving assistance available"
+    url: "/services/#moving"
+
+  - id: cleanout
+    name: "Property Cleanouts"
+    icon: home
+    description: >
+      Full property cleanouts for any situation—estate sales, foreclosures,
+      evictions, or preparing a property for sale. We handle everything
+      from start to finish.
+    points:
+      - "Estate and inheritance cleanouts"
+      - "Foreclosure and eviction cleanouts"
+      - "Hoarding cleanup with discretion"
+      - "Real estate preparation cleanouts"
+      - "Commercial property cleanouts"
+    url: "/services/#cleanout"
+
+# Service packages (for pricing page integration)
+packages:
+  - id: single-item
+    name: "Single Item"
+    description: "Perfect for one large item like a couch, mattress, or appliance"
+    includes:
+      - "One large item removal"
+      - "We do all the lifting"
+      - "Responsible disposal/recycling"
+      - "Same-day service available"
+    turnaround: "Same day"
+    
+  - id: partial-load
+    name: "Partial Truck Load"
+    description: "Ideal for small cleanouts or multiple items"
+    includes:
+      - "1/4 to 1/2 truck load capacity"
+      - "Multiple items and furniture"
+      - "Construction debris accepted"
+      - "We load everything"
+      - "Eco-friendly disposal"
+    turnaround: "Same day"
+    popular: true
+    
+  - id: full-load
+    name: "Full Truck Load"
+    description: "Complete cleanouts and large jobs"
+    includes:
+      - "Full truck capacity"
+      - "Whole room or garage cleanout"
+      - "Property cleanout service"
+      - "Multiple trips if needed"
+      - "All labor included"
+    turnaround: "1-2 days"
+
+# What we can haul
+items_accepted:
+  furniture:
+    - "Couches and sofas"
+    - "Recliners and chairs"
+    - "Mattresses and box springs"
+    - "Bed frames and headboards"
+    - "Dressers and desks"
+    - "Tables and dining sets"
+    - "Office furniture"
+    - "Outdoor furniture"
+    
+  appliances:
+    - "Refrigerators and freezers"
+    - "Washers and dryers"
+    - "Stoves and ovens"
+    - "Dishwashers"
+    - "Water heaters"
+    - "AC units"
+    - "Microwaves"
+    - "TVs and electronics"
+    
+  yard_debris:
+    - "Branches and brush"
+    - "Leaves and grass"
+    - "Old fencing"
+    - "Deck materials"
+    - "Outdoor equipment"
+    - "Grills and fire pits"
+    - "Play sets"
+    - "Hot tubs"
+    
+  construction:
+    - "Drywall and plaster"
+    - "Lumber and wood"
+    - "Roofing materials"
+    - "Flooring and tile"
+    - "Carpet and padding"
+    - "Windows and doors"
+    - "Bathroom fixtures"
+    - "Kitchen cabinets"
+
+# Items we cannot haul
+items_not_accepted:
+  - "Hazardous materials"
+  - "Chemicals and solvents"
+  - "Paint and stains"
+  - "Asbestos materials"
+  - "Medical waste"
+  - "Propane tanks (unless empty)"
+  - "Car batteries"
+  - "Tires (additional fee may apply)"
