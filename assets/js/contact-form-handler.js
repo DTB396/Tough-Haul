@@ -11,12 +11,12 @@
     endpoint: '/.netlify/functions/contact',
     successMessage: {
       title: 'Message Sent Successfully!',
-        body: 'Thank you for contacting Tillerstead. We\\'ve received your inquiry and will respond within 48 hours. If you don\\'t hear from us, please text us at (609) 862-8808 to confirm we received your message.',
+        body: 'Thank you for contacting Tough Haul. We\'ve received your inquiry and will respond within 24 hours. If you don\'t hear from us, please text us at (609) 418-0550 to confirm we received your message.',
       confirmationSent: 'A confirmation email has been sent to your address.',
     },
     errorMessage: {
       title: 'Submission Error',
-      body: 'We apologize, but there was an issue sending your message. Please email us directly at info@tillerstead.com or call (609) 862-8808.',
+      body: 'We apologize, but there was an issue sending your message. Please email us directly at info@toughhauljunk.com or call (609) 418-0550.',
     },
   };
 

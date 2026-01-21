@@ -5,51 +5,53 @@
 license:
   # Set to empty string if no license required
   number: ""
-  status: "Active"
-  issuer: ""
-  type: ""
-  verified: false
-  last_verified: ""
+  status: "Licensed & Insured"
+  issuer: "State of New Jersey"
+  type: "Junk Removal & Hauling Services"
+  verified: true
+  last_verified: "2026-01-21"
   scope_notice: >
-    Update this with any relevant licensing or certification information
-    for your business type.
+    Tough Haul is a fully licensed and insured junk removal service.
+    2025 Nextdoor Neighborhood Fave.
   trades: []
 
 # Business information
 business:
-  legal_name: "Tough Haul LLC"
+  legal_name: "Tough Haul Trash & Junk LLC"
   trade_name: "Tough Haul"
-  owner: ""
+  owner: "Gabriel Donahue"
   address:
-    street: "123 Main Street"
-    city: "Your City"
-    state: "ST"
-    zip: "00000"
+    street: ""
+    city: "Northfield"
+    state: "NJ"
+    zip: "08225"
 
 # Insurance information
 insurance:
-  general_liability: "$1M per occurrence / $2M aggregate"
-  workers_comp: "Compliant where applicable"
+  general_liability: "Fully Insured"
+  workers_comp: "Fully Insured"
   coverage:
     - "General Liability"
     - "Property Damage"
-    - "Bodily Injury"
+    - "Workers Compensation"
 
 # Warranty information
 warranty:
-  workmanship_years: 1
+  workmanship_years: 0
   workmanship_description: >
-    Limited workmanship warranty covering services performed by the company.
-    Specific terms defined in service agreement.
+    Junk removal and hauling services are completed same-day.
+    Customer satisfaction guaranteed. Any issues addressed immediately.
   exclusions:
-    - "Normal wear and tear"
-    - "Improper maintenance or misuse"
-    - "Third-party modifications"
+    - "Items left on property after service completion"
+    - "Damage caused by pre-existing conditions"
+    - "Items not disclosed during initial estimate"
 
 # Consumer protection notices
 consumer_protection:
   payment_terms: >
-    Payment terms are defined in a written contract or service agreement.
+    Upfront pricing with no hidden fees. Payment due upon completion of service.
+    We accept cash, check, and all major credit cards.
   public_notice: >
-    Your Company LLC provides professional services. All projects are governed
-    by written contracts with clearly documented scope.
+    Tough Haul Trash & Junk LLC provides professional junk removal and hauling services
+    throughout Atlantic, Cape May, and Ocean Counties, NJ. Licensed, insured, and
+    recognized as a 2025 Nextdoor Neighborhood Fave.
