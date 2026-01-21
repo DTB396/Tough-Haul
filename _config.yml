@@ -9,10 +9,9 @@
 title: "Tough Haul LLC"
 tagline: "Professional Junk Removal & Hauling Services"
 description: >-
-  Tough Haul LLC provides professional junk removal, trash hauling,
-  furniture and appliance pickup, yard clean out, and moving services.
-  Fully insured and ready to tackle any job. Fast, reliable, and affordable hauling
-  services for homes and businesses.
+  Need Junk Gone Fast? I handle furniture removal, appliance pickup,
+  yard clean outs, trash removal & more — all fast, friendly, and affordable.
+  Serving Atlantic County and beyond.
 url: "https://toughhauljunk.com"
 baseurl: ""
 timezone: "America/New_York"
@@ -106,9 +105,12 @@ webmaster_verifications:
 social:
   name: "Tough Haul LLC"
   type: "LocalBusiness"
+  facebook: "https://facebook.com/toughhauljunk"
+  instagram: "gabedonahue6"
   links:
     - "https://toughhauljunk.com"
     - "https://facebook.com/toughhauljunk"
+    - "https://www.instagram.com/gabedonahue6"
 
 # Open Graph & Twitter Cards
 twitter:
@@ -134,6 +136,7 @@ service_areas:
   - "Mays Landing, NJ"
   - "Atlantic County, NJ"
   - "Cape May County, NJ"
+  - "Ocean County, NJ"
 
 # ----------------------------
 # Business variables
@@ -144,6 +147,9 @@ company:
   phone_display: "(609) 418-0550"
   phone_link: "+16094180550"
   license: "Licensed & Insured | 2025 Nextdoor Neighborhood Fave"
+  google_reviews:
+    count: 23
+    rating: 4.8
   address_line: ""
   address_city: "Northfield"
   address_region: "NJ"
