@@ -13,10 +13,10 @@
       </a>
     </div>
     <nav class="footer-links">
-      <a href="/services/">Services</a>
-      <a href="/estimate/">Estimate</a>
-      <a href="/contact/">Contact</a>
-      <a href="/privacy/">Privacy</a>
+      <a href="{{ '/services/' | relative_url }}">Services</a>
+      <a href="{{ '/estimate/' | relative_url }}">Estimate</a>
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
+      <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
     </nav>
     <p class="footer-copy">&copy; {{ 'now' | date: '%Y' }} {{ site.title }} · Serving Atlantic County & beyond</p>
   </div>

@@ -1,26 +1,28 @@
 ---
 layout: default
-title: Reviews | WebDevPro
+title: Reviews | Tough Haul Trash & Junk LLC
 description: >-
-  Read reviews from WebDevPro clients about our website design, development, and
-  management services.
-meta_title: Client Reviews | Professional Website Development | WebDevPro
+  Read real Google reviews from Tough Haul customers. 4.8 stars from 23 reviews.
+  Professional junk removal in Atlantic County, NJ.
+meta_title: Customer Reviews | Tough Haul Junk Removal | 4.8★ Rating
 meta_description: >-
-  Read verified client reviews for WebDevPro. Professional website design,
-  development, and management for contractors and small businesses.
+  Read 23 verified Google reviews for Tough Haul Trash & Junk LLC. 4.8 star rating.
+  Professional junk removal, furniture pickup, and property cleanouts in Atlantic County, NJ.
 permalink: /reviews/
 body_class: page-reviews
 schema_type: Review
 ---
 
-
 <!-- Hero Section -->
 <section class="reviews-hero">
   <div class="container">
     <div class="reviews-hero__content">
-      <span class="reviews-hero__eyebrow">Client Feedback</span>
-      <h1 class="reviews-hero__title">Client Reviews</h1>
-      <p class="reviews-hero__summary">Real feedback from business owners who trusted us with their online presence</p>
+      <span class="reviews-hero__eyebrow">Customer Feedback</span>
+      <h1 class="reviews-hero__title">What Our Customers Say</h1>
+      <div class="reviews-hero__rating">
+        <span class="rating-stars">★★★★★</span>
+        <span class="rating-text"><strong>4.8</strong> out of 5 · 23 Google Reviews</span>
+      </div>
     </div>
   </div>
 </section>
@@ -28,72 +30,249 @@ schema_type: Review
 <!-- Reviews Section -->
 <section class="reviews-section">
   <div class="container">
-    <div class="reviews-intro">
-      <p class="reviews-intro__text">We take pride in every website we build. Here's what our clients have to say about working with WebDevPro.</p>
-      <p class="reviews-intro__meta">
-        <strong>{{ site.data.reviews.reviews | size }} verified reviews</strong> · All reviews are genuine and unedited
-      </p>
-    </div>
-
     <div class="reviews-grid">
       {% for review in site.data.reviews.reviews %}
+      {% if review.text and review.text != "" %}
       <article class="review-card" itemscope itemtype="https://schema.org/Review">
         <div class="review-card__header">
           <div class="review-card__rating" aria-label="{{ review.rating }} out of 5 stars">
-            {% for i in (1..review.rating) %}
-            <svg class="review-card__star" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            {% for i in (1..5) %}
+              {% if i <= review.rating %}
+              <span class="star star--filled">★</span>
+              {% else %}
+              <span class="star star--empty">☆</span>
+              {% endif %}
             {% endfor %}
           </div>
-          {% if review.source %}
-          <span class="review-card__source">{{ review.source }}</span>
-          {% endif %}
+          <span class="review-card__source">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#4285F4"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            Google
+          </span>
         </div>
 
-        <div class="review-card__content" itemprop="reviewBody">
-          {{ review.text }}
-        </div>
+        <blockquote class="review-card__content" itemprop="reviewBody">
+          "{{ review.text | strip_newlines | strip }}"
+        </blockquote>
 
         <footer class="review-card__footer">
           <div class="review-card__author">
             <strong itemprop="author">{{ review.name }}</strong>
-            {% if review.business %}
+            {% if review.business and review.business != "" %}
             <span class="review-card__business">{{ review.business }}</span>
             {% endif %}
           </div>
-          {% if review.date %}
-          <time class="review-card__date" datetime="{{ review.date }}" itemprop="datePublished">
-            {{ review.date | date: "%B %Y" }}
-          </time>
+          {% if review.service %}
+          <span class="review-card__service">{{ review.service }}</span>
           {% endif %}
         </footer>
-
-        {% if review.service %}
-        <div class="review-card__badges">
-          <span class="review-card__badge">{{ review.service }}</span>
-        </div>
-        {% endif %}
       </article>
+      {% endif %}
       {% endfor %}
     </div>
 
     <!-- CTA -->
     <div class="reviews-cta">
-      <h2 class="reviews-cta__title">Ready to Join Our Happy Clients?</h2>
-      <p class="reviews-cta__text">Get a free consultation to discuss your website project.</p>
-      <a href="/contact/" class="btn btn--primary btn--lg">Schedule Free Consultation</a>
+      <h2 class="reviews-cta__title">Ready to Experience the Difference?</h2>
+      <p class="reviews-cta__text">Join our happy customers. Get a free estimate today!</p>
+      <div class="reviews-cta__buttons">
+        <a href="{{ '/estimate/' | relative_url }}" class="btn btn--primary btn--lg">Get Free Estimate</a>
+        <a href="tel:+16094180550" class="btn btn--secondary btn--lg">📞 (609) 418-0550</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Demo Notice -->
-{% if site.is_demo_template %}
-<section class="reviews-demo-notice">
-  <div class="container">
-    <div class="reviews-demo-notice__content">
-      <p><strong>Note:</strong> These are example reviews for demonstration purposes. Your website will feature your actual customer testimonials.</p>
-    </div>
-  </div>
-</section>
-{% endif %}
+<style>
+/* Reviews Hero */
+.reviews-hero {
+  background: linear-gradient(135deg, #0f1210 0%, #1a1f1c 100%);
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.reviews-hero__eyebrow {
+  display: block;
+  color: #10b981;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+.reviews-hero__title {
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin: 0 0 1rem;
+}
+.reviews-hero__rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.rating-stars {
+  color: #fbbf24;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+.rating-text {
+  color: #9ca3af;
+  font-size: 1rem;
+}
+.rating-text strong {
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+/* Reviews Section */
+.reviews-section {
+  background: #111;
+  padding: 3rem 1rem 4rem;
+}
+.reviews-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Reviews Grid */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Review Card */
+.review-card {
+  background: #1a1f1c;
+  border: 1px solid #2a2f2c;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.review-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(16,185,129,0.1);
+  border-color: rgba(16,185,129,0.3);
+}
+
+.review-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.review-card__rating {
+  display: flex;
+  gap: 2px;
+}
+.star {
+  font-size: 1.1rem;
+}
+.star--filled { color: #fbbf24; }
+.star--empty { color: #4b5563; }
+
+.review-card__source {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #6b7280;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.review-card__content {
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0 0 1rem;
+  flex: 1;
+  font-style: normal;
+  border: none;
+  padding: 0;
+}
+
+.review-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #2a2f2c;
+  margin-top: auto;
+}
+.review-card__author strong {
+  display: block;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.review-card__business {
+  display: block;
+  color: #6b7280;
+  font-size: 0.8rem;
+}
+.review-card__service {
+  background: rgba(16,185,129,0.15);
+  color: #10b981;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* CTA Section */
+.reviews-cta {
+  text-align: center;
+  background: linear-gradient(135deg, #0f1210 0%, #1a1f1c 100%);
+  border: 1px solid rgba(16,185,129,0.2);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+}
+.reviews-cta__title {
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+.reviews-cta__text {
+  color: #9ca3af;
+  font-size: 1.1rem;
+  margin: 0 0 1.5rem;
+}
+.reviews-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.btn--secondary {
+  background: transparent;
+  border: 2px solid #10b981;
+  color: #10b981;
+}
+.btn--secondary:hover {
+  background: #10b981;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  .review-card__footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .reviews-cta {
+    padding: 2rem 1rem;
+  }
+}
+</style>
 
 

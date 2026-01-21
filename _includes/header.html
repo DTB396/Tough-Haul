@@ -1,6 +1,6 @@
 <header class="site-header" id="site-header">
   <div class="header-inner">
-    <a href="/" class="header-brand" aria-label="{{ site.title }} - Home">
+    <a href="{{ '/' | relative_url }}" class="header-brand" aria-label="{{ site.title }} - Home">
       <svg class="header-logo" viewBox="0 0 200 40" aria-hidden="true">
         <!-- Truck icon -->
         <g transform="translate(0,4)">
@@ -29,15 +29,25 @@
   z-index: 1000;
   background: #0f1210;
   border-bottom: 1px solid rgba(16,185,129,0.15);
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
+  transition: padding 0.3s ease, background 0.3s ease;
+}
+.site-header.scrolled {
+  padding: 0.4rem 1rem;
+  background: rgba(15,18,16,0.98);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transition: justify-content 0.3s ease;
+}
+.site-header.scrolled .header-inner {
   justify-content: space-between;
-  gap: 1rem;
 }
 .header-brand {
   display: flex;
@@ -47,8 +57,38 @@
 .header-logo {
   height: 40px;
   width: auto;
+  transition: height 0.3s ease;
+}
+.site-header.scrolled .header-logo {
+  height: 32px;
 }
 @media (max-width: 768px) {
+  .header-inner { justify-content: space-between; }
   .header-logo { height: 32px; }
 }
 </style>
+
+<script>
+(function(){
+  const header = document.getElementById('site-header');
+  let ticking = false;
+  
+  function updateHeader() {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+    ticking = false;
+  }
+  
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      requestAnimationFrame(updateHeader);
+      ticking = true;
+    }
+  });
+  
+  updateHeader();
+})();
+</script>
