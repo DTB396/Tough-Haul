@@ -101,20 +101,7 @@
 }
 
 /* ===== HERO CORNER ACCENT ===== */
-.home-hero::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 200px;
-  height: 200px;
-  background-image: url('/assets/img/patterns/sacred-tile.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  opacity: 8%;
-  pointer-events: none;
-}
+/* Removed - pattern SVGs not available for junk removal site */
 
 /* ===== CTA SECTION ENHANCEMENTS ===== */
 
@@ -123,29 +110,7 @@
   position: relative;
 }
 
-.home-cta .container::before,
-.home-cta .container::after {
-  content: '';
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  background-image: url('/assets/img/patterns/flower-of-life.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 8%;
-  pointer-events: none;
-}
-
-.home-cta .container::before {
-  top: -20px;
-  left: -20px;
-}
-
-.home-cta .container::after {
-  bottom: -20px;
-  right: -20px;
-  transform: rotate(180deg);
-}
+/* Removed - pattern SVGs not available for junk removal site */
 
 /* ===== ENHANCED BUTTON MICRO-INTERACTIONS ===== */
 
@@ -308,18 +273,6 @@
 
 /* ===== MOBILE OPTIMIZATIONS ===== */
 @media (max-width: 768px) {
-  .home-hero::after {
-    width: 100px;
-    height: 15%;
-  }
-  
-  .home-cta .container::before,
-  .home-cta .container::after {
-    width: 50px;
-    height: 50px;
-    opacity: 5%;
-  }
-  
   .ts-grout-divider {
     max-width: 90%;
   }
