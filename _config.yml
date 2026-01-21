@@ -89,8 +89,10 @@ keywords:
 # Local business SEO
 locale: "en_US"
 geo:
-  region: "US"
-  placename: "Local Service Area"
+  region: "US-NJ"
+  placename: "Northfield, New Jersey"
+  position: "39.3784;-74.5588"
+  icbm: "39.3784, -74.5588"
 
 # Schema.org structured data
 author:
@@ -121,23 +123,36 @@ assets_version: "2026-01-20.2"
 
 # Service areas
 service_areas:
-  - "Local Service Area"
-  - "Surrounding Communities"
+  - "Northfield, NJ"
+  - "Linwood, NJ"
+  - "Somers Point, NJ"
+  - "Atlantic City, NJ"
+  - "Ventnor City, NJ"
+  - "Egg Harbor Township, NJ"
+  - "Margate City, NJ"
+  - "Pleasantville, NJ"
+  - "Mays Landing, NJ"
+  - "Atlantic County, NJ"
+  - "Cape May County, NJ"
 
 # ----------------------------
 # Business variables
 # ----------------------------
 company:
   name: "Tough Haul Trash & Junk LLC"
-  owner: "Tough Haul Team"
-  phone_display: "(555) 123-4567"
-  phone_link: "+15551234567"
-  license: "Licensed & Insured"
+  owner: "Gabriel Donahue"
+  phone_display: "(609) 418-0550"
+  phone_link: "+16094180550"
+  license: "Licensed & Insured | 2025 Nextdoor Neighborhood Fave"
   address_line: ""
-  address_city: ""
-  address_region: ""
-  address_postal_code: ""
+  address_city: "Northfield"
+  address_region: "NJ"
+  address_postal_code: "08225"
   email: "info@toughhauljunk.com"
+  hours:
+    monday_friday: "8:00 AM – 6:00 PM"
+    saturday: "8:00 AM – 12:00 PM"
+    sunday: "Closed"
 
 # ----------------------------
 # UX flags
