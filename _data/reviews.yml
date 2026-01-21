@@ -192,6 +192,84 @@ reviews:
     service: "Junk Removal"
     source: "Google"
 
+  - name: "Penny Michalkiewicz"
+    business: ""
+    location: "Atlantic County, NJ"
+    date: "2025-12-21"
+    rating: 5
+    text: >
+      They did great with moving my furniture. It was very heavy! Great pricing 
+      as well! Very professional! Will use them again!
+    service: "Furniture Moving"
+    source: "Google"
+
+  - name: "Jenna Troyano"
+    business: ""
+    location: "Atlantic County, NJ"
+    date: "2025-11-21"
+    rating: 5
+    text: >
+      Contacted for bush removal and tree trimming and was really happy with everything. 
+      Great work and super efficient. Thanks again!
+    service: "Bush Removal & Tree Trimming"
+    source: "Google"
+
+  - name: "Verizon Wireless"
+    business: "Verizon Wireless"
+    location: "Atlantic County, NJ"
+    date: "2025-09-21"
+    rating: 5
+    text: >
+      Would definitely recommend Gabriel and Tough Haul. Great job clearing out shed.
+    service: "Shed Cleanout"
+    source: "Google"
+
+  - name: "Britt Campbell"
+    business: ""
+    location: "Atlantic County, NJ"
+    date: "2025-09-21"
+    rating: 1
+    text: >
+      Terrible Service. Not a man of his word. I explained to Gabriel what I needed done. 
+      He did not empty my trash cans and cleared everything else and the trash cans were 
+      one of my main concerns that I expressed in writing through text. He apologized and 
+      told me it must have been a miscommunication but I had to screenshot and circle where 
+      I told him I wanted my trash cans emptied. He told me for a week he would come back 
+      and clear them out and has yet to come do it. After explaining to him in a single 
+      mother and I don't have the money to pay for it to get done again after already paying. 
+      I still had to end up hiring someone else after already paying for this service. 
+      I will not be using this service again and will be telling friends, family, 
+      contractors I do business with to not use this service.
+    service: "Property Cleanout"
+    source: "Google"
+
+  - name: "Tatiana Santiago"
+    business: ""
+    location: "Atlantic County, NJ"
+    date: "2026-01-14"
+    rating: 5
+    text: ""
+    service: "Junk Removal"
+    source: "Google"
+
+  - name: "Ketan Raval"
+    business: ""
+    location: "Atlantic County, NJ"
+    date: "2025-11-21"
+    rating: 5
+    text: ""
+    service: "Junk Removal"
+    source: "Google"
+
+  - name: "Detailz by D, LLC"
+    business: "Detailz by D, LLC"
+    location: "Atlantic County, NJ"
+    date: "2025-09-21"
+    rating: 5
+    text: ""
+    service: "Commercial Service"
+    source: "Google"
+
 # Review summary for display
 summary:
   total_reviews: 23
