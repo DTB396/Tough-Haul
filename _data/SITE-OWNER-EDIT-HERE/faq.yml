@@ -20,7 +20,7 @@
 
     - question: "What areas do you serve?"
       answer: |
-        We serve the local area and surrounding communities. Not sure if we cover your location? Just give us a call and we'll let you know!
+        We serve Atlantic, Ocean, and Cape May counties and surrounding communities. Not sure if we cover your location? Just give us a call and we'll let you know!
 
     - question: "Do I need to be home during the pickup?"
       answer: |
@@ -49,8 +49,7 @@
           <li>Cash</li>
           <li>Credit and debit cards</li>
           <li>Checks</li>
-          <li>Digital payments (Venmo, PayPal, etc.)</li>
-        </ul>
+          </ul>
         Payment is due upon completion of the job.
 
     - question: "Are there any hidden fees?"

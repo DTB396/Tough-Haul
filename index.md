@@ -108,15 +108,4 @@ keywords: "junk removal, furniture removal, appliance pickup, yard debris haulin
 {% include sections/section-cta.html data=data.cta %}
 </section>
 
-<!-- Demo Notice Banner (only shows on demo site) -->
-{% if site.is_demo_template %}
-<aside class="demo-banner" aria-label="Demo Site Notice">
-  <div class="container">
-    <div class="demo-banner__content">
-      <strong>🎨 This is a demo template.</strong>
-      <span>Interested in a professional website like this for your business?</span>
-      <a href="/contact/" class="demo-banner__cta">Get Your Free Consultation</a>
-    </div>
-  </div>
-</aside>
-{% endif %}
+

@@ -13,7 +13,7 @@
 </button>
 
 <div class="nav-drawer" id="nav-drawer">
-  <button class="nav-close" aria-label="Close">✕</button>
+  <button class="nav-close" aria-label="Close menu">✕</button>
   <a href="{{ '/services/' | relative_url }}">Services</a>
   <a href="{{ '/estimate/' | relative_url }}">Get Estimate</a>
   <a href="{{ '/pricing/' | relative_url }}">Pricing</a>
@@ -38,31 +38,46 @@
   font-weight: 500;
   transition: color 0.2s;
 }
-.main-nav a:hover { color: #10b981; }
+.main-nav a:hover { color: #A02030; }
 .nav-cta {
-  background: #10b981;
+  background: #A02030;
   color: #fff !important;
   padding: 0.5rem 1rem;
   border-radius: 6px;
   font-weight: 600;
 }
-.nav-cta:hover { background: #059669; }
+.nav-cta:hover { background: #C73A4F; }
 
 /* Mobile Toggle */
 .nav-toggle {
   display: none;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
   padding: 8px;
-  background: none;
+  background: transparent;
   border: none;
   cursor: pointer;
+  position: relative;
+  z-index: 2100;
+  margin-left: auto;
 }
 .nav-toggle span {
   width: 24px;
-  height: 2px;
-  background: #fff;
-  transition: 0.2s;
+  height: 3px;
+  background: #A02030;
+  transition: all 0.3s ease;
+  display: block;
+}
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
 }
 
 /* Mobile Drawer */
@@ -72,24 +87,36 @@
   right: 0;
   width: 280px;
   height: 100vh;
-  background: #111;
+  background: #0f1210;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  z-index: 2000;
+  z-index: 2050;
   transform: translateX(100%);
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
 }
-.nav-drawer.open { transform: translateX(0); }
+.nav-drawer.open { 
+  transform: translateX(0);
+}
+.nav-drawer::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
 .nav-close {
   align-self: flex-end;
   background: none;
   border: none;
-  color: #fff;
+  color: #A02030;
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+.nav-close:hover {
+  color: #C73A4F;
 }
 .nav-drawer a {
   color: #fff;
@@ -97,15 +124,22 @@
   padding: 0.75rem 0;
   border-bottom: 1px solid #222;
   font-size: 1rem;
+  transition: color 0.2s;
 }
-.nav-drawer a:hover { color: #10b981; }
+.nav-drawer a:hover {
+  color: #A02030;
+}
 .drawer-cta {
-  background: #10b981;
+  background: #A02030 !important;
   text-align: center;
   padding: 0.75rem !important;
   border-radius: 6px;
   margin-top: 0.5rem;
   border: none !important;
+  transition: background 0.2s;
+}
+.drawer-cta:hover {
+  background: #C73A4F !important;
 }
 .drawer-trust {
   color: #666;
@@ -119,6 +153,18 @@
   .main-nav { display: none; }
   .nav-toggle { display: flex; }
 }
+
+/* Add overlay when drawer is open */
+.nav-drawer.open::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2049;
+}
 </style>
 
 <script>
@@ -126,21 +172,51 @@
   const toggle = document.querySelector('.nav-toggle');
   const drawer = document.getElementById('nav-drawer');
   const close = document.querySelector('.nav-close');
+  const drawerLinks = drawer.querySelectorAll('a');
   
-  function open() {
+  // Add overlay element
+  const overlay = document.createElement('div');
+  overlay.className = 'nav-overlay';
+  overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:2049;display:none;';
+  document.body.appendChild(overlay);
+  
+  function openMenu() {
     drawer.classList.add('open');
+    toggle.classList.add('active');
     toggle.setAttribute('aria-expanded', 'true');
+    overlay.style.display = 'block';
     document.body.style.overflow = 'hidden';
   }
-  function shut() {
+  
+  function closeMenu() {
     drawer.classList.remove('open');
+    toggle.classList.remove('active');
     toggle.setAttribute('aria-expanded', 'false');
+    overlay.style.display = 'none';
     document.body.style.overflow = '';
   }
   
-  toggle.addEventListener('click', open);
-  close.addEventListener('click', shut);
-  document.addEventListener('keydown', e => e.key === 'Escape' && shut());
-  drawer.addEventListener('click', e => e.target === drawer && shut());
+  toggle.addEventListener('click', () => {
+    if (drawer.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+  
+  close.addEventListener('click', closeMenu);
+  overlay.addEventListener('click', closeMenu);
+  
+  // Close menu when clicking links
+  drawerLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+  
+  // Close on Escape key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) {
+      closeMenu();
+    }
+  });
 })();
 </script>

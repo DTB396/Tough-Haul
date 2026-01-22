@@ -57,11 +57,11 @@
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgb(16 185 129 / 30%);
+    box-shadow: 0 0 20px rgb(160 32 48 / 30%);
   }
 
   50% {
-    box-shadow: 0 0 40px rgb(16 185 129 / 50%);
+    box-shadow: 0 0 40px rgb(160 32 48 / 50%);
   }
 }
 
@@ -77,11 +77,11 @@
 
 @keyframes border-glow {
   0%, 100% {
-    border-color: rgb(201 162 39 / 20%);
+    border-color: rgb(160 32 48 / 20%);
   }
 
   50% {
-    border-color: rgb(201 162 39 / 50%);
+    border-color: rgb(160 32 48 / 50%);
   }
 }
 
