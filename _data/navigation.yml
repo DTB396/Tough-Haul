@@ -72,25 +72,10 @@ secondary:
     title: "Terms"
     url: "/terms/"
 
-# Mobile-specific adjustments (optimized for right-side menu)
+# Mobile-specific adjustments (if needed)
 mobile:
   show_phone: true
   collapse_dropdowns: true
-  menu_position: "right"
-  icon:
-    type: "hamburger"
-    size: 24
-    touch_target: 44
-    aria_label: "Toggle navigation menu"
-  animation:
-    type: "slide-right"
-    duration: 200
-    easing: "ease-out"
-  overlay:
-    enabled: true
-    close_on_tap: true
-  swipe_to_close: true
-  lazy_load_icons: true
 
 # Footer navigation groups
 footer:
