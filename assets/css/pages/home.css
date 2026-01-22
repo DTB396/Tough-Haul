@@ -113,7 +113,7 @@
 }
 
 .bg-primary {
-  background: var(--tiller-color-emerald, #10b981);
+  background: var(--tiller-color-emerald, #A02030);
   color: white;
 }
 
@@ -130,7 +130,7 @@
 /* Unified Hero Crosshatch Pattern */
 .hero {
   position: relative;
-  background: linear-gradient(135deg, var(--tiller-color-green, #1a3d2e) 0%, var(--tiller-color-green-dark, #0f2a1f) 100%);
+  background: linear-gradient(135deg, var(--tiller-color-green, #6B1520) 0%, var(--tiller-color-green-dark, #4A0F17) 100%);
   overflow: hidden;
 }
 
@@ -141,8 +141,8 @@
   right: 0;
   bottom: 0;
   background-image: 
-    linear-gradient(90deg, rgb(201 162 39 / 8%) 1px, transparent 1px),
-    linear-gradient(rgb(201 162 39 / 8%) 1px, transparent 1px);
+    linear-gradient(90deg, rgb(160 32 48 / 8%) 1px, transparent 1px),
+    linear-gradient(rgb(160 32 48 / 8%) 1px, transparent 1px);
   background-size: 60px 60px;
   pointer-events: none;
   opacity: 60%;
@@ -165,20 +165,20 @@
 .hero-eyebrow {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--tiller-color-gold, #c9a227);
+  color: var(--tiller-color-gold, #C73A4F);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.75rem;
-  text-shadow: 0 0 12px rgb(201 162 39 / 40%);
+  text-shadow: 0 0 12px rgb(160 32 48 / 40%);
 }
 
 .hero-title {
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.1;
-  color: var(--tiller-color-emerald, #10b981);
+  color: var(--tiller-color-emerald, #A02030);
   margin-bottom: 1.5rem;
-  text-shadow: 0 0 30px rgb(16 185 129 / 40%);
+  text-shadow: 0 0 30px rgb(160 32 48 / 40%);
   animation: fadeInUp 0.8s ease forwards;
 }
 
@@ -213,7 +213,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   padding-top: 2rem;
-  border-top: 2px solid rgb(201 162 39 / 20%);
+  border-top: 2px solid rgb(160 32 48 / 20%);
   animation: fadeInUp 0.8s ease 0.4s forwards;
   opacity: 0%;
 }
@@ -240,7 +240,7 @@
 .fact-text {
   font-size: 0.9375rem;
   font-weight: 600;
-  color: var(--tiller-color-emerald, #10b981);
+  color: var(--tiller-color-emerald, #A02030);
   white-space: nowrap;
 }
 
@@ -248,7 +248,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 33px;
-  box-shadow: 0 8px 24px rgb(0 0 0 / 40%), 0 0 0 1px rgb(201 162 39 / 20%);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 40%), 0 0 0 1px rgb(160 32 48 / 20%);
   animation: fade-in-right 0.8s ease 0.2s forwards;
   opacity: 0%;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -256,7 +256,7 @@
 
 .hero-image:hover {
   transform: scale(1.02);
-  box-shadow: 0 12px 40px rgb(0 0 0 / 50%), 0 0 0 2px rgb(201 162 39 / 40%);
+  box-shadow: 0 12px 40px rgb(0 0 0 / 50%), 0 0 0 2px rgb(160 32 48 / 40%);
 }
 
 .hero-image img {
@@ -286,21 +286,21 @@
   padding: 1.5rem;
   background: var(--tiller-bg-stone, #222524);
   border-radius: 33px;
-  border: 1px solid rgb(201 162 39 / 20%);
+  border: 1px solid rgb(160 32 48 / 20%);
   transition: all 0.3s ease;
 }
 
 .highlight-item:hover {
   transform: translateY(-4px);
-  border-color: rgb(16 185 129 / 40%);
-  box-shadow: 0 8px 24px rgb(0 0 0 / 30%), 0 0 20px rgb(16 185 129 / 15%);
+  border-color: rgb(160 32 48 / 40%);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 30%), 0 0 20px rgb(160 32 48 / 15%);
 }
 
 .highlight-icon {
   flex-shrink: 0;
   width: 24px;
   height: 24px;
-  background: var(--tiller-color-emerald, #10b981);
+  background: var(--tiller-color-emerald, #A02030);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -308,7 +308,7 @@
   justify-content: center;
   font-weight: 700;
   font-size: 0.875rem;
-  box-shadow: 0 0 12px rgb(16 185 129 / 40%);
+  box-shadow: 0 0 12px rgb(160 32 48 / 40%);
 }
 
 .highlight-text {
@@ -360,40 +360,40 @@
 }
 
 .btn--primary {
-  background: linear-gradient(135deg, var(--tiller-color-emerald, #10b981) 0%, #059669 100%);
+  background: linear-gradient(135deg, var(--tiller-color-emerald, #A02030) 0%, #C73A4F 100%);
   color: white;
-  box-shadow: 0 4px 15px rgb(16 185 129 / 30%), inset 0 1px 0 rgb(255 255 255 / 20%);
+  box-shadow: 0 4px 15px rgb(160 32 48 / 30%), inset 0 1px 0 rgb(255 255 255 / 20%);
 }
 
 .btn--primary:hover {
-  background: linear-gradient(135deg, #34d399 0%, var(--tiller-color-emerald, #10b981) 100%);
+  background: linear-gradient(135deg, #E85566 0%, var(--tiller-color-emerald, #A02030) 100%);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgb(16 185 129 / 45%), inset 0 1px 0 rgb(255 255 255 / 20%);
+  box-shadow: 0 8px 25px rgb(160 32 48 / 45%), inset 0 1px 0 rgb(255 255 255 / 20%);
 }
 
 .btn--primary:active {
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgb(16 185 129 / 30%);
+  box-shadow: 0 4px 12px rgb(160 32 48 / 30%);
 }
 
 .btn--secondary-outline {
   background: transparent;
   color: var(--tiller-text-primary, #ffffff);
-  border-color: var(--tiller-color-gold, #c9a227);
-  box-shadow: 0 0 15px rgb(201 162 39 / 15%);
+  border-color: var(--tiller-color-gold, #C73A4F);
+  box-shadow: 0 0 15px rgb(160 32 48 / 15%);
 }
 
 .btn--secondary-outline:hover {
-  background: var(--tiller-color-gold, #c9a227);
+  background: var(--tiller-color-gold, #C73A4F);
   color: var(--tiller-bg-darker, #121414);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgb(201 162 39 / 35%);
+  box-shadow: 0 8px 25px rgb(160 32 48 / 35%);
 }
 
 .btn--white {
   background: var(--tiller-bg-stone, #222524);
   color: var(--tiller-text-primary, #ffffff);
-  border: 1px solid rgb(201 162 39 / 30%);
+  border: 1px solid rgb(160 32 48 / 30%);
 }
 
 .btn--white:hover {
@@ -423,20 +423,20 @@
 .section-eyebrow {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--tiller-color-gold, #c9a227);
+  color: var(--tiller-color-gold, #C73A4F);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.75rem;
-  text-shadow: 0 0 12px rgb(201 162 39 / 40%);
+  text-shadow: 0 0 12px rgb(160 32 48 / 40%);
 }
 
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--tiller-color-emerald, #10b981);
+  color: var(--tiller-color-emerald, #A02030);
   margin-bottom: 1.5rem;
   line-height: 1.2;
-  text-shadow: 0 0 30px rgb(16 185 129 / 40%);
+  text-shadow: 0 0 30px rgb(160 32 48 / 40%);
 }
 
 .section-summary {
@@ -484,7 +484,7 @@
 .service-card {
   padding: 2rem;
   background: var(--tiller-bg-stone, #222524);
-  border: 1px solid rgb(201 162 39 / 20%);
+  border: 1px solid rgb(160 32 48 / 20%);
   border-radius: 33px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -498,16 +498,16 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--tiller-color-emerald, #10b981), var(--tiller-color-gold, #c9a227));
+  background: linear-gradient(90deg, var(--tiller-color-emerald, #A02030), var(--tiller-color-gold, #C73A4F));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;
 }
 
 .service-card:hover {
-  border-color: rgb(16 185 129 / 40%);
+  border-color: rgb(160 32 48 / 40%);
   transform: translateY(-8px);
-  box-shadow: 0 16px 40px rgb(0 0 0 / 40%), 0 0 40px rgb(16 185 129 / 15%);
+  box-shadow: 0 16px 40px rgb(0 0 0 / 40%), 0 0 40px rgb(160 32 48 / 15%);
 }
 
 .service-card:hover::before {
@@ -517,14 +517,14 @@
 .service-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--tiller-color-emerald, #10b981);
+  color: var(--tiller-color-emerald, #A02030);
   margin-bottom: 1.5rem;
-  text-shadow: 0 0 15px rgb(16 185 129 / 30%);
+  text-shadow: 0 0 15px rgb(160 32 48 / 30%);
   transition: color 0.3s ease;
 }
 
 .service-card:hover .service-title {
-  text-shadow: 0 0 25px rgb(16 185 129 / 50%);
+  text-shadow: 0 0 25px rgb(160 32 48 / 50%);
 }
 
 .service-description {
@@ -553,20 +553,20 @@
   content: "→";
   position: absolute;
   left: 0;
-  color: var(--tiller-color-gold, #c9a227);
+  color: var(--tiller-color-gold, #C73A4F);
   font-weight: 700;
 }
 
 .service-link {
   display: inline-block;
   font-weight: 600;
-  color: var(--tiller-color-emerald, #10b981);
+  color: var(--tiller-color-emerald, #A02030);
   text-decoration: none;
 }
 
 .service-link:hover {
   text-decoration: underline;
-  text-shadow: 0 0 12px rgb(16 185 129 / 50%);
+  text-shadow: 0 0 12px rgb(160 32 48 / 50%);
 }
 
 .services-actions {
@@ -615,22 +615,22 @@
   padding: 2rem;
   background: var(--tiller-bg-stone, #222524);
   border-radius: 33px;
-  border: 1px solid rgb(201 162 39 / 20%);
-  border-left: 4px solid var(--tiller-color-emerald, #10b981);
+  border: 1px solid rgb(160 32 48 / 20%);
+  border-left: 4px solid var(--tiller-color-emerald, #A02030);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
 
 .process-step:hover {
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 12px 30px rgb(0 0 0 / 35%), 0 0 30px rgb(16 185 129 / 15%);
-  border-color: rgb(16 185 129 / 50%);
+  box-shadow: 0 12px 30px rgb(0 0 0 / 35%), 0 0 30px rgb(160 32 48 / 15%);
+  border-color: rgb(160 32 48 / 50%);
 }
 
 .step-number {
   width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, var(--tiller-color-emerald, #10b981) 0%, #059669 100%);
+  background: linear-gradient(135deg, var(--tiller-color-emerald, #A02030) 0%, #C73A4F 100%);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -639,13 +639,13 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 15px rgb(16 185 129 / 40%);
+  box-shadow: 0 4px 15px rgb(160 32 48 / 40%);
   transition: all 0.3s ease;
 }
 
 .process-step:hover .step-number {
   transform: scale(1.1);
-  box-shadow: 0 6px 20px rgb(16 185 129 / 50%);
+  box-shadow: 0 6px 20px rgb(160 32 48 / 50%);
 }
 
 .step-title {
@@ -671,7 +671,7 @@
   padding: 2rem;
   background: var(--tiller-bg-stone, #222524);
   border-radius: 33px;
-  border-left: 4px solid var(--tiller-color-gold, #c9a227);
+  border-left: 4px solid var(--tiller-color-gold, #C73A4F);
 }
 
 /* ============================================
@@ -687,7 +687,7 @@
   padding: 2.5rem 3rem;
   background: #222524;
   background-color: #222524;
-  border-left: 4px solid var(--tiller-color-gold, #c9a227);
+  border-left: 4px solid var(--tiller-color-gold, #C73A4F);
   border-radius: 33px;
   margin-bottom: 4rem;
   text-align: center;
@@ -721,7 +721,7 @@
   padding: 2rem;
   background: #222524;
   background-color: #222524;
-  border: 1px solid rgb(201 162 39 / 20%);
+  border: 1px solid rgb(160 32 48 / 20%);
   border-radius: 33px;
   height: 100%;
   display: flex;
@@ -739,7 +739,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--tiller-color-gold, #c9a227), var(--tiller-color-emerald, #10b981));
+  background: linear-gradient(90deg, var(--tiller-color-gold, #C73A4F), var(--tiller-color-emerald, #A02030));
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.4s ease;
@@ -747,8 +747,8 @@
 
 .material-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgb(0 0 0 / 35%), 0 0 25px rgb(201 162 39 / 15%);
-  border-color: rgb(201 162 39 / 40%);
+  box-shadow: 0 12px 30px rgb(0 0 0 / 35%), 0 0 25px rgb(160 32 48 / 15%);
+  border-color: rgb(160 32 48 / 40%);
 }
 
 .material-card:hover::after {
@@ -758,9 +758,9 @@
 .material-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--tiller-color-gold, #c9a227);
+  color: var(--tiller-color-gold, #C73A4F);
   margin-bottom: 0.75rem;
-  text-shadow: 0 0 12px rgb(201 162 39 / 30%);
+  text-shadow: 0 0 12px rgb(160 32 48 / 30%);
   transition: text-shadow 0.3s ease;
 }
 
@@ -794,7 +794,7 @@
   content: "•";
   position: absolute;
   left: 0;
-  color: var(--tiller-color-emerald, #10b981);
+  color: var(--tiller-color-emerald, #A02030);
   font-weight: 700;
 }
 
@@ -823,7 +823,7 @@
   padding: 2rem;
   background: var(--tiller-bg-stone, #222524);
   border-radius: 33px;
-  border: 1px solid rgb(201 162 39 / 20%);
+  border: 1px solid rgb(160 32 48 / 20%);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
@@ -835,27 +835,27 @@
   right: 1.5rem;
   font-size: 4rem;
   font-family: Georgia, serif;
-  color: rgb(201 162 39 / 15%);
+  color: rgb(160 32 48 / 15%);
   line-height: 1;
   transition: all 0.3s ease;
 }
 
 .testimonial-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgb(0 0 0 / 35%), 0 0 25px rgb(201 162 39 / 10%);
-  border-color: rgb(201 162 39 / 40%);
+  box-shadow: 0 12px 30px rgb(0 0 0 / 35%), 0 0 25px rgb(160 32 48 / 10%);
+  border-color: rgb(160 32 48 / 40%);
 }
 
 .testimonial-card:hover::before {
-  color: rgb(201 162 39 / 30%);
+  color: rgb(160 32 48 / 30%);
   transform: scale(1.1);
 }
 
 .testimonial-rating {
-  color: var(--tiller-color-gold, #c9a227);
+  color: var(--tiller-color-gold, #C73A4F);
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
-  text-shadow: 0 0 10px rgb(201 162 39 / 40%);
+  text-shadow: 0 0 10px rgb(160 32 48 / 40%);
   letter-spacing: 2px;
 }
 
@@ -904,8 +904,8 @@
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(ellipse at 20% 80%, rgb(16 185 129 / 15%) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgb(201 162 39 / 15%) 0%, transparent 50%);
+    radial-gradient(ellipse at 20% 80%, rgb(160 32 48 / 15%) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgb(160 32 48 / 15%) 0%, transparent 50%);
   pointer-events: none;
   animation: pulse-glow 4s ease-in-out infinite;
 }
@@ -954,16 +954,16 @@
 /* CTA button overrides for contrast */
 .home-cta .btn--white {
   background: white;
-  color: var(--tiller-color-emerald, #10b981);
+  color: var(--tiller-color-emerald, #A02030);
   font-weight: 700;
   box-shadow: 0 4px 20px rgb(255 255 255 / 25%);
 }
 
 .home-cta .btn--white:hover {
-  background: var(--tiller-color-gold, #c9a227);
+  background: var(--tiller-color-gold, #C73A4F);
   color: var(--tiller-bg-darker, #121414);
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgb(201 162 39 / 40%);
+  box-shadow: 0 8px 30px rgb(160 32 48 / 40%);
 }
 
 .home-cta .btn--outline-white {
@@ -974,7 +974,7 @@
 
 .home-cta .btn--outline-white:hover {
   background: white;
-  color: var(--tiller-color-emerald, #10b981);
+  color: var(--tiller-color-emerald, #A02030);
   transform: translateY(-3px);
 }
 
@@ -992,7 +992,7 @@
 .material-card:focus-visible,
 .process-step:focus-visible,
 .highlight-item:focus-visible {
-  outline: 3px solid var(--tiller-color-gold, #c9a227);
+  outline: 3px solid var(--tiller-color-gold, #C73A4F);
   outline-offset: 4px;
 }
 
