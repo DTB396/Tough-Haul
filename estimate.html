@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Get Your Free Estimate | Tough Haul
-description: Instant junk removal estimates. Select your load size and get a price in seconds.
+description: Request a free custom junk removal estimate. We provide personalized quotes for every job.
 permalink: /estimate/
 body_class: page-estimate
 ---
@@ -10,8 +10,8 @@ body_class: page-estimate
   <!-- Hero -->
   <section class="estimate-hero">
     <div class="container">
-      <h1>Get Your Estimate</h1>
-      <p>Select your load size below. Pricing is simple and upfront.</p>
+      <h1>Request Your Free Estimate</h1>
+      <p>Every job is unique. Tell us about your project and we'll provide a custom quote.</p>
     </div>
   </section>
 
@@ -21,42 +21,37 @@ body_class: page-estimate
       
       <!-- Step 1: Load Size -->
       <div class="estimate-step">
-        <h2><span class="step-num">1</span> How much are you hauling?</h2>
+        <h2><span class="step-num">1</span> What best describes your job?</h2>
         
         <div class="load-grid" id="load-grid">
-          <button type="button" class="load-option" data-size="single" data-low="75" data-high="125">
+          <button type="button" class="load-option" data-size="single">
             <span class="load-icon">🪑</span>
             <span class="load-name">Single Item</span>
-            <span class="load-price">$75 – $125</span>
             <span class="load-example">Couch, mattress, or appliance</span>
           </button>
           
-          <button type="button" class="load-option" data-size="quarter" data-low="150" data-high="225">
+          <button type="button" class="load-option" data-size="quarter">
             <span class="load-icon">📦</span>
-            <span class="load-name">1/4 Truck</span>
-            <span class="load-price">$ – $225</span>
+            <span class="load-name">Small Load</span>
             <span class="load-example">Small cleanout, few items</span>
           </button>
           
-          <button type="button" class="load-option load-option--popular" data-size="half" data-low="275" data-high="375">
-            <span class="load-badge">Most Popular</span>
+          <button type="button" class="load-option load-option--popular" data-size="half">
+            <span class="load-badge">Most Common</span>
             <span class="load-icon">🚚</span>
-            <span class="load-name">1/2 Truck</span>
-            <span class="load-price">$$ – $375</span>
+            <span class="load-name">Medium Load</span>
             <span class="load-example">Room cleanout, multiple items</span>
           </button>
           
-          <button type="button" class="load-option" data-size="three-quarter" data-low="400" data-high="500">
+          <button type="button" class="load-option" data-size="three-quarter">
             <span class="load-icon">🏠</span>
-            <span class="load-name">3/4 Truck</span>
-            <span class="load-price">$$$ – $500</span>
+            <span class="load-name">Large Load</span>
             <span class="load-example">Garage or basement cleanout</span>
           </button>
           
-          <button type="button" class="load-option" data-size="full" data-low="500" data-high="650">
+          <button type="button" class="load-option" data-size="full">
             <span class="load-icon">🏢</span>
-            <span class="load-name">Full Truck</span>
-            <span class="load-price">$$$$ – $650</span>
+            <span class="load-name">Full Cleanout</span>
             <span class="load-example">Complete property cleanout</span>
           </button>
         </div>
@@ -64,50 +59,46 @@ body_class: page-estimate
 
       <!-- Step 2: Add-ons (Optional) -->
       <div class="estimate-step" id="step-addons" style="display: none;">
-        <h2><span class="step-num">2</span> Any special items?</h2>
-        <p class="step-hint">These items require extra handling. Select if applicable.</p>
+        <h2><span class="step-num">2</span> Any special considerations?</h2>
+        <p class="step-hint">Let us know if any of these apply to your job.</p>
         
         <div class="addon-grid">
           <label class="addon-option">
-            <input type="checkbox" name="addon" value="stairs" data-fee="25">
+            <input type="checkbox" name="addon" value="stairs">
             <span class="addon-content">
               <span class="addon-icon">🪜</span>
               <span class="addon-text">
                 <strong>Stairs / Difficult Access</strong>
-                <span>+$25</span>
               </span>
             </span>
           </label>
           
           <label class="addon-option">
-            <input type="checkbox" name="addon" value="freon" data-fee="25">
+            <input type="checkbox" name="addon" value="freon">
             <span class="addon-content">
               <span class="addon-icon">❄️</span>
               <span class="addon-text">
                 <strong>Fridge / AC (Freon)</strong>
-                <span>+$25 per unit</span>
               </span>
             </span>
           </label>
           
           <label class="addon-option">
-            <input type="checkbox" name="addon" value="hottub" data-fee="150">
+            <input type="checkbox" name="addon" value="hottub">
             <span class="addon-content">
               <span class="addon-icon">🛁</span>
               <span class="addon-text">
                 <strong>Hot Tub Removal</strong>
-                <span>+$150</span>
               </span>
             </span>
           </label>
           
           <label class="addon-option">
-            <input type="checkbox" name="addon" value="sameday" data-fee="50">
+            <input type="checkbox" name="addon" value="sameday">
             <span class="addon-content">
               <span class="addon-icon">⚡</span>
               <span class="addon-text">
-                <strong>Same-Day Pickup</strong>
-                <span>+$50</span>
+                <strong>Same-Day Pickup Needed</strong>
               </span>
             </span>
           </label>
@@ -117,13 +108,8 @@ body_class: page-estimate
       <!-- Results -->
       <div class="estimate-result" id="estimate-result" style="display: none;">
         <div class="result-card">
-          <span class="result-label">Your Estimated Price</span>
-          <div class="result-price">
-            <span class="price-low" id="price-low">$0</span>
-            <span class="price-sep">–</span>
-            <span class="price-high" id="price-high">$0</span>
-          </div>
-          <p class="result-note">Final price confirmed on-site. No hidden fees.</p>
+          <span class="result-label">Ready for Your Custom Quote?</span>
+          <p class="result-note">Contact us to discuss your project. We'll provide a personalized estimate based on your specific needs. No obligation, no hidden fees.</p>
           
           <div class="result-includes">
             <h4>Always Included:</h4>
@@ -136,7 +122,7 @@ body_class: page-estimate
           </div>
 
           <div class="result-cta">
-            <a href="/contact/" class="btn btn--primary btn--lg">Schedule Pickup</a>
+            <a href="/contact/" class="btn btn--primary btn--lg">Request Free Quote</a>
             <a href="tel:{{ site.company.phone_link }}" class="btn btn--outline">Call Now</a>
           </div>
         </div>
@@ -150,7 +136,7 @@ body_class: page-estimate
     <div class="container">
       <div class="trust-items">
         <span>✓ Licensed & Insured</span>
-        <span>✓ Upfront Pricing</span>
+        <span>✓ Custom Quotes</span>
         <span>✓ Same-Day Available</span>
         <span>✓ Atlantic County & Beyond</span>
       </div>
@@ -163,13 +149,6 @@ body_class: page-estimate
   const loadOptions = document.querySelectorAll('.load-option');
   const stepAddons = document.getElementById('step-addons');
   const resultSection = document.getElementById('estimate-result');
-  const priceLow = document.getElementById('price-low');
-  const priceHigh = document.getElementById('price-high');
-  const addonCheckboxes = document.querySelectorAll('input[name="addon"]');
-  
-  let selectedLoad = null;
-  let baseLow = 0;
-  let baseHigh = 0;
 
   // Load selection
   loadOptions.forEach(btn => {
@@ -179,42 +158,14 @@ body_class: page-estimate
       // Add active to clicked
       this.classList.add('active');
       
-      selectedLoad = this.dataset.size;
-      baseLow = parseInt(this.dataset.low);
-      baseHigh = parseInt(this.dataset.high);
-      
       // Show next steps
       stepAddons.style.display = 'block';
       resultSection.style.display = 'block';
       
-      updatePrice();
-      
       // Smooth scroll to addons
       stepAddons.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
-  });
-
-  // Add-on changes
-  addonCheckboxes.forEach(cb => {
-    cb.addEventListener('change', updatePrice);
-  });
-
-  function updatePrice() {
-    let addonTotal = 0;
-    addonCheckboxes.forEach(cb => {
-      if (cb.checked) {
-        addonTotal += parseInt(cb.dataset.fee);
-      }
-    });
-    
-    priceLow.textContent = '$' + (baseLow + addonTotal);
-    priceHigh.textContent = '$' + (baseHigh + addonTotal);
-  }
-})();
-</script>
-
-<style>
-/* =========================================
+  });=========================================
    ESTIMATE PAGE - Modern Minimal Design
    ========================================= */
 

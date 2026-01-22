@@ -40,7 +40,7 @@ services:
   summary: >
     From a single couch to a whole house cleanout, Tough Haul handles jobs
     of all sizes. Our professional team arrives on time, gives you an upfront
-    price, and hauls everything away. No surprises, no hidden fees.
+    estimate, and hauls everything away. No surprises, no hidden fees.
   homeowner_note: >
     Not sure what we can take? Just show us what you've got—we'll give you
     a quick quote on the spot. Most items we can haul same-day!
@@ -114,10 +114,10 @@ process:
         Call or book online. We'll set up a convenient time that works for 
         your schedule—including same-day and weekend appointments.
 
-    - title: "We Give You a Price"
+    - title: "We Give You an Estimate"
       icon: clipboard
       description: >
-        Our team arrives, assesses the job, and gives you an upfront price.
+        Our team arrives, assesses the job, and gives you an upfront estimate.
         No hidden fees, no surprises. You approve it before we start.
 
     - title: "We Haul It Away"
@@ -186,8 +186,8 @@ why_us:
   items:
     - title: "Fully Insured"
       description: "Licensed, bonded, and insured for your peace of mind."
-    - title: "Upfront Pricing"
-      description: "No hidden fees. The price we quote is the price you pay."
+    - title: "Upfront Estimates"
+      description: "No hidden fees. The estimate we quote is what you pay."
     - title: "Same-Day Service"
       description: "Need it gone today? We offer same-day pickup when available."
     - title: "We Do the Work"

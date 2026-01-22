@@ -30,17 +30,17 @@
   items:
     - question: "How do you determine pricing?"
       answer: |
-        Our pricing is based on <strong>how much space your items take in our truck</strong>, not by the hour. We'll give you an upfront quote before we start:
+        Our pricing is based on <strong>how much space your items take in our truck</strong>, not by the hour. We'll give you an upfront estimate before we start:
         <ul>
           <li><strong>Single items:</strong> Great for one large piece like a couch or appliance</li>
           <li><strong>Partial load:</strong> 1/4 to 1/2 truck for small cleanouts</li>
           <li><strong>Full load:</strong> Complete cleanouts and large jobs</li>
         </ul>
-        The price we quote is the price you pay—no hidden fees.
+        The estimate we quote is what you pay—no hidden fees.
 
     - question: "Do you provide free estimates?"
       answer: |
-        Yes! We provide free, no-obligation quotes. Our team will assess the job on-site and give you an upfront price before any work begins. You only pay if you want us to proceed.
+        Yes! We provide free, no-obligation quotes. Our team will assess the job on-site and give you an upfront estimate before any work begins. You only pay if you want us to proceed.
 
     - question: "What forms of payment do you accept?"
       answer: |
@@ -55,7 +55,7 @@
 
     - question: "Are there any hidden fees?"
       answer: |
-        No hidden fees, ever. The quote we give you is the price you pay. We may adjust pricing only if the actual job differs significantly from what was described (more items, heavier than expected, etc.), but we'll always discuss this with you first.
+        No hidden fees, ever. The estimate we give you is what you pay. We may adjust the estimate only if the actual job differs significantly from what was described (more items, heavier than expected, etc.), but we'll always discuss this with you first.
 
 - category: "What We Take"
   items:
